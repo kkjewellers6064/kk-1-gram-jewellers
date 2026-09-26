@@ -11,7 +11,18 @@
 nav{position:sticky;top:0;z-index:10;background:#111;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;box-shadow:0 2px 12px #0003}
 .logo{font-weight:800;color:#e6bd58;letter-spacing:.5px;font-size:20px}
 nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px}
-.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 6%;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),url('banner.jpg.jpg') center/cover no-repeat;color:white}
+.hero{
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0;
+  background:
+    linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
+    url('banner.jpg.jpg') center center/cover no-repeat;
+  color:white;
+}
 .hero h1{font-size:clamp(38px,7vw,76px);margin:10px 0;color:#f1c75b}
 .hero p{font-size:20px;max-width:700px;margin:0 auto 28px;color:#eee}
 .btn{display:inline-block;background:var(--gold);color:#111;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:700;margin:5px}
@@ -35,13 +46,6 @@ footer{background:#111;color:#ddd;text-align:center;padding:35px 6%}footer stron
 </nav>
 
 <header class="hero">
-<div>
-<img src="kk-logo.jpg" alt="KK 1 Gram Jewellers" style="width:115px;height:115px;object-fit:cover;border-radius:18px;margin-bottom:14px"><div style="letter-spacing:4px;color:#ddd">ELEGANCE • STYLE • TRUST</div>
-<h1>KK 1 Gram Jewellers</h1>
-<p>Beautiful jewellery collections for every special moment.</p>
-<a class="btn" href="#collections">Explore Collection</a>
-<a class="btn dark" href="tel:8140136435">Call Us</a>
-</div>
 </header>
 
 <section id="collections">
