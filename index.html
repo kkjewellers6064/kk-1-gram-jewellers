@@ -5,7 +5,10 @@
 
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>KK 1 Gram Jewellers | Premium 1 Gram Jewellery</title>
 
@@ -54,6 +57,10 @@
       font-family: inherit;
     }
 
+    /* =====================================================
+       COLORS
+    ====================================================== */
+
     :root {
       --black: #0d0d0d;
       --black-2: #171717;
@@ -67,7 +74,6 @@
       --green: #25D366;
     }
 
-
     /* =====================================================
        NAVBAR
     ====================================================== */
@@ -79,9 +85,9 @@
 
       width: 100%;
 
-      background: rgba(13, 13, 13, 0.97);
+      background: rgba(13, 13, 13, 0.98);
 
-      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.35);
 
       padding: 12px 5%;
 
@@ -133,7 +139,6 @@
       color: var(--gold-light);
     }
 
-
     /* =====================================================
        HERO
     ====================================================== */
@@ -141,15 +146,16 @@
     .hero {
       width: 100%;
       background: #111;
+
       overflow: hidden;
     }
 
     .hero img {
       width: 100%;
       height: auto;
+
       object-fit: cover;
     }
-
 
     /* =====================================================
        INTRO
@@ -196,7 +202,6 @@
       font-size: 16px;
     }
 
-
     /* =====================================================
        COMMON SECTION
     ====================================================== */
@@ -207,6 +212,7 @@
 
     .section-heading {
       text-align: center;
+
       margin-bottom: 45px;
     }
 
@@ -231,6 +237,7 @@
 
     .section-heading p {
       color: var(--muted);
+
       font-size: 15px;
     }
 
@@ -243,9 +250,8 @@
       margin: 18px auto 0;
     }
 
-
     /* =====================================================
-       COLLECTIONS
+       COLLECTION CARDS
     ====================================================== */
 
     .collection-grid {
@@ -391,20 +397,36 @@
       color: #111;
     }
 
-
     /* =====================================================
-       PRODUCTS AREA
-       IMPORTANT:
+       PRODUCTS SECTION
        Products are hidden initially.
+       They appear only after collection is selected.
     ====================================================== */
 
-    #products {
+    .products-section {
+      background: #fff;
+
       display: none;
-      background: #ffffff;
     }
 
-    #products.show {
+    .products-section.show {
       display: block;
+
+      animation: sectionAppear 0.45s ease;
+    }
+
+    @keyframes sectionAppear {
+
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
     }
 
     .selected-collection-info {
@@ -413,20 +435,8 @@
       margin-bottom: 35px;
     }
 
-    .selected-collection-info .eyebrow {
-      color: #b08a1e;
-
-      font-size: 13px;
-
-      font-weight: 800;
-
-      letter-spacing: 4px;
-
-      margin-bottom: 8px;
-    }
-
     .selected-collection-info h2 {
-      font-size: clamp(30px, 4vw, 42px);
+      font-size: clamp(28px, 4vw, 40px);
 
       margin-bottom: 8px;
     }
@@ -434,9 +444,7 @@
     .selected-collection-info p {
       color: #777;
 
-      font-size: 14px;
-
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .back-to-collections {
@@ -471,79 +479,25 @@
       color: #111;
     }
 
-
-    /* =====================================================
-       EACH PRODUCT CATEGORY
-    ====================================================== */
-
-    .product-category {
-      max-width: 1200px;
-
-      margin: 0 auto;
-
-      display: none;
-    }
-
-    .product-category.active {
-      display: block;
-
-      animation: fadeCollection 0.45s ease;
-    }
-
-    @keyframes fadeCollection {
-
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-    }
-
-    .category-heading {
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      margin-bottom: 22px;
-
-      padding-bottom: 12px;
-
-      border-bottom: 1px solid var(--border);
-    }
-
-    .category-heading h3 {
-      font-size: 25px;
-
-      letter-spacing: 1px;
-    }
-
-    .category-heading span {
-      color: #a67e12;
-
-      font-size: 13px;
-
-      font-weight: 700;
-    }
-
-
     /* =====================================================
        PRODUCT GRID
     ====================================================== */
 
     .product-grid {
+      max-width: 1200px;
+
+      margin: auto;
+
       display: grid;
 
       grid-template-columns: repeat(4, 1fr);
 
       gap: 20px;
     }
+
+    /* =====================================================
+       PRODUCT CARD
+    ====================================================== */
 
     .product-card {
       background: white;
@@ -572,11 +526,19 @@
     .product-image {
       position: relative;
 
+      width: 100%;
+
       height: 280px;
 
       background: #f7f4ed;
 
       overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
     }
 
     .product-image img {
@@ -585,7 +547,7 @@
 
       object-fit: contain;
 
-      padding: 12px;
+      padding: 10px;
 
       transition: transform 0.45s ease;
     }
@@ -643,6 +605,21 @@
       font-weight: 800;
     }
 
+    /* =====================================================
+       IMAGE ERROR MESSAGE
+    ====================================================== */
+
+    .image-error {
+      color: #999;
+
+      text-align: center;
+
+      padding: 20px;
+
+      font-size: 13px;
+
+      display: none;
+    }
 
     /* =====================================================
        PRODUCT MODAL
@@ -676,8 +653,6 @@
       width: min(1050px, 100%);
 
       max-height: 92vh;
-
-      overflow-y: auto;
 
       background: #fff;
 
@@ -778,6 +753,8 @@
       flex-direction: column;
 
       justify-content: center;
+
+      overflow-y: auto;
     }
 
     .modal-label {
@@ -859,7 +836,6 @@
         0 8px 20px rgba(37, 211, 102, 0.25);
     }
 
-
     /* =====================================================
        WHY US
     ====================================================== */
@@ -919,7 +895,6 @@
 
       font-size: 14px;
     }
-
 
     /* =====================================================
        SHOWROOMS
@@ -1013,7 +988,6 @@
       color: #111;
     }
 
-
     /* =====================================================
        CONTACT
     ====================================================== */
@@ -1060,7 +1034,6 @@
       font-weight: 800;
     }
 
-
     /* =====================================================
        FOOTER
     ====================================================== */
@@ -1080,7 +1053,6 @@
     footer strong {
       color: var(--gold);
     }
-
 
     /* =====================================================
        FLOATING WHATSAPP
@@ -1120,7 +1092,6 @@
     .whatsapp-float:hover {
       transform: scale(1.1);
     }
-
 
     /* =====================================================
        MOBILE
@@ -1174,6 +1145,7 @@
 
       .logo {
         font-size: 12px;
+
         gap: 7px;
       }
 
@@ -1200,6 +1172,7 @@
 
       .collection-grid {
         grid-template-columns: 1fr;
+
         gap: 18px;
       }
 
@@ -1209,11 +1182,13 @@
 
       .collection-content {
         min-height: 240px;
+
         padding: 28px;
       }
 
       .product-grid {
         grid-template-columns: 1fr 1fr;
+
         gap: 12px;
       }
 
@@ -1233,14 +1208,6 @@
         font-size: 11px;
       }
 
-      .category-heading h3 {
-        font-size: 20px;
-      }
-
-      .category-heading span {
-        font-size: 10px;
-      }
-
       .why-grid {
         grid-template-columns: 1fr;
       }
@@ -1251,6 +1218,7 @@
 
       .modal-box {
         max-height: 95vh;
+
         border-radius: 15px;
       }
 
@@ -1312,7 +1280,8 @@
         Collections
       </a>
 
-      <a href="#collections">
+      <a href="#products"
+         onclick="openProducts(event)">
         Jewellery
       </a>
 
@@ -1329,1825 +1298,4 @@
   </nav>
 
 
-  <!-- =====================================================
-       HERO
-  ====================================================== -->
-
-  <header class="hero">
-
-    <img
-      src="banner.jpg.jpg"
-      alt="KK 1 Gram Jewellers Premium Jewellery"
-    >
-
-  </header>
-
-
-  <!-- =====================================================
-       INTRO
-  ====================================================== -->
-
-  <div class="intro">
-
-    <div class="intro-label">
-      PREMIUM 1 GRAM JEWELLERY
-    </div>
-
-    <h1>
-      KK 1 Gram Jewellers
-    </h1>
-
-    <p>
-      Discover elegant jewellery collections designed
-      to make every special moment shine.
-    </p>
-
-  </div>
-
-
-  <!-- =====================================================
-       COLLECTIONS
-  ====================================================== -->
-
-  <section
-    class="section"
-    id="collections"
-  >
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        EXPLORE
-      </div>
-
-      <h2>
-        Our Collections
-      </h2>
-
-      <p>
-        Choose a jewellery collection and explore our designs.
-      </p>
-
-      <div class="gold-line"></div>
-
-    </div>
-
-
-    <div class="collection-grid">
-
-
-      <!-- NECKLACES -->
-
-      <div
-        class="collection-card"
-        onclick="showCollection('necklaces')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            💎
-          </div>
-
-          <h3>
-            NECKLACES
-          </h3>
-
-          <p>
-            Elegant necklace designs for every occasion.
-          </p>
-
-          <span class="collection-btn">
-            View Collection →
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- EARRINGS -->
-
-      <div
-        class="collection-card"
-        onclick="showCollection('earrings')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            ✨
-          </div>
-
-          <h3>
-            EARRINGS
-          </h3>
-
-          <p>
-            Beautiful earrings crafted for a graceful look.
-          </p>
-
-          <span class="collection-btn">
-            View Collection →
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- BANGLES -->
-
-      <div
-        class="collection-card"
-        onclick="showCollection('bangles')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            💫
-          </div>
-
-          <h3>
-            BANGLES
-          </h3>
-
-          <p>
-            Stylish bangle designs with premium finishing.
-          </p>
-
-          <span class="collection-btn">
-            View Collection →
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- RINGS -->
-
-      <div
-        class="collection-card"
-        onclick="showCollection('rings')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            💍
-          </div>
-
-          <h3>
-            RINGS
-          </h3>
-
-          <p>
-            Elegant rings designed to complete your style.
-          </p>
-
-          <span class="collection-btn">
-            View Collection →
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================================
-       PRODUCTS
-       HIDDEN UNTIL COLLECTION IS SELECTED
-  ====================================================== -->
-
-  <section
-    class="section"
-    id="products"
-  >
-
-    <div class="selected-collection-info">
-
-      <div class="eyebrow">
-        OUR JEWELLERY
-      </div>
-
-      <h2 id="selectedTitle">
-        Collection
-      </h2>
-
-      <p id="selectedDescription">
-        Explore our premium jewellery designs.
-      </p>
-
-      <button
-        class="back-to-collections"
-        onclick="backToCollections()"
-      >
-        ← Back to Collections
-      </button>
-
-    </div>
-
-
-    <!-- =================================================
-         NECKLACES PRODUCTS
-    ================================================== -->
-
-    <div
-      class="product-category"
-      id="necklaces-products"
-    >
-
-      <div class="category-heading">
-
-        <h3>
-          Necklaces
-        </h3>
-
-        <span>
-          Premium Collection
-        </span>
-
-      </div>
-
-
-      <div class="product-grid">
-
-
-        <!-- PRODUCT 1 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Elegant Necklace',
-            'Necklaces',
-            'necklace1.jpg',
-            'Premium 1 gram jewellery necklace with elegant traditional finishing.',
-            'Premium 1 Gram',
-            'Gold Finish',
-            'Necklace'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="necklace1.jpg"
-              alt="Elegant Necklace"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Elegant Necklace
-            </h4>
-
-            <p>
-              Premium Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 2 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Royal Necklace',
-            'Necklaces',
-            'necklace2.jpg',
-            'Beautiful royal style necklace designed for weddings and special occasions.',
-            'Premium 1 Gram',
-            'Royal Finish',
-            'Necklace'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              PREMIUM
-            </span>
-
-            <img
-              src="necklace2.jpg"
-              alt="Royal Necklace"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Royal Necklace
-            </h4>
-
-            <p>
-              Royal Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Classic Necklace',
-            'Necklaces',
-            'necklace3.jpg',
-            'Classic necklace design suitable for festive and daily occasions.',
-            'Premium 1 Gram',
-            'Classic Finish',
-            'Necklace'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              CLASSIC
-            </span>
-
-            <img
-              src="necklace3.jpg"
-              alt="Classic Necklace"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Classic Necklace
-            </h4>
-
-            <p>
-              Classic Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 4 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Designer Necklace',
-            'Necklaces',
-            'necklace4.jpg',
-            'Designer necklace with an attractive premium jewellery finish.',
-            'Premium 1 Gram',
-            'Designer Finish',
-            'Necklace'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              DESIGNER
-            </span>
-
-            <img
-              src="necklace4.jpg"
-              alt="Designer Necklace"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Designer Necklace
-            </h4>
-
-            <p>
-              Designer Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-    <!-- =================================================
-         EARRINGS PRODUCTS
-    ================================================== -->
-
-    <div
-      class="product-category"
-      id="earrings-products"
-    >
-
-      <div class="category-heading">
-
-        <h3>
-          Earrings
-        </h3>
-
-        <span>
-          Premium Collection
-        </span>
-
-      </div>
-
-
-      <div class="product-grid">
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Elegant Earrings',
-            'Earrings',
-            'earring1.jpg',
-            'Elegant earrings designed for a premium and graceful appearance.',
-            'Premium 1 Gram',
-            'Gold Finish',
-            'Earrings'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="earring1.jpg"
-              alt="Elegant Earrings"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Elegant Earrings
-            </h4>
-
-            <p>
-              Premium Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Royal Earrings',
-            'Earrings',
-            'earring2.jpg',
-            'Royal style earrings suitable for weddings and festive occasions.',
-            'Premium 1 Gram',
-            'Royal Finish',
-            'Earrings'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              PREMIUM
-            </span>
-
-            <img
-              src="earring2.jpg"
-              alt="Royal Earrings"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Royal Earrings
-            </h4>
-
-            <p>
-              Royal Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Traditional Earrings',
-            'Earrings',
-            'earring3.jpg',
-            'Traditional earrings with beautiful detailing and elegant finishing.',
-            'Premium 1 Gram',
-            'Traditional Finish',
-            'Earrings'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              TRADITIONAL
-            </span>
-
-            <img
-              src="earring3.jpg"
-              alt="Traditional Earrings"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Traditional Earrings
-            </h4>
-
-            <p>
-              Traditional Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Designer Earrings',
-            'Earrings',
-            'earring4.jpg',
-            'Designer earrings created for a modern and stylish appearance.',
-            'Premium 1 Gram',
-            'Designer Finish',
-            'Earrings'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              DESIGNER
-            </span>
-
-            <img
-              src="earring4.jpg"
-              alt="Designer Earrings"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Designer Earrings
-            </h4>
-
-            <p>
-              Designer Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-    <!-- =================================================
-         BANGLES PRODUCTS
-    ================================================== -->
-
-    <div
-      class="product-category"
-      id="bangles-products"
-    >
-
-      <div class="category-heading">
-
-        <h3>
-          Bangles
-        </h3>
-
-        <span>
-          Premium Collection
-        </span>
-
-      </div>
-
-
-      <div class="product-grid">
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Elegant Bangles',
-            'Bangles',
-            'bangle1.jpg',
-            'Elegant bangle design with premium gold finish.',
-            'Premium 1 Gram',
-            'Gold Finish',
-            'Bangles'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="bangle1.jpg"
-              alt="Elegant Bangles"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Elegant Bangles
-            </h4>
-
-            <p>
-              Premium Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Royal Bangles',
-            'Bangles',
-            'bangle2.jpg',
-            'Royal bangle design suitable for weddings and special occasions.',
-            'Premium 1 Gram',
-            'Royal Finish',
-            'Bangles'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              PREMIUM
-            </span>
-
-            <img
-              src="bangle2.jpg"
-              alt="Royal Bangles"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Royal Bangles
-            </h4>
-
-            <p>
-              Royal Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Classic Bangles',
-            'Bangles',
-            'bangle3.jpg',
-            'Classic bangle design with elegant traditional detailing.',
-            'Premium 1 Gram',
-            'Classic Finish',
-            'Bangles'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              CLASSIC
-            </span>
-
-            <img
-              src="bangle3.jpg"
-              alt="Classic Bangles"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Classic Bangles
-            </h4>
-
-            <p>
-              Classic Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Designer Bangles',
-            'Bangles',
-            'bangle4.jpg',
-            'Designer bangle with attractive premium jewellery finishing.',
-            'Premium 1 Gram',
-            'Designer Finish',
-            'Bangles'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              DESIGNER
-            </span>
-
-            <img
-              src="bangle4.jpg"
-              alt="Designer Bangles"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Designer Bangles
-            </h4>
-
-            <p>
-              Designer Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-    <!-- =================================================
-         RINGS PRODUCTS
-    ================================================== -->
-
-    <div
-      class="product-category"
-      id="rings-products"
-    >
-
-      <div class="category-heading">
-
-        <h3>
-          Rings
-        </h3>
-
-        <span>
-          Premium Collection
-        </span>
-
-      </div>
-
-
-      <div class="product-grid">
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Elegant Ring',
-            'Rings',
-            'ring1.jpg',
-            'Elegant ring design with premium gold finish.',
-            'Premium 1 Gram',
-            'Gold Finish',
-            'Ring'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="ring1.jpg"
-              alt="Elegant Ring"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Elegant Ring
-            </h4>
-
-            <p>
-              Premium Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Royal Ring',
-            'Rings',
-            'ring2.jpg',
-            'Royal ring design suitable for special occasions.',
-            'Premium 1 Gram',
-            'Royal Finish',
-            'Ring'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              PREMIUM
-            </span>
-
-            <img
-              src="ring2.jpg"
-              alt="Royal Ring"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Royal Ring
-            </h4>
-
-            <p>
-              Royal Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Classic Ring',
-            'Rings',
-            'ring3.jpg',
-            'Classic ring design with a timeless jewellery look.',
-            'Premium 1 Gram',
-            'Classic Finish',
-            'Ring'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              CLASSIC
-            </span>
-
-            <img
-              src="ring3.jpg"
-              alt="Classic Ring"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Classic Ring
-            </h4>
-
-            <p>
-              Classic Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="product-card"
-          onclick="openProduct(
-            'Designer Ring',
-            'Rings',
-            'ring4.jpg',
-            'Designer ring created for a modern premium appearance.',
-            'Premium 1 Gram',
-            'Designer Finish',
-            'Ring'
-          )"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              DESIGNER
-            </span>
-
-            <img
-              src="ring4.jpg"
-              alt="Designer Ring"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Designer Ring
-            </h4>
-
-            <p>
-              Designer Gold Finish
-            </p>
-
-            <span class="view-product">
-              View Product →
-            </span>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================================
-       WHY US
-  ====================================================== -->
-
-  <section class="section why-section">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        WHY KK
-      </div>
-
-      <h2>
-        Why Choose Us
-      </h2>
-
-      <p>
-        Quality, elegance and trust in every design.
-      </p>
-
-      <div class="gold-line"></div>
-
-    </div>
-
-
-    <div class="why-grid">
-
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          ✨
-        </div>
-
-        <h3>
-          Premium Designs
-        </h3>
-
-        <p>
-          Elegant jewellery designs made for every special occasion.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          💎
-        </div>
-
-        <h3>
-          Quality Finish
-        </h3>
-
-        <p>
-          Carefully selected designs with beautiful premium finishing.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          🤝
-        </div>
-
-        <h3>
-          Trusted Service
-        </h3>
-
-        <p>
-          Friendly service and jewellery assistance for our customers.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================================
-       SHOWROOMS
-  ====================================================== -->
-
-  <section
-    class="section stores"
-    id="stores"
-  >
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        VISIT US
-      </div>
-
-      <h2>
-        Our Branches
-      </h2>
-
-      <p>
-        Visit your nearest KK 1 Gram Jewellers showroom.
-      </p>
-
-      <div class="gold-line"></div>
-
-    </div>
-
-
-    <div class="store-grid">
-
-
-      <!-- MEHSANA -->
-
-      <div class="store-card">
-
-        <h3>
-          KK <span>Mehsana</span>
-        </h3>
-
-        <p>
-          Visit our Mehsana showroom and explore our latest
-          1 gram jewellery collections.
-        </p>
-
-        <div class="store-buttons">
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Mehsana"
-            target="_blank"
-            class="store-btn"
-          >
-            📍 Directions
-          </a>
-
-          <a
-            href="https://wa.me/919999999999"
-            target="_blank"
-            class="store-btn"
-          >
-            WhatsApp
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PALANPUR -->
-
-      <div class="store-card">
-
-        <h3>
-          KK <span>Palanpur</span>
-        </h3>
-
-        <p>
-          Discover beautiful jewellery designs at our
-          Palanpur showroom.
-        </p>
-
-        <div class="store-buttons">
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Palanpur"
-            target="_blank"
-            class="store-btn"
-          >
-            📍 Directions
-          </a>
-
-          <a
-            href="https://wa.me/919999999999"
-            target="_blank"
-            class="store-btn"
-          >
-            WhatsApp
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- KALOL -->
-
-      <div class="store-card">
-
-        <h3>
-          KK <span>Kalol</span>
-        </h3>
-
-        <p>
-          Visit our Kalol branch for premium 1 gram jewellery
-          collections.
-        </p>
-
-        <div class="store-buttons">
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Kalol"
-            target="_blank"
-            class="store-btn"
-          >
-            📍 Directions
-          </a>
-
-          <a
-            href="https://wa.me/919999999999"
-            target="_blank"
-            class="store-btn"
-          >
-            WhatsApp
-          </a>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================================
-       CONTACT
-  ====================================================== -->
-
-  <section
-    class="contact"
-    id="contact"
-  >
-
-    <h2>
-      Let's Find Your Perfect Jewellery
-    </h2>
-
-    <p>
-      For product enquiries, availability and showroom information,
-      contact us on WhatsApp.
-    </p>
-
-    <a
-      href="https://wa.me/919999999999"
-      target="_blank"
-      class="contact-btn"
-    >
-      💬 Chat on WhatsApp
-    </a>
-
-  </section>
-
-
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
-
-  <footer>
-
-    © 2026
-    <strong>
-      KK 1 Gram Jewellers
-    </strong>
-
-    — All Rights Reserved.
-
-  </footer>
-
-
-  <!-- =====================================================
-       PRODUCT DETAIL MODAL
-  ====================================================== -->
-
-  <div
-    class="product-modal"
-    id="productModal"
-  >
-
-    <div class="modal-box">
-
-
-      <button
-        class="modal-close"
-        onclick="closeProduct()"
-        aria-label="Close"
-      >
-        ×
-      </button>
-
-
-      <!-- GALLERY -->
-
-      <div class="modal-gallery">
-
-        <img
-          id="modalMainImage"
-          class="main-product-image"
-          src=""
-          alt=""
-        >
-
-        <div
-          class="thumbnail-row"
-          id="thumbnailRow"
-        >
-        </div>
-
-      </div>
-
-
-      <!-- DETAILS -->
-
-      <div class="modal-details">
-
-        <div
-          class="modal-label"
-          id="modalCategory"
-        >
-          JEWELLERY
-        </div>
-
-        <h2
-          id="modalTitle"
-        >
-          Product Name
-        </h2>
-
-        <p
-          class="modal-description"
-          id="modalDescription"
-        >
-          Product description.
-        </p>
-
-
-        <ul class="detail-list">
-
-          <li>
-            <strong>
-              Collection:
-            </strong>
-
-            <span id="modalCollection">
-              -
-            </span>
-          </li>
-
-          <li>
-            <strong>
-              Finish:
-            </strong>
-
-            <span id="modalFinish">
-              -
-            </span>
-          </li>
-
-          <li>
-            <strong>
-              Type:
-            </strong>
-
-            <span id="modalType">
-              -
-            </span>
-          </li>
-
-        </ul>
-
-
-        <a
-          id="modalWhatsapp"
-          class="whatsapp-product"
-          href="#"
-          target="_blank"
-        >
-          💬 Enquire on WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- =====================================================
-       FLOATING WHATSAPP
-  ====================================================== -->
-
-  <a
-    href="https://wa.me/919999999999"
-    target="_blank"
-    class="whatsapp-float"
-    aria-label="WhatsApp"
-  >
-    💬
-  </a>
-
-
-  <!-- =====================================================
-       JAVASCRIPT
-  ====================================================== -->
-
-  <script>
-
-
-    /* =====================================================
-       COLLECTION DATA
-    ====================================================== */
-
-    const collectionData = {
-
-      necklaces: {
-        title: "Necklaces Collection",
-        description:
-          "Explore our elegant premium 1 gram necklace designs."
-      },
-
-      earrings: {
-        title: "Earrings Collection",
-        description:
-          "Explore our beautiful premium 1 gram earrings."
-      },
-
-      bangles: {
-        title: "Bangles Collection",
-        description:
-          "Explore our stylish premium 1 gram bangle designs."
-      },
-
-      rings: {
-        title: "Rings Collection",
-        description:
-          "Explore our elegant premium 1 gram ring designs."
-      }
-
-    };
-
-
-    /* =====================================================
-       SHOW COLLECTION
-    ====================================================== */
-
-    function showCollection(collectionName) {
-
-      const productsSection =
-        document.getElementById("products");
-
-      const selectedTitle =
-        document.getElementById("selectedTitle");
-
-      const selectedDescription =
-        document.getElementById("selectedDescription");
-
-
-      /* Show products section */
-
-      productsSection.classList.add("show");
-
-
-      /* Hide all product categories */
-
-      document
-        .querySelectorAll(".product-category")
-        .forEach(function(category) {
-
-          category.classList.remove("active");
-
-        });
-
-
-      /* Selected category */
-
-      const selectedCategory =
-        document.getElementById(
-          collectionName + "-products"
-        );
-
-
-      if (selectedCategory) {
-
-        selectedCategory.classList.add("active");
-
-      }
-
-
-      /* Update heading */
-
-      if (collectionData[collectionName]) {
-
-        selectedTitle.textContent =
-          collectionData[collectionName].title;
-
-        selectedDescription.textContent =
-          collectionData[collectionName].description;
-
-      }
-
-
-      /* Scroll to products */
-
-      setTimeout(function() {
-
-        productsSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-      }, 50);
-
-    }
-
-
-    /* =====================================================
-       BACK TO COLLECTIONS
-    ====================================================== */
-
-    function backToCollections() {
-
-      const productsSection =
-        document.getElementById("products");
-
-
-      productsSection.classList.remove("show");
-
-
-      document
-        .querySelectorAll(".product-category")
-        .forEach(function(category) {
-
-          category.classList.remove("active");
-
-        });
-
-
-      document
-        .getElementById("collections")
-        .scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-    }
-
-
-    /* =====================================================
-       OPEN PRODUCT MODAL
-    ====================================================== */
-
-    function openProduct(
-      title,
-      category,
-      image,
-      description,
-      collection,
-      finish,
-      type
-    ) {
-
-
-      const modal =
-        document.getElementById("productModal");
-
-      const mainImage =
-        document.getElementById("modalMainImage");
-
-      const modalTitle =
-        document.getElementById("modalTitle");
-
-      const modalCategory =
-        document.getElementById("modalCategory");
-
-      const modalDescription =
-        document.getElementById("modalDescription");
-
-      const modalCollection =
-        document.getElementById("modalCollection");
-
-      const modalFinish =
-        document.getElementById("modalFinish");
-
-      const modalType =
-        document.getElementById("modalType");
-
-      const whatsapp =
-        document.getElementById("modalWhatsapp");
-
-      const thumbnailRow =
-        document.getElementById("thumbnailRow");
-
-
-      /* Set image */
-
-      mainImage.src = image;
-
-      mainImage.alt = title;
-
-
-      /* Set product details */
-
-      modalTitle.textContent = title;
-
-      modalCategory.textContent =
-        category.toUpperCase();
-
-      modalDescription.textContent =
-        description;
-
-      modalCollection.textContent =
-        collection;
-
-      modalFinish.textContent =
-        finish;
-
-      modalType.textContent =
-        type;
-
-
-      /* =================================================
-         THUMBNAILS
-
-         Currently using same image.
-         You can add more images later.
-      ================================================== */
-
-      thumbnailRow.innerHTML = "";
-
-
-      const thumbnail =
-        document.createElement("img");
-
-      thumbnail.src = image;
-
-      thumbnail.alt = title;
-
-      thumbnail.className =
-        "thumbnail active";
-
-
-      thumbnail.onclick = function() {
-
-        mainImage.src = image;
-
-      };
-
-
-      thumbnailRow.appendChild(thumbnail);
-
-
-      /* =================================================
-         WHATSAPP MESSAGE
-      ================================================== */
-
-      const message =
-        "Hello KK 1 Gram Jewellers,%0A%0A" +
-        "I am interested in:%0A" +
-        title +
-        "%0A%0A" +
-        "Collection: " +
-        collection;
-
-
-      whatsapp.href =
-        "https://wa.me/919999999999?text=" +
-        message;
-
-
-      /* Show modal */
-
-      modal.classList.add("active");
-
-      document.body.classList.add("modal-open");
-
-    }
-
-
-    /* =====================================================
-       CLOSE PRODUCT MODAL
-    ====================================================== */
-
-    function closeProduct() {
-
-      const modal =
-        document.getElementById("productModal");
-
-
-      modal.classList.remove("active");
-
-      document.body.classList.remove("modal-open");
-
-    }
-
-
-    /* =====================================================
-       CLOSE MODAL WHEN CLICKING OUTSIDE
-    ====================================================== */
-
-    document
-      .getElementById("productModal")
-      .addEventListener(
-        "click",
-        function(event) {
-
-          if (
-            event.target ===
-            this
-          ) {
-
-            closeProduct();
-
-          }
-
-        }
-      );
-
-
-    /* =====================================================
-       ESC KEY CLOSE MODAL
-    ====================================================== */
-
-    document.addEventListener(
-      "keydown",
-      function(event) {
-
-        if (
-          event.key === "Escape"
-        ) {
-
-          closeProduct();
-
-        }
-
-      }
-    );
-
-
-  </script>
-
-
-</body>
-
-</html>
+  <!-- =================================================
