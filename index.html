@@ -5,7 +5,10 @@
 
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>KK 1 Gram Jewellers | Premium 1 Gram Jewellery</title>
 
@@ -37,6 +40,10 @@
       line-height: 1.6;
     }
 
+    body.modal-open {
+      overflow: hidden;
+    }
+
     img {
       max-width: 100%;
       display: block;
@@ -49,7 +56,6 @@
     button {
       font-family: inherit;
     }
-
 
     /* =====================================================
        COLORS
@@ -65,8 +71,8 @@
       --text: #1c1c1c;
       --muted: #777777;
       --border: #e5dfd2;
+      --green: #25D366;
     }
-
 
     /* =====================================================
        NAVBAR
@@ -92,7 +98,6 @@
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
     }
 
-
     .logo {
       display: flex;
       align-items: center;
@@ -106,7 +111,6 @@
       letter-spacing: 1px;
     }
 
-
     .logo img {
       width: 45px;
       height: 45px;
@@ -116,13 +120,11 @@
       object-fit: cover;
     }
 
-
     .nav-links {
       display: flex;
       align-items: center;
       gap: 28px;
     }
-
 
     .nav-links a {
       color: white;
@@ -133,14 +135,12 @@
       transition: 0.3s;
     }
 
-
     .nav-links a:hover {
       color: var(--gold-light);
     }
 
-
     /* =====================================================
-       HERO BANNER
+       HERO
     ====================================================== */
 
     .hero {
@@ -150,14 +150,12 @@
       overflow: hidden;
     }
 
-
     .hero img {
       width: 100%;
       height: auto;
 
       object-fit: cover;
     }
-
 
     /* =====================================================
        INTRO
@@ -173,7 +171,6 @@
       padding: 70px 20px 45px;
     }
 
-
     .intro-label {
       color: #b08a1e;
 
@@ -185,7 +182,6 @@
       margin-bottom: 12px;
     }
 
-
     .intro h1 {
       font-size: clamp(32px, 5vw, 55px);
 
@@ -195,7 +191,6 @@
 
       color: #171717;
     }
-
 
     .intro p {
       max-width: 700px;
@@ -207,22 +202,19 @@
       font-size: 16px;
     }
 
-
     /* =====================================================
-       SECTION
+       COMMON SECTION
     ====================================================== */
 
     .section {
       padding: 75px 6%;
     }
 
-
     .section-heading {
       text-align: center;
 
       margin-bottom: 45px;
     }
-
 
     .section-heading .eyebrow {
       color: #b08a1e;
@@ -235,7 +227,6 @@
       margin-bottom: 8px;
     }
 
-
     .section-heading h2 {
       font-size: clamp(30px, 4vw, 44px);
 
@@ -244,13 +235,11 @@
       margin-bottom: 12px;
     }
 
-
     .section-heading p {
       color: var(--muted);
 
       font-size: 15px;
     }
-
 
     .gold-line {
       width: 70px;
@@ -261,9 +250,8 @@
       margin: 18px auto 0;
     }
 
-
     /* =====================================================
-       FEATURED COLLECTION CARDS
+       COLLECTION CARDS
     ====================================================== */
 
     .collection-grid {
@@ -273,16 +261,15 @@
 
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
 
-      gap: 25px;
+      gap: 22px;
     }
-
 
     .collection-card {
       position: relative;
 
-      min-height: 300px;
+      min-height: 310px;
 
       overflow: hidden;
 
@@ -292,7 +279,7 @@
         linear-gradient(
           145deg,
           #111,
-          #272727
+          #292929
         );
 
       border: 1px solid rgba(201, 162, 39, 0.45);
@@ -305,14 +292,12 @@
       transition: 0.4s ease;
     }
 
-
     .collection-card:hover {
       transform: translateY(-8px);
 
       box-shadow:
         0 22px 50px rgba(0, 0, 0, 0.22);
     }
-
 
     .collection-card::before {
       content: "";
@@ -330,7 +315,6 @@
       right: -90px;
     }
 
-
     .collection-card::after {
       content: "";
 
@@ -347,7 +331,6 @@
       left: -70px;
     }
 
-
     .collection-content {
       position: relative;
 
@@ -355,9 +338,9 @@
 
       height: 100%;
 
-      min-height: 300px;
+      min-height: 310px;
 
-      padding: 35px 30px;
+      padding: 30px;
 
       display: flex;
 
@@ -366,24 +349,21 @@
       justify-content: flex-end;
     }
 
-
     .collection-icon {
       font-size: 48px;
 
       margin-bottom: auto;
     }
 
-
     .collection-content h3 {
       color: var(--gold-light);
 
-      font-size: 25px;
+      font-size: 23px;
 
       letter-spacing: 2px;
 
       margin-bottom: 7px;
     }
-
 
     .collection-content p {
       color: #d2d2d2;
@@ -392,7 +372,6 @@
 
       margin-bottom: 20px;
     }
-
 
     .collection-btn {
       width: fit-content;
@@ -412,29 +391,91 @@
       transition: 0.3s;
     }
 
-
     .collection-card:hover .collection-btn {
       background: var(--gold);
 
       color: #111;
     }
 
-
     /* =====================================================
-       PRODUCT PREVIEW SECTION
+       PRODUCTS
     ====================================================== */
 
     .products-section {
       background: #fff;
+
+      display: none;
     }
 
+    .products-section.show {
+      display: block;
+    }
+
+    .selected-collection-info {
+      text-align: center;
+
+      margin-bottom: 35px;
+    }
+
+    .back-to-collections {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      border: 1px solid var(--gold);
+
+      color: #8d6b10;
+
+      background: transparent;
+
+      padding: 9px 17px;
+
+      border-radius: 30px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .back-to-collections:hover {
+      background: var(--gold);
+
+      color: #111;
+    }
 
     .product-category {
       max-width: 1200px;
 
-      margin: 0 auto 65px;
+      margin: auto;
+
+      display: none;
     }
 
+    .product-category.active {
+      display: block;
+
+      animation: fadeCollection 0.45s ease;
+    }
+
+    @keyframes fadeCollection {
+
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
 
     .category-heading {
       display: flex;
@@ -450,13 +491,11 @@
       border-bottom: 1px solid var(--border);
     }
 
-
     .category-heading h3 {
       font-size: 25px;
 
       letter-spacing: 1px;
     }
-
 
     .category-heading span {
       color: #a67e12;
@@ -466,7 +505,6 @@
       font-weight: 700;
     }
 
-
     .product-grid {
       display: grid;
 
@@ -474,7 +512,6 @@
 
       gap: 20px;
     }
-
 
     /* =====================================================
        PRODUCT CARD
@@ -493,16 +530,16 @@
 
       transition: 0.35s ease;
 
-      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.06);
+      box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.06);
     }
-
 
     .product-card:hover {
       transform: translateY(-7px);
 
-      box-shadow: 0 17px 38px rgba(0, 0, 0, 0.13);
+      box-shadow:
+        0 17px 38px rgba(0, 0, 0, 0.13);
     }
-
 
     .product-image {
       position: relative;
@@ -513,7 +550,6 @@
 
       overflow: hidden;
     }
-
 
     .product-image img {
       width: 100%;
@@ -526,11 +562,9 @@
       transition: transform 0.45s ease;
     }
 
-
     .product-card:hover .product-image img {
       transform: scale(1.05);
     }
-
 
     .product-tag {
       position: absolute;
@@ -551,20 +585,19 @@
       font-weight: 800;
 
       letter-spacing: 1px;
-    }
 
+      z-index: 2;
+    }
 
     .product-info {
       padding: 17px;
     }
-
 
     .product-info h4 {
       font-size: 17px;
 
       margin-bottom: 5px;
     }
-
 
     .product-info p {
       color: #888;
@@ -574,7 +607,6 @@
       margin-bottom: 13px;
     }
 
-
     .view-product {
       color: #a57d13;
 
@@ -583,9 +615,8 @@
       font-weight: 800;
     }
 
-
     /* =====================================================
-       PRODUCT DETAIL MODAL
+       PRODUCT MODAL
     ====================================================== */
 
     .product-modal {
@@ -606,11 +637,9 @@
       padding: 20px;
     }
 
-
     .product-modal.active {
       display: flex;
     }
-
 
     .modal-box {
       position: relative;
@@ -625,7 +654,8 @@
 
       border-radius: 22px;
 
-      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
+      box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.4);
 
       display: grid;
 
@@ -633,7 +663,6 @@
 
       overflow: hidden;
     }
-
 
     .modal-close {
       position: absolute;
@@ -659,7 +688,6 @@
       z-index: 5;
     }
 
-
     .modal-gallery {
       background: #f5f2eb;
 
@@ -674,7 +702,6 @@
       justify-content: center;
     }
 
-
     .main-product-image {
       width: 100%;
 
@@ -682,7 +709,6 @@
 
       object-fit: contain;
     }
-
 
     .thumbnail-row {
       display: flex;
@@ -693,7 +719,6 @@
 
       overflow-x: auto;
     }
-
 
     .thumbnail {
       width: 70px;
@@ -712,11 +737,9 @@
       background: white;
     }
 
-
     .thumbnail.active {
       border-color: var(--gold);
     }
-
 
     .modal-details {
       padding: 55px 45px;
@@ -727,7 +750,6 @@
 
       justify-content: center;
     }
-
 
     .modal-label {
       color: #b08a1e;
@@ -741,7 +763,6 @@
       margin-bottom: 10px;
     }
 
-
     .modal-details h2 {
       font-size: 34px;
 
@@ -750,8 +771,7 @@
       margin-bottom: 12px;
     }
 
-
-    .modal-details .modal-description {
+    .modal-description {
       color: #777;
 
       font-size: 15px;
@@ -759,13 +779,11 @@
       margin-bottom: 25px;
     }
 
-
     .detail-list {
       list-style: none;
 
       margin-bottom: 28px;
     }
-
 
     .detail-list li {
       padding: 8px 0;
@@ -777,21 +795,20 @@
       font-size: 14px;
     }
 
-
     .detail-list strong {
       color: #222;
     }
-
 
     .whatsapp-product {
       display: inline-flex;
 
       justify-content: center;
+
       align-items: center;
 
       gap: 8px;
 
-      background: #25D366;
+      background: var(--green);
 
       color: white;
 
@@ -806,13 +823,12 @@
       transition: 0.3s;
     }
 
-
     .whatsapp-product:hover {
       transform: translateY(-2px);
 
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+      box-shadow:
+        0 8px 20px rgba(37, 211, 102, 0.25);
     }
-
 
     /* =====================================================
        WHY US
@@ -824,16 +840,13 @@
       color: white;
     }
 
-
     .why-section .section-heading h2 {
       color: white;
     }
 
-
     .why-section .section-heading p {
       color: #aaa;
     }
-
 
     .why-grid {
       max-width: 1100px;
@@ -847,7 +860,6 @@
       gap: 22px;
     }
 
-
     .why-card {
       padding: 35px 25px;
 
@@ -860,13 +872,11 @@
       background: rgba(255, 255, 255, 0.025);
     }
 
-
     .why-icon {
       font-size: 38px;
 
       margin-bottom: 15px;
     }
-
 
     .why-card h3 {
       color: var(--gold-light);
@@ -874,13 +884,11 @@
       margin-bottom: 8px;
     }
 
-
     .why-card p {
       color: #aaa;
 
       font-size: 14px;
     }
-
 
     /* =====================================================
        SHOWROOMS
@@ -889,7 +897,6 @@
     .stores {
       background: var(--cream);
     }
-
 
     .store-grid {
       max-width: 1150px;
@@ -903,7 +910,6 @@
       gap: 22px;
     }
 
-
     .store-card {
       background: white;
 
@@ -913,18 +919,18 @@
 
       border: 1px solid var(--border);
 
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.05);
 
       transition: 0.3s;
     }
 
-
     .store-card:hover {
       transform: translateY(-6px);
 
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.1);
     }
-
 
     .store-card h3 {
       font-size: 23px;
@@ -932,11 +938,9 @@
       margin-bottom: 12px;
     }
 
-
     .store-card h3 span {
       color: var(--gold);
     }
-
 
     .store-card p {
       color: #666;
@@ -946,7 +950,6 @@
       margin-bottom: 20px;
     }
 
-
     .store-buttons {
       display: flex;
 
@@ -954,7 +957,6 @@
 
       flex-wrap: wrap;
     }
-
 
     .store-btn {
       display: inline-block;
@@ -974,13 +976,11 @@
       transition: 0.3s;
     }
 
-
     .store-btn:hover {
       background: var(--gold);
 
       color: #111;
     }
-
 
     /* =====================================================
        CONTACT
@@ -996,7 +996,6 @@
       padding: 75px 20px;
     }
 
-
     .contact h2 {
       color: var(--gold-light);
 
@@ -1005,13 +1004,11 @@
       margin-bottom: 12px;
     }
 
-
     .contact p {
       color: #bbb;
 
       margin-bottom: 25px;
     }
-
 
     .contact-btn {
       display: inline-flex;
@@ -1020,7 +1017,7 @@
 
       gap: 8px;
 
-      background: #25D366;
+      background: var(--green);
 
       color: white;
 
@@ -1030,7 +1027,6 @@
 
       font-weight: 800;
     }
-
 
     /* =====================================================
        FOOTER
@@ -1048,11 +1044,9 @@
       font-size: 13px;
     }
 
-
     footer strong {
       color: var(--gold);
     }
-
 
     /* =====================================================
        FLOATING WHATSAPP
@@ -1072,47 +1066,39 @@
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
-      background: #25D366;
+      background: var(--green);
 
       color: white;
 
       font-size: 27px;
 
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.25);
 
       z-index: 15000;
 
       transition: 0.3s;
     }
 
-
     .whatsapp-float:hover {
       transform: scale(1.1);
     }
-
 
     /* =====================================================
        MOBILE
     ====================================================== */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
 
       .collection-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .store-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .modal-box {
@@ -1129,6 +1115,21 @@
 
     }
 
+    @media (max-width: 800px) {
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .store-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
 
     @media (max-width: 650px) {
 
@@ -1136,39 +1137,32 @@
         padding: 10px 14px;
       }
 
-
       .logo {
-        font-size: 13px;
+        font-size: 12px;
 
         gap: 7px;
       }
-
 
       .logo img {
         width: 36px;
         height: 36px;
       }
 
-
       .nav-links {
         gap: 9px;
       }
-
 
       .nav-links a {
         font-size: 10px;
       }
 
-
       .intro {
         padding: 50px 18px 35px;
       }
 
-
       .section {
         padding: 55px 18px;
       }
-
 
       .collection-grid {
         grid-template-columns: 1fr;
@@ -1176,11 +1170,9 @@
         gap: 18px;
       }
 
-
       .collection-card {
         min-height: 240px;
       }
-
 
       .collection-content {
         min-height: 240px;
@@ -1188,53 +1180,43 @@
         padding: 28px;
       }
 
-
       .product-grid {
         grid-template-columns: 1fr 1fr;
 
         gap: 12px;
       }
 
-
       .product-image {
         height: 190px;
       }
-
 
       .product-info {
         padding: 12px;
       }
 
-
       .product-info h4 {
         font-size: 14px;
       }
-
 
       .product-info p {
         font-size: 11px;
       }
 
-
       .category-heading h3 {
         font-size: 20px;
       }
-
 
       .category-heading span {
         font-size: 10px;
       }
 
-
       .why-grid {
         grid-template-columns: 1fr;
       }
 
-
       .store-grid {
         grid-template-columns: 1fr;
       }
-
 
       .modal-box {
         max-height: 95vh;
@@ -1242,26 +1224,21 @@
         border-radius: 15px;
       }
 
-
       .modal-gallery {
         padding: 18px;
       }
-
 
       .main-product-image {
         height: 300px;
       }
 
-
       .modal-details {
         padding: 28px 22px;
       }
 
-
       .modal-details h2 {
         font-size: 27px;
       }
-
 
       .whatsapp-float {
         width: 52px;
@@ -1322,9 +1299,8 @@
   </nav>
 
 
-
   <!-- =====================================================
-       HERO BANNER
+       HERO
   ====================================================== -->
 
   <header class="hero">
@@ -1337,1235 +1313,4 @@
   </header>
 
 
-
-  <!-- =====================================================
-       INTRO
-  ====================================================== -->
-
-  <div class="intro">
-
-    <div class="intro-label">
-      PREMIUM 1 GRAM JEWELLERY
-    </div>
-
-    <h1>
-      KK 1 Gram Jewellers
-    </h1>
-
-    <p>
-      Discover elegant jewellery collections designed
-      to make every special moment shine.
-    </p>
-
-  </div>
-
-
-
-  <!-- =====================================================
-       COLLECTION CATEGORIES
-  ====================================================== -->
-
-  <section
-    class="section"
-    id="collections"
-  >
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        EXPLORE
-      </div>
-
-      <h2>
-        Our Collections
-      </h2>
-
-      <p>
-        Choose a jewellery collection and explore our designs.
-      </p>
-
-      <div class="gold-line"></div>
-
-    </div>
-
-
-    <div class="collection-grid">
-
-
-      <!-- NECKLACES -->
-
-      <div
-        class="collection-card"
-        onclick="scrollToProducts('necklaces')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            💎
-          </div>
-
-          <h3>
-            NECKLACES
-          </h3>
-
-          <p>
-            Elegant necklace sets for every occasion.
-          </p>
-
-          <span class="collection-btn">
-            VIEW COLLECTION →
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- BANGLES -->
-
-      <div
-        class="collection-card"
-        onclick="showComingSoon('Bangles')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            ✨
-          </div>
-
-          <h3>
-            BANGLES
-          </h3>
-
-          <p>
-            Premium 1 gram bangle designs.
-          </p>
-
-          <span class="collection-btn">
-            VIEW COLLECTION →
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- EARRINGS -->
-
-      <div
-        class="collection-card"
-        onclick="showComingSoon('Earrings')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            💫
-          </div>
-
-          <h3>
-            EARRINGS
-          </h3>
-
-          <p>
-            Stylish earrings with elegant finishing.
-          </p>
-
-          <span class="collection-btn">
-            VIEW COLLECTION →
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- RINGS -->
-
-      <div
-        class="collection-card"
-        onclick="showComingSoon('Rings')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            💍
-          </div>
-
-          <h3>
-            RINGS
-          </h3>
-
-          <p>
-            Beautiful designs for everyday elegance.
-          </p>
-
-          <span class="collection-btn">
-            VIEW COLLECTION →
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- BRIDAL -->
-
-      <div
-        class="collection-card"
-        onclick="showComingSoon('Bridal')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            👑
-          </div>
-
-          <h3>
-            BRIDAL
-          </h3>
-
-          <p>
-            Special jewellery for your memorable day.
-          </p>
-
-          <span class="collection-btn">
-            VIEW COLLECTION →
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- NEW ARRIVALS -->
-
-      <div
-        class="collection-card"
-        onclick="scrollToProducts('necklaces')"
-      >
-
-        <div class="collection-content">
-
-          <div class="collection-icon">
-            🌟
-          </div>
-
-          <h3>
-            NEW ARRIVALS
-          </h3>
-
-          <p>
-            Explore our latest jewellery designs.
-          </p>
-
-          <span class="collection-btn">
-            VIEW COLLECTION →
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       PRODUCT SECTION
-  ====================================================== -->
-
-  <section
-    class="section products-section"
-    id="products"
-  >
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        KK JEWELLERS
-      </div>
-
-      <h2>
-        Featured Jewellery
-      </h2>
-
-      <p>
-        Tap any product to view the complete design.
-      </p>
-
-      <div class="gold-line"></div>
-
-    </div>
-
-
-    <!-- ===================================================
-         NECKLACE PRODUCTS
-    ==================================================== -->
-
-    <div
-      class="product-category"
-      id="necklaces"
-    >
-
-      <div class="category-heading">
-
-        <h3>
-          Necklace Collection
-        </h3>
-
-        <span>
-          PREMIUM DESIGNS
-        </span>
-
-      </div>
-
-
-      <div class="product-grid">
-
-
-        <!-- PRODUCT 1 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(0)"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="images/necklaces/SHORT%20SET%201.jpeg"
-              alt="Premium Necklace Set"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Classic Necklace Set
-            </h4>
-
-            <p>
-              Premium 1 Gram Jewellery
-            </p>
-
-            <span class="view-product">
-              VIEW DETAILS →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 2 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(1)"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="images/necklaces/SHORT%20SET%202.jpeg"
-              alt="Elegant Necklace Set"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Elegant Necklace Set
-            </h4>
-
-            <p>
-              Premium Collection
-            </p>
-
-            <span class="view-product">
-              VIEW DETAILS →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(2)"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="images/necklaces/SHORT%20SET%203.jpeg"
-              alt="Designer Necklace Set"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Designer Necklace Set
-            </h4>
-
-            <p>
-              Elegant Collection
-            </p>
-
-            <span class="view-product">
-              VIEW DETAILS →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 4 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(3)"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="images/necklaces/SHORT%20SET%204.jpeg"
-              alt="Latest Necklace Design"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              Latest Necklace Design
-            </h4>
-
-            <p>
-              Latest Collection
-            </p>
-
-            <span class="view-product">
-              VIEW DETAILS →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PRODUCT 5 -->
-
-        <div
-          class="product-card"
-          onclick="openProduct(4)"
-        >
-
-          <div class="product-image">
-
-            <span class="product-tag">
-              NEW
-            </span>
-
-            <img
-              src="images/necklaces/SHORT%20SET%205.jpeg"
-              alt="New Arrival Necklace"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <h4>
-              New Arrival Necklace
-            </h4>
-
-            <p>
-              Premium Design
-            </p>
-
-            <span class="view-product">
-              VIEW DETAILS →
-            </span>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =====================================================
-       WHY US
-  ====================================================== -->
-
-  <section class="section why-section">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        OUR PROMISE
-      </div>
-
-      <h2>
-        Why KK 1 Gram Jewellers?
-      </h2>
-
-      <p>
-        Designed for elegance, style and special moments.
-      </p>
-
-      <div class="gold-line"></div>
-
-    </div>
-
-
-    <div class="why-grid">
-
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          ✨
-        </div>
-
-        <h3>
-          Premium Designs
-        </h3>
-
-        <p>
-          Beautiful jewellery designs created
-          for modern style and elegance.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          💎
-        </div>
-
-        <h3>
-          Elegant Finishing
-        </h3>
-
-        <p>
-          Detailed finishing and attractive designs
-          for your special occasions.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="why-icon">
-          👑
-        </div>
-
-        <h3>
-          Wide Collection
-        </h3>
-
-        <p>
-          Explore necklaces, earrings, bangles,
-          rings and bridal jewellery.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       SHOWROOMS
-  ====================================================== -->
-
-  <section
-    class="section stores"
-    id="stores"
-  >
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        VISIT US
-      </div>
-
-      <h2>
-        Our Showrooms
-      </h2>
-
-      <p>
-        Visit your nearest KK 1 Gram Jewellers showroom.
-      </p>
-
-      <div class="gold-line"></div>
-
-    </div>
-
-
-    <div class="store-grid">
-
-
-      <!-- MEHSANA -->
-
-      <div class="store-card">
-
-        <h3>
-          <span>📍</span>
-          Mehsana
-        </h3>
-
-        <p>
-          ST Workshop Road,<br>
-          Opp. Surya Complex,<br>
-          Mehsana, Gujarat
-        </p>
-
-        <div class="store-buttons">
-
-          <a
-            class="store-btn"
-            href="tel:8140136434"
-          >
-            Call Store
-          </a>
-
-          <a
-            class="store-btn"
-            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Mehsana"
-            target="_blank"
-          >
-            Directions
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- PALANPUR -->
-
-      <div class="store-card">
-
-        <h3>
-          <span>📍</span>
-          Palanpur
-        </h3>
-
-        <p>
-          Guru Nanak Chowk,<br>
-          C M Complex,<br>
-          Palanpur, Gujarat
-        </p>
-
-        <div class="store-buttons">
-
-          <a
-            class="store-btn"
-            href="tel:8140136453"
-          >
-            Call Store
-          </a>
-
-          <a
-            class="store-btn"
-            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Palanpur"
-            target="_blank"
-          >
-            Directions
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- KALOL -->
-
-      <div class="store-card">
-
-        <h3>
-          <span>📍</span>
-          Kalol
-        </h3>
-
-        <p>
-          Jivabhai Market,<br>
-          F.F. 5-6, Opp. HDFC Bank,<br>
-          Navin Mill Compound, Kalol
-        </p>
-
-        <div class="store-buttons">
-
-          <a
-            class="store-btn"
-            href="tel:8140136435"
-          >
-            Call Store
-          </a>
-
-          <a
-            class="store-btn"
-            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Kalol"
-            target="_blank"
-          >
-            Directions
-          </a>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       CONTACT
-  ====================================================== -->
-
-  <section
-    class="contact"
-    id="contact"
-  >
-
-    <h2>
-      Find Your Perfect Jewellery
-    </h2>
-
-    <p>
-      Have a design in mind? Contact KK 1 Gram Jewellers
-      for product details and enquiries.
-    </p>
-
-    <a
-      class="contact-btn"
-      href="https://wa.me/918140136435"
-      target="_blank"
-    >
-      💬 WhatsApp Us
-    </a>
-
-  </section>
-
-
-
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
-
-  <footer>
-
-    <p>
-      © 2026
-      <strong>KK 1 Gram Jewellers</strong>.
-      All Rights Reserved.
-    </p>
-
-    <p>
-      Premium 1 Gram Jewellery
-    </p>
-
-  </footer>
-
-
-
-  <!-- =====================================================
-       FLOATING WHATSAPP
-  ====================================================== -->
-
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/918140136435"
-    target="_blank"
-    aria-label="WhatsApp KK 1 Gram Jewellers"
-  >
-    💬
-  </a>
-
-
-
-  <!-- =====================================================
-       PRODUCT DETAIL MODAL
-  ====================================================== -->
-
-  <div
-    class="product-modal"
-    id="productModal"
-  >
-
-    <div class="modal-box">
-
-
-      <button
-        class="modal-close"
-        onclick="closeProduct()"
-        aria-label="Close"
-      >
-        ×
-      </button>
-
-
-      <!-- GALLERY -->
-
-      <div class="modal-gallery">
-
-        <img
-          id="mainProductImage"
-          class="main-product-image"
-          src=""
-          alt="Jewellery Product"
-        >
-
-
-        <div
-          class="thumbnail-row"
-          id="thumbnailRow"
-        ></div>
-
-      </div>
-
-
-      <!-- DETAILS -->
-
-      <div class="modal-details">
-
-        <div class="modal-label">
-          KK 1 GRAM JEWELLERS
-        </div>
-
-
-        <h2 id="modalProductTitle">
-          Product Name
-        </h2>
-
-
-        <p
-          class="modal-description"
-          id="modalProductDescription"
-        >
-          Premium 1 Gram Jewellery design.
-        </p>
-
-
-        <ul class="detail-list">
-
-          <li>
-            <strong>Category:</strong>
-            <span id="modalCategory">
-              Necklace
-            </span>
-          </li>
-
-          <li>
-            <strong>Collection:</strong>
-            Premium Collection
-          </li>
-
-          <li>
-            <strong>Availability:</strong>
-            Contact for details
-          </li>
-
-        </ul>
-
-
-        <a
-          id="productWhatsapp"
-          class="whatsapp-product"
-          href="#"
-          target="_blank"
-        >
-          💬 Enquire on WhatsApp
-        </a>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =====================================================
-       JAVASCRIPT
-  ====================================================== -->
-
-  <script>
-
-
-    /* =====================================================
-       PRODUCT DATA
-    ====================================================== */
-
-    const products = [
-
-      {
-        title: "Classic Necklace Set",
-
-        category: "Necklace",
-
-        description:
-          "Elegant 1 Gram Necklace Set with a premium traditional finish.",
-
-        images: [
-          "images/necklaces/SHORT%20SET%201.jpeg"
-        ]
-      },
-
-
-      {
-        title: "Elegant Necklace Set",
-
-        category: "Necklace",
-
-        description:
-          "Beautiful necklace design suitable for festive and special occasions.",
-
-        images: [
-          "images/necklaces/SHORT%20SET%202.jpeg"
-        ]
-      },
-
-
-      {
-        title: "Designer Necklace Set",
-
-        category: "Necklace",
-
-        description:
-          "Stylish designer necklace from our premium jewellery collection.",
-
-        images: [
-          "images/necklaces/SHORT%20SET%203.jpeg"
-        ]
-      },
-
-
-      {
-        title: "Latest Necklace Design",
-
-        category: "Necklace",
-
-        description:
-          "Latest jewellery design with an elegant and modern appearance.",
-
-        images: [
-          "images/necklaces/SHORT%20SET%204.jpeg"
-        ]
-      },
-
-
-      {
-        title: "New Arrival Necklace",
-
-        category: "Necklace",
-
-        description:
-          "New arrival jewellery design from KK 1 Gram Jewellers.",
-
-        images: [
-          "images/necklaces/SHORT%20SET%205.jpeg"
-        ]
-      }
-
-    ];
-
-
-
-    /* =====================================================
-       OPEN PRODUCT
-    ====================================================== */
-
-    function openProduct(index) {
-
-      const product = products[index];
-
-      if (!product) {
-        return;
-      }
-
-
-      document.getElementById(
-        "modalProductTitle"
-      ).textContent = product.title;
-
-
-      document.getElementById(
-        "modalProductDescription"
-      ).textContent = product.description;
-
-
-      document.getElementById(
-        "modalCategory"
-      ).textContent = product.category;
-
-
-      const mainImage =
-        document.getElementById(
-          "mainProductImage"
-        );
-
-
-      mainImage.src =
-        product.images[0];
-
-
-      mainImage.alt =
-        product.title;
-
-
-      const thumbnailRow =
-        document.getElementById(
-          "thumbnailRow"
-        );
-
-
-      thumbnailRow.innerHTML = "";
-
-
-      product.images.forEach(
-        function (image, imageIndex) {
-
-          const thumbnail =
-            document.createElement("img");
-
-
-          thumbnail.src = image;
-
-
-          thumbnail.className =
-            "thumbnail";
-
-
-          if (imageIndex === 0) {
-
-            thumbnail.classList.add(
-              "active"
-            );
-
-          }
-
-
-          thumbnail.onclick =
-            function () {
-
-              mainImage.src =
-                image;
-
-
-              document
-                .querySelectorAll(".thumbnail")
-                .forEach(
-                  function (item) {
-
-                    item.classList.remove(
-                      "active"
-                    );
-
-                  }
-                );
-
-
-              thumbnail.classList.add(
-                "active"
-              );
-
-            };
-
-
-          thumbnailRow.appendChild(
-            thumbnail
-          );
-
-        }
-      );
-
-
-      const whatsappText =
-        encodeURIComponent(
-          "Hello KK 1 Gram Jewellers, I am interested in: " +
-          product.title
-        );
-
-
-      document.getElementById(
-        "productWhatsapp"
-      ).href =
-        "https://wa.me/918140136435?text=" +
-        whatsappText;
-
-
-      document
-        .getElementById("productModal")
-        .classList.add("active");
-
-
-      document.body.style.overflow =
-        "hidden";
-
-    }
-
-
-
-    /* =====================================================
-       CLOSE PRODUCT
-    ====================================================== */
-
-    function closeProduct() {
-
-      document
-        .getElementById("productModal")
-        .classList.remove("active");
-
-
-      document.body.style.overflow =
-        "";
-
-    }
-
-
-
-    /* =====================================================
-       CLICK OUTSIDE MODAL TO CLOSE
-    ====================================================== */
-
-    document
-      .getElementById("productModal")
-      .addEventListener(
-        "click",
-        function (event) {
-
-          if (
-            event.target ===
-            this
-          ) {
-
-            closeProduct();
-
-          }
-
-        }
-      );
-
-
-
-    /* =====================================================
-       ESC KEY TO CLOSE
-    ====================================================== */
-
-    document.addEventListener(
-      "keydown",
-      function (event) {
-
-        if (
-          event.key === "Escape"
-        ) {
-
-          closeProduct();
-
-        }
-
-      }
-    );
-
-
-
-    /* =====================================================
-       SCROLL TO PRODUCTS
-    ====================================================== */
-
-    function scrollToProducts(
-      category
-    ) {
-
-      const section =
-        document.getElementById(
-          category
-        );
-
-
-      if (section) {
-
-        section.scrollIntoView({
-          behavior: "smooth"
-        });
-
-      }
-
-    }
-
-
-
-    /* =====================================================
-       COMING SOON MESSAGE
-    ====================================================== */
-
-    function showComingSoon(
-      category
-    ) {
-
-      alert(
-        category +
-        " collection will be added soon. Please contact us on WhatsApp for available designs."
-      );
-
-    }
-
-  </script>
-
-
-</body>
-
-</html>
+  <!--
