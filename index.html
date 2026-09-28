@@ -1,152 +1,1434 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KK 1 Gram Jewellers | Mehsana • Palanpur • Kalol</title>
-<meta name="description" content="KK 1 Gram Jewellers — jewellery collections in Mehsana, Palanpur and Kalol.">
-<style>
-:root{--gold:#c99a2e;--dark:#111;--cream:#fffaf0;--muted:#666}
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:#171717}
-nav{position:sticky;top:0;z-index:10;background:#111;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;box-shadow:0 2px 12px #0003}
-.logo{font-weight:800;color:#e6bd58;letter-spacing:.5px;font-size:20px}
-nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px}
-.hero{
-  min-height:78vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:0;
-  background:
-    linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
-    url('banner.jpg.jpg') center center/cover no-repeat;
-  color:white;
-}
-.hero h1{font-size:clamp(38px,7vw,76px);margin:10px 0;color:#f1c75b}
-.hero p{font-size:20px;max-width:700px;margin:0 auto 28px;color:#eee}
-.btn{display:inline-block;background:var(--gold);color:#111;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:700;margin:5px}
-.btn.dark{background:#fff;color:#111}
-section{padding:65px 6%;max-width:1200px;margin:auto}
-.title{text-align:center;margin-bottom:35px}.title h2{font-size:34px;margin:0 0 8px}.title p{color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#fff;border:1px solid #eadbb8;border-radius:18px;padding:24px;box-shadow:0 8px 30px #0000000d}
-.card h3{margin-top:0;color:#9b711a}.card p{line-height:1.6;color:#555}
-.product{height:240px;border-radius:16px;background:linear-gradient(135deg,#21180a,#d2a63a,#fff2bd,#8b651d);display:grid;place-items:center;color:#fff;font-size:26px;font-weight:800;text-shadow:0 2px 8px #000}
-.branch a{color:#9b711a;font-weight:700;text-decoration:none}
-footer{background:#111;color:#ddd;text-align:center;padding:35px 6%}footer strong{color:#e6bd58}
-.whatsapp{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;text-decoration:none;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;font-size:25px;box-shadow:0 5px 18px #0004}
-@media(max-width:700px){nav a{display:none}.hero{min-height:70vh}section{padding:50px 5%}}
-</style>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KK 1 Gram Jewellers | Premium 1 Gram Jewellery</title>
+
+  <meta name="description"
+    content="KK 1 Gram Jewellers - Premium 1 Gram Jewellery collections in Mehsana, Palanpur and Kalol.">
+
+  <style>
+
+    /* =========================
+       BASIC RESET
+    ========================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf2;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       COLORS
+    ========================== */
+
+    :root {
+      --black: #111111;
+      --dark: #181818;
+      --gold: #d4af37;
+      --gold-light: #f4d77b;
+      --cream: #fffaf2;
+      --white: #ffffff;
+      --text: #222222;
+      --muted: #777777;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      width: 100%;
+
+      background: rgba(17, 17, 17, 0.97);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 13px 5%;
+
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      color: var(--gold-light);
+
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo img {
+      width: 43px;
+      height: 43px;
+
+      object-fit: cover;
+
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+
+    /* =========================
+       PREMIUM BANNER
+    ========================== */
+
+    .hero {
+      width: 100%;
+      background: #111111;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+
+      display: block;
+
+      object-fit: cover;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================== */
+
+    .intro {
+      text-align: center;
+
+      padding: 70px 20px 30px;
+
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .small-gold {
+      color: #b28a20;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      letter-spacing: 4px;
+
+      margin-bottom: 10px;
+    }
+
+    .intro h1 {
+      font-size: clamp(32px, 5vw, 52px);
+
+      color: #171717;
+
+      margin-bottom: 12px;
+
+      font-weight: 800;
+    }
+
+    .intro p {
+      color: var(--muted);
+
+      max-width: 720px;
+
+      margin: auto;
+
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       SECTION
+    ========================== */
+
+    section {
+      padding: 70px 6%;
+    }
+
+    .section-heading {
+      text-align: center;
+
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 4vw, 42px);
+
+      color: #171717;
+
+      margin-bottom: 10px;
+
+      font-weight: 800;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+
+      font-size: 16px;
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 3px;
+
+      background: var(--gold);
+
+      margin: 18px auto 0;
+    }
+
+
+    /* =========================
+       COLLECTION CATEGORY TITLE
+    ========================== */
+
+    .collection-title {
+      text-align: center;
+
+      margin-bottom: 35px;
+
+      font-size: 24px;
+
+      letter-spacing: 4px;
+
+      color: #222;
+
+      font-weight: 800;
+    }
+
+
+    /* =========================
+       JEWELLERY GRID
+    ========================== */
+
+    .jewellery-grid {
+      max-width: 1250px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 28px;
+    }
+
+
+    /* =========================
+       JEWELLERY CARD
+    ========================== */
+
+    .jewellery-card {
+      background: #ffffff;
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      border: 1px solid #eeeeee;
+
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+
+      transition: 0.35s ease;
+    }
+
+    .jewellery-card:hover {
+      transform: translateY(-8px);
+
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .jewellery-card a {
+      display: block;
+
+      overflow: hidden;
+    }
+
+    .jewellery-card img {
+      width: 100%;
+
+      height: 300px;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: transform 0.5s ease;
+
+      cursor: pointer;
+    }
+
+    .jewellery-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .card-info {
+      text-align: center;
+
+      padding: 18px 12px 21px;
+
+      background: #ffffff;
+    }
+
+    .card-info h3 {
+      color: #222;
+
+      font-size: 18px;
+
+      margin-bottom: 5px;
+    }
+
+    .card-info p {
+      color: #888;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       OTHER CATEGORY CARDS
+    ========================== */
+
+    .category-grid {
+      max-width: 1250px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .category-card {
+      min-height: 210px;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #171717,
+          #292929
+        );
+
+      border: 1px solid #d4af37;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      position: relative;
+
+      overflow: hidden;
+
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+      transition: 0.3s ease;
+    }
+
+    .category-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+      height: 250px;
+
+      border-radius: 50%;
+
+      background: rgba(212, 175, 55, 0.08);
+
+      top: -100px;
+      right: -80px;
+    }
+
+    .category-card:hover {
+      transform: translateY(-7px);
+
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-content {
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .category-content h3 {
+      color: #f4d77b;
+
+      font-size: 25px;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 8px;
+    }
+
+    .category-content p {
+      color: #dddddd;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       WHY US
+    ========================== */
+
+    .why-section {
+      background: #171717;
+
+      color: white;
+    }
+
+    .why-section .section-heading h2 {
+      color: white;
+    }
+
+    .why-section .section-heading p {
+      color: #bbbbbb;
+    }
+
+    .why-grid {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .why-card {
+      text-align: center;
+
+      padding: 35px 25px;
+
+      border: 1px solid rgba(212, 175, 55, 0.4);
+
+      border-radius: 15px;
+
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .why-card .icon {
+      font-size: 38px;
+
+      margin-bottom: 15px;
+    }
+
+    .why-card h3 {
+      color: #f4d77b;
+
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: #bbbbbb;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       STORES
+    ========================== */
+
+    .stores {
+      background: #fffaf2;
+    }
+
+    .store-grid {
+      max-width: 1150px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .store-card {
+      background: white;
+
+      padding: 30px 25px;
+
+      border-radius: 16px;
+
+      border: 1px solid #e7e0d1;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+      transition: 0.3s;
+    }
+
+    .store-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .store-card h3 {
+      font-size: 23px;
+
+      color: #222;
+
+      margin-bottom: 12px;
+    }
+
+    .store-card h3 span {
+      color: #d4af37;
+    }
+
+    .store-card p {
+      color: #666;
+
+      font-size: 14px;
+
+      margin-bottom: 15px;
+    }
+
+    .call-btn {
+      display: inline-block;
+
+      background: #111111;
+
+      color: white;
+
+      padding: 10px 18px;
+
+      border-radius: 7px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .call-btn:hover {
+      background: #d4af37;
+
+      color: #111111;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-section {
+      background: #111111;
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 38px;
+
+      color: #f4d77b;
+
+      margin-bottom: 12px;
+    }
+
+    .contact-section p {
+      color: #cccccc;
+
+      margin-bottom: 25px;
+    }
+
+    .whatsapp-main {
+      display: inline-block;
+
+      background: #25D366;
+
+      color: white;
+
+      padding: 13px 25px;
+
+      border-radius: 8px;
+
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .whatsapp-main:hover {
+      transform: scale(1.04);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #080808;
+
+      color: #999;
+
+      text-align: center;
+
+      padding: 25px 15px;
+
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================== */
+
+    .whatsapp-float {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      width: 58px;
+      height: 58px;
+
+      border-radius: 50%;
+
+      background: #25D366;
+
+      color: white;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 28px;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+      z-index: 2000;
+
+      transition: 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 1000px) {
+
+      .jewellery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .store-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      nav {
+        padding: 11px 15px;
+      }
+
+      .logo {
+        font-size: 16px;
+
+        gap: 7px;
+      }
+
+      .logo img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .nav-links {
+        gap: 10px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .intro {
+        padding: 50px 18px 20px;
+      }
+
+      section {
+        padding: 55px 18px;
+      }
+
+      .jewellery-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+      }
+
+      .jewellery-card img {
+        height: auto;
+
+        max-height: 500px;
+
+        object-fit: contain;
+
+        background: #f8f5ef;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .store-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 30px;
+      }
+
+      .collection-title {
+        font-size: 21px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-<nav>
-<div class="logo"><img src="kk-logo.jpg" alt="KK 1 Gram Jewellers Logo" style="height:42px;width:42px;object-fit:cover;border-radius:8px;vertical-align:middle;margin-right:8px"> KK 1 GRAM JEWELLERS</div>
-<div><a href="#collections">Collections</a><a href="#branches">Branches</a><a href="#contact">Contact</a></div>
-</nav>
 
-<header class="hero">
-</header>
 
-<section id="collections" class="collections-section">
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
 
-  <div class="section-heading">
-    <h2>Our Jewellery Collection</h2>
-    <p>Explore our latest 1 Gram Jewellery designs</p>
-  </div>
+  <nav>
 
-  <h3 class="collection-name">NECKLACES</h3>
+    <a href="#" class="logo">
 
-  <div class="jewellery-grid">
+      <img
+        src="kk-logo.jpg"
+        alt="KK 1 Gram Jewellers Logo">
 
-    <div class="jewellery-card">
-      <a href="images/necklaces/SHORT%20SET%201.jpeg" target="_blank">
-        <img src="images/necklaces/SHORT%20SET%201.jpeg" alt="Necklace Set 1">
-      </a>
-      <div class="card-info">
-        <h4>Necklace Set</h4>
-        <p>Premium 1 Gram Jewellery</p>
-      </div>
+      <span>KK 1 GRAM JEWELLERS</span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="#collections">Collections</a>
+
+      <a href="#stores">Branches</a>
+
+      <a href="#contact">Contact</a>
+
     </div>
 
-    <div class="jewellery-card">
-      <a href="images/necklaces/SHORT%20SET%202.jpeg" target="_blank">
-        <img src="images/necklaces/SHORT%20SET%202.jpeg" alt="Necklace Set 2">
-      </a>
-      <div class="card-info">
-        <h4>Necklace Set</h4>
-        <p>Elegant Collection</p>
-      </div>
+  </nav>
+
+
+
+  <!-- =========================
+       PREMIUM BANNER
+  ========================== -->
+
+  <header class="hero">
+
+    <img
+      src="banner.jpg.jpg"
+      alt="KK 1 Gram Jewellers Premium Jewellery Banner">
+
+  </header>
+
+
+
+  <!-- =========================
+       INTRO
+  ========================== -->
+
+  <div class="intro">
+
+    <div class="small-gold">
+      PREMIUM 1 GRAM JEWELLERY
     </div>
 
-    <div class="jewellery-card">
-      <a href="images/necklaces/SHORT%20SET%203.jpeg" target="_blank">
-        <img src="images/necklaces/SHORT%20SET%203.jpeg" alt="Necklace Set 3">
-      </a>
-      <div class="card-info">
-        <h4>Necklace Set</h4>
-        <p>Premium Collection</p>
-      </div>
-    </div>
+    <h1>
+      KK 1 Gram Jewellers
+    </h1>
 
-    <div class="jewellery-card">
-      <a href="images/necklaces/SHORT%20SET%204.jpeg" target="_blank">
-        <img src="images/necklaces/SHORT%20SET%204.jpeg" alt="Necklace Set 4">
-      </a>
-      <div class="card-info">
-        <h4>Necklace Set</h4>
-        <p>Latest Design</p>
-      </div>
-    </div>
-
-    <div class="jewellery-card">
-      <a href="images/necklaces/SHORT%20SET%205.jpeg" target="_blank">
-        <img src="images/necklaces/SHORT%20SET%205.jpeg" alt="Necklace Set 5">
-      </a>
-      <div class="card-info">
-        <h4>Necklace Set</h4>
-        <p>New Arrival</p>
-      </div>
-    </div>
+    <p>
+      Discover elegant and stylish jewellery collections
+      crafted for your special moments.
+    </p>
 
   </div>
 
-</section>
-<div><div class="product">BANGLES</div></div>
-<div><div class="product">EARRINGS</div></div>
-<div><div class="product">RINGS</div></div>
-<div><div class="product">BRIDAL</div></div>
-<div><div class="product">NEW ARRIVALS</div></div>
-</div>
-</section>
 
-<section id="branches">
-<div class="title"><h2>Our Stores</h2><p>Visit your nearest KK 1 Gram Jewellers showroom.</p></div>
-<div class="grid">
-<div class="card branch"><h3>📍 Mehsana</h3><p>ST Workshop Road, Opp. Surya Complex, Mehsana, Gujarat</p><a href="tel:8140136434">Call Store</a></div>
-<div class="card branch"><h3>📍 Palanpur</h3><p>Guru Nanak Chowk, C M Complex, Palanpur, Gujarat</p><a href="tel:8140136453">Call Store</a></div>
-<div class="card branch"><h3>📍 Kalol</h3><p>Jivabhai Market, F.F. 5-6, Opp. HDFC Bank, Navjivan Mill Compound, Memon Market, Kalol, Gujarat – 382721</p><p><strong>MO: 8140136435</strong></p><a href="https://maps.app.goo.gl/W9jJkdr8yHZDbbj78?g_st=ac" target="_blank">Open in Google Maps →</a></div>
-</div>
-</section>
 
-<section>
-<div class="title"><h2>Why KK 1 Gram Jewellers?</h2></div>
-<div class="grid">
-<div class="card"><h3>✨ Stylish Designs</h3><p>Discover jewellery styles for everyday wear, celebrations and bridal occasions.</p></div>
-<div class="card"><h3>💛 Elegant Finishing</h3><p>Showcase your favourite designs with a premium jewellery experience.</p></div>
-<div class="card"><h3>🤝 Personal Service</h3><p>Visit any of our three stores and explore the collection in person.</p></div>
-</div>
-</section>
+  <!-- =========================
+       COLLECTIONS
+  ========================== -->
 
-<section id="contact">
-<div class="title"><h2>Contact KK 1 Gram Jewellers</h2><p>For enquiries and showroom information.</p></div>
-<div style="text-align:center">
-<a class="btn" href="tel:8140136435">📞 Call 8140136435</a>
-<a class="btn" href="https://wa.me/918140136435?text=Hello%20KK%201%20Gram%20Jewellers%2C%20I%20want%20to%20know%20more%20about%20your%20jewellery%20collection." target="_blank">💬 WhatsApp</a>
-</div>
-</section>
+  <section id="collections">
 
-<footer><strong>KK 1 Gram Jewellers</strong><br>Mehsana • Palanpur • Kalol<br><small>© 2026 KK 1 Gram Jewellers. All rights reserved.</small></footer>
-<a class="whatsapp" href="https://wa.me/918140136435" target="_blank" aria-label="WhatsApp">✆</a>
+    <div class="section-heading">
+
+      <h2>
+        Our Jewellery Collection
+      </h2>
+
+      <p>
+        Explore our latest 1 Gram Jewellery designs
+      </p>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <!-- NECKLACES -->
+
+    <h3 class="collection-title">
+      NECKLACES
+    </h3>
+
+
+    <div class="jewellery-grid">
+
+
+      <!-- NECKLACE 1 -->
+
+      <div class="jewellery-card">
+
+        <a
+          href="images/necklaces/SHORT%20SET%201.jpeg"
+          target="_blank">
+
+          <img
+            src="images/necklaces/SHORT%20SET%201.jpeg"
+            alt="KK 1 Gram Jewellers Necklace Set 1">
+
+        </a>
+
+        <div class="card-info">
+
+          <h3>
+            Necklace Set
+          </h3>
+
+          <p>
+            Premium 1 Gram Jewellery
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- NECKLACE 2 -->
+
+      <div class="jewellery-card">
+
+        <a
+          href="images/necklaces/SHORT%20SET%202.jpeg"
+          target="_blank">
+
+          <img
+            src="images/necklaces/SHORT%20SET%202.jpeg"
+            alt="KK 1 Gram Jewellers Necklace Set 2">
+
+        </a>
+
+        <div class="card-info">
+
+          <h3>
+            Necklace Set
+          </h3>
+
+          <p>
+            Elegant Collection
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- NECKLACE 3 -->
+
+      <div class="jewellery-card">
+
+        <a
+          href="images/necklaces/SHORT%20SET%203.jpeg"
+          target="_blank">
+
+          <img
+            src="images/necklaces/SHORT%20SET%203.jpeg"
+            alt="KK 1 Gram Jewellers Necklace Set 3">
+
+        </a>
+
+        <div class="card-info">
+
+          <h3>
+            Necklace Set
+          </h3>
+
+          <p>
+            Premium Collection
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- NECKLACE 4 -->
+
+      <div class="jewellery-card">
+
+        <a
+          href="images/necklaces/SHORT%20SET%204.jpeg"
+          target="_blank">
+
+          <img
+            src="images/necklaces/SHORT%20SET%204.jpeg"
+            alt="KK 1 Gram Jewellers Necklace Set 4">
+
+        </a>
+
+        <div class="card-info">
+
+          <h3>
+            Necklace Set
+          </h3>
+
+          <p>
+            Latest Design
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- NECKLACE 5 -->
+
+      <div class="jewellery-card">
+
+        <a
+          href="images/necklaces/SHORT%20SET%205.jpeg"
+          target="_blank">
+
+          <img
+            src="images/necklaces/SHORT%20SET%205.jpeg"
+            alt="KK 1 Gram Jewellers Necklace Set 5">
+
+        </a>
+
+        <div class="card-info">
+
+          <h3>
+            Necklace Set
+          </h3>
+
+          <p>
+            New Arrival
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       OTHER COLLECTIONS
+  ========================== -->
+
+  <section>
+
+    <div class="section-heading">
+
+      <h2>
+        Explore More Collections
+      </h2>
+
+      <p>
+        More premium jewellery categories coming soon
+      </p>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+      <div class="category-card">
+
+        <div class="category-content">
+
+          <h3>
+            BANGLES
+          </h3>
+
+          <p>
+            Premium 1 Gram Bangles
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="category-card">
+
+        <div class="category-content">
+
+          <h3>
+            EARRINGS
+          </h3>
+
+          <p>
+            Elegant Earrings Collection
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="category-card">
+
+        <div class="category-content">
+
+          <h3>
+            RINGS
+          </h3>
+
+          <p>
+            Stylish Ring Designs
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="category-card">
+
+        <div class="category-content">
+
+          <h3>
+            BRIDAL
+          </h3>
+
+          <p>
+            Special Bridal Collection
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="category-card">
+
+        <div class="category-content">
+
+          <h3>
+            NEW ARRIVALS
+          </h3>
+
+          <p>
+            Latest Jewellery Designs
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="category-card">
+
+        <div class="category-content">
+
+          <h3>
+            DIAMOND WORK
+          </h3>
+
+          <p>
+            Premium Diamond & Swarovski Work
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       WHY KK 1 GRAM
+  ========================== -->
+
+  <section class="why-section">
+
+    <div class="section-heading">
+
+      <h2>
+        Why KK 1 Gram Jewellers?
+      </h2>
+
+      <p>
+        Style, elegance and premium finishing
+      </p>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+      <div class="why-card">
+
+        <div class="icon">
+          ✨
+        </div>
+
+        <h3>
+          Premium Designs
+        </h3>
+
+        <p>
+          Beautiful and stylish jewellery designs
+          for every special occasion.
+        </p>
+
+      </div>
+
+
+
+      <div class="why-card">
+
+        <div class="icon">
+          💎
+        </div>
+
+        <h3>
+          Diamond & Swarovski
+        </h3>
+
+        <p>
+          Elegant finishing with premium
+          diamond and Swarovski work.
+        </p>
+
+      </div>
+
+
+
+      <div class="why-card">
+
+        <div class="icon">
+          👑
+        </div>
+
+        <h3>
+          Elegant Collection
+        </h3>
+
+        <p>
+          Modern jewellery styles with a
+          premium showroom experience.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       OUR STORES
+  ========================== -->
+
+  <section id="stores" class="stores">
+
+    <div class="section-heading">
+
+      <h2>
+        Our Showrooms
+      </h2>
+
+      <p>
+        Visit your nearest KK 1 Gram Jewellers showroom
+      </p>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="store-grid">
+
+
+      <!-- MEHSANA -->
+
+      <div class="store-card">
+
+        <h3>
+          <span>📍</span> Mehsana
+        </h3>
+
+        <p>
+          ST Workshop Road,<br>
+          Opp. Surya Complex,<br>
+          Mehsana, Gujarat
+        </p>
+
+        <a
+          class="call-btn"
+          href="tel:8140136434">
+
+          Call Store
+
+        </a>
+
+      </div>
+
+
+
+      <!-- PALANPUR -->
+
+      <div class="store-card">
+
+        <h3>
+          <span>📍</span> Palanpur
+        </h3>
+
+        <p>
+          Guru Nanak Chowk,<br>
+          C M Complex,<br>
+          Palanpur, Gujarat
+        </p>
+
+        <a
+          class="call-btn"
+          href="tel:8140136453">
+
+          Call Store
+
+        </a>
+
+      </div>
+
+
+
+      <!-- KALOL -->
+
+      <div class="store-card">
+
+        <h3>
+          <span>📍</span> Kalol
+        </h3>
+
+        <p>
+          Jivabhai Market,<br>
+          F.F. 5-6, Opp. HDFC Bank,<br>
+          Navin Mill Compound, Kalol
+        </p>
+
+        <a
+          class="call-btn"
+          href="tel:8140136435">
+
+          Call Store
+
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section id="contact" class="contact-section">
+
+    <h2>
+      Visit KK 1 Gram Jewellers
+    </h2>
+
+    <p>
+      For jewellery enquiries and showroom information,
+      contact us directly.
+    </p>
+
+    <a
+      class="whatsapp-main"
+      href="https://wa.me/918140136435"
+      target="_blank">
+
+      💬 WhatsApp Us
+
+    </a>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © 2026
+      <strong>KK 1 Gram Jewellers</strong>.
+      All Rights Reserved.
+    </p>
+
+    <p>
+      Premium 1 Gram Jewellery
+    </p>
+
+  </footer>
+
+
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================== -->
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/918140136435"
+    target="_blank"
+    aria-label="WhatsApp KK 1 Gram Jewellers">
+
+    💬
+
+  </a>
+
+
 </body>
+
 </html>
