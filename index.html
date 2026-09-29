@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -10,18 +9,33 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>KK 1 Gram Jewellers | Premium 1 Gram Jewellery</title>
+  <title>KK 1 Gram Jewellers | Premium Jewellery</title>
 
   <meta
     name="description"
-    content="KK 1 Gram Jewellers - Premium 1 Gram Jewellery collections in Mehsana, Palanpur and Kalol."
+    content="KK 1 Gram Jewellers - Premium 1 Gram Jewellery Collections."
+  >
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
 
   <style>
 
-    /* =====================================================
+    /* =========================================================
        RESET
-    ====================================================== */
+    ========================================================= */
 
     * {
       margin: 0;
@@ -34,10 +48,11 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8f6f1;
-      color: #171717;
+      font-family: "Montserrat", sans-serif;
+      background: #0b0b0b;
+      color: #fff;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     body.modal-open {
@@ -57,46 +72,91 @@
       font-family: inherit;
     }
 
-    /* =====================================================
-       COLORS
-    ====================================================== */
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
 
     :root {
-      --black: #0d0d0d;
-      --black-2: #171717;
+      --black: #080808;
+      --black2: #111111;
+
       --gold: #c9a227;
-      --gold-light: #efd477;
-      --cream: #f8f6f1;
+      --gold-light: #f3d77a;
+      --gold-dark: #8f6d12;
+
+      --cream: #f8f3e8;
       --white: #ffffff;
-      --text: #1c1c1c;
-      --muted: #777777;
-      --border: #e5dfd2;
-      --green: #25D366;
+
+      --muted: #aaa;
+
+      --green: #25d366;
+
+      --border:
+        rgba(201, 162, 39, 0.35);
     }
 
-    /* =====================================================
+
+    /* =========================================================
+       BODY BACKGROUND GRAPHICS
+    ========================================================= */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(201,162,39,0.08),
+          transparent 25%
+        ),
+
+        radial-gradient(
+          circle at 90% 70%,
+          rgba(201,162,39,0.06),
+          transparent 25%
+        );
+
+      z-index: -2;
+    }
+
+
+    /* =========================================================
        NAVBAR
-    ====================================================== */
+    ========================================================= */
 
     .navbar {
       position: sticky;
       top: 0;
-      z-index: 9999;
 
       width: 100%;
 
-      background: rgba(13, 13, 13, 0.98);
-
-      border-bottom: 1px solid rgba(201, 162, 39, 0.35);
-
-      padding: 12px 5%;
+      z-index: 9999;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+      padding: 12px 5%;
+
+      background:
+        rgba(7,7,7,0.96);
+
+      backdrop-filter: blur(15px);
+
+      border-bottom:
+        1px solid
+        rgba(201,162,39,0.3);
+
+      box-shadow:
+        0 8px 35px
+        rgba(0,0,0,0.35);
     }
+
 
     .logo {
       display: flex;
@@ -105,20 +165,27 @@
 
       color: var(--gold-light);
 
-      font-size: 20px;
       font-weight: 800;
 
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+
+      font-size: 18px;
     }
 
+
     .logo img {
-      width: 45px;
-      height: 45px;
+      width: 48px;
+      height: 48px;
+
+      object-fit: cover;
 
       border-radius: 8px;
 
-      object-fit: cover;
+      border:
+        1px solid
+        rgba(201,162,39,0.5);
     }
+
 
     .nav-links {
       display: flex;
@@ -126,133 +193,249 @@
       gap: 28px;
     }
 
-    .nav-links a {
-      color: white;
 
-      font-size: 14px;
+    .nav-links a {
+      color: #fff;
+
+      font-size: 13px;
+
       font-weight: 600;
 
       transition: 0.3s;
     }
 
+
     .nav-links a:hover {
       color: var(--gold-light);
     }
 
-    /* =====================================================
-       HERO
-    ====================================================== */
+
+    /* =========================================================
+       HERO BANNER
+       EXISTING BANNER IS NOT CHANGED
+    ========================================================= */
 
     .hero {
       width: 100%;
-      background: #111;
+
+      background: #000;
 
       overflow: hidden;
+
+      position: relative;
     }
+
 
     .hero img {
       width: 100%;
       height: auto;
 
+      display: block;
+
       object-fit: cover;
     }
 
-    /* =====================================================
+
+    .hero-overlay {
+      position: absolute;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,0.02),
+          rgba(0,0,0,0.15)
+        );
+    }
+
+
+    /* =========================================================
        INTRO
-    ====================================================== */
+    ========================================================= */
 
     .intro {
+      position: relative;
+
       text-align: center;
 
-      max-width: 900px;
+      padding: 90px 20px 70px;
 
-      margin: auto;
-
-      padding: 70px 20px 45px;
+      background:
+        radial-gradient(
+          circle at center,
+          #242016 0%,
+          #111 45%,
+          #080808 100%
+        );
     }
+
+
+    .intro::before,
+    .intro::after {
+      content: "✦";
+
+      position: absolute;
+
+      color: var(--gold);
+
+      font-size: 35px;
+
+      opacity: 0.45;
+    }
+
+
+    .intro::before {
+      left: 10%;
+      top: 55px;
+    }
+
+
+    .intro::after {
+      right: 10%;
+      bottom: 45px;
+    }
+
 
     .intro-label {
-      color: #b08a1e;
+      color: var(--gold-light);
 
-      font-size: 13px;
+      font-size: 12px;
+
       font-weight: 800;
 
-      letter-spacing: 5px;
+      letter-spacing: 6px;
 
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
+
 
     .intro h1 {
-      font-size: clamp(32px, 5vw, 55px);
+      font-family:
+        "Cormorant Garamond",
+        serif;
 
-      line-height: 1.1;
+      font-size:
+        clamp(42px, 7vw, 78px);
 
-      margin-bottom: 16px;
+      line-height: 0.95;
 
-      color: #171717;
+      margin-bottom: 20px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #b68b20,
+          #ffe9a0,
+          #b68b20
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
     }
 
+
     .intro p {
-      max-width: 700px;
+      max-width: 760px;
 
       margin: auto;
 
-      color: #777;
+      color: #bbb;
 
-      font-size: 16px;
+      font-size: 15px;
+
+      line-height: 1.9;
     }
 
-    /* =====================================================
-       COMMON SECTION
-    ====================================================== */
+
+    .gold-line {
+      width: 100px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+
+      margin: 28px auto;
+    }
+
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
 
     .section {
-      padding: 75px 6%;
+      padding: 85px 6%;
+
+      position: relative;
     }
+
 
     .section-heading {
       text-align: center;
 
-      margin-bottom: 45px;
+      margin-bottom: 50px;
     }
 
-    .section-heading .eyebrow {
-      color: #b08a1e;
 
-      font-size: 13px;
+    .eyebrow {
+      color: var(--gold-light);
+
+      font-size: 11px;
+
       font-weight: 800;
 
-      letter-spacing: 4px;
+      letter-spacing: 5px;
 
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
+
 
     .section-heading h2 {
-      font-size: clamp(30px, 4vw, 44px);
+      font-family:
+        "Cormorant Garamond",
+        serif;
 
-      line-height: 1.2;
+      font-size:
+        clamp(38px, 5vw, 58px);
 
-      margin-bottom: 12px;
+      line-height: 1;
+
+      color: #fff;
     }
+
 
     .section-heading p {
-      color: var(--muted);
+      color: #999;
 
-      font-size: 15px;
+      margin-top: 14px;
+
+      font-size: 14px;
     }
 
-    .gold-line {
-      width: 70px;
-      height: 3px;
 
-      background: var(--gold);
+    /* =========================================================
+       COLLECTIONS
+    ========================================================= */
 
-      margin: 18px auto 0;
+    .collections {
+      background:
+        linear-gradient(
+          135deg,
+          #0a0a0a,
+          #16130c,
+          #080808
+        );
     }
 
-    /* =====================================================
-       COLLECTION CARDS
-    ====================================================== */
 
     .collection-grid {
       max-width: 1200px;
@@ -261,75 +444,90 @@
 
       display: grid;
 
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns:
+        repeat(4, 1fr);
 
-      gap: 22px;
+      gap: 20px;
     }
 
-    .collection-card {
-      position: relative;
 
-      min-height: 300px;
+    .collection-card {
+      min-height: 280px;
+
+      position: relative;
 
       overflow: hidden;
 
       border-radius: 20px;
 
+      cursor: pointer;
+
+      border:
+        1px solid
+        rgba(201,162,39,0.35);
+
       background:
         linear-gradient(
           145deg,
-          #111,
-          #292929
+          #181818,
+          #080808
         );
 
-      border: 1px solid rgba(201, 162, 39, 0.45);
-
       box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.12);
+        0 20px 50px
+        rgba(0,0,0,0.35);
 
-      cursor: pointer;
-
-      transition: 0.4s ease;
+      transition:
+        transform 0.4s,
+        box-shadow 0.4s;
     }
 
-    .collection-card:hover {
-      transform: translateY(-8px);
-
-      box-shadow:
-        0 22px 50px rgba(0, 0, 0, 0.22);
-    }
 
     .collection-card::before {
       content: "";
 
       position: absolute;
 
-      width: 260px;
-      height: 260px;
+      width: 220px;
+      height: 220px;
 
       border-radius: 50%;
 
-      background: rgba(201, 162, 39, 0.08);
+      right: -100px;
+      top: -100px;
 
-      top: -110px;
-      right: -90px;
+      background:
+        rgba(201,162,39,0.08);
     }
+
 
     .collection-card::after {
       content: "";
 
       position: absolute;
 
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
 
       border-radius: 50%;
 
-      background: rgba(201, 162, 39, 0.05);
-
-      bottom: -90px;
       left: -70px;
+      bottom: -80px;
+
+      background:
+        rgba(201,162,39,0.06);
     }
+
+
+    .collection-card:hover {
+      transform:
+        translateY(-10px);
+
+      box-shadow:
+        0 30px 65px
+        rgba(0,0,0,0.5);
+    }
+
 
     .collection-content {
       position: relative;
@@ -338,7 +536,7 @@
 
       height: 100%;
 
-      min-height: 300px;
+      min-height: 280px;
 
       padding: 30px;
 
@@ -349,197 +547,224 @@
       justify-content: flex-end;
     }
 
+
     .collection-icon {
-      font-size: 48px;
+      font-size: 45px;
+
+      color: var(--gold-light);
 
       margin-bottom: auto;
     }
 
+
     .collection-content h3 {
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
       color: var(--gold-light);
 
-      font-size: 23px;
+      font-size: 30px;
 
-      letter-spacing: 2px;
-
-      margin-bottom: 7px;
+      margin-bottom: 6px;
     }
+
 
     .collection-content p {
-      color: #d2d2d2;
+      color: #aaa;
 
-      font-size: 14px;
+      font-size: 12px;
 
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
+
     .collection-btn {
+      display: inline-flex;
+
       width: fit-content;
 
-      border: 1px solid var(--gold);
+      padding: 9px 18px;
 
-      color: white;
-
-      padding: 9px 17px;
+      border:
+        1px solid
+        var(--gold);
 
       border-radius: 30px;
 
-      font-size: 13px;
+      color: #fff;
+
+      font-size: 11px;
 
       font-weight: 700;
 
       transition: 0.3s;
     }
 
-    .collection-card:hover .collection-btn {
+
+    .collection-card:hover
+    .collection-btn {
       background: var(--gold);
 
       color: #111;
     }
 
-    /* =====================================================
-       PRODUCTS SECTION
-       Products are hidden initially.
-       They appear only after collection is selected.
-    ====================================================== */
+
+    /* =========================================================
+       PRODUCTS
+    ========================================================= */
 
     .products-section {
-      background: #fff;
+      background:
+        linear-gradient(
+          180deg,
+          #f8f3e8,
+          #fff
+        );
+
+      color: #111;
 
       display: none;
     }
 
+
     .products-section.show {
       display: block;
 
-      animation: sectionAppear 0.45s ease;
+      animation:
+        fadeUp 0.5s ease;
     }
 
-    @keyframes sectionAppear {
+
+    @keyframes fadeUp {
 
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform:
+          translateY(25px);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform:
+          translateY(0);
       }
 
     }
 
-    .selected-collection-info {
+
+    .selected-title {
       text-align: center;
 
       margin-bottom: 35px;
     }
 
-    .selected-collection-info h2 {
-      font-size: clamp(28px, 4vw, 40px);
 
-      margin-bottom: 8px;
+    .selected-title h2 {
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: 50px;
+
+      color: #171717;
     }
 
-    .selected-collection-info p {
+
+    .selected-title p {
       color: #777;
 
-      margin-bottom: 18px;
+      font-size: 13px;
     }
 
-    .back-to-collections {
-      display: inline-flex;
 
-      align-items: center;
+    .back-btn {
+      margin-top: 18px;
 
-      gap: 7px;
+      padding: 10px 20px;
 
-      border: 1px solid var(--gold);
-
-      color: #8d6b10;
-
-      background: transparent;
-
-      padding: 9px 17px;
+      border:
+        1px solid
+        var(--gold);
 
       border-radius: 30px;
 
-      font-size: 13px;
+      background: transparent;
 
-      font-weight: 700;
+      color: #80630f;
 
       cursor: pointer;
 
-      transition: 0.3s;
+      font-weight: 700;
     }
 
-    .back-to-collections:hover {
-      background: var(--gold);
-
-      color: #111;
-    }
-
-    /* =====================================================
-       PRODUCT GRID
-    ====================================================== */
 
     .product-grid {
-      max-width: 1200px;
+      max-width: 1250px;
 
       margin: auto;
 
       display: grid;
 
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns:
+        repeat(4, 1fr);
 
-      gap: 20px;
+      gap: 22px;
     }
 
-    /* =====================================================
-       PRODUCT CARD
-    ====================================================== */
 
     .product-card {
-      background: white;
+      background: #fff;
 
-      border: 1px solid #e8e3da;
+      border:
+        1px solid
+        #e6dfd0;
 
-      border-radius: 16px;
+      border-radius: 18px;
 
       overflow: hidden;
 
       cursor: pointer;
 
-      transition: 0.35s ease;
+      transition: 0.35s;
 
       box-shadow:
-        0 7px 25px rgba(0, 0, 0, 0.06);
+        0 10px 35px
+        rgba(0,0,0,0.08);
     }
+
 
     .product-card:hover {
-      transform: translateY(-7px);
+      transform:
+        translateY(-8px);
 
       box-shadow:
-        0 17px 38px rgba(0, 0, 0, 0.13);
+        0 22px 50px
+        rgba(0,0,0,0.15);
     }
 
+
     .product-image {
+      height: 300px;
+
+      background:
+        radial-gradient(
+          circle,
+          #fff,
+          #f4eee1
+        );
+
       position: relative;
-
-      width: 100%;
-
-      height: 280px;
-
-      background: #f7f4ed;
-
-      overflow: hidden;
 
       display: flex;
 
       align-items: center;
 
       justify-content: center;
+
+      overflow: hidden;
     }
+
 
     .product-image img {
       width: 100%;
@@ -547,14 +772,19 @@
 
       object-fit: contain;
 
-      padding: 10px;
+      padding: 15px;
 
-      transition: transform 0.45s ease;
+      transition:
+        transform 0.5s;
     }
 
-    .product-card:hover .product-image img {
-      transform: scale(1.05);
+
+    .product-card:hover
+    .product-image img {
+      transform:
+        scale(1.07);
     }
+
 
     .product-tag {
       position: absolute;
@@ -566,11 +796,11 @@
 
       color: var(--gold-light);
 
-      padding: 5px 9px;
+      padding: 6px 10px;
 
       border-radius: 20px;
 
-      font-size: 10px;
+      font-size: 9px;
 
       font-weight: 800;
 
@@ -579,60 +809,61 @@
       z-index: 2;
     }
 
+
     .product-info {
-      padding: 17px;
+      padding: 18px;
     }
+
 
     .product-info h4 {
-      font-size: 17px;
+      font-family:
+        "Cormorant Garamond",
+        serif;
 
-      margin-bottom: 5px;
+      font-size: 24px;
+
+      color: #222;
+
+      margin-bottom: 4px;
     }
+
 
     .product-info p {
       color: #888;
 
-      font-size: 12px;
+      font-size: 11px;
 
-      margin-bottom: 13px;
+      margin-bottom: 12px;
     }
+
 
     .view-product {
-      color: #a57d13;
+      color: #a17c13;
 
-      font-size: 13px;
+      font-size: 11px;
 
       font-weight: 800;
+
+      letter-spacing: 0.5px;
     }
 
-    /* =====================================================
-       IMAGE ERROR MESSAGE
-    ====================================================== */
 
-    .image-error {
-      color: #999;
-
-      text-align: center;
-
-      padding: 20px;
-
-      font-size: 13px;
-
-      display: none;
-    }
-
-    /* =====================================================
+    /* =========================================================
        PRODUCT MODAL
-    ====================================================== */
+    ========================================================= */
 
     .product-modal {
       position: fixed;
 
       inset: 0;
 
-      z-index: 20000;
+      z-index: 50000;
 
-      background: rgba(0, 0, 0, 0.78);
+      background:
+        rgba(0,0,0,0.88);
+
+      backdrop-filter:
+        blur(8px);
 
       display: none;
 
@@ -643,39 +874,67 @@
       padding: 20px;
     }
 
+
     .product-modal.active {
       display: flex;
     }
 
-    .modal-box {
-      position: relative;
 
-      width: min(1050px, 100%);
+    .modal-box {
+      width:
+        min(1050px, 100%);
 
       max-height: 92vh;
+
+      overflow: hidden;
 
       background: #fff;
 
       border-radius: 22px;
 
-      box-shadow:
-        0 30px 90px rgba(0, 0, 0, 0.4);
-
       display: grid;
 
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns:
+        1.15fr 0.85fr;
 
-      overflow: hidden;
+      box-shadow:
+        0 40px 100px
+        rgba(0,0,0,0.65);
+
+      position: relative;
+
+      animation:
+        modalOpen 0.35s ease;
     }
+
+
+    @keyframes modalOpen {
+
+      from {
+        opacity: 0;
+        transform:
+          scale(0.94)
+          translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform:
+          scale(1)
+          translateY(0);
+      }
+
+    }
+
 
     .modal-close {
       position: absolute;
 
-      right: 15px;
       top: 15px;
+      right: 15px;
 
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
 
       border: none;
 
@@ -683,21 +942,25 @@
 
       background: #111;
 
-      color: white;
+      color: #fff;
 
       font-size: 20px;
 
       cursor: pointer;
 
-      z-index: 5;
+      z-index: 10;
     }
 
+
     .modal-gallery {
-      background: #f5f2eb;
+      background:
+        radial-gradient(
+          circle,
+          #fff,
+          #eee6d7
+        );
 
       padding: 30px;
-
-      min-height: 550px;
 
       display: flex;
 
@@ -706,23 +969,26 @@
       justify-content: center;
     }
 
+
     .main-product-image {
       width: 100%;
 
-      height: 450px;
+      height: 470px;
 
       object-fit: contain;
     }
+
 
     .thumbnail-row {
       display: flex;
 
       gap: 10px;
 
-      margin-top: 18px;
-
       overflow-x: auto;
+
+      margin-top: 18px;
     }
+
 
     .thumbnail {
       width: 70px;
@@ -732,21 +998,28 @@
 
       object-fit: cover;
 
-      border-radius: 9px;
+      border-radius: 10px;
 
-      border: 2px solid transparent;
+      background: #fff;
+
+      border:
+        2px solid
+        transparent;
 
       cursor: pointer;
-
-      background: white;
     }
+
 
     .thumbnail.active {
-      border-color: var(--gold);
+      border-color:
+        var(--gold);
     }
+
 
     .modal-details {
       padding: 55px 45px;
+
+      color: #111;
 
       display: flex;
 
@@ -757,102 +1030,118 @@
       overflow-y: auto;
     }
 
-    .modal-label {
-      color: #b08a1e;
 
-      font-size: 12px;
+    .modal-label {
+      color:
+        var(--gold-dark);
+
+      font-size: 11px;
 
       font-weight: 800;
 
-      letter-spacing: 3px;
+      letter-spacing: 4px;
 
       margin-bottom: 10px;
     }
 
+
     .modal-details h2 {
-      font-size: 34px;
+      font-family:
+        "Cormorant Garamond",
+        serif;
 
-      line-height: 1.2;
+      font-size: 46px;
 
-      margin-bottom: 12px;
+      line-height: 1;
+
+      margin-bottom: 15px;
     }
+
 
     .modal-description {
       color: #777;
 
-      font-size: 15px;
+      font-size: 13px;
+
+      line-height: 1.8;
 
       margin-bottom: 25px;
     }
 
+
     .detail-list {
       list-style: none;
 
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
-    .detail-list li {
-      padding: 8px 0;
 
-      border-bottom: 1px solid #eee;
+    .detail-list li {
+      padding: 9px 0;
+
+      border-bottom:
+        1px solid #eee;
 
       color: #555;
 
-      font-size: 14px;
+      font-size: 12px;
     }
 
+
     .detail-list strong {
-      color: #222;
+      color: #111;
     }
+
 
     .whatsapp-product {
       display: inline-flex;
 
-      justify-content: center;
-
       align-items: center;
 
-      gap: 8px;
+      justify-content: center;
 
-      background: var(--green);
+      gap: 9px;
 
-      color: white;
+      background:
+        var(--green);
 
-      padding: 13px 22px;
+      color: #fff;
 
-      border-radius: 8px;
+      padding: 14px 20px;
 
-      font-size: 14px;
+      border-radius: 9px;
+
+      font-size: 13px;
 
       font-weight: 800;
 
       transition: 0.3s;
     }
 
+
     .whatsapp-product:hover {
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
 
       box-shadow:
-        0 8px 20px rgba(37, 211, 102, 0.25);
+        0 10px 25px
+        rgba(37,211,102,0.3);
     }
 
-    /* =====================================================
+
+    /* =========================================================
        WHY US
-    ====================================================== */
+    ========================================================= */
 
     .why-section {
-      background: #111;
-
-      color: white;
+      background:
+        radial-gradient(
+          circle at center,
+          #211d12,
+          #080808 65%
+        );
     }
 
-    .why-section .section-heading h2 {
-      color: white;
-    }
-
-    .why-section .section-heading p {
-      color: #aaa;
-    }
 
     .why-grid {
       max-width: 1100px;
@@ -861,48 +1150,82 @@
 
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
       gap: 22px;
     }
+
 
     .why-card {
       padding: 35px 25px;
 
       text-align: center;
 
-      border-radius: 16px;
+      border-radius: 18px;
 
-      border: 1px solid rgba(201, 162, 39, 0.35);
+      border:
+        1px solid
+        rgba(201,162,39,0.3);
 
-      background: rgba(255, 255, 255, 0.025);
+      background:
+        rgba(255,255,255,0.025);
+
+      transition: 0.35s;
     }
+
+
+    .why-card:hover {
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(201,162,39,0.7);
+    }
+
 
     .why-icon {
       font-size: 38px;
 
+      color:
+        var(--gold-light);
+
       margin-bottom: 15px;
     }
 
+
     .why-card h3 {
-      color: var(--gold-light);
+      color:
+        var(--gold-light);
+
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: 25px;
 
       margin-bottom: 8px;
     }
 
-    .why-card p {
-      color: #aaa;
 
-      font-size: 14px;
+    .why-card p {
+      color: #999;
+
+      font-size: 12px;
     }
 
-    /* =====================================================
-       SHOWROOMS
-    ====================================================== */
+
+    /* =========================================================
+       BRANCHES
+    ========================================================= */
 
     .stores {
-      background: var(--cream);
+      background:
+        #f8f3e8;
+
+      color: #111;
     }
+
 
     .store-grid {
       max-width: 1150px;
@@ -911,50 +1234,72 @@
 
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
       gap: 22px;
     }
 
+
     .store-card {
-      background: white;
+      background: #fff;
 
       padding: 30px;
 
-      border-radius: 16px;
+      border-radius: 18px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid #e4ddce;
 
       box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.05);
+        0 12px 35px
+        rgba(0,0,0,0.07);
 
-      transition: 0.3s;
+      transition: 0.35s;
     }
+
 
     .store-card:hover {
-      transform: translateY(-6px);
+      transform:
+        translateY(-7px);
 
       box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.1);
+        0 22px 45px
+        rgba(0,0,0,0.12);
     }
+
+
+    .store-icon {
+      font-size: 30px;
+
+      color:
+        var(--gold-dark);
+
+      margin-bottom: 15px;
+    }
+
 
     .store-card h3 {
-      font-size: 23px;
+      font-family:
+        "Cormorant Garamond",
+        serif;
 
-      margin-bottom: 12px;
+      font-size: 30px;
+
+      margin-bottom: 10px;
     }
 
-    .store-card h3 span {
-      color: var(--gold);
-    }
 
     .store-card p {
       color: #666;
 
-      font-size: 14px;
+      font-size: 12px;
 
-      margin-bottom: 20px;
+      line-height: 1.8;
+
+      margin-bottom: 18px;
     }
+
 
     .store-buttons {
       display: flex;
@@ -964,99 +1309,153 @@
       flex-wrap: wrap;
     }
 
+
     .store-btn {
-      display: inline-block;
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 6px;
 
       background: #111;
 
-      color: white;
+      color: #fff;
 
-      padding: 9px 15px;
+      padding: 9px 13px;
 
       border-radius: 7px;
 
-      font-size: 13px;
+      font-size: 11px;
 
       font-weight: 700;
 
       transition: 0.3s;
     }
 
+
     .store-btn:hover {
-      background: var(--gold);
+      background:
+        var(--gold);
 
       color: #111;
     }
 
-    /* =====================================================
+
+    /* =========================================================
        CONTACT
-    ====================================================== */
+    ========================================================= */
 
     .contact {
-      background: #111;
-
-      color: white;
+      padding: 90px 20px;
 
       text-align: center;
 
-      padding: 75px 20px;
+      background:
+        radial-gradient(
+          circle at center,
+          #262015,
+          #080808 70%
+        );
     }
+
 
     .contact h2 {
-      color: var(--gold-light);
+      font-family:
+        "Cormorant Garamond",
+        serif;
 
-      font-size: clamp(30px, 4vw, 42px);
+      color:
+        var(--gold-light);
 
-      margin-bottom: 12px;
+      font-size:
+        clamp(42px, 6vw, 65px);
+
+      margin-bottom: 10px;
     }
+
 
     .contact p {
-      color: #bbb;
+      color: #aaa;
 
-      margin-bottom: 25px;
+      max-width: 650px;
+
+      margin: 0 auto 25px;
+
+      font-size: 13px;
     }
+
+
+    .contact-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+    }
+
 
     .contact-btn {
       display: inline-flex;
 
       align-items: center;
 
-      gap: 8px;
+      gap: 9px;
 
-      background: var(--green);
-
-      color: white;
-
-      padding: 13px 25px;
+      padding: 14px 22px;
 
       border-radius: 8px;
+
+      color: #fff;
+
+      font-size: 13px;
 
       font-weight: 800;
     }
 
-    /* =====================================================
+
+    .call-btn {
+      background: #1b1b1b;
+
+      border:
+        1px solid
+        var(--gold);
+    }
+
+
+    .whatsapp-btn {
+      background:
+        var(--green);
+    }
+
+
+    /* =========================================================
        FOOTER
-    ====================================================== */
+    ========================================================= */
 
     footer {
-      background: #070707;
+      background: #050505;
 
       text-align: center;
 
-      color: #888;
+      padding: 30px 15px;
 
-      padding: 28px 15px;
+      color: #777;
 
-      font-size: 13px;
+      font-size: 11px;
     }
+
 
     footer strong {
-      color: var(--gold);
+      color:
+        var(--gold);
     }
 
-    /* =====================================================
+
+    /* =========================================================
        FLOATING WHATSAPP
-    ====================================================== */
+    ========================================================= */
 
     .whatsapp-float {
       position: fixed;
@@ -1064,10 +1463,8 @@
       right: 20px;
       bottom: 20px;
 
-      width: 58px;
-      height: 58px;
-
-      border-radius: 50%;
+      width: 60px;
+      height: 60px;
 
       display: flex;
 
@@ -1075,44 +1472,79 @@
 
       justify-content: center;
 
-      background: var(--green);
+      border-radius: 50%;
 
-      color: white;
+      background:
+        var(--green);
 
-      font-size: 27px;
+      color: #fff;
+
+      font-size: 28px;
 
       box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.25);
+        0 10px 35px
+        rgba(0,0,0,0.4);
 
-      z-index: 15000;
+      z-index: 45000;
 
       transition: 0.3s;
     }
 
+
     .whatsapp-float:hover {
-      transform: scale(1.1);
+      transform:
+        scale(1.1);
     }
 
-    /* =====================================================
+
+    /* =========================================================
+       LOADING
+    ========================================================= */
+
+    .loading {
+      text-align: center;
+
+      padding: 50px;
+
+      color: #777;
+
+      font-size: 13px;
+    }
+
+
+    .loading i {
+      color: var(--gold);
+
+      font-size: 25px;
+
+      margin-bottom: 10px;
+    }
+
+
+    /* =========================================================
        MOBILE
-    ====================================================== */
+    ========================================================= */
 
     @media (max-width: 1100px) {
 
       .collection-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .product-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+          repeat(3,1fr);
+      }
+
+      .store-grid {
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .modal-box {
-        grid-template-columns: 1fr;
-      }
-
-      .modal-gallery {
-        min-height: auto;
+        grid-template-columns:
+          1fr;
       }
 
       .main-product-image {
@@ -1121,73 +1553,44 @@
 
     }
 
-    @media (max-width: 800px) {
 
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .store-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-    }
-
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
 
       .navbar {
         padding: 10px 14px;
       }
 
       .logo {
-        font-size: 12px;
-
+        font-size: 11px;
         gap: 7px;
       }
 
       .logo img {
-        width: 36px;
-        height: 36px;
+        width: 38px;
+        height: 38px;
       }
 
       .nav-links {
-        gap: 9px;
+        gap: 10px;
       }
 
       .nav-links a {
-        font-size: 10px;
-      }
-
-      .intro {
-        padding: 50px 18px 35px;
+        font-size: 9px;
       }
 
       .section {
-        padding: 55px 18px;
+        padding:
+          65px 18px;
       }
 
       .collection-grid {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-      }
-
-      .collection-card {
-        min-height: 240px;
-      }
-
-      .collection-content {
-        min-height: 240px;
-
-        padding: 28px;
+        grid-template-columns:
+          1fr;
       }
 
       .product-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+          repeat(2,1fr);
 
         gap: 12px;
       }
@@ -1201,19 +1604,13 @@
       }
 
       .product-info h4 {
-        font-size: 14px;
+        font-size: 19px;
       }
 
-      .product-info p {
-        font-size: 11px;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .why-grid,
       .store-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
       }
 
       .modal-box {
@@ -1223,27 +1620,44 @@
       }
 
       .modal-gallery {
-        padding: 18px;
+        padding: 15px;
       }
 
       .main-product-image {
-        height: 300px;
+        height: 290px;
       }
 
       .modal-details {
-        padding: 28px 22px;
+        padding: 28px 20px;
       }
 
       .modal-details h2 {
-        font-size: 27px;
+        font-size: 38px;
       }
 
       .whatsapp-float {
-        width: 52px;
-        height: 52px;
+        width: 54px;
+        height: 54px;
 
         right: 15px;
         bottom: 15px;
+      }
+
+    }
+
+
+    @media (max-width: 450px) {
+
+      .nav-links a:nth-child(3) {
+        display: none;
+      }
+
+      .product-image {
+        height: 165px;
+      }
+
+      .intro h1 {
+        font-size: 45px;
       }
 
     }
@@ -1269,7 +1683,9 @@
         alt="KK 1 Gram Jewellers Logo"
       >
 
-      <span>KK 1 GRAM JEWELLERS</span>
+      <span>
+        KK 1 GRAM JEWELLERS
+      </span>
 
     </a>
 
@@ -1280,8 +1696,10 @@
         Collections
       </a>
 
-      <a href="#products"
-         onclick="openProducts(event)">
+      <a
+        href="#products"
+        onclick="scrollToProducts(event)"
+      >
         Jewellery
       </a>
 
@@ -1298,4 +1716,1255 @@
   </nav>
 
 
-  <!-- =================================================
+
+  <!-- =====================================================
+       EXISTING BANNER
+       DO NOT CHANGE
+  ====================================================== -->
+
+  <section class="hero">
+
+    <img
+      src="banner.jpg.jpg"
+      alt="KK 1 Gram Jewellers"
+    >
+
+    <div class="hero-overlay"></div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       INTRO
+  ====================================================== -->
+
+  <section class="intro">
+
+    <div class="intro-label">
+      WELCOME TO KK 1 GRAM JEWELLERS
+    </div>
+
+    <h1>
+      Elegance That<br>
+      Speaks For You
+    </h1>
+
+    <div class="gold-line"></div>
+
+    <p>
+      Discover beautiful jewellery designs crafted
+      for every occasion. Explore our necklace
+      collection and connect with KK 1 Gram Jewellers
+      directly through WhatsApp.
+    </p>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       COLLECTIONS
+  ====================================================== -->
+
+  <section
+    class="section collections"
+    id="collections"
+  >
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        OUR COLLECTIONS
+      </div>
+
+      <h2>
+        Jewellery For Every Occasion
+      </h2>
+
+      <p>
+        Select a collection to explore our designs.
+      </p>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="collection-grid">
+
+
+      <!-- NECKLACES -->
+
+      <div
+        class="collection-card"
+        onclick="openNecklaces()"
+      >
+
+        <div class="collection-content">
+
+          <div class="collection-icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+
+          <h3>
+            Necklaces
+          </h3>
+
+          <p>
+            Elegant necklace designs for
+            weddings, functions and daily wear.
+          </p>
+
+          <span class="collection-btn">
+            VIEW COLLECTION
+            <i
+              class="fa-solid fa-arrow-right"
+              style="margin-left:8px;"
+            ></i>
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- EARRINGS -->
+
+      <div class="collection-card">
+
+        <div class="collection-content">
+
+          <div class="collection-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <h3>
+            Earrings
+          </h3>
+
+          <p>
+            Stylish designs to complete
+            your jewellery look.
+          </p>
+
+          <span class="collection-btn">
+            COMING SOON
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- BANGLES -->
+
+      <div class="collection-card">
+
+        <div class="collection-content">
+
+          <div class="collection-icon">
+            <i class="fa-solid fa-circle"></i>
+          </div>
+
+          <h3>
+            Bangles
+          </h3>
+
+          <p>
+            Traditional and modern
+            bangle designs.
+          </p>
+
+          <span class="collection-btn">
+            COMING SOON
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- SETS -->
+
+      <div class="collection-card">
+
+        <div class="collection-content">
+
+          <div class="collection-icon">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+
+          <h3>
+            Jewellery Sets
+          </h3>
+
+          <p>
+            Complete jewellery combinations
+            for special occasions.
+          </p>
+
+          <span class="collection-btn">
+            COMING SOON
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       PRODUCTS
+  ====================================================== -->
+
+  <section
+    class="section products-section"
+    id="products"
+  >
+
+    <div class="selected-title">
+
+      <div class="eyebrow">
+        NECKLACE COLLECTION
+      </div>
+
+      <h2>
+        Our Necklace Designs
+      </h2>
+
+      <p>
+        Tap any design to view it without leaving this page.
+      </p>
+
+      <button
+        class="back-btn"
+        onclick="backToCollections()"
+      >
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back To Collections
+
+      </button>
+
+    </div>
+
+
+    <div
+      id="productGrid"
+      class="product-grid"
+    >
+
+      <div class="loading">
+
+        <i class="fa-solid fa-spinner fa-spin"></i>
+
+        <br>
+
+        Loading necklace collection...
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       WHY US
+  ====================================================== -->
+
+  <section
+    class="section why-section"
+  >
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        WHY KK 1 GRAM JEWELLERS
+      </div>
+
+      <h2>
+        Crafted To Make You Shine
+      </h2>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          <i class="fa-solid fa-gem"></i>
+        </div>
+
+        <h3>
+          Beautiful Designs
+        </h3>
+
+        <p>
+          Carefully selected jewellery designs
+          for traditional and modern looks.
+        </p>
+
+      </div>
+
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          <i class="fa-solid fa-hand-sparkles"></i>
+        </div>
+
+        <h3>
+          Elegant Finish
+        </h3>
+
+        <p>
+          Designs created to give your look
+          a premium and elegant appearance.
+        </p>
+
+      </div>
+
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+
+        <h3>
+          Easy Enquiry
+        </h3>
+
+        <p>
+          Like a design? Send it directly to us
+          on WhatsApp with one click.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       BRANCHES / ADDRESS
+  ====================================================== -->
+
+  <section
+    class="section stores"
+    id="stores"
+  >
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        VISIT OUR STORE
+      </div>
+
+      <h2>
+        Our Branches
+      </h2>
+
+      <p>
+        Visit KK 1 Gram Jewellers for more designs.
+      </p>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="store-grid">
+
+
+      <!-- MEHSANA -->
+
+      <div class="store-card">
+
+        <div class="store-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <h3>
+          Mehsana
+        </h3>
+
+        <p>
+          ADD YOUR EXACT MEHSANA SHOP ADDRESS HERE.
+        </p>
+
+        <div class="store-buttons">
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Mehsana"
+            target="_blank"
+            class="store-btn"
+          >
+            <i class="fa-solid fa-map-location-dot"></i>
+            MAP
+          </a>
+
+          <a
+            href="tel:+91YOURPHONENUMBER"
+            class="store-btn"
+          >
+            <i class="fa-solid fa-phone"></i>
+            CALL
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PALANPUR -->
+
+      <div class="store-card">
+
+        <div class="store-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <h3>
+          Palanpur
+        </h3>
+
+        <p>
+          ADD YOUR EXACT PALANPUR SHOP ADDRESS HERE.
+        </p>
+
+        <div class="store-buttons">
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Palanpur"
+            target="_blank"
+            class="store-btn"
+          >
+            <i class="fa-solid fa-map-location-dot"></i>
+            MAP
+          </a>
+
+          <a
+            href="tel:+91YOURPHONENUMBER"
+            class="store-btn"
+          >
+            <i class="fa-solid fa-phone"></i>
+            CALL
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- KALOL -->
+
+      <div class="store-card">
+
+        <div class="store-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <h3>
+          Kalol
+        </h3>
+
+        <p>
+          ADD YOUR EXACT KALOL SHOP ADDRESS HERE.
+        </p>
+
+        <div class="store-buttons">
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Kalol"
+            target="_blank"
+            class="store-btn"
+          >
+            <i class="fa-solid fa-map-location-dot"></i>
+            MAP
+          </a>
+
+          <a
+            href="tel:+91YOURPHONENUMBER"
+            class="store-btn"
+          >
+            <i class="fa-solid fa-phone"></i>
+            CALL
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
+
+  <section
+    class="contact"
+    id="contact"
+  >
+
+    <div class="eyebrow">
+      GET IN TOUCH
+    </div>
+
+    <h2>
+      Let's Find Your Perfect Design
+    </h2>
+
+    <p>
+      Have a design in mind or want to know more
+      about a necklace? Contact KK 1 Gram Jewellers
+      directly.
+    </p>
+
+
+    <div class="contact-buttons">
+
+      <!-- PHONE -->
+
+      <a
+        href="tel:+91YOURPHONENUMBER"
+        class="contact-btn call-btn"
+      >
+
+        <i class="fa-solid fa-phone"></i>
+
+        Call Us
+
+      </a>
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        href="https://wa.me/91YOURWHATSAPPNUMBER?text=Hello%20KK%201%20Gram%20Jewellers%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
+        target="_blank"
+        class="contact-btn whatsapp-btn"
+      >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        WhatsApp Us
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    © 2026
+    <strong>
+      KK 1 Gram Jewellers
+    </strong>
+
+    — All Rights Reserved.
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       PRODUCT MODAL
+  ====================================================== -->
+
+  <div
+    class="product-modal"
+    id="productModal"
+    onclick="closeModalOutside(event)"
+  >
+
+    <div class="modal-box">
+
+
+      <button
+        class="modal-close"
+        onclick="closeProductModal()"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+      <!-- IMAGE -->
+
+      <div class="modal-gallery">
+
+        <img
+          id="mainProductImage"
+          class="main-product-image"
+          src=""
+          alt="Jewellery"
+        >
+
+        <div
+          id="thumbnailRow"
+          class="thumbnail-row"
+        ></div>
+
+      </div>
+
+
+      <!-- DETAILS -->
+
+      <div class="modal-details">
+
+        <div class="modal-label">
+          KK 1 GRAM JEWELLERS
+        </div>
+
+        <h2 id="modalTitle">
+          Necklace
+        </h2>
+
+        <p
+          id="modalDescription"
+          class="modal-description"
+        >
+          Beautiful jewellery design from
+          KK 1 Gram Jewellers.
+        </p>
+
+
+        <ul class="detail-list">
+
+          <li>
+            <strong>Category:</strong>
+            Necklace
+          </li>
+
+          <li>
+            <strong>Collection:</strong>
+            Premium Jewellery
+          </li>
+
+          <li>
+            <strong>Enquiry:</strong>
+            Available on WhatsApp
+          </li>
+
+        </ul>
+
+
+        <a
+          id="productWhatsapp"
+          href="#"
+          target="_blank"
+          class="whatsapp-product"
+        >
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          Enquire On WhatsApp
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       FLOATING WHATSAPP
+  ====================================================== -->
+
+  <a
+    href="https://wa.me/91YOURWHATSAPPNUMBER?text=Hello%20KK%201%20Gram%20Jewellers%2C%20I%20want%20to%20know%20about%20your%20jewellery."
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="WhatsApp"
+  >
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    /* =====================================================
+       GITHUB REPOSITORY
+    ===================================================== */
+
+    const GITHUB_API =
+      "https://api.github.com/repos/kkjewellers6064/kk-1-gram-jewellers/contents/images/necklaces";
+
+
+
+    const RAW_BASE =
+      "https://raw.githubusercontent.com/kkjewellers6064/kk-1-gram-jewellers/main/images/necklaces/";
+
+
+    /* =====================================================
+       WHATSAPP NUMBER
+       IMPORTANT:
+       Replace with actual number WITHOUT +
+       Example:
+       919876543210
+    ===================================================== */
+
+    const WHATSAPP_NUMBER =
+      "91YOURWHATSAPPNUMBER";
+
+
+
+    /* =====================================================
+       DOM
+    ===================================================== */
+
+    const productsSection =
+      document.getElementById(
+        "products"
+      );
+
+    const productGrid =
+      document.getElementById(
+        "productGrid"
+      );
+
+    const productModal =
+      document.getElementById(
+        "productModal"
+      );
+
+    const mainProductImage =
+      document.getElementById(
+        "mainProductImage"
+      );
+
+    const thumbnailRow =
+      document.getElementById(
+        "thumbnailRow"
+      );
+
+    const modalTitle =
+      document.getElementById(
+        "modalTitle"
+      );
+
+    const modalDescription =
+      document.getElementById(
+        "modalDescription"
+      );
+
+    const productWhatsapp =
+      document.getElementById(
+        "productWhatsapp"
+      );
+
+
+
+    /* =====================================================
+       OPEN NECKLACES
+    ===================================================== */
+
+    async function openNecklaces() {
+
+      productsSection.classList.add(
+        "show"
+      );
+
+      productsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      await loadNecklaces();
+
+    }
+
+
+
+    /* =====================================================
+       LOAD NECKLACES FROM GITHUB FOLDER
+    ===================================================== */
+
+    async function loadNecklaces() {
+
+      productGrid.innerHTML = `
+
+        <div class="loading">
+
+          <i class="fa-solid fa-spinner fa-spin"></i>
+
+          <br>
+
+          Loading necklace collection...
+
+        </div>
+
+      `;
+
+
+      try {
+
+        const response =
+          await fetch(
+            GITHUB_API
+          );
+
+
+        if (!response.ok) {
+          throw new Error(
+            "Unable to load images"
+          );
+        }
+
+
+        const files =
+          await response.json();
+
+
+        const imageFiles =
+          files.filter(
+            file => {
+
+              const name =
+                file.name.toLowerCase();
+
+              return (
+                name.endsWith(".jpg") ||
+                name.endsWith(".jpeg") ||
+                name.endsWith(".png") ||
+                name.endsWith(".webp")
+              );
+
+            }
+          );
+
+
+        if (
+          imageFiles.length === 0
+        ) {
+
+          productGrid.innerHTML = `
+
+            <div class="loading">
+
+              No necklace images found.
+
+            </div>
+
+          `;
+
+          return;
+
+        }
+
+
+        productGrid.innerHTML = "";
+
+
+        imageFiles.forEach(
+          (file, index) => {
+
+            const imageUrl =
+              RAW_BASE +
+              encodeURIComponent(
+                file.name
+              );
+
+
+            const title =
+              cleanProductName(
+                file.name
+              );
+
+
+            const card =
+              document.createElement(
+                "div"
+              );
+
+            card.className =
+              "product-card";
+
+
+            card.innerHTML = `
+
+              <div class="product-image">
+
+                <span class="product-tag">
+                  NECKLACE
+                </span>
+
+                <img
+                  src="${imageUrl}"
+                  alt="${title}"
+                  loading="lazy"
+                >
+
+              </div>
+
+              <div class="product-info">
+
+                <h4>
+                  ${title}
+                </h4>
+
+                <p>
+                  KK 1 Gram Jewellers
+                </p>
+
+                <span class="view-product">
+
+                  VIEW DETAILS
+                  →
+                  
+                </span>
+
+              </div>
+
+            `;
+
+
+            card.addEventListener(
+              "click",
+              () => {
+
+                openProduct(
+                  imageUrl,
+                  title
+                );
+
+              }
+            );
+
+
+            productGrid.appendChild(
+              card
+            );
+
+          }
+        );
+
+
+      } catch (error) {
+
+        console.error(error);
+
+
+        productGrid.innerHTML = `
+
+          <div class="loading">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <br>
+
+            Necklace images could not be loaded.
+
+            <br><br>
+
+            Please refresh the page.
+
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+
+    /* =====================================================
+       CLEAN FILE NAME
+    ===================================================== */
+
+    function cleanProductName(
+      filename
+    ) {
+
+      return filename
+        .replace(
+          /\.[^/.]+$/,
+          ""
+        )
+
+        .replace(
+          /[-_]+/g,
+          " "
+        )
+
+        .replace(
+          /\s+/g,
+          " "
+        )
+
+        .trim()
+
+        .replace(
+          /\b\w/g,
+          letter =>
+            letter.toUpperCase()
+        );
+
+    }
+
+
+
+    /* =====================================================
+       OPEN PRODUCT
+    ===================================================== */
+
+    function openProduct(
+      imageUrl,
+      title
+    ) {
+
+      mainProductImage.src =
+        imageUrl;
+
+      mainProductImage.alt =
+        title;
+
+
+      modalTitle.textContent =
+        title;
+
+
+      modalDescription.textContent =
+        "Beautiful necklace design from KK 1 Gram Jewellers. Contact us on WhatsApp for price, availability and more details.";
+
+
+      thumbnailRow.innerHTML = "";
+
+
+      const thumbnail =
+        document.createElement(
+          "img"
+        );
+
+
+      thumbnail.src =
+        imageUrl;
+
+      thumbnail.className =
+        "thumbnail active";
+
+      thumbnail.alt =
+        title;
+
+
+      thumbnailRow.appendChild(
+        thumbnail
+      );
+
+
+      /* WhatsApp message */
+
+      const message =
+        `Hello KK 1 Gram Jewellers, I am interested in this necklace design: ${title}. Please share the price and details.`;
+
+
+      productWhatsapp.href =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(
+          message
+        );
+
+
+      productModal.classList.add(
+        "active"
+      );
+
+      document.body.classList.add(
+        "modal-open"
+      );
+
+    }
+
+
+
+    /* =====================================================
+       CLOSE MODAL
+    ===================================================== */
+
+    function closeProductModal() {
+
+      productModal.classList.remove(
+        "active"
+      );
+
+      document.body.classList.remove(
+        "modal-open"
+      );
+
+    }
+
+
+
+    /* =====================================================
+       CLOSE WHEN CLICKING OUTSIDE
+    ===================================================== */
+
+    function closeModalOutside(
+      event
+    ) {
+
+      if (
+        event.target ===
+        productModal
+      ) {
+
+        closeProductModal();
+
+      }
+
+    }
+
+
+
+    /* =====================================================
+       ESCAPE KEY
+    ===================================================== */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeProductModal();
+
+        }
+
+      }
+    );
+
+
+
+    /* =====================================================
+       BACK TO COLLECTIONS
+    ===================================================== */
+
+    function backToCollections() {
+
+      productsSection.classList.remove(
+        "show"
+      );
+
+
+      document
+        .getElementById(
+          "collections"
+        )
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    }
+
+
+
+    /* =====================================================
+       NAVBAR JEWELLERY LINK
+    ===================================================== */
+
+    function scrollToProducts(
+      event
+    ) {
+
+      event.preventDefault();
+
+      openNecklaces();
+
+    }
+
+
+
+    /* =====================================================
+       PRELOAD NECKLACES ONLY WHEN USER OPENS COLLECTION
+    ===================================================== */
+
+    let necklacesLoaded = false;
+
+
+    const originalOpen =
+      openNecklaces;
+
+
+    openNecklaces =
+      async function() {
+
+        productsSection.classList.add(
+          "show"
+        );
+
+
+        productsSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+
+        if (
+          !necklacesLoaded
+        ) {
+
+          necklacesLoaded = true;
+
+          await loadNecklaces();
+
+        }
+
+      };
+
+  </script>
+
+
+</body>
+
+</html>
