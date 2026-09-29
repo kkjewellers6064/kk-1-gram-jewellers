@@ -1288,7 +1288,8 @@
 
 
     /* =========================================================
-       BRANCH INQUIRY BOXES
+       PRODUCT ENQUIRY
+       ALL 3 BRANCHES
     ========================================================= */
 
     .inquiry-title {
@@ -1297,11 +1298,13 @@
         "Cormorant Garamond",
         serif;
 
-      font-size: 28px;
+      font-size: 30px;
+
+      font-weight: 700;
 
       color: #111;
 
-      margin-bottom: 12px;
+      margin-bottom: 3px;
 
     }
 
@@ -1321,6 +1324,8 @@
 
       display: grid;
 
+      grid-template-columns: 1fr;
+
       gap: 9px;
 
       margin-bottom: 5px;
@@ -1335,10 +1340,18 @@
 
       border-radius: 11px;
 
-      padding: 10px 11px;
+      padding: 11px;
 
       background:
-        #faf8f3;
+        linear-gradient(
+          135deg,
+          #fffdf8,
+          #faf7ef
+        );
+
+      box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.04);
 
     }
 
@@ -1351,9 +1364,9 @@
 
       justify-content: space-between;
 
-      gap: 8px;
+      gap: 10px;
 
-      margin-bottom: 7px;
+      margin-bottom: 8px;
 
     }
 
@@ -1364,7 +1377,7 @@
         "Cormorant Garamond",
         serif;
 
-      font-size: 22px;
+      font-size: 23px;
 
       font-weight: 700;
 
@@ -1375,13 +1388,19 @@
 
     .branch-inquiry-number {
 
-      color: #777;
+      color: #555;
 
-      font-size: 10px;
+      font-size: 11px;
 
-      font-weight: 600;
+      font-weight: 700;
 
       white-space: nowrap;
+
+      background: #f1eadb;
+
+      padding: 4px 8px;
+
+      border-radius: 20px;
 
     }
 
@@ -1407,7 +1426,7 @@
 
       gap: 6px;
 
-      padding: 9px 8px;
+      padding: 10px 8px;
 
       border-radius: 7px;
 
@@ -1416,6 +1435,8 @@
       font-weight: 800;
 
       transition: 0.25s;
+
+      cursor: pointer;
 
     }
 
@@ -1450,6 +1471,10 @@
 
       color: #fff;
 
+      border:
+        1px solid
+        var(--green);
+
     }
 
 
@@ -1457,6 +1482,11 @@
 
       background:
         #1fba59;
+
+      color: #fff;
+
+      transform:
+        translateY(-1px);
 
     }
 
@@ -2248,7 +2278,7 @@
 
         flex-direction: column;
 
-        gap: 2px;
+        gap: 4px;
 
       }
 
@@ -2264,7 +2294,7 @@
 
         font-size: 9px;
 
-        padding: 9px 5px;
+        padding: 10px 5px;
 
       }
 
@@ -2891,9 +2921,7 @@
     <div class="store-grid">
 
 
-      <!-- =================================================
-           MEHSANA
-      ================================================== -->
+      <!-- MEHSANA -->
 
       <div class="store-card">
 
@@ -2921,6 +2949,7 @@
           <a
             href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Mehsana"
             target="_blank"
+            rel="noopener"
             class="store-btn"
           >
 
@@ -2946,6 +2975,7 @@
           <a
             href="https://wa.me/918140136434?text=Hello%20KK%201%20Gram%20Jewellers%20Mehsana%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
             target="_blank"
+            rel="noopener"
             class="store-btn store-whatsapp"
           >
 
@@ -2961,9 +2991,7 @@
 
 
 
-      <!-- =================================================
-           PALANPUR
-      ================================================== -->
+      <!-- PALANPUR -->
 
       <div class="store-card">
 
@@ -2991,6 +3019,7 @@
           <a
             href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Palanpur"
             target="_blank"
+            rel="noopener"
             class="store-btn"
           >
 
@@ -3016,6 +3045,7 @@
           <a
             href="https://wa.me/918140136453?text=Hello%20KK%201%20Gram%20Jewellers%20Palanpur%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
             target="_blank"
+            rel="noopener"
             class="store-btn store-whatsapp"
           >
 
@@ -3031,9 +3061,7 @@
 
 
 
-      <!-- =================================================
-           KALOL
-      ================================================== -->
+      <!-- KALOL -->
 
       <div class="store-card">
 
@@ -3061,6 +3089,7 @@
           <a
             href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Kalol"
             target="_blank"
+            rel="noopener"
             class="store-btn"
           >
 
@@ -3086,6 +3115,7 @@
           <a
             href="https://wa.me/918140136435?text=Hello%20KK%201%20Gram%20Jewellers%20Kalol%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
             target="_blank"
+            rel="noopener"
             class="store-btn store-whatsapp"
           >
 
@@ -3172,6 +3202,7 @@
           <a
             href="https://wa.me/918140136434?text=Hello%20KK%201%20Gram%20Jewellers%20Mehsana%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
             target="_blank"
+            rel="noopener"
             class="small-contact-btn small-whatsapp"
           >
 
@@ -3219,6 +3250,7 @@
           <a
             href="https://wa.me/918140136435?text=Hello%20KK%201%20Gram%20Jewellers%20Kalol%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
             target="_blank"
+            rel="noopener"
             class="small-contact-btn small-whatsapp"
           >
 
@@ -3266,6 +3298,7 @@
           <a
             href="https://wa.me/918140136453?text=Hello%20KK%201%20Gram%20Jewellers%20Palanpur%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
             target="_blank"
+            rel="noopener"
             class="small-contact-btn small-whatsapp"
           >
 
@@ -3313,7 +3346,6 @@
     id="productModal"
     onclick="closeModalOutside(event)"
   >
-
 
     <div class="modal-box">
 
@@ -3409,7 +3441,7 @@
               Enquiry:
             </strong>
 
-            Select your preferred branch below
+            Select any showroom below
 
           </li>
 
@@ -3419,7 +3451,7 @@
 
 
         <!-- =================================================
-             BRANCH SELECTION FOR PRODUCT INQUIRY
+             PRODUCT ENQUIRY - 3 SHOWROOMS
         ================================================== -->
 
         <div class="inquiry-title">
@@ -3428,21 +3460,23 @@
 
 
         <div class="inquiry-subtitle">
-          Select the branch you want to contact:
+          Choose the showroom you want to contact on WhatsApp:
         </div>
 
 
         <div class="branch-inquiry-list">
 
 
-          <!-- MEHSANA -->
+          <!-- =================================================
+               MEHSANA
+          ================================================== -->
 
           <div class="branch-inquiry">
 
             <div class="branch-inquiry-top">
 
               <div class="branch-inquiry-name">
-                Mehsana
+                Mehsana Showroom
               </div>
 
 
@@ -3455,9 +3489,7 @@
 
             <div class="branch-inquiry-buttons">
 
-
               <a
-                id="mehsanaProductCall"
                 href="tel:+918140136434"
                 class="branch-inquiry-button branch-call-button"
               >
@@ -3473,6 +3505,7 @@
                 id="mehsanaProductWhatsapp"
                 href="#"
                 target="_blank"
+                rel="noopener"
                 class="branch-inquiry-button branch-whatsapp-button"
               >
 
@@ -3488,14 +3521,16 @@
 
 
 
-          <!-- KALOL -->
+          <!-- =================================================
+               KALOL
+          ================================================== -->
 
           <div class="branch-inquiry">
 
             <div class="branch-inquiry-top">
 
               <div class="branch-inquiry-name">
-                Kalol
+                Kalol Showroom
               </div>
 
 
@@ -3508,9 +3543,7 @@
 
             <div class="branch-inquiry-buttons">
 
-
               <a
-                id="kalolProductCall"
                 href="tel:+918140136435"
                 class="branch-inquiry-button branch-call-button"
               >
@@ -3526,6 +3559,7 @@
                 id="kalolProductWhatsapp"
                 href="#"
                 target="_blank"
+                rel="noopener"
                 class="branch-inquiry-button branch-whatsapp-button"
               >
 
@@ -3541,14 +3575,16 @@
 
 
 
-          <!-- PALANPUR -->
+          <!-- =================================================
+               PALANPUR
+          ================================================== -->
 
           <div class="branch-inquiry">
 
             <div class="branch-inquiry-top">
 
               <div class="branch-inquiry-name">
-                Palanpur
+                Palanpur Showroom
               </div>
 
 
@@ -3561,9 +3597,7 @@
 
             <div class="branch-inquiry-buttons">
 
-
               <a
-                id="palanpurProductCall"
                 href="tel:+918140136453"
                 class="branch-inquiry-button branch-call-button"
               >
@@ -3579,6 +3613,7 @@
                 id="palanpurProductWhatsapp"
                 href="#"
                 target="_blank"
+                rel="noopener"
                 class="branch-inquiry-button branch-whatsapp-button"
               >
 
@@ -3607,12 +3642,14 @@
 
   <!-- =====================================================
        FLOATING WHATSAPP
+       GENERAL WEBSITE WHATSAPP
        DEFAULT = MEHSANA
-    ====================================================== -->
+  ====================================================== -->
 
   <a
     href="https://wa.me/918140136434?text=Hello%20KK%201%20Gram%20Jewellers%2C%20I%20want%20to%20know%20about%20your%20jewellery."
     target="_blank"
+    rel="noopener"
     class="whatsapp-float"
     aria-label="WhatsApp"
   >
@@ -3643,16 +3680,29 @@
 
 
     /* =====================================================
-       BRANCH PHONE NUMBERS
+       ALL 3 BRANCHES
+       ONE PLACE - EASY TO CHANGE LATER
     ===================================================== */
 
-    const BRANCH_NUMBERS = {
+    const BRANCHES = {
 
-      mehsana: "918140136434",
+      mehsana: {
+        name: "Mehsana",
+        phone: "918140136434",
+        displayPhone: "+91 81401 36434"
+      },
 
-      kalol: "918140136435",
+      kalol: {
+        name: "Kalol",
+        phone: "918140136435",
+        displayPhone: "+91 81401 36435"
+      },
 
-      palanpur: "918140136453"
+      palanpur: {
+        name: "Palanpur",
+        phone: "918140136453",
+        displayPhone: "+91 81401 36453"
+      }
 
     };
 
@@ -3806,18 +3856,18 @@
 
 
     /* =====================================================
-       CREATE WHATSAPP MESSAGE
+       CREATE PRODUCT WHATSAPP MESSAGE
     ===================================================== */
 
     function createProductMessage(
       category,
       title,
-      branch
+      branchName
     ) {
 
       return (
 
-        `Hello KK 1 Gram Jewellers ${branch}, ` +
+        `Hello KK 1 Gram Jewellers ${branchName} Showroom, ` +
 
         `I am interested in this ${category.toLowerCase()} design: ` +
 
@@ -3831,7 +3881,7 @@
 
 
     /* =====================================================
-       SET PRODUCT WHATSAPP LINKS
+       SET ALL 3 PRODUCT WHATSAPP LINKS
     ===================================================== */
 
     function setProductWhatsappLinks(
@@ -3839,51 +3889,63 @@
       title
     ) {
 
+      /* -----------------------------------------------
+         MEHSANA
+      ------------------------------------------------ */
+
       const mehsanaMessage =
         createProductMessage(
           category,
           title,
-          "Mehsana"
-        );
-
-
-      const kalolMessage =
-        createProductMessage(
-          category,
-          title,
-          "Kalol"
-        );
-
-
-      const palanpurMessage =
-        createProductMessage(
-          category,
-          title,
-          "Palanpur"
+          BRANCHES.mehsana.name
         );
 
 
       mehsanaProductWhatsapp.href =
         "https://wa.me/" +
-        BRANCH_NUMBERS.mehsana +
+        BRANCHES.mehsana.phone +
         "?text=" +
         encodeURIComponent(
           mehsanaMessage
         );
 
 
+      /* -----------------------------------------------
+         KALOL
+      ------------------------------------------------ */
+
+      const kalolMessage =
+        createProductMessage(
+          category,
+          title,
+          BRANCHES.kalol.name
+        );
+
+
       kalolProductWhatsapp.href =
         "https://wa.me/" +
-        BRANCH_NUMBERS.kalol +
+        BRANCHES.kalol.phone +
         "?text=" +
         encodeURIComponent(
           kalolMessage
         );
 
 
+      /* -----------------------------------------------
+         PALANPUR
+      ------------------------------------------------ */
+
+      const palanpurMessage =
+        createProductMessage(
+          category,
+          title,
+          BRANCHES.palanpur.name
+        );
+
+
       palanpurProductWhatsapp.href =
         "https://wa.me/" +
-        BRANCH_NUMBERS.palanpur +
+        BRANCHES.palanpur.phone +
         "?text=" +
         encodeURIComponent(
           palanpurMessage
@@ -4423,7 +4485,7 @@
 
 
     /* =====================================================
-       OPEN PRODUCT
+       OPEN PRODUCT MODAL
     ===================================================== */
 
     function openProduct(
@@ -4433,6 +4495,10 @@
     ) {
 
 
+      /* -----------------------------------------------
+         PRODUCT IMAGE
+      ------------------------------------------------ */
+
       mainProductImage.src =
         imageUrl;
 
@@ -4441,22 +4507,35 @@
         title;
 
 
+      /* -----------------------------------------------
+         PRODUCT TITLE
+      ------------------------------------------------ */
+
       modalTitle.textContent =
         title;
 
+
+      /* -----------------------------------------------
+         CATEGORY
+      ------------------------------------------------ */
 
       modalCategory.textContent =
         category;
 
 
+      /* -----------------------------------------------
+         DESCRIPTION
+      ------------------------------------------------ */
+
       modalDescription.textContent =
 
-        `Beautiful ${category.toLowerCase()} design from KK 1 Gram Jewellers. Select your preferred branch below to enquire about price, availability and details.`;
+        `Beautiful ${category.toLowerCase()} design from KK 1 Gram Jewellers. Select Mehsana, Kalol or Palanpur showroom to enquire about this design.`;
 
 
-      /* ===================================================
+
+      /* -----------------------------------------------
          THUMBNAIL
-      =================================================== */
+      ------------------------------------------------ */
 
       thumbnailRow.innerHTML = "";
 
@@ -4495,9 +4574,11 @@
       );
 
 
-      /* ===================================================
-         SET ALL 3 BRANCH WHATSAPP LINKS
-      =================================================== */
+
+      /* -----------------------------------------------
+         IMPORTANT:
+         SET ALL 3 WHATSAPP LINKS
+      ------------------------------------------------ */
 
       setProductWhatsappLinks(
         category,
@@ -4505,122 +4586,5 @@
       );
 
 
-      /* ===================================================
-         OPEN MODAL
-      =================================================== */
 
-      productModal.classList.add(
-        "active"
-      );
-
-
-      document.body.classList.add(
-        "modal-open"
-      );
-
-    }
-
-
-    /* =====================================================
-       CLOSE PRODUCT MODAL
-    ===================================================== */
-
-    function closeProductModal() {
-
-      productModal.classList.remove(
-        "active"
-      );
-
-
-      document.body.classList.remove(
-        "modal-open"
-      );
-
-    }
-
-
-    /* =====================================================
-       CLOSE WHEN CLICKING OUTSIDE
-    ===================================================== */
-
-    function closeModalOutside(
-      event
-    ) {
-
-      if (
-        event.target ===
-        productModal
-      ) {
-
-        closeProductModal();
-
-      }
-
-    }
-
-
-    /* =====================================================
-       ESCAPE KEY
-    ===================================================== */
-
-    document.addEventListener(
-      "keydown",
-      function(event) {
-
-        if (
-          event.key === "Escape"
-        ) {
-
-          closeProductModal();
-
-        }
-
-      }
-    );
-
-
-    /* =====================================================
-       BACK TO COLLECTIONS
-    ===================================================== */
-
-    function backToCollections() {
-
-      productsSection.classList.remove(
-        "show"
-      );
-
-
-      document
-        .getElementById(
-          "collections"
-        )
-        .scrollIntoView({
-
-          behavior: "smooth"
-
-        });
-
-    }
-
-
-    /* =====================================================
-       NAVBAR JEWELLERY BUTTON
-    ===================================================== */
-
-    function scrollToProducts(
-      event
-    ) {
-
-      event.preventDefault();
-
-      openNecklaces();
-
-    }
-
-
-  </script>
-
-
-</body>
-
-</html>
+      /* ---------------
