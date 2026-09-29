@@ -45,11 +45,9 @@
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
-
 
     body {
       font-family: "Montserrat", sans-serif;
@@ -59,22 +57,18 @@
       overflow-x: hidden;
     }
 
-
     body.modal-open {
       overflow: hidden;
     }
-
 
     img {
       max-width: 100%;
       display: block;
     }
 
-
     a {
       text-decoration: none;
     }
-
 
     button {
       font-family: inherit;
@@ -1583,6 +1577,24 @@
     }
 
 
+    .store-whatsapp {
+
+      background:
+        var(--green);
+
+    }
+
+
+    .store-whatsapp:hover {
+
+      background:
+        #20b858;
+
+      color: #fff;
+
+    }
+
+
     /* =========================================================
        CONTACT
     ========================================================= */
@@ -1644,6 +1656,8 @@
 
       flex-wrap: wrap;
 
+      margin-bottom: 15px;
+
     }
 
 
@@ -1680,6 +1694,121 @@
 
 
     .whatsapp-btn {
+
+      background:
+        var(--green);
+
+    }
+
+
+    .branch-contact-title {
+
+      color: var(--gold-light);
+
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: 28px;
+
+      margin: 35px 0 18px;
+
+    }
+
+
+    .contact-branch-grid {
+
+      max-width: 950px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 15px;
+
+    }
+
+
+    .contact-branch {
+
+      padding: 20px 15px;
+
+      border:
+        1px solid
+        rgba(201,162,39,0.3);
+
+      border-radius: 14px;
+
+      background:
+        rgba(255,255,255,0.025);
+
+    }
+
+
+    .contact-branch h3 {
+
+      color: #fff;
+
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size: 27px;
+
+      margin-bottom: 13px;
+
+    }
+
+
+    .contact-branch-buttons {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 7px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    .small-contact-btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 5px;
+
+      padding: 9px 12px;
+
+      border-radius: 7px;
+
+      color: #fff;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+    }
+
+
+    .small-call {
+
+      background: #1b1b1b;
+
+      border:
+        1px solid
+        var(--gold);
+
+    }
+
+
+    .small-whatsapp {
 
       background:
         var(--green);
@@ -1839,6 +1968,14 @@
 
       }
 
+
+      .contact-branch-grid {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+      }
+
     }
 
 
@@ -1932,6 +2069,14 @@
 
       .why-grid,
       .store-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .contact-branch-grid {
 
         grid-template-columns:
           1fr;
@@ -2156,9 +2301,7 @@
     <div class="collection-grid">
 
 
-      <!-- =================================================
-           NECKLACES
-      ================================================== -->
+      <!-- NECKLACES -->
 
       <div
         class="collection-card"
@@ -2202,9 +2345,7 @@
 
 
 
-      <!-- =================================================
-           LADIES BRACELETS
-      ================================================== -->
+      <!-- LADIES BRACELETS -->
 
       <div
         class="collection-card"
@@ -2248,9 +2389,7 @@
 
 
 
-      <!-- =================================================
-           KADA KADLI
-      ================================================== -->
+      <!-- KADA KADLI -->
 
       <div class="collection-card">
 
@@ -2284,9 +2423,7 @@
 
 
 
-      <!-- =================================================
-           PENDAL BUTTI
-      ================================================== -->
+      <!-- PENDAL BUTTI -->
 
       <div class="collection-card">
 
@@ -2320,9 +2457,7 @@
 
 
 
-      <!-- =================================================
-           SHORT MS
-      ================================================== -->
+      <!-- SHORT MS -->
 
       <div class="collection-card">
 
@@ -2356,9 +2491,7 @@
 
 
 
-      <!-- =================================================
-           LAKI
-      ================================================== -->
+      <!-- LAKI -->
 
       <div class="collection-card">
 
@@ -2598,7 +2731,9 @@
     <div class="store-grid">
 
 
-      <!-- MEHSANA -->
+      <!-- =================================================
+           MEHSANA
+      ================================================== -->
 
       <div class="store-card">
 
@@ -2615,11 +2750,13 @@
 
 
         <p>
-          ADD YOUR EXACT MEHSANA SHOP ADDRESS HERE.
+          Contact KK 1 Gram Jewellers Mehsana
+          branch for jewellery enquiries and designs.
         </p>
 
 
         <div class="store-buttons">
+
 
           <a
             href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Mehsana"
@@ -2635,7 +2772,7 @@
 
 
           <a
-            href="tel:+91YOURPHONENUMBER"
+            href="tel:+918140136437"
             class="store-btn"
           >
 
@@ -2645,13 +2782,28 @@
 
           </a>
 
+
+          <a
+            href="https://wa.me/918140136437?text=Hello%20KK%201%20Gram%20Jewellers%20Mehsana%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
+            target="_blank"
+            class="store-btn store-whatsapp"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WHATSAPP
+
+          </a>
+
         </div>
 
       </div>
 
 
 
-      <!-- PALANPUR -->
+      <!-- =================================================
+           PALANPUR
+      ================================================== -->
 
       <div class="store-card">
 
@@ -2668,11 +2820,13 @@
 
 
         <p>
-          ADD YOUR EXACT PALANPUR SHOP ADDRESS HERE.
+          Contact KK 1 Gram Jewellers Palanpur
+          branch for jewellery enquiries and designs.
         </p>
 
 
         <div class="store-buttons">
+
 
           <a
             href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Palanpur"
@@ -2688,7 +2842,7 @@
 
 
           <a
-            href="tel:+91YOURPHONENUMBER"
+            href="tel:+918140136453"
             class="store-btn"
           >
 
@@ -2698,13 +2852,28 @@
 
           </a>
 
+
+          <a
+            href="https://wa.me/918140136453?text=Hello%20KK%201%20Gram%20Jewellers%20Palanpur%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
+            target="_blank"
+            class="store-btn store-whatsapp"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WHATSAPP
+
+          </a>
+
         </div>
 
       </div>
 
 
 
-      <!-- KALOL -->
+      <!-- =================================================
+           KALOL
+      ================================================== -->
 
       <div class="store-card">
 
@@ -2721,11 +2890,13 @@
 
 
         <p>
-          ADD YOUR EXACT KALOL SHOP ADDRESS HERE.
+          Contact KK 1 Gram Jewellers Kalol
+          branch for jewellery enquiries and designs.
         </p>
 
 
         <div class="store-buttons">
+
 
           <a
             href="https://www.google.com/maps/search/?api=1&query=KK+1+Gram+Jewellers+Kalol"
@@ -2741,13 +2912,26 @@
 
 
           <a
-            href="tel:+91YOURPHONENUMBER"
+            href="tel:+918140136435"
             class="store-btn"
           >
 
             <i class="fa-solid fa-phone"></i>
 
             CALL
+
+          </a>
+
+
+          <a
+            href="https://wa.me/918140136435?text=Hello%20KK%201%20Gram%20Jewellers%20Kalol%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
+            target="_blank"
+            class="store-btn store-whatsapp"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WHATSAPP
 
           </a>
 
@@ -2783,41 +2967,139 @@
 
     <p>
       Have a design in mind or want to know more
-      about our jewellery? Contact KK 1 Gram Jewellers
-      directly.
+      about our jewellery? Contact your nearest
+      KK 1 Gram Jewellers branch directly.
     </p>
 
 
-    <div class="contact-buttons">
+
+    <!-- MEHSANA CONTACT -->
+
+    <div class="branch-contact-title">
+      Contact Our Branches
+    </div>
 
 
-      <!-- CALL -->
-
-      <a
-        href="tel:+91YOURPHONENUMBER"
-        class="contact-btn call-btn"
-      >
-
-        <i class="fa-solid fa-phone"></i>
-
-        Call Us
-
-      </a>
+    <div class="contact-branch-grid">
 
 
-      <!-- WHATSAPP -->
+      <div class="contact-branch">
 
-      <a
-        href="https://wa.me/91YOURWHATSAPPNUMBER?text=Hello%20KK%201%20Gram%20Jewellers%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
-        target="_blank"
-        class="contact-btn whatsapp-btn"
-      >
+        <h3>
+          Mehsana
+        </h3>
 
-        <i class="fa-brands fa-whatsapp"></i>
 
-        WhatsApp Us
+        <div class="contact-branch-buttons">
 
-      </a>
+
+          <a
+            href="tel:+918140136437"
+            class="small-contact-btn small-call"
+          >
+
+            <i class="fa-solid fa-phone"></i>
+
+            CALL
+
+          </a>
+
+
+          <a
+            href="https://wa.me/918140136437?text=Hello%20KK%201%20Gram%20Jewellers%20Mehsana%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
+            target="_blank"
+            class="small-contact-btn small-whatsapp"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WHATSAPP
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="contact-branch">
+
+        <h3>
+          Kalol
+        </h3>
+
+
+        <div class="contact-branch-buttons">
+
+
+          <a
+            href="tel:+918140136435"
+            class="small-contact-btn small-call"
+          >
+
+            <i class="fa-solid fa-phone"></i>
+
+            CALL
+
+          </a>
+
+
+          <a
+            href="https://wa.me/918140136435?text=Hello%20KK%201%20Gram%20Jewellers%20Kalol%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
+            target="_blank"
+            class="small-contact-btn small-whatsapp"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WHATSAPP
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="contact-branch">
+
+        <h3>
+          Palanpur
+        </h3>
+
+
+        <div class="contact-branch-buttons">
+
+
+          <a
+            href="tel:+918140136453"
+            class="small-contact-btn small-call"
+          >
+
+            <i class="fa-solid fa-phone"></i>
+
+            CALL
+
+          </a>
+
+
+          <a
+            href="https://wa.me/918140136453?text=Hello%20KK%201%20Gram%20Jewellers%20Palanpur%2C%20I%20would%20like%20to%20know%20about%20your%20jewellery."
+            target="_blank"
+            class="small-contact-btn small-whatsapp"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WHATSAPP
+
+          </a>
+
+        </div>
+
+      </div>
 
 
     </div>
@@ -2983,10 +3265,11 @@
 
   <!-- =====================================================
        FLOATING WHATSAPP
+       DEFAULT = MEHSANA
   ====================================================== -->
 
   <a
-    href="https://wa.me/91YOURWHATSAPPNUMBER?text=Hello%20KK%201%20Gram%20Jewellers%2C%20I%20want%20to%20know%20about%20your%20jewellery."
+    href="https://wa.me/918140136437?text=Hello%20KK%201%20Gram%20Jewellers%2C%20I%20want%20to%20know%20about%20your%20jewellery."
     target="_blank"
     class="whatsapp-float"
     aria-label="WhatsApp"
@@ -3006,36 +3289,30 @@
 
 
     /* =====================================================
-       NECKLACE GITHUB FOLDER
+       GITHUB FOLDERS
     ===================================================== */
 
     const GITHUB_API =
       "https://api.github.com/repos/kkjewellers6064/kk-1-gram-jewellers/contents/images/necklaces";
 
 
-    const RAW_BASE =
-      "https://raw.githubusercontent.com/kkjewellers6064/kk-1-gram-jewellers/main/images/necklaces/";
-
-
-    /* =====================================================
-       LADIES BRACELETS GITHUB FOLDER
-    ===================================================== */
-
     const BRACELETS_GITHUB_API =
       "https://api.github.com/repos/kkjewellers6064/kk-1-gram-jewellers/contents/images/ladies-bracelets";
 
 
-    const BRACELETS_RAW_BASE =
-      "https://raw.githubusercontent.com/kkjewellers6064/kk-1-gram-jewellers/main/images/ladies-bracelets/";
-
-
     /* =====================================================
-       WHATSAPP NUMBER
-       REPLACE ONLY THIS NUMBER LATER
+       WHATSAPP NUMBERS
     ===================================================== */
 
-    const WHATSAPP_NUMBER =
-      "91YOURWHATSAPPNUMBER";
+    const BRANCH_NUMBERS = {
+
+      mehsana: "918140136437",
+
+      kalol: "918140136435",
+
+      palanpur: "918140136453"
+
+    };
 
 
     /* =====================================================
@@ -3109,11 +3386,76 @@
 
 
     /* =====================================================
+       IMAGE FILE CHECK
+    ===================================================== */
+
+    function isImageFile(filename) {
+
+      const name =
+        filename.toLowerCase();
+
+      return (
+
+        name.endsWith(".jpg") ||
+
+        name.endsWith(".jpeg") ||
+
+        name.endsWith(".png") ||
+
+        name.endsWith(".webp") ||
+
+        name.endsWith(".gif") ||
+
+        name.endsWith(".avif") ||
+
+        name.endsWith(".jfif")
+
+      );
+
+    }
+
+
+    /* =====================================================
+       CLEAN FILE NAME
+    ===================================================== */
+
+    function cleanProductName(
+      filename
+    ) {
+
+      return filename
+
+        .replace(
+          /\.[^/.]+$/,
+          ""
+        )
+
+        .replace(
+          /[-_]+/g,
+          " "
+        )
+
+        .replace(
+          /\s+/g,
+          " "
+        )
+
+        .trim()
+
+        .replace(
+          /\b\w/g,
+          letter =>
+            letter.toUpperCase()
+        );
+
+    }
+
+
+    /* =====================================================
        OPEN NECKLACES
     ===================================================== */
 
     async function openNecklaces() {
-
 
       productsSection.classList.add(
         "show"
@@ -3121,8 +3463,11 @@
 
 
       productsSection.scrollIntoView({
+
         behavior: "smooth",
+
         block: "start"
+
       });
 
 
@@ -3145,7 +3490,6 @@
 
     async function loadNecklaces() {
 
-
       productGrid.innerHTML = `
 
         <div class="loading">
@@ -3163,17 +3507,16 @@
 
       try {
 
-
         const response =
           await fetch(
-            GITHUB_API
+            GITHUB_API + "?t=" + Date.now()
           );
 
 
         if (!response.ok) {
 
           throw new Error(
-            "Unable to load necklace images"
+            "GitHub necklace folder could not be loaded."
           );
 
         }
@@ -3184,44 +3527,54 @@
 
 
         const imageFiles =
-          files.filter(
-            file => {
+          files
 
-              const name =
-                file.name.toLowerCase();
+            .filter(
+              file =>
+                file.type === "file" &&
+                isImageFile(file.name)
+            )
 
-
-              return (
-
-                name.endsWith(".jpg") ||
-
-                name.endsWith(".jpeg") ||
-
-                name.endsWith(".png") ||
-
-                name.endsWith(".webp")
-
-              );
-
-            }
-          );
+            .sort(
+              (a,b) =>
+                a.name.localeCompare(
+                  b.name,
+                  undefined,
+                  {
+                    numeric: true,
+                    sensitivity: "base"
+                  }
+                )
+            );
 
 
         if (
           imageFiles.length === 0
         ) {
 
-
           productGrid.innerHTML = `
 
             <div class="loading">
 
+              <i class="fa-solid fa-image"></i>
+
+              <br>
+
               No necklace images found.
+
+              <br><br>
+
+              Please check:
+
+              <br>
+
+              <strong>
+                images/necklaces
+              </strong>
 
             </div>
 
           `;
-
 
           return;
 
@@ -3234,18 +3587,19 @@
         imageFiles.forEach(
           file => {
 
-
             const imageUrl =
-              RAW_BASE +
-              encodeURIComponent(
-                file.name
-              );
+              file.download_url;
 
 
             const title =
               cleanProductName(
                 file.name
               );
+
+
+            if (!imageUrl) {
+              return;
+            }
 
 
             const card =
@@ -3303,7 +3657,8 @@
 
                 openProduct(
                   imageUrl,
-                  title
+                  title,
+                  "Necklace"
                 );
 
               }
@@ -3314,13 +3669,11 @@
               card
             );
 
-
           }
         );
 
 
       } catch (error) {
-
 
         console.error(
           "Necklace Error:",
@@ -3340,7 +3693,17 @@
 
             <br><br>
 
-            Please refresh the page.
+            Please check your GitHub folder:
+
+            <br><br>
+
+            <strong>
+              images/necklaces
+            </strong>
+
+            <br><br>
+
+            Then refresh the website.
 
           </div>
 
@@ -3357,15 +3720,17 @@
 
     async function openLadiesBracelets() {
 
-
       productsSection.classList.add(
         "show"
       );
 
 
       productsSection.scrollIntoView({
+
         behavior: "smooth",
+
         block: "start"
+
       });
 
 
@@ -3388,7 +3753,6 @@
 
     async function loadLadiesBracelets() {
 
-
       productGrid.innerHTML = `
 
         <div class="loading">
@@ -3406,17 +3770,18 @@
 
       try {
 
-
         const response =
           await fetch(
-            BRACELETS_GITHUB_API
+            BRACELETS_GITHUB_API +
+            "?t=" +
+            Date.now()
           );
 
 
         if (!response.ok) {
 
           throw new Error(
-            "Unable to load bracelet images"
+            "GitHub bracelet folder could not be loaded."
           );
 
         }
@@ -3433,44 +3798,54 @@
 
 
         const imageFiles =
-          files.filter(
-            file => {
+          files
 
-              const name =
-                file.name.toLowerCase();
+            .filter(
+              file =>
+                file.type === "file" &&
+                isImageFile(file.name)
+            )
 
-
-              return (
-
-                name.endsWith(".jpg") ||
-
-                name.endsWith(".jpeg") ||
-
-                name.endsWith(".png") ||
-
-                name.endsWith(".webp")
-
-              );
-
-            }
-          );
+            .sort(
+              (a,b) =>
+                a.name.localeCompare(
+                  b.name,
+                  undefined,
+                  {
+                    numeric: true,
+                    sensitivity: "base"
+                  }
+                )
+            );
 
 
         if (
           imageFiles.length === 0
         ) {
 
-
           productGrid.innerHTML = `
 
             <div class="loading">
 
+              <i class="fa-solid fa-image"></i>
+
+              <br>
+
               No ladies bracelet images found.
+
+              <br><br>
+
+              Please check:
+
+              <br>
+
+              <strong>
+                images/ladies-bracelets
+              </strong>
 
             </div>
 
           `;
-
 
           return;
 
@@ -3483,22 +3858,19 @@
         imageFiles.forEach(
           file => {
 
-
-            /*
-              GitHub RAW image URL
-            */
-
             const imageUrl =
-              BRACELETS_RAW_BASE +
-              encodeURIComponent(
-                file.name
-              );
+              file.download_url;
 
 
             const title =
               cleanProductName(
                 file.name
               );
+
+
+            if (!imageUrl) {
+              return;
+            }
 
 
             const card =
@@ -3554,9 +3926,10 @@
               "click",
               function() {
 
-                openBraceletProduct(
+                openProduct(
                   imageUrl,
-                  title
+                  title,
+                  "Ladies Bracelet"
                 );
 
               }
@@ -3567,13 +3940,11 @@
               card
             );
 
-
           }
         );
 
 
       } catch (error) {
-
 
         console.error(
           "Ladies Bracelet Error:",
@@ -3593,7 +3964,7 @@
 
             <br><br>
 
-            Please check that your images are inside:
+            Please check:
 
             <br><br>
 
@@ -3615,49 +3986,13 @@
 
 
     /* =====================================================
-       CLEAN FILE NAME
-    ===================================================== */
-
-    function cleanProductName(
-      filename
-    ) {
-
-
-      return filename
-
-        .replace(
-          /\.[^/.]+$/,
-          ""
-        )
-
-        .replace(
-          /[-_]+/g,
-          " "
-        )
-
-        .replace(
-          /\s+/g,
-          " "
-        )
-
-        .trim()
-
-        .replace(
-          /\b\w/g,
-          letter =>
-            letter.toUpperCase()
-        );
-
-    }
-
-
-    /* =====================================================
-       OPEN NECKLACE PRODUCT
+       OPEN PRODUCT MODAL
     ===================================================== */
 
     function openProduct(
       imageUrl,
-      title
+      title,
+      category
     ) {
 
 
@@ -3673,12 +4008,12 @@
         title;
 
 
-      modalDescription.textContent =
-        "Beautiful necklace design from KK 1 Gram Jewellers. Contact us on WhatsApp for price, availability and more details.";
-
-
       modalCategory.textContent =
-        "Necklace";
+        category;
+
+
+      modalDescription.textContent =
+        `Beautiful ${category.toLowerCase()} design from KK 1 Gram Jewellers. Contact us on WhatsApp for price, availability and more details.`;
 
 
       thumbnailRow.innerHTML = "";
@@ -3702,85 +4037,15 @@
         title;
 
 
-      thumbnailRow.appendChild(
-        thumbnail
+      thumbnail.addEventListener(
+        "click",
+        function() {
+
+          mainProductImage.src =
+            imageUrl;
+
+        }
       );
-
-
-      const message =
-        `Hello KK 1 Gram Jewellers, I am interested in this necklace design: ${title}. Please share the price and details.`;
-
-
-      productWhatsapp.href =
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(
-          message
-        );
-
-
-      productModal.classList.add(
-        "active"
-      );
-
-
-      document.body.classList.add(
-        "modal-open"
-      );
-
-    }
-
-
-    /* =====================================================
-       OPEN LADIES BRACELET PRODUCT
-    ===================================================== */
-
-    function openBraceletProduct(
-      imageUrl,
-      title
-    ) {
-
-
-      mainProductImage.src =
-        imageUrl;
-
-
-      mainProductImage.alt =
-        title;
-
-
-      modalTitle.textContent =
-        title;
-
-
-      modalDescription.textContent =
-        "Beautiful ladies bracelet design from KK 1 Gram Jewellers. Contact us on WhatsApp for price, availability and more details.";
-
-
-      modalCategory.textContent =
-        "Ladies Bracelet";
-
-
-      thumbnailRow.innerHTML = "";
-
-
-      const thumbnail =
-        document.createElement(
-          "img"
-        );
-
-
-      thumbnail.src =
-        imageUrl;
-
-
-      thumbnail.className =
-        "thumbnail active";
-
-
-      thumbnail.alt =
-        title;
 
 
       thumbnailRow.appendChild(
@@ -3788,13 +4053,18 @@
       );
 
 
+      /*
+        Product enquiry will go to
+        Mehsana WhatsApp number.
+      */
+
       const message =
-        `Hello KK 1 Gram Jewellers, I am interested in this ladies bracelet design: ${title}. Please share the price and details.`;
+        `Hello KK 1 Gram Jewellers, I am interested in this ${category.toLowerCase()} design: ${title}. Please share the price and details.`;
 
 
       productWhatsapp.href =
         "https://wa.me/" +
-        WHATSAPP_NUMBER +
+        BRANCH_NUMBERS.mehsana +
         "?text=" +
         encodeURIComponent(
           message
@@ -3819,7 +4089,6 @@
 
     function closeProductModal() {
 
-
       productModal.classList.remove(
         "active"
       );
@@ -3839,7 +4108,6 @@
     function closeModalOutside(
       event
     ) {
-
 
       if (
         event.target ===
@@ -3861,7 +4129,6 @@
       "keydown",
       function(event) {
 
-
         if (
           event.key === "Escape"
         ) {
@@ -3880,7 +4147,6 @@
 
     function backToCollections() {
 
-
       productsSection.classList.remove(
         "show"
       );
@@ -3891,7 +4157,9 @@
           "collections"
         )
         .scrollIntoView({
+
           behavior: "smooth"
+
         });
 
     }
@@ -3905,9 +4173,7 @@
       event
     ) {
 
-
       event.preventDefault();
-
 
       openNecklaces();
 
