@@ -26,10 +26,9 @@
     }
 
 
-    html {
-      scroll-behavior: smooth;
-    }
-
+    /* =====================================================
+       BODY
+    ===================================================== */
 
     body {
 
@@ -82,14 +81,18 @@
 
       width: 100%;
 
-      background: rgba(0,0,0,0.94);
+      background:
+        rgba(0,0,0,0.94);
 
-      backdrop-filter: blur(12px);
+      backdrop-filter:
+        blur(12px);
 
       border-bottom:
-        1px solid rgba(212,175,55,0.35);
+        1px solid
+        rgba(212,175,55,0.35);
 
-      padding: 10px 5%;
+      padding:
+        10px 5%;
 
       display: flex;
 
@@ -168,7 +171,7 @@
 
     /* =====================================================
        HERO
-       EXISTING BANNER - NOT CHANGED
+       EXISTING BANNER - SAME
     ===================================================== */
 
     .hero {
@@ -212,7 +215,7 @@
 
 
     /* =====================================================
-       SECTIONS
+       SECTION
     ===================================================== */
 
     .section {
@@ -305,7 +308,8 @@
 
       font-size: 80px;
 
-      transform: rotate(20deg);
+      transform:
+        rotate(20deg);
 
       pointer-events: none;
 
@@ -327,7 +331,8 @@
 
       font-size: 100px;
 
-      transform: rotate(-20deg);
+      transform:
+        rotate(-20deg);
 
       pointer-events: none;
 
@@ -343,7 +348,10 @@
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fit, minmax(210px, 1fr));
+        repeat(
+          auto-fit,
+          minmax(210px,1fr)
+        );
 
       gap: 22px;
 
@@ -365,7 +373,8 @@
       min-height: 250px;
 
       border:
-        1px solid rgba(212,175,55,0.40);
+        1px solid
+        rgba(212,175,55,0.40);
 
       border-radius: 18px;
 
@@ -397,7 +406,8 @@
       background-position: center;
 
       box-shadow:
-        0 12px 35px rgba(0,0,0,0.35);
+        0 12px 35px
+        rgba(0,0,0,0.35);
 
       transition:
         transform 0.35s ease,
@@ -406,6 +416,10 @@
 
     }
 
+
+    /* =====================================================
+       CARD OVERLAY
+    ===================================================== */
 
     .collection-card::after {
 
@@ -430,6 +444,10 @@
 
     }
 
+
+    /* =====================================================
+       GOLD GRAPHIC
+    ===================================================== */
 
     .collection-card::before {
 
@@ -472,12 +490,15 @@
 
     .collection-card:hover {
 
-      transform: translateY(-8px);
+      transform:
+        translateY(-8px);
 
-      border-color: #d4af37;
+      border-color:
+        #d4af37;
 
       box-shadow:
-        0 20px 50px rgba(212,175,55,0.18);
+        0 20px 50px
+        rgba(212,175,55,0.18);
 
     }
 
@@ -494,6 +515,10 @@
 
     }
 
+
+    /* =====================================================
+       COLLECTION CONTENT
+    ===================================================== */
 
     .collection-content {
 
@@ -515,7 +540,8 @@
       margin-bottom: 8px;
 
       text-shadow:
-        0 2px 8px rgba(0,0,0,0.8);
+        0 2px 8px
+        rgba(0,0,0,0.8);
 
     }
 
@@ -529,7 +555,8 @@
       margin-bottom: 15px;
 
       text-shadow:
-        0 2px 7px rgba(0,0,0,0.9);
+        0 2px 7px
+        rgba(0,0,0,0.9);
 
     }
 
@@ -556,7 +583,8 @@
 
       color: #111;
 
-      padding: 10px 19px;
+      padding:
+        10px 19px;
 
       border-radius: 25px;
 
@@ -564,27 +592,32 @@
 
       transition: 0.3s;
 
+      position: relative;
+
       box-shadow:
-        0 5px 15px rgba(212,175,55,0.15);
+        0 5px 15px
+        rgba(212,175,55,0.15);
 
     }
 
 
     .gold-btn:hover {
 
-      transform: scale(1.06);
+      transform:
+        scale(1.06);
 
       box-shadow:
-        0 8px 25px rgba(212,175,55,0.35);
+        0 8px 25px
+        rgba(212,175,55,0.35);
 
     }
 
 
     /* =====================================================
-       LOADING CARD
+       LOADING BACKGROUND
     ===================================================== */
 
-    .loading-bg {
+    .collection-card.loading-bg {
 
       background:
         linear-gradient(
@@ -597,7 +630,7 @@
     }
 
 
-    .loading-bg::before {
+    .collection-card.loading-bg::before {
 
       animation:
         goldPulse 1.5s infinite;
@@ -608,15 +641,11 @@
     @keyframes goldPulse {
 
       0%,100% {
-
         opacity: 0.35;
-
       }
 
       50% {
-
         opacity: 1;
-
       }
 
     }
@@ -651,7 +680,10 @@
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fill, minmax(190px, 1fr));
+        repeat(
+          auto-fill,
+          minmax(190px,1fr)
+        );
 
       gap: 22px;
 
@@ -668,7 +700,8 @@
         );
 
       border:
-        1px solid rgba(212,175,55,0.28);
+        1px solid
+        rgba(212,175,55,0.28);
 
       border-radius: 16px;
 
@@ -683,12 +716,15 @@
 
     .product-card:hover {
 
-      transform: translateY(-6px);
+      transform:
+        translateY(-6px);
 
-      border-color: #d4af37;
+      border-color:
+        #d4af37;
 
       box-shadow:
-        0 15px 35px rgba(212,175,55,0.14);
+        0 15px 35px
+        rgba(212,175,55,0.14);
 
     }
 
@@ -699,7 +735,7 @@
 
       height: 230px;
 
-      object-fit: contain;
+      object-fit: cover;
 
       display: block;
 
@@ -750,7 +786,8 @@
 
       color: #d4af37;
 
-      padding: 9px 17px;
+      padding:
+        9px 17px;
 
       border-radius: 20px;
 
@@ -787,7 +824,8 @@
       background:
         rgba(0,0,0,0.82);
 
-      backdrop-filter: blur(8px);
+      backdrop-filter:
+        blur(8px);
 
       padding: 20px;
 
@@ -798,9 +836,11 @@
 
     .modal-content {
 
-      width: min(1000px, 100%);
+      width:
+        min(1000px,100%);
 
-      margin: 30px auto;
+      margin:
+        30px auto;
 
       background:
         linear-gradient(
@@ -810,7 +850,8 @@
         );
 
       border:
-        1px solid rgba(212,175,55,0.45);
+        1px solid
+        rgba(212,175,55,0.45);
 
       border-radius: 20px;
 
@@ -819,7 +860,8 @@
       position: relative;
 
       box-shadow:
-        0 25px 80px rgba(0,0,0,0.65);
+        0 25px 80px
+        rgba(0,0,0,0.65);
 
     }
 
@@ -858,7 +900,8 @@
 
       display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:
+        1fr 1fr;
 
       gap: 30px;
 
@@ -880,7 +923,8 @@
       border-radius: 15px;
 
       border:
-        1px solid rgba(212,175,55,0.3);
+        1px solid
+        rgba(212,175,55,0.3);
 
       display: block;
 
@@ -913,7 +957,8 @@
       cursor: pointer;
 
       border:
-        1px solid rgba(212,175,55,0.25);
+        1px solid
+        rgba(212,175,55,0.25);
 
     }
 
@@ -965,7 +1010,8 @@
         rgba(255,255,255,0.035);
 
       border:
-        1px solid rgba(212,175,55,0.2);
+        1px solid
+        rgba(212,175,55,0.2);
 
       padding: 15px;
 
@@ -1006,7 +1052,8 @@
 
       display: grid;
 
-      grid-template-columns: 1fr auto;
+      grid-template-columns:
+        1fr auto;
 
       gap: 12px;
 
@@ -1016,7 +1063,8 @@
         rgba(255,255,255,0.035);
 
       border:
-        1px solid rgba(212,175,55,0.18);
+        1px solid
+        rgba(212,175,55,0.18);
 
       border-radius: 12px;
 
@@ -1055,7 +1103,8 @@
 
       color: white;
 
-      padding: 10px 14px;
+      padding:
+        10px 14px;
 
       border-radius: 22px;
 
@@ -1078,7 +1127,8 @@
 
       background: #1ebe5d;
 
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
 
     }
 
@@ -1092,7 +1142,10 @@
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
+        repeat(
+          auto-fit,
+          minmax(220px,1fr)
+        );
 
       gap: 20px;
 
@@ -1106,7 +1159,8 @@
       border-radius: 16px;
 
       border:
-        1px solid rgba(212,175,55,0.28);
+        1px solid
+        rgba(212,175,55,0.28);
 
       background:
         rgba(255,255,255,0.035);
@@ -1157,9 +1211,11 @@
         rgba(255,255,255,0.035);
 
       border:
-        1px solid rgba(212,175,55,0.25);
+        1px solid
+        rgba(212,175,55,0.25);
 
-      padding: 35px 20px;
+      padding:
+        35px 20px;
 
       border-radius: 20px;
 
@@ -1219,7 +1275,8 @@
       border: none;
 
       box-shadow:
-        0 8px 25px rgba(0,0,0,0.35);
+        0 8px 25px
+        rgba(0,0,0,0.35);
 
       cursor: pointer;
 
@@ -1230,7 +1287,8 @@
 
     .floating-whatsapp:hover {
 
-      transform: scale(1.08);
+      transform:
+        scale(1.08);
 
     }
 
@@ -1266,7 +1324,8 @@
         rgba(255,255,255,0.04);
 
       border:
-        1px solid rgba(212,175,55,0.2);
+        1px solid
+        rgba(212,175,55,0.2);
 
     }
 
@@ -1301,9 +1360,11 @@
 
       color: #d4af37;
 
-      padding: 40px 10px;
+      padding:
+        40px 10px;
 
-      grid-column: 1 / -1;
+      grid-column:
+        1 / -1;
 
     }
 
@@ -1314,9 +1375,11 @@
 
       color: #aaa;
 
-      padding: 40px 10px;
+      padding:
+        40px 10px;
 
-      grid-column: 1 / -1;
+      grid-column:
+        1 / -1;
 
     }
 
@@ -1332,7 +1395,8 @@
       padding: 25px;
 
       border-top:
-        1px solid rgba(212,175,55,0.2);
+        1px solid
+        rgba(212,175,55,0.2);
 
       color: #888;
 
@@ -1349,7 +1413,8 @@
 
       .navbar {
 
-        padding: 9px 4%;
+        padding:
+          9px 4%;
 
       }
 
@@ -1386,7 +1451,8 @@
 
       .section {
 
-        padding: 40px 4%;
+        padding:
+          40px 4%;
 
       }
 
@@ -1401,7 +1467,7 @@
       .collections {
 
         grid-template-columns:
-          repeat(2, 1fr);
+          repeat(2,1fr);
 
         gap: 12px;
 
@@ -1412,7 +1478,8 @@
 
         min-height: 205px;
 
-        padding: 16px 10px;
+        padding:
+          16px 10px;
 
       }
 
@@ -1435,7 +1502,8 @@
 
         font-size: 11px;
 
-        padding: 9px 14px;
+        padding:
+          9px 14px;
 
       }
 
@@ -1443,7 +1511,7 @@
       .products {
 
         grid-template-columns:
-          repeat(2, 1fr);
+          repeat(2,1fr);
 
         gap: 12px;
 
@@ -1491,7 +1559,8 @@
 
         padding: 18px;
 
-        margin: 10px auto;
+        margin:
+          10px auto;
 
       }
 
@@ -1632,7 +1701,7 @@
 
   <!-- =====================================================
        EXISTING BANNER
-       NOT CHANGED
+       SAME BANNER
   ===================================================== -->
 
   <section
@@ -1716,7 +1785,7 @@
           </h3>
 
           <p id="desc-ladies-bracelets">
-            Beautiful Ladies Bracelet Collection
+            Beautiful Bracelet Collection
           </p>
 
           <button
@@ -2090,7 +2159,9 @@
                 Category:
               </strong>
 
-              <span id="modalDetailCategory"></span>
+              <span
+                id="modalDetailCategory"
+              ></span>
 
             </p>
 
@@ -2403,53 +2474,25 @@
 
 
     /* =====================================================
-       GITHUB REPOSITORY
-    ===================================================== */
-
-    const GITHUB_REPO =
-      "kkjewellers6064/kk-1-gram-jewellers";
-
-
-    const GITHUB_API =
-      "https://api.github.com/repos/" +
-      GITHUB_REPO;
-
-
-    /*
-      Important:
-
-      Ab hum kisi ek fixed folder ko
-      directly assume nahi kar rahe.
-
-      GitHub repository ke complete tree ko
-      read karke category ke images search
-      ki jayengi.
-    */
-
-    let repositoryFiles = [];
-
-
-    let repositoryLoaded = false;
-
-
-    /* =====================================================
        CATEGORY DATA
+
+       IMPORTANT:
+       folder = GitHub ke andar EXACT folder name
     ===================================================== */
 
     const CATEGORY_DATA = {
+
 
       "necklaces": {
 
         title:
           "Necklaces Collection",
 
-        description:
-          "Elegant 1 Gram Gold Necklace Designs",
+        folder:
+          "Necklaces",
 
-        aliases: [
-          "necklaces",
-          "necklace"
-        ]
+        description:
+          "Elegant 1 Gram Gold Necklace Designs"
 
       },
 
@@ -2459,16 +2502,11 @@
         title:
           "Ladies Bracelets Collection",
 
-        description:
-          "Beautiful Ladies Bracelet Collection",
+        folder:
+          "Ladies Bracelets",
 
-        aliases: [
-          "ladies bracelets",
-          "ladies-bracelets",
-          "ladies_bracelets",
-          "bracelets",
-          "bracelet"
-        ]
+        description:
+          "Beautiful Ladies Bracelet Collection"
 
       },
 
@@ -2478,15 +2516,17 @@
         title:
           "Kada Kadli Collection",
 
-        description:
-          "Beautiful Kada Kadli Collection",
+        /*
+          GitHub screenshot ke according
+          actual folder name:
+          Kada Kadli
+        */
 
-        aliases: [
-          "kada kadli",
-          "kada-kadli",
-          "kada_kadli",
-          "kadli"
-        ]
+        folder:
+          "Kada Kadli",
+
+        description:
+          "Beautiful Kada Kadli Collection"
 
       },
 
@@ -2496,15 +2536,17 @@
         title:
           "Pendal Butti Collection",
 
-        description:
-          "Beautiful Pendal Butti Collection",
+        /*
+          Aapke latest screenshot ke according
+          EXACT folder:
+          images / Pendal Butti
+        */
 
-        aliases: [
-          "pendal butti",
-          "pendal-butti",
-          "pendal_butti",
-          "butti"
-        ]
+        folder:
+          "Pendal Butti",
+
+        description:
+          "Beautiful Pendal Butti Collection"
 
       },
 
@@ -2514,14 +2556,11 @@
         title:
           "Short MS Collection",
 
-        description:
-          "Beautiful Short MS Collection",
+        folder:
+          "Short MS",
 
-        aliases: [
-          "short ms",
-          "short-ms",
-          "short_ms"
-        ]
+        description:
+          "Beautiful Short MS Collection"
 
       },
 
@@ -2531,33 +2570,15 @@
         title:
           "Laki Collection",
 
-        description:
-          "Beautiful Laki Collection",
+        folder:
+          "Laki",
 
-        aliases: [
-          "laki"
-        ]
+        description:
+          "Beautiful Laki Collection"
 
       }
 
     };
-
-
-    /* =====================================================
-       IMAGE EXTENSIONS
-    ===================================================== */
-
-    const IMAGE_EXTENSIONS = [
-
-      ".jpg",
-      ".jpeg",
-      ".png",
-      ".webp",
-      ".gif",
-      ".avif",
-      ".jfif"
-
-    ];
 
 
     /* =====================================================
@@ -2577,210 +2598,167 @@
 
 
     /* =====================================================
-       NORMALIZE TEXT
+       GITHUB REPOSITORY
     ===================================================== */
 
-    function normalizeText(text) {
-
-      return String(text || "")
-
-        .toLowerCase()
-
-        .replace(/\.[^/.]+$/, "")
-
-        .replace(/[_-]+/g, " ")
-
-        .replace(/\s+/g, " ")
-
-        .trim();
-
-    }
+    const GITHUB_API_BASE =
+      "https://api.github.com/repos/kkjewellers6064/kk-1-gram-jewellers/contents/images";
 
 
     /* =====================================================
-       CHECK IMAGE
+       IMAGE EXTENSIONS
     ===================================================== */
 
-    function isImage(path) {
+    const IMAGE_EXTENSIONS = [
 
-      const lower =
-        String(path || "").toLowerCase();
+      ".jpg",
 
-      return IMAGE_EXTENSIONS.some(
-        ext =>
-          lower.endsWith(ext)
-      );
+      ".jpeg",
 
-    }
+      ".png",
+
+      ".webp",
+
+      ".gif",
+
+      ".avif",
+
+      ".jfif"
+
+    ];
 
 
     /* =====================================================
-       CREATE RAW GITHUB URL
+       CREATE PRODUCT NAME
     ===================================================== */
 
-    function createRawUrl(path) {
+    function createProductName(
+      filename
+    ) {
 
-      return (
-        "https://raw.githubusercontent.com/" +
-        GITHUB_REPO +
-        "/main/" +
-        path
-          .split("/")
-          .map(
-            part =>
-              encodeURIComponent(part)
+      let name =
+        filename
+          .replace(
+            /\.[^/.]+$/,
+            ""
           )
-          .join("/")
-      );
-
-    }
-
-
-    /* =====================================================
-       LOAD COMPLETE REPOSITORY TREE
-    ===================================================== */
-
-    async function loadRepositoryTree() {
-
-      if (repositoryLoaded) {
-
-        return repositoryFiles;
-
-      }
+          .replace(
+            /[-_]+/g,
+            " "
+          )
+          .replace(
+            /\s+/g,
+            " "
+          )
+          .trim();
 
 
-      try {
+      return name
+        .split(" ")
+        .map(
+          word => {
 
-        /*
-          Pehle repository ka default branch
-          automatically find kar rahe hain.
-        */
+            if (!word) {
 
-        const repoResponse =
-          await fetch(
-            GITHUB_API
-          );
+              return "";
 
-
-        if (!repoResponse.ok) {
-
-          throw new Error(
-            "Repository information not found"
-          );
-
-        }
+            }
 
 
-        const repoData =
-          await repoResponse.json();
-
-
-        const branch =
-          repoData.default_branch ||
-          "main";
-
-
-        /*
-          Complete repository tree.
-        */
-
-        const treeResponse =
-          await fetch(
-            GITHUB_API +
-            "/git/trees/" +
-            encodeURIComponent(branch) +
-            "?recursive=1"
-          );
-
-
-        if (!treeResponse.ok) {
-
-          throw new Error(
-            "GitHub image tree could not be loaded"
-          );
-
-        }
-
-
-        const treeData =
-          await treeResponse.json();
-
-
-        repositoryFiles =
-          (treeData.tree || [])
-            .filter(item =>
-              item.type === "blob"
-            )
-            .filter(item =>
-              isImage(item.path)
+            return (
+              word.charAt(0)
+              .toUpperCase() +
+              word.slice(1)
             );
 
+          }
+        )
+        .join(" ");
 
-        /*
-          Raw URL ke liye actual branch
-          save kar rahe hain.
-        */
-
-        window.GITHUB_ACTIVE_BRANCH =
-          branch;
+    }
 
 
-        repositoryLoaded =
-          true;
+    /* =====================================================
+       CATEGORY NAME
+    ===================================================== */
 
+    function categoryName(
+      category
+    ) {
 
-        return repositoryFiles;
+      if (
+        category ===
+        "necklaces"
+      ) {
 
-      } catch (error) {
-
-        console.error(
-          "GitHub tree error:",
-          error
-        );
-
-
-        return [];
+        return "Necklace";
 
       }
 
+
+      if (
+        category ===
+        "ladies-bracelets"
+      ) {
+
+        return "Ladies Bracelet";
+
+      }
+
+
+      if (
+        category ===
+        "kada-kadli"
+      ) {
+
+        return "Kada Kadli";
+
+      }
+
+
+      if (
+        category ===
+        "pendal-butti"
+      ) {
+
+        return "Pendal Butti";
+
+      }
+
+
+      if (
+        category ===
+        "short-ms"
+      ) {
+
+        return "Short MS";
+
+      }
+
+
+      if (
+        category ===
+        "laki"
+      ) {
+
+        return "Laki";
+
+      }
+
+
+      return category;
+
     }
 
 
     /* =====================================================
-       RAW URL USING ACTIVE BRANCH
+       GET CATEGORY API
+       
+       encodeURIComponent is IMPORTANT
+       because folder names have spaces.
     ===================================================== */
 
-    function rawUrl(path) {
-
-      const branch =
-        window.GITHUB_ACTIVE_BRANCH ||
-        "main";
-
-
-      return (
-        "https://raw.githubusercontent.com/" +
-        GITHUB_REPO +
-        "/" +
-        encodeURIComponent(branch) +
-        "/" +
-        path
-          .split("/")
-          .map(
-            part =>
-              encodeURIComponent(part)
-          )
-          .join("/")
-      );
-
-    }
-
-
-    /* =====================================================
-       CHECK CATEGORY MATCH
-    ===================================================== */
-
-    function categoryMatchesPath(
-      path,
+    function getCategoryApi(
       category
     ) {
 
@@ -2790,86 +2768,24 @@
 
       if (!data) {
 
-        return false;
+        return "";
 
       }
 
 
-      const normalizedPath =
-        normalizeText(path);
-
-
-      /*
-        Folder name ya file name mein
-        category alias search hoga.
-      */
-
-      return data.aliases.some(
-        alias => {
-
-          const normalizedAlias =
-            normalizeText(alias);
-
-          return normalizedPath.includes(
-            normalizedAlias
-          );
-
-        }
+      return (
+        GITHUB_API_BASE +
+        "/" +
+        encodeURIComponent(
+          data.folder
+        )
       );
 
     }
 
 
     /* =====================================================
-       GET CATEGORY IMAGES
-    ===================================================== */
-
-    function getCategoryImages(
-      files,
-      category
-    ) {
-
-      const matches =
-        files.filter(
-          file =>
-            categoryMatchesPath(
-              file.path,
-              category
-            )
-        );
-
-
-      /*
-        Duplicate paths remove.
-      */
-
-      const unique =
-        [];
-
-      const seen =
-        new Set();
-
-
-      matches.forEach(file => {
-
-        if (!seen.has(file.path)) {
-
-          seen.add(file.path);
-
-          unique.push(file);
-
-        }
-
-      });
-
-
-      return unique;
-
-    }
-
-
-    /* =====================================================
-       LOAD CATEGORY BACKGROUNDS
+       LOAD CATEGORY BACKGROUND
     ===================================================== */
 
     async function loadCategoryBackground(
@@ -2889,42 +2805,118 @@
       }
 
 
-      const files =
-        await loadRepositoryTree();
+      const apiUrl =
+        getCategoryApi(
+          category
+        );
 
 
-      if (!files.length) {
+      if (!apiUrl) {
 
         return;
 
       }
 
 
-      const categoryImages =
-        getCategoryImages(
-          files,
-          category
-        );
+      try {
+
+        const response =
+          await fetch(
+            apiUrl,
+            {
+              cache: "no-store"
+            }
+          );
 
 
-      if (
-        categoryImages.length
-      ) {
+        if (!response.ok) {
 
-        const firstImage =
-          categoryImages[0];
+          throw new Error(
+            "Folder not found"
+          );
 
-
-        card.style.backgroundImage =
-          "url(\"" +
-          rawUrl(
-            firstImage.path
-          ) +
-          "\")";
+        }
 
 
-        card.classList.remove(
-          "loading-bg"
+        const files =
+          await response.json();
+
+
+        if (
+          !Array.isArray(files)
+        ) {
+
+          throw new Error(
+            "Invalid GitHub response"
+          );
+
+        }
+
+
+        const imageFile =
+          files.find(
+            file => {
+
+              if (
+                !file.name ||
+                !file.download_url
+              ) {
+
+                return false;
+
+              }
+
+
+              const name =
+                file.name.toLowerCase();
+
+
+              return IMAGE_EXTENSIONS.some(
+                ext =>
+                  name.endsWith(ext)
+              );
+
+            }
+          );
+
+
+        if (imageFile) {
+
+          card.style.backgroundImage =
+            "url('" +
+            imageFile.download_url +
+            "')";
+
+
+          card.classList.remove(
+            "loading-bg"
+          );
+
+
+          const description =
+            document.getElementById(
+              "desc-" + category
+            );
+
+
+          if (description) {
+
+            description.textContent =
+              CATEGORY_DATA[
+                category
+              ].description;
+
+          }
+
+        }
+
+
+      } catch (error) {
+
+        console.log(
+          "Category images not loaded:",
+          category,
+          error
         );
 
       }
@@ -2936,188 +2928,19 @@
        LOAD ALL CATEGORY BACKGROUNDS
     ===================================================== */
 
-    async function loadAllCategoryBackgrounds() {
-
-      const files =
-        await loadRepositoryTree();
-
-
-      if (!files.length) {
-
-        console.log(
-          "No repository images found."
-        );
-
-        return;
-
-      }
-
+    function loadAllCategoryBackgrounds() {
 
       Object.keys(
         CATEGORY_DATA
       ).forEach(
         category => {
 
-          const card =
-            document.getElementById(
-              "card-" + category
-            );
-
-
-          if (!card) {
-
-            return;
-
-          }
-
-
-          const images =
-            getCategoryImages(
-              files,
-              category
-            );
-
-
-          if (images.length) {
-
-            card.style.backgroundImage =
-              "url(\"" +
-              rawUrl(
-                images[0].path
-              ) +
-              "\")";
-
-
-            card.classList.remove(
-              "loading-bg"
-            );
-
-          }
+          loadCategoryBackground(
+            category
+          );
 
         }
       );
-
-    }
-
-
-    /* =====================================================
-       CREATE PRODUCT NAME
-    ===================================================== */
-
-    function createProductName(
-      filename
-    ) {
-
-      let name =
-        filename
-
-          .replace(
-            /\.[^/.]+$/,
-            ""
-          )
-
-          .replace(
-            /[-_]+/g,
-            " "
-          )
-
-          .replace(
-            /\s+/g,
-            " "
-          )
-
-          .trim();
-
-
-      return name
-
-        .split(" ")
-
-        .map(word => {
-
-          if (!word) {
-
-            return "";
-
-          }
-
-
-          return (
-            word.charAt(0).toUpperCase() +
-            word.slice(1)
-          );
-
-        })
-
-        .join(" ");
-
-    }
-
-
-    /* =====================================================
-       CATEGORY NAME
-    ===================================================== */
-
-    function categoryName(
-      category
-    ) {
-
-      if (
-        category === "necklaces"
-      ) {
-
-        return "Necklace";
-
-      }
-
-
-      if (
-        category ===
-        "ladies-bracelets"
-      ) {
-
-        return "Ladies Bracelet";
-
-      }
-
-
-      if (
-        category === "kada-kadli"
-      ) {
-
-        return "Kada Kadli";
-
-      }
-
-
-      if (
-        category === "pendal-butti"
-      ) {
-
-        return "Pendal Butti";
-
-      }
-
-
-      if (
-        category === "short-ms"
-      ) {
-
-        return "Short MS";
-
-      }
-
-
-      if (
-        category === "laki"
-      ) {
-
-        return "Laki";
-
-      }
-
-
-      return category;
 
     }
 
@@ -3137,94 +2960,146 @@
 
 
       container.innerHTML =
-
-        '<div class="loading">' +
-        'Loading designs...' +
-        '</div>';
-
-
-      const files =
-        await loadRepositoryTree();
+        `
+          <div class="loading">
+            Loading designs...
+          </div>
+        `;
 
 
-      if (!files.length) {
-
-        showCollectionError(
-          container
+      const apiUrl =
+        getCategoryApi(
+          category
         );
+
+
+      if (!apiUrl) {
+
+        container.innerHTML =
+          `
+            <div class="empty">
+              Collection available soon.
+            </div>
+          `;
 
         return;
 
       }
 
 
-      const categoryImages =
-        getCategoryImages(
-          files,
-          category
+      try {
+
+        const response =
+          await fetch(
+            apiUrl,
+            {
+              cache: "no-store"
+            }
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            "Unable to load products"
+          );
+
+        }
+
+
+        const files =
+          await response.json();
+
+
+        if (
+          !Array.isArray(files)
+        ) {
+
+          throw new Error(
+            "Invalid folder data"
+          );
+
+        }
+
+
+        currentProducts =
+          files
+            .filter(
+              file => {
+
+                if (
+                  !file.name ||
+                  !file.download_url
+                ) {
+
+                  return false;
+
+                }
+
+
+                const name =
+                  file.name.toLowerCase();
+
+
+                return IMAGE_EXTENSIONS.some(
+                  ext =>
+                    name.endsWith(ext)
+                );
+
+              }
+            )
+            .map(
+              file => ({
+
+                title:
+                  createProductName(
+                    file.name
+                  ),
+
+                image:
+                  file.download_url,
+
+                category:
+                  category
+
+              })
+            );
+
+
+        displayProducts();
+
+
+      } catch (error) {
+
+        console.error(
+          "Product loading error:",
+          error
         );
 
 
-      currentProducts =
-        categoryImages.map(
-          file => ({
+        container.innerHTML =
 
-            title:
-              createProductName(
-                file.path
-                  .split("/")
-                  .pop()
-              ),
+          `
+            <div class="empty">
 
-            image:
-              rawUrl(
-                file.path
-              ),
+              <h3
+                style="
+                  color:#d4af37;
+                  margin-bottom:10px;
+                "
+              >
+                Collection Coming Soon
+              </h3>
 
-            path:
-              file.path,
+              <p>
+                Is category ke designs
+                abhi load nahi ho rahe hain.
+              </p>
 
-            category:
-              category
+            </div>
+          `;
 
-          })
-        );
-
-
-      displayProducts();
-
-    }
-
-
-    /* =====================================================
-       COLLECTION ERROR
-    ===================================================== */
-
-    function showCollectionError(
-      container
-    ) {
-
-      container.innerHTML = `
-
-        <div class="empty">
-
-          <h3
-            style="
-              color:#d4af37;
-              margin-bottom:10px;
-            "
-          >
-            Collection Loading Problem
-          </h3>
-
-          <p>
-            GitHub images load nahi ho pa rahi hain.
-            Please thodi der baad refresh karein.
-          </p>
-
-        </div>
-
-      `;
+      }
 
     }
 
@@ -3249,27 +3124,27 @@
         !currentProducts.length
       ) {
 
-        container.innerHTML = `
+        container.innerHTML =
 
-          <div class="empty">
+          `
+            <div class="empty">
 
-            <h3
-              style="
-                color:#d4af37;
-                margin-bottom:10px;
-              "
-            >
-              Collection Coming Soon
-            </h3>
+              <h3
+                style="
+                  color:#d4af37;
+                  margin-bottom:10px;
+                "
+              >
+                Collection Coming Soon
+              </h3>
 
-            <p>
-              Is collection mein abhi
-              koi design available nahi hai.
-            </p>
+              <p>
+                Is collection mein abhi
+                koi design available nahi hai.
+              </p>
 
-          </div>
-
-        `;
+            </div>
+          `;
 
         return;
 
@@ -3277,7 +3152,10 @@
 
 
       currentProducts.forEach(
-        (product, index) => {
+        (
+          product,
+          index
+        ) => {
 
           const card =
             document.createElement(
@@ -3292,7 +3170,9 @@
           card.onclick =
             function() {
 
-              openProduct(index);
+              openProduct(
+                index
+              );
 
             };
 
@@ -3318,10 +3198,8 @@
           image.onerror =
             function() {
 
-              console.error(
-                "Image failed:",
-                product.image
-              );
+              this.style.opacity =
+                "0.2";
 
             };
 
@@ -3417,13 +3295,9 @@
         ].title;
 
 
-      const productsSection =
-        document.getElementById(
-          "productsSection"
-        );
-
-
-      productsSection.style.display =
+      document.getElementById(
+        "productsSection"
+      ).style.display =
         "block";
 
 
@@ -3438,22 +3312,17 @@
       );
 
 
-      setTimeout(
-        function() {
+      document.getElementById(
+        "productsSection"
+      ).scrollIntoView({
 
-          productsSection.scrollIntoView({
+        behavior:
+          "smooth",
 
-            behavior:
-              "smooth",
+        block:
+          "start"
 
-            block:
-              "start"
-
-          });
-
-        },
-        50
-      );
+      });
 
     }
 
@@ -3555,11 +3424,15 @@
       ).textContent =
 
         "Beautiful " +
+
         categoryName(
           product.category
         ) +
+
         " design from KK 1 Gram Jewellers. " +
+
         "For price, availability and more details, " +
+
         "please contact your preferred branch on WhatsApp.";
 
 
@@ -3677,7 +3550,7 @@
 
 
     /* =====================================================
-       PRODUCT WHATSAPP MESSAGE
+       PRODUCT MESSAGE
     ===================================================== */
 
     function createProductMessage(
@@ -3689,11 +3562,17 @@
       return (
 
         "Hello KK 1 Gram Jewellers " +
+
         branch +
+
         ", I am interested in this " +
+
         category.toLowerCase() +
+
         " design: " +
+
         title +
+
         ". Please share the price, availability and details."
 
       );
@@ -3733,7 +3612,9 @@
 
 
       const branchName =
-        branch.charAt(0).toUpperCase() +
+        branch.charAt(0)
+          .toUpperCase() +
+
         branch.slice(1);
 
 
@@ -3745,19 +3626,19 @@
         );
 
 
-      /*
-        WhatsApp mein product ki
-        public image link bhi jayegi.
-      */
-
       const finalMessage =
+
         message +
+
         "\n\nProduct Photo:\n" +
+
         currentProduct.image;
 
 
       const number =
-        BRANCH_NUMBERS[branch];
+        BRANCH_NUMBERS[
+          branch
+        ];
 
 
       if (!number) {
@@ -3768,18 +3649,17 @@
 
 
       const whatsappUrl =
+
         "https://wa.me/" +
+
         number +
+
         "?text=" +
+
         encodeURIComponent(
           finalMessage
         );
 
-
-      /*
-        Direct selected branch ki
-        WhatsApp chat open hogi.
-      */
 
       window.location.href =
         whatsappUrl;
@@ -3886,7 +3766,7 @@
 
 
     /* =====================================================
-       START WEBSITE
+       START
     ===================================================== */
 
     document.addEventListener(
@@ -3897,6 +3777,7 @@
 
       }
     );
+
 
   </script>
 
