@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8">
@@ -34,7 +33,6 @@
     body {
 
       background:
-
         radial-gradient(
           circle at 15% 10%,
           rgba(212,175,55,0.13),
@@ -60,7 +58,7 @@
           #050505
         );
 
-      color: white;
+      color: #fff;
 
       min-height: 100vh;
 
@@ -82,17 +80,14 @@
 
       width: 100%;
 
-      background:
-        rgba(0,0,0,0.94);
+      background: rgba(0,0,0,0.94);
 
-      backdrop-filter:
-        blur(12px);
+      backdrop-filter: blur(12px);
 
       border-bottom:
         1px solid rgba(212,175,55,0.35);
 
-      padding:
-        10px 5%;
+      padding: 10px 5%;
 
       display: flex;
 
@@ -164,7 +159,7 @@
 
     /* =====================================================
        HERO
-       EXISTING BANNER - SAME
+       EXISTING BANNER KEPT EXACTLY SAME
     ===================================================== */
 
     .hero {
@@ -194,7 +189,6 @@
       inset: 0;
 
       background:
-
         linear-gradient(
           to bottom,
           transparent 60%,
@@ -211,8 +205,7 @@
 
     .section {
 
-      padding:
-        55px 5%;
+      padding: 55px 5%;
 
       position: relative;
     }
@@ -244,11 +237,9 @@
 
       height: 2px;
 
-      margin:
-        12px auto 0;
+      margin: 12px auto 0;
 
       background:
-
         linear-gradient(
           90deg,
           transparent,
@@ -259,7 +250,7 @@
 
 
     /* =====================================================
-       COLLECTION BACKGROUND
+       COLLECTION BACKGROUND GRAPHICS
     ===================================================== */
 
     #collections {
@@ -269,7 +260,6 @@
       overflow: hidden;
 
       background:
-
         radial-gradient(
           circle at 10% 30%,
           rgba(212,175,55,0.08),
@@ -294,13 +284,11 @@
 
       left: 6%;
 
-      color:
-        rgba(212,175,55,0.20);
+      color: rgba(212,175,55,0.20);
 
       font-size: 80px;
 
-      transform:
-        rotate(20deg);
+      transform: rotate(20deg);
 
       pointer-events: none;
     }
@@ -316,20 +304,18 @@
 
       right: 6%;
 
-      color:
-        rgba(212,175,55,0.16);
+      color: rgba(212,175,55,0.16);
 
       font-size: 100px;
 
-      transform:
-        rotate(-20deg);
+      transform: rotate(-20deg);
 
       pointer-events: none;
     }
 
 
     /* =====================================================
-       COLLECTION GRID
+       COLLECTIONS GRID
     ===================================================== */
 
     .collections {
@@ -358,13 +344,11 @@
       min-height: 250px;
 
       border:
-        1px solid
-        rgba(212,175,55,0.40);
+        1px solid rgba(212,175,55,0.40);
 
       border-radius: 18px;
 
-      padding:
-        25px 18px;
+      padding: 25px 18px;
 
       display: flex;
 
@@ -381,7 +365,6 @@
       cursor: pointer;
 
       background:
-
         linear-gradient(
           145deg,
           rgba(212,175,55,0.12),
@@ -393,8 +376,7 @@
       background-position: center;
 
       box-shadow:
-        0 12px 35px
-        rgba(0,0,0,0.35);
+        0 12px 35px rgba(0,0,0,0.35);
 
       transition:
         transform 0.35s ease,
@@ -404,7 +386,7 @@
 
 
     /* =====================================================
-       CARD OVERLAY
+       IMAGE DARK OVERLAY
     ===================================================== */
 
     .collection-card::after {
@@ -416,7 +398,6 @@
       inset: 0;
 
       background:
-
         linear-gradient(
           to top,
           rgba(0,0,0,0.94) 0%,
@@ -432,7 +413,7 @@
 
 
     /* =====================================================
-       GOLD GRAPHIC
+       GOLD GRAPHIC CORNER
     ===================================================== */
 
     .collection-card::before {
@@ -452,15 +433,13 @@
       border-radius: 50%;
 
       background:
-
         radial-gradient(
           circle,
           rgba(212,175,55,0.30),
           transparent 65%
         );
 
-      color:
-        rgba(212,175,55,0.60);
+      color: rgba(212,175,55,0.60);
 
       font-size: 32px;
 
@@ -471,28 +450,25 @@
       justify-content: center;
 
       z-index: 1;
+
+      filter: blur(0.2px);
     }
 
 
     .collection-card:hover {
 
-      transform:
-        translateY(-8px);
+      transform: translateY(-8px);
 
-      border-color:
-        #d4af37;
+      border-color: #d4af37;
 
       box-shadow:
-
-        0 20px 50px
-        rgba(212,175,55,0.18);
+        0 20px 50px rgba(212,175,55,0.18);
     }
 
 
     .collection-card:hover::after {
 
       background:
-
         linear-gradient(
           to top,
           rgba(0,0,0,0.94) 0%,
@@ -518,15 +494,14 @@
 
     .collection-card h3 {
 
-      color: white;
+      color: #fff;
 
       font-size: 20px;
 
       margin-bottom: 8px;
 
       text-shadow:
-        0 2px 8px
-        rgba(0,0,0,0.8);
+        0 2px 8px rgba(0,0,0,0.8);
     }
 
 
@@ -539,8 +514,7 @@
       margin-bottom: 15px;
 
       text-shadow:
-        0 2px 7px
-        rgba(0,0,0,0.9);
+        0 2px 7px rgba(0,0,0,0.9);
     }
 
 
@@ -557,7 +531,6 @@
       cursor: pointer;
 
       background:
-
         linear-gradient(
           135deg,
           #d4af37,
@@ -567,8 +540,7 @@
 
       color: #111;
 
-      padding:
-        10px 19px;
+      padding: 10px 19px;
 
       border-radius: 25px;
 
@@ -576,31 +548,29 @@
 
       transition: 0.3s;
 
+      position: relative;
+
       box-shadow:
-        0 5px 15px
-        rgba(212,175,55,0.15);
+        0 5px 15px rgba(212,175,55,0.15);
     }
 
 
     .gold-btn:hover {
 
-      transform:
-        scale(1.06);
+      transform: scale(1.06);
 
       box-shadow:
-        0 8px 25px
-        rgba(212,175,55,0.35);
+        0 8px 25px rgba(212,175,55,0.35);
     }
 
 
     /* =====================================================
-       LOADING CARD
+       CARD LOADING EFFECT
     ===================================================== */
 
-    .loading-bg {
+    .collection-card.loading-bg {
 
       background:
-
         linear-gradient(
           135deg,
           #151515,
@@ -610,10 +580,9 @@
     }
 
 
-    .loading-bg::before {
+    .collection-card.loading-bg::before {
 
-      animation:
-        goldPulse 1.5s infinite;
+      animation: goldPulse 1.5s infinite;
     }
 
 
@@ -626,11 +595,28 @@
       50% {
         opacity: 1;
       }
+
     }
 
 
     /* =====================================================
-       PRODUCTS SECTION
+       COMING SOON
+    ===================================================== */
+
+    .coming {
+
+      opacity: 0.95;
+    }
+
+
+    .coming .gold-btn {
+
+      cursor: pointer;
+    }
+
+
+    /* =====================================================
+       PRODUCTS
     ===================================================== */
 
     .products-section {
@@ -638,7 +624,6 @@
       display: none;
 
       background:
-
         radial-gradient(
           circle at 20% 20%,
           rgba(212,175,55,0.08),
@@ -664,14 +649,9 @@
     }
 
 
-    /* =====================================================
-       PRODUCT CARD
-    ===================================================== */
-
     .product-card {
 
       background:
-
         linear-gradient(
           145deg,
           rgba(255,255,255,0.06),
@@ -679,8 +659,7 @@
         );
 
       border:
-        1px solid
-        rgba(212,175,55,0.28);
+        1px solid rgba(212,175,55,0.28);
 
       border-radius: 16px;
 
@@ -694,15 +673,12 @@
 
     .product-card:hover {
 
-      transform:
-        translateY(-6px);
+      transform: translateY(-6px);
 
-      border-color:
-        #d4af37;
+      border-color: #d4af37;
 
       box-shadow:
-        0 15px 35px
-        rgba(212,175,55,0.14);
+        0 15px 35px rgba(212,175,55,0.14);
     }
 
 
@@ -728,7 +704,7 @@
 
     .product-info h3 {
 
-      color: white;
+      color: #fff;
 
       font-size: 16px;
 
@@ -759,8 +735,7 @@
 
       color: #d4af37;
 
-      padding:
-        9px 17px;
+      padding: 9px 17px;
 
       border-radius: 20px;
 
@@ -772,11 +747,9 @@
 
     .back-btn:hover {
 
-      background:
-        #d4af37;
+      background: #d4af37;
 
-      color:
-        #111;
+      color: #111;
     }
 
 
@@ -797,8 +770,7 @@
       background:
         rgba(0,0,0,0.82);
 
-      backdrop-filter:
-        blur(8px);
+      backdrop-filter: blur(8px);
 
       padding: 20px;
 
@@ -808,14 +780,11 @@
 
     .modal-content {
 
-      width:
-        min(1000px, 100%);
+      width: min(1000px, 100%);
 
-      margin:
-        30px auto;
+      margin: 30px auto;
 
       background:
-
         linear-gradient(
           145deg,
           #17130b,
@@ -823,8 +792,7 @@
         );
 
       border:
-        1px solid
-        rgba(212,175,55,0.45);
+        1px solid rgba(212,175,55,0.45);
 
       border-radius: 20px;
 
@@ -833,8 +801,7 @@
       position: relative;
 
       box-shadow:
-        0 25px 80px
-        rgba(0,0,0,0.65);
+        0 25px 80px rgba(0,0,0,0.65);
     }
 
 
@@ -855,11 +822,9 @@
       border:
         1px solid #d4af37;
 
-      background:
-        #090909;
+      background: #090909;
 
-      color:
-        #d4af37;
+      color: #d4af37;
 
       font-size: 25px;
 
@@ -890,14 +855,12 @@
 
       object-fit: contain;
 
-      background:
-        #080808;
+      background: #080808;
 
       border-radius: 15px;
 
       border:
-        1px solid
-        rgba(212,175,55,0.3);
+        1px solid rgba(212,175,55,0.3);
 
       display: block;
     }
@@ -928,8 +891,7 @@
       cursor: pointer;
 
       border:
-        1px solid
-        rgba(212,175,55,0.25);
+        1px solid rgba(212,175,55,0.25);
     }
 
 
@@ -942,8 +904,7 @@
 
     .modal-info h2 {
 
-      color:
-        #d4af37;
+      color: #d4af37;
 
       font-size: 28px;
 
@@ -977,8 +938,7 @@
         rgba(255,255,255,0.035);
 
       border:
-        1px solid
-        rgba(212,175,55,0.2);
+        1px solid rgba(212,175,55,0.2);
 
       padding: 15px;
 
@@ -1004,8 +964,7 @@
 
     .enquiry-title {
 
-      color:
-        #d4af37;
+      color: #d4af37;
 
       font-size: 19px;
 
@@ -1028,8 +987,7 @@
         rgba(255,255,255,0.035);
 
       border:
-        1px solid
-        rgba(212,175,55,0.18);
+        1px solid rgba(212,175,55,0.18);
 
       border-radius: 12px;
 
@@ -1043,7 +1001,7 @@
 
       display: block;
 
-      color: white;
+      color: #fff;
 
       margin-bottom: 4px;
     }
@@ -1061,13 +1019,11 @@
 
       text-decoration: none;
 
-      background:
-        #25D366;
+      background: #25D366;
 
       color: white;
 
-      padding:
-        10px 14px;
+      padding: 10px 14px;
 
       border-radius: 22px;
 
@@ -1087,11 +1043,9 @@
 
     .whatsapp-btn:hover {
 
-      background:
-        #1ebe5d;
+      background: #1ebe5d;
 
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
     }
 
 
@@ -1117,8 +1071,7 @@
       border-radius: 16px;
 
       border:
-        1px solid
-        rgba(212,175,55,0.28);
+        1px solid rgba(212,175,55,0.28);
 
       background:
         rgba(255,255,255,0.035);
@@ -1129,8 +1082,7 @@
 
     .branch-card h3 {
 
-      color:
-        #d4af37;
+      color: #d4af37;
 
       margin-bottom: 10px;
     }
@@ -1146,8 +1098,7 @@
 
     .branch-card a {
 
-      color:
-        #25D366;
+      color: #25D366;
 
       text-decoration: none;
 
@@ -1167,11 +1118,9 @@
         rgba(255,255,255,0.035);
 
       border:
-        1px solid
-        rgba(212,175,55,0.25);
+        1px solid rgba(212,175,55,0.25);
 
-      padding:
-        35px 20px;
+      padding: 35px 20px;
 
       border-radius: 20px;
     }
@@ -1179,8 +1128,7 @@
 
     .contact-box h2 {
 
-      color:
-        #d4af37;
+      color: #d4af37;
 
       margin-bottom: 12px;
     }
@@ -1212,8 +1160,7 @@
 
       border-radius: 50%;
 
-      background:
-        #25D366;
+      background: #25D366;
 
       display: flex;
 
@@ -1230,8 +1177,7 @@
       border: none;
 
       box-shadow:
-        0 8px 25px
-        rgba(0,0,0,0.35);
+        0 8px 25px rgba(0,0,0,0.35);
 
       cursor: pointer;
 
@@ -1241,8 +1187,7 @@
 
     .floating-whatsapp:hover {
 
-      transform:
-        scale(1.08);
+      transform: scale(1.08);
     }
 
 
@@ -1260,8 +1205,7 @@
 
       display: flex;
 
-      justify-content:
-        space-between;
+      justify-content: space-between;
 
       align-items: center;
 
@@ -1277,14 +1221,13 @@
         rgba(255,255,255,0.04);
 
       border:
-        1px solid
-        rgba(212,175,55,0.2);
+        1px solid rgba(212,175,55,0.2);
     }
 
 
     .branch-choice strong {
 
-      color: white;
+      color: #fff;
 
       display: block;
 
@@ -1308,14 +1251,11 @@
 
       text-align: center;
 
-      color:
-        #d4af37;
+      color: #d4af37;
 
-      padding:
-        40px 10px;
+      padding: 40px 10px;
 
-      grid-column:
-        1 / -1;
+      grid-column: 1 / -1;
     }
 
 
@@ -1325,11 +1265,9 @@
 
       color: #aaa;
 
-      padding:
-        40px 10px;
+      padding: 40px 10px;
 
-      grid-column:
-        1 / -1;
+      grid-column: 1 / -1;
     }
 
 
@@ -1344,8 +1282,7 @@
       padding: 25px;
 
       border-top:
-        1px solid
-        rgba(212,175,55,0.2);
+        1px solid rgba(212,175,55,0.2);
 
       color: #888;
 
@@ -1361,8 +1298,7 @@
 
       .navbar {
 
-        padding:
-          9px 4%;
+        padding: 9px 4%;
       }
 
 
@@ -1394,8 +1330,7 @@
 
       .section {
 
-        padding:
-          40px 4%;
+        padding: 40px 4%;
       }
 
 
@@ -1473,8 +1408,7 @@
 
       .product-modal-grid {
 
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
 
         gap: 20px;
       }
@@ -1502,8 +1436,7 @@
 
       .branch-enquiry {
 
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
 
@@ -1517,11 +1450,9 @@
 
       .branch-choice {
 
-        flex-direction:
-          column;
+        flex-direction: column;
 
-        align-items:
-          stretch;
+        align-items: stretch;
       }
 
 
@@ -1622,8 +1553,9 @@
 
 
   <!-- =====================================================
-       EXISTING BANNER
-    ===================================================== -->
+       BANNER
+       EXISTING BANNER - NOT CHANGED
+  ===================================================== -->
 
   <section
     class="hero"
@@ -1657,7 +1589,9 @@
     <div class="collections">
 
 
-      <!-- NECKLACES -->
+      <!-- =================================================
+           NECKLACES
+      ================================================= -->
 
       <div
         class="collection-card loading-bg"
@@ -1688,7 +1622,9 @@
       </div>
 
 
-      <!-- LADIES BRACELETS -->
+      <!-- =================================================
+           LADIES BRACELETS
+      ================================================= -->
 
       <div
         class="collection-card loading-bg"
@@ -1703,7 +1639,7 @@
           </h3>
 
           <p id="desc-ladies-bracelets">
-            Beautiful Ladies Bracelet Collection
+            Beautiful Bracelet Collection
           </p>
 
           <button
@@ -1719,7 +1655,9 @@
       </div>
 
 
-      <!-- KADA KADLI -->
+      <!-- =================================================
+           KADA KADLI
+      ================================================= -->
 
       <div
         class="collection-card loading-bg"
@@ -1734,7 +1672,7 @@
           </h3>
 
           <p id="desc-kada-kadli">
-            Beautiful Kada Kadli Collection
+            Collection Coming Soon
           </p>
 
           <button
@@ -1750,7 +1688,9 @@
       </div>
 
 
-      <!-- PENDAL BUTTI -->
+      <!-- =================================================
+           PENDAL BUTTI
+      ================================================= -->
 
       <div
         class="collection-card loading-bg"
@@ -1765,7 +1705,7 @@
           </h3>
 
           <p id="desc-pendal-butti">
-            Beautiful Pendal Butti Collection
+            Collection Coming Soon
           </p>
 
           <button
@@ -1781,7 +1721,9 @@
       </div>
 
 
-      <!-- SHORT MS -->
+      <!-- =================================================
+           SHORT MS
+      ================================================= -->
 
       <div
         class="collection-card loading-bg"
@@ -1796,7 +1738,7 @@
           </h3>
 
           <p id="desc-short-ms">
-            Beautiful Short MS Collection
+            Collection Coming Soon
           </p>
 
           <button
@@ -1812,7 +1754,9 @@
       </div>
 
 
-      <!-- LAKI -->
+      <!-- =================================================
+           LAKI
+      ================================================= -->
 
       <div
         class="collection-card loading-bg"
@@ -1827,7 +1771,7 @@
           </h3>
 
           <p id="desc-laki">
-            Beautiful Laki Collection
+            Collection Coming Soon
           </p>
 
           <button
@@ -2118,7 +2062,7 @@
             <button
               class="whatsapp-btn"
               type="button"
-              onclick="sendProductInquiry(event,'mehsana')"
+              onclick="sendProductInquiry(event, 'mehsana')"
             >
               WhatsApp + Photo
             </button>
@@ -2146,7 +2090,7 @@
             <button
               class="whatsapp-btn"
               type="button"
-              onclick="sendProductInquiry(event,'kalol')"
+              onclick="sendProductInquiry(event, 'kalol')"
             >
               WhatsApp + Photo
             </button>
@@ -2174,7 +2118,7 @@
             <button
               class="whatsapp-btn"
               type="button"
-              onclick="sendProductInquiry(event,'palanpur')"
+              onclick="sendProductInquiry(event, 'palanpur')"
             >
               WhatsApp + Photo
             </button>
@@ -2224,6 +2168,8 @@
       </h2>
 
 
+      <!-- MEHSANA -->
+
       <div class="branch-choice">
 
         <div>
@@ -2251,6 +2197,8 @@
       </div>
 
 
+      <!-- KALOL -->
+
       <div class="branch-choice">
 
         <div>
@@ -2277,6 +2225,8 @@
 
       </div>
 
+
+      <!-- PALANPUR -->
 
       <div class="branch-choice">
 
@@ -2362,20 +2312,16 @@
 
 
     /* =====================================================
-       GITHUB REPOSITORY
-    ===================================================== */
+       CATEGORY INFORMATION
 
-    const GITHUB_API_BASE =
-      "https://api.github.com/repos/kkjewellers6064/kk-1-gram-jewellers/contents/images";
-
-
-    /* =====================================================
        IMPORTANT:
-       GITHUB FOLDER NAMES EXACTLY AS YOUR SCREENSHOTS
+       Folder name yahan exact hona zaroori nahi hai.
+
+       Neeche ka code GitHub images folder ke andar
+       automatically matching folder dhoondhega.
     ===================================================== */
 
     const CATEGORY_DATA = {
-
 
       "necklaces": {
 
@@ -2383,7 +2329,7 @@
           "Necklaces Collection",
 
         folder:
-          "Necklaces",
+          "necklaces",
 
         description:
           "Elegant 1 Gram Gold Necklace Designs"
@@ -2397,7 +2343,7 @@
           "Ladies Bracelets Collection",
 
         folder:
-          "Ladies Bracelets",
+          "ladies-bracelets",
 
         description:
           "Beautiful Ladies Bracelet Collection"
@@ -2411,7 +2357,7 @@
           "Kada Kadli Collection",
 
         folder:
-          "Kada Kadli",
+          "kada-kadli",
 
         description:
           "Beautiful Kada Kadli Collection"
@@ -2425,7 +2371,7 @@
           "Pendal Butti Collection",
 
         folder:
-          "Pendal Butti",
+          "pendal-butti",
 
         description:
           "Beautiful Pendal Butti Collection"
@@ -2439,7 +2385,7 @@
           "Short MS Collection",
 
         folder:
-          "Short MS",
+          "short-ms",
 
         description:
           "Beautiful Short MS Collection"
@@ -2453,7 +2399,7 @@
           "Laki Collection",
 
         folder:
-          "Laki",
+          "laki",
 
         description:
           "Beautiful Laki Collection"
@@ -2461,6 +2407,30 @@
       }
 
     };
+
+
+    /* =====================================================
+       STATE
+    ===================================================== */
+
+    let currentCategory =
+      "necklaces";
+
+
+    let currentProducts =
+      [];
+
+
+    let currentProduct =
+      null;
+
+
+    /* =====================================================
+       GITHUB REPOSITORY
+    ===================================================== */
+
+    const GITHUB_API_BASE =
+      "https://api.github.com/repos/kkjewellers6064/kk-1-gram-jewellers/contents/images";
 
 
     /* =====================================================
@@ -2481,19 +2451,140 @@
 
 
     /* =====================================================
-       STATE
+       NORMALIZE FOLDER NAME
+
+       Example:
+
+       "Ladies Bracelets"
+       "ladies-bracelets"
+       "Ladies-Bracelets"
+       "LADIES_BRACELETS"
+
+       Sab ko same maana jayega.
     ===================================================== */
 
-    let currentCategory =
-      "necklaces";
+    function normalizeFolderName(name) {
+
+      return String(name)
+
+        .toLowerCase()
+
+        .replace(/[\s\-_]+/g, "")
+
+        .trim();
+
+    }
 
 
-    let currentProducts =
-      [];
+    /* =====================================================
+       GET ALL IMAGE ROOT ITEMS
+    ===================================================== */
+
+    async function getImagesRoot() {
+
+      const response =
+        await fetch(
+          GITHUB_API_BASE
+        );
 
 
-    let currentProduct =
-      null;
+      if (!response.ok) {
+
+        throw new Error(
+          "Unable to access images folder"
+        );
+
+      }
+
+
+      return await response.json();
+
+    }
+
+
+    /* =====================================================
+       FIND REAL GITHUB CATEGORY FOLDER
+
+       Ye function GitHub ke images folder
+       ke andar actual folder name automatically
+       find karta hai.
+    ===================================================== */
+
+    async function resolveCategoryFolder(
+      category
+    ) {
+
+      const data =
+        CATEGORY_DATA[category];
+
+
+      if (!data) {
+
+        return null;
+
+      }
+
+
+      const rootItems =
+        await getImagesRoot();
+
+
+      const wantedName =
+        normalizeFolderName(
+          data.folder
+        );
+
+
+      const folder =
+        rootItems.find(item => {
+
+          if (
+            item.type !== "dir"
+          ) {
+
+            return false;
+
+          }
+
+
+          return (
+            normalizeFolderName(
+              item.name
+            ) === wantedName
+          );
+
+        });
+
+
+      return folder || null;
+
+    }
+
+
+    /* =====================================================
+       GET CATEGORY API
+    ===================================================== */
+
+    async function getCategoryApi(
+      category
+    ) {
+
+      const folder =
+        await resolveCategoryFolder(
+          category
+        );
+
+
+      if (!folder) {
+
+        return "";
+
+      }
+
+
+      return folder.url;
+
+    }
 
 
     /* =====================================================
@@ -2504,36 +2595,46 @@
       filename
     ) {
 
-      return filename
+      let name =
+        filename
 
-        .replace(
-          /\.[^/.]+$/,
-          ""
-        )
+          .replace(
+            /\.[^/.]+$/,
+            ""
+          )
 
-        .replace(
-          /[-_]+/g,
-          " "
-        )
+          .replace(
+            /[-_]+/g,
+            " "
+          )
 
-        .replace(
-          /\s+/g,
-          " "
-        )
+          .replace(
+            /\s+/g,
+            " "
+          )
 
-        .trim()
+          .trim();
+
+
+      return name
 
         .split(" ")
 
         .map(word => {
 
           if (!word) {
+
             return "";
+
           }
 
+
           return (
+
             word.charAt(0).toUpperCase() +
+
             word.slice(1)
+
           );
 
         })
@@ -2544,7 +2645,7 @@
 
 
     /* =====================================================
-       CATEGORY DISPLAY NAME
+       CATEGORY NAME
     ===================================================== */
 
     function categoryName(
@@ -2552,17 +2653,58 @@
     ) {
 
       if (
-        CATEGORY_DATA[category]
+        category === "necklaces"
       ) {
 
-        return CATEGORY_DATA[
-          category
-        ].title.replace(
-          " Collection",
-          ""
-        );
+        return "Necklace";
 
       }
+
+
+      if (
+        category === "ladies-bracelets"
+      ) {
+
+        return "Ladies Bracelet";
+
+      }
+
+
+      if (
+        category === "kada-kadli"
+      ) {
+
+        return "Kada Kadli";
+
+      }
+
+
+      if (
+        category === "pendal-butti"
+      ) {
+
+        return "Pendal Butti";
+
+      }
+
+
+      if (
+        category === "short-ms"
+      ) {
+
+        return "Short MS";
+
+      }
+
+
+      if (
+        category === "laki"
+      ) {
+
+        return "Laki";
+
+      }
+
 
       return category;
 
@@ -2570,30 +2712,49 @@
 
 
     /* =====================================================
-       GET CATEGORY API
-       URL ENCODED FOR SPACES
+       CHECK IMAGE FILE
     ===================================================== */
 
-    function getCategoryApi(
-      category
+    function isImageFile(
+      filename
     ) {
 
-      const data =
-        CATEGORY_DATA[category];
+      const name =
+        filename.toLowerCase();
 
 
-      if (!data) {
+      return IMAGE_EXTENSIONS.some(
+        ext =>
+          name.endsWith(ext)
+      );
 
-        return "";
-      }
+    }
 
 
-      return (
-        GITHUB_API_BASE +
-        "/" +
-        encodeURIComponent(
-          data.folder
-        )
+    /* =====================================================
+       SORT IMAGE FILES
+
+       1, 2, 3 ... 10, 11
+       correct order mein show honge.
+    ===================================================== */
+
+    function sortFiles(
+      files
+    ) {
+
+      return files.sort(
+        (a, b) => {
+
+          return a.name.localeCompare(
+            b.name,
+            undefined,
+            {
+              numeric: true,
+              sensitivity: "base"
+            }
+          );
+
+        }
       );
 
     }
@@ -2601,7 +2762,7 @@
 
     /* =====================================================
        LOAD CATEGORY BACKGROUND
-       FIRST IMAGE BECOMES CARD BACKGROUND
+       FIRST PRODUCT IMAGE CARD BACKGROUND BANEGI
     ===================================================== */
 
     async function loadCategoryBackground(
@@ -2617,66 +2778,71 @@
       if (!card) {
 
         return;
-      }
 
-
-      const apiUrl =
-        getCategoryApi(
-          category
-        );
-
-
-      if (!apiUrl) {
-
-        return;
       }
 
 
       try {
 
-        const response =
-          await fetch(
-            apiUrl
+        const apiUrl =
+          await getCategoryApi(
+            category
           );
+
+
+        if (!apiUrl) {
+
+          console.log(
+            "Folder not found:",
+            category
+          );
+
+          return;
+
+        }
+
+
+        const response =
+          await fetch(apiUrl);
 
 
         if (!response.ok) {
 
           throw new Error(
-            "Folder not found"
+            "Category folder not found"
           );
 
         }
 
 
-        const files =
+        let files =
           await response.json();
 
 
-        const imageFiles =
-          files.filter(
-            file => {
-
-              const name =
-                file.name.toLowerCase();
-
-
-              return IMAGE_EXTENSIONS.some(
-                ext =>
-                  name.endsWith(ext)
-              );
-
-            }
+        files =
+          sortFiles(
+            files
           );
 
 
-        if (
-          imageFiles.length > 0
-        ) {
+        const imageFile =
+          files.find(file => {
+
+            return (
+              file.type === "file" &&
+              isImageFile(
+                file.name
+              )
+            );
+
+          });
+
+
+        if (imageFile) {
 
           card.style.backgroundImage =
             "url('" +
-            imageFiles[0].download_url +
+            imageFile.download_url +
             "')";
 
 
@@ -2684,13 +2850,30 @@
             "loading-bg"
           );
 
+
+          const description =
+            document.getElementById(
+              "desc-" + category
+            );
+
+
+          if (description) {
+
+            description.textContent =
+              CATEGORY_DATA[
+                category
+              ].description;
+
+          }
+
         }
 
+      }
 
-      } catch (error) {
+      catch (error) {
 
         console.log(
-          "Background not loaded:",
+          "No images found for:",
           category,
           error
         );
@@ -2736,96 +2919,105 @@
 
 
       container.innerHTML =
-
-        '<div class="loading">' +
-        'Loading designs...' +
-        '</div>';
-
-
-      const apiUrl =
-        getCategoryApi(
-          category
-        );
-
-
-      if (!apiUrl) {
-
-        container.innerHTML =
-
-          '<div class="empty">' +
-          'Collection available soon.' +
-          '</div>';
-
-        return;
-
-      }
+        '<div class="loading">Loading designs...</div>';
 
 
       try {
 
-        const response =
-          await fetch(
-            apiUrl
+        const apiUrl =
+          await getCategoryApi(
+            category
           );
+
+
+        if (!apiUrl) {
+
+          container.innerHTML = `
+
+            <div class="empty">
+
+              <h3 style="
+                color:#d4af37;
+                margin-bottom:10px;
+              ">
+                Collection Coming Soon
+              </h3>
+
+              <p>
+                Is category ka folder GitHub ke
+                images folder mein nahi mila.
+              </p>
+
+            </div>
+
+          `;
+
+          return;
+
+        }
+
+
+        const response =
+          await fetch(apiUrl);
 
 
         if (!response.ok) {
 
           throw new Error(
-            "Unable to load folder"
+            "Unable to load products"
           );
 
         }
 
 
-        const files =
+        let files =
           await response.json();
 
 
-        currentProducts =
+        files =
+          sortFiles(
+            files
+          );
 
+
+        currentProducts =
           files
 
-            .filter(
-              file => {
+            .filter(file => {
 
-                const name =
-                  file.name.toLowerCase();
+              return (
+                file.type === "file" &&
+                isImageFile(
+                  file.name
+                )
+              );
 
+            })
 
-                return IMAGE_EXTENSIONS.some(
-                  ext =>
-                    name.endsWith(ext)
-                );
+            .map(file => ({
 
-              }
-            )
+              title:
+                createProductName(
+                  file.name
+                ),
 
-            .map(
-              file => ({
+              image:
+                file.download_url,
 
-                title:
-                  createProductName(
-                    file.name
-                  ),
+              category:
+                category
 
-                image:
-                  file.download_url,
-
-                category:
-                  category
-
-              })
-            );
+            }));
 
 
         displayProducts();
 
+      }
 
-      } catch (error) {
+      catch (error) {
 
         console.error(
-          "Products error:",
+          "Product loading error:",
           error
         );
 
@@ -2834,18 +3026,16 @@
 
           <div class="empty">
 
-            <h3
-              style="
-                color:#d4af37;
-                margin-bottom:10px;
-              "
-            >
+            <h3 style="
+              color:#d4af37;
+              margin-bottom:10px;
+            ">
               Collection Coming Soon
             </h3>
 
             <p>
               Is category ke designs
-              load nahi ho pa rahe hain.
+              abhi load nahi ho pa rahe hain.
             </p>
 
           </div>
@@ -2881,19 +3071,16 @@
 
           <div class="empty">
 
-            <h3
-              style="
-                color:#d4af37;
-                margin-bottom:10px;
-              "
-            >
+            <h3 style="
+              color:#d4af37;
+              margin-bottom:10px;
+            ">
               Collection Coming Soon
             </h3>
 
             <p>
-              Is collection mein
-              abhi koi design available
-              nahi hai.
+              Is collection mein abhi
+              koi design available nahi hai.
             </p>
 
           </div>
@@ -2908,7 +3095,6 @@
       currentProducts.forEach(
         (product, index) => {
 
-
           const card =
             document.createElement(
               "div"
@@ -2922,9 +3108,7 @@
           card.onclick =
             function() {
 
-              openProduct(
-                index
-              );
+              openProduct(index);
 
             };
 
@@ -2945,6 +3129,15 @@
 
           image.loading =
             "lazy";
+
+
+          image.onerror =
+            function() {
+
+              this.style.display =
+                "none";
+
+            };
 
 
           const info =
@@ -3022,6 +3215,7 @@
       ) {
 
         return;
+
       }
 
 
@@ -3117,6 +3311,7 @@
       if (!product) {
 
         return;
+
       }
 
 
@@ -3195,7 +3390,7 @@
 
 
     /* =====================================================
-       CREATE THUMBNAIL
+       THUMBNAIL
     ===================================================== */
 
     function createThumbnail(
@@ -3243,15 +3438,13 @@
             .querySelectorAll(
               "#productThumbs img"
             )
-            .forEach(
-              item => {
+            .forEach(item => {
 
-                item.classList.remove(
-                  "active"
-                );
+              item.classList.remove(
+                "active"
+              );
 
-              }
-            );
+            });
 
 
           img.classList.add(
@@ -3322,7 +3515,7 @@
 
 
     /* =====================================================
-       WHATSAPP PRODUCT INQUIRY
+       DIRECT WHATSAPP
     ===================================================== */
 
     function sendProductInquiry(
@@ -3342,6 +3535,7 @@
       if (!currentProduct) {
 
         return;
+
       }
 
 
@@ -3384,6 +3578,7 @@
       if (!number) {
 
         return;
+
       }
 
 
@@ -3505,7 +3700,7 @@
 
 
     /* =====================================================
-       START WEBSITE
+       START
     ===================================================== */
 
     document.addEventListener(
@@ -3522,5 +3717,4 @@
 
 
 </body>
-
 </html>
