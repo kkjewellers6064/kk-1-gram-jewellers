@@ -1,3787 +1,3212 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KK 1 Gram Jewellers</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body{
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(212,175,55,0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(212,175,55,0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(212,175,55,0.07),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #070707,
+      #17130b,
+      #050505
+    );
+
+  color:#fff;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
 
-  <meta charset="UTF-8">
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  width:100%;
+
+  background:rgba(0,0,0,0.94);
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  backdrop-filter:blur(12px);
 
-  <title>KK 1 Gram Jewellers</title>
+  border-bottom:
+    1px solid rgba(212,175,55,0.35);
+
+  padding:10px 5%;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-  <style>
+
+.logo-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 
-    /* =====================================================
-       RESET
-    ===================================================== */
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+.logo-box img{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+  border-radius:50%;
+}
+
 
+.logo-text{
+  color:#d4af37;
+  font-size:21px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
 
-    /* =====================================================
-       BODY
-    ===================================================== */
 
-    body {
+.nav-links{
+  display:flex;
+  gap:20px;
+}
 
-      background:
-        radial-gradient(
-          circle at 15% 10%,
-          rgba(212,175,55,0.13),
-          transparent 28%
-        ),
 
-        radial-gradient(
-          circle at 85% 30%,
-          rgba(212,175,55,0.08),
-          transparent 25%
-        ),
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+
 
-        radial-gradient(
-          circle at 50% 80%,
-          rgba(212,175,55,0.07),
-          transparent 30%
-        ),
+.nav-links a:hover{
+  color:#d4af37;
+}
 
-        linear-gradient(
-          135deg,
-          #070707,
-          #17130b,
-          #050505
-        );
 
-      color: #fff;
+/* =====================================================
+   HERO
+   EXISTING BANNER SAME
+===================================================== */
 
-      min-height: 100vh;
+.hero{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
 
-      overflow-x: hidden;
 
-    }
+.hero img{
+  width:100%;
+  display:block;
+  height:auto;
+}
 
 
-    /* =====================================================
-       NAVBAR
-    ===================================================== */
+.hero-overlay{
+  position:absolute;
+  inset:0;
 
-    .navbar {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 60%,
+      rgba(0,0,0,0.45)
+    );
 
-      position: sticky;
+  pointer-events:none;
+}
 
-      top: 0;
 
-      z-index: 1000;
+/* =====================================================
+   SECTION
+===================================================== */
 
-      width: 100%;
+.section{
+  padding:55px 5%;
+  position:relative;
+}
 
-      background:
-        rgba(0,0,0,0.94);
 
-      backdrop-filter:
-        blur(12px);
+.section-title{
+  text-align:center;
+  color:#d4af37;
+  font-size:30px;
+  margin-bottom:35px;
+  letter-spacing:1px;
+  position:relative;
+}
 
-      border-bottom:
-        1px solid
-        rgba(212,175,55,0.35);
 
-      padding:
-        10px 5%;
+.section-title::after{
+  content:"";
+  display:block;
 
-      display: flex;
+  width:90px;
+  height:2px;
 
-      align-items: center;
+  margin:12px auto 0;
 
-      justify-content: space-between;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #d4af37,
+      transparent
+    );
+}
 
-    }
 
+/* =====================================================
+   COLLECTION BACKGROUND
+===================================================== */
 
-    .logo-box {
+#collections{
+  position:relative;
+  overflow:hidden;
 
-      display: flex;
+  background:
+    radial-gradient(
+      circle at 10% 30%,
+      rgba(212,175,55,0.08),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(212,175,55,0.08),
+      transparent 22%
+    );
+}
 
-      align-items: center;
 
-      gap: 10px;
+#collections::before{
+  content:"✦";
 
-    }
+  position:absolute;
 
+  top:25px;
+  left:6%;
 
-    .logo-box img {
+  color:rgba(212,175,55,0.20);
 
-      width: 52px;
+  font-size:80px;
 
-      height: 52px;
+  transform:rotate(20deg);
 
-      object-fit: contain;
+  pointer-events:none;
+}
 
-      border-radius: 50%;
 
-    }
+#collections::after{
+  content:"✦";
 
+  position:absolute;
 
-    .logo-text {
+  bottom:20px;
+  right:6%;
 
-      color: #d4af37;
+  color:rgba(212,175,55,0.16);
 
-      font-size: 21px;
+  font-size:100px;
 
-      font-weight: bold;
+  transform:rotate(-20deg);
 
-      letter-spacing: 1px;
+  pointer-events:none;
+}
 
-    }
 
+/* =====================================================
+   COLLECTION GRID
+===================================================== */
 
-    .nav-links {
+.collections{
+  display:grid;
 
-      display: flex;
+  grid-template-columns:
+    repeat(auto-fit,minmax(210px,1fr));
 
-      gap: 20px;
+  gap:22px;
 
-    }
+  position:relative;
+  z-index:2;
+}
 
 
-    .nav-links a {
+/* =====================================================
+   COLLECTION CARD
+===================================================== */
 
-      color: white;
+.collection-card{
+  position:relative;
 
-      text-decoration: none;
+  min-height:250px;
 
-      font-size: 14px;
+  border:
+    1px solid rgba(212,175,55,0.40);
 
-      transition: 0.3s;
+  border-radius:18px;
 
-    }
+  padding:25px 18px;
 
+  display:flex;
+  flex-direction:column;
 
-    .nav-links a:hover {
+  justify-content:flex-end;
+  align-items:center;
 
-      color: #d4af37;
+  text-align:center;
 
-    }
+  overflow:hidden;
 
+  cursor:pointer;
 
-    /* =====================================================
-       HERO
-       EXISTING BANNER - SAME
-    ===================================================== */
+  background:
+    linear-gradient(
+      145deg,
+      rgba(212,175,55,0.12),
+      rgba(255,255,255,0.025)
+    );
 
-    .hero {
+  background-size:cover;
+  background-position:center;
 
-      position: relative;
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.35);
 
-      width: 100%;
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
 
-      overflow: hidden;
 
-    }
+.collection-card::after{
+  content:"";
 
+  position:absolute;
+  inset:0;
 
-    .hero img {
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.94) 0%,
+      rgba(0,0,0,.70) 38%,
+      rgba(0,0,0,.22) 75%,
+      rgba(0,0,0,.05) 100%
+    );
 
-      width: 100%;
+  z-index:0;
 
-      display: block;
+  transition:.35s;
+}
 
-      height: auto;
 
-    }
+.collection-card::before{
+  content:"✦";
 
+  position:absolute;
 
-    .hero-overlay {
+  width:110px;
+  height:110px;
 
-      position: absolute;
+  top:-42px;
+  right:-42px;
 
-      inset: 0;
+  border-radius:50%;
 
-      background:
-        linear-gradient(
-          to bottom,
-          transparent 60%,
-          rgba(0,0,0,0.45)
-        );
+  background:
+    radial-gradient(
+      circle,
+      rgba(212,175,55,.30),
+      transparent 65%
+    );
 
-      pointer-events: none;
+  color:rgba(212,175,55,.60);
 
-    }
+  font-size:32px;
 
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-    /* =====================================================
-       SECTION
-    ===================================================== */
+  z-index:1;
+}
 
-    .section {
 
-      padding: 55px 5%;
+.collection-card:hover{
+  transform:translateY(-8px);
 
-      position: relative;
+  border-color:#d4af37;
 
-    }
+  box-shadow:
+    0 20px 50px rgba(212,175,55,.18);
+}
 
 
-    .section-title {
+.collection-card:hover::after{
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.94) 0%,
+      rgba(0,0,0,.62) 45%,
+      rgba(0,0,0,.12) 100%
+    );
+}
 
-      text-align: center;
 
-      color: #d4af37;
+/* =====================================================
+   CARD CONTENT
+===================================================== */
 
-      font-size: 30px;
+.collection-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+}
 
-      margin-bottom: 35px;
 
-      letter-spacing: 1px;
+.collection-card h3{
+  color:#fff;
+  font-size:20px;
+  margin-bottom:8px;
 
-      position: relative;
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.8);
+}
 
-    }
 
+.collection-card p{
+  color:#e0e0e0;
+  font-size:12px;
+  margin-bottom:15px;
 
-    .section-title::after {
+  text-shadow:
+    0 2px 7px rgba(0,0,0,.9);
+}
 
-      content: "";
 
-      display: block;
+/* =====================================================
+   BUTTON
+===================================================== */
 
-      width: 90px;
+.gold-btn{
+  border:none;
+  outline:none;
+  cursor:pointer;
 
-      height: 2px;
+  background:
+    linear-gradient(
+      135deg,
+      #d4af37,
+      #f2d675,
+      #c49b28
+    );
 
-      margin: 12px auto 0;
+  color:#111;
 
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          #d4af37,
-          transparent
-        );
+  padding:10px 19px;
 
-    }
+  border-radius:25px;
 
+  font-weight:bold;
 
-    /* =====================================================
-       COLLECTION BACKGROUND
-    ===================================================== */
+  transition:.3s;
 
-    #collections {
+  position:relative;
 
-      position: relative;
+  box-shadow:
+    0 5px 15px rgba(212,175,55,.15);
+}
 
-      overflow: hidden;
 
-      background:
-        radial-gradient(
-          circle at 10% 30%,
-          rgba(212,175,55,0.08),
-          transparent 22%
-        ),
+.gold-btn:hover{
+  transform:scale(1.06);
 
-        radial-gradient(
-          circle at 90% 70%,
-          rgba(212,175,55,0.08),
-          transparent 22%
-        );
+  box-shadow:
+    0 8px 25px rgba(212,175,55,.35);
+}
 
-    }
 
+/* =====================================================
+   LOADING CARD
+===================================================== */
 
-    #collections::before {
+.collection-card.loading-bg{
+  background:
+    linear-gradient(
+      135deg,
+      #151515,
+      #211b0e,
+      #101010
+    );
+}
 
-      content: "✦";
 
-      position: absolute;
+.collection-card.loading-bg::before{
+  animation:goldPulse 1.5s infinite;
+}
 
-      top: 25px;
 
-      left: 6%;
+@keyframes goldPulse{
 
-      color:
-        rgba(212,175,55,0.20);
+  0%,100%{
+    opacity:.35;
+  }
 
-      font-size: 80px;
+  50%{
+    opacity:1;
+  }
 
-      transform:
-        rotate(20deg);
+}
 
-      pointer-events: none;
 
-    }
+/* =====================================================
+   PRODUCTS
+===================================================== */
 
+.products-section{
+  display:none;
 
-    #collections::after {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(212,175,55,.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(212,175,55,.08),
+      transparent 25%
+    );
+}
 
-      content: "✦";
 
-      position: absolute;
+.products{
+  display:grid;
 
-      bottom: 20px;
+  grid-template-columns:
+    repeat(auto-fill,minmax(190px,1fr));
 
-      right: 6%;
+  gap:22px;
+}
 
-      color:
-        rgba(212,175,55,0.16);
 
-      font-size: 100px;
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
 
-      transform:
-        rotate(-20deg);
+.product-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.06),
+      rgba(255,255,255,.025)
+    );
 
-      pointer-events: none;
+  border:
+    1px solid rgba(212,175,55,.28);
 
-    }
+  border-radius:16px;
 
+  overflow:hidden;
 
-    /* =====================================================
-       COLLECTION GRID
-    ===================================================== */
+  cursor:pointer;
 
-    .collections {
+  transition:.35s;
+}
 
-      display: grid;
 
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(210px,1fr)
-        );
+.product-card:hover{
+  transform:translateY(-6px);
 
-      gap: 22px;
+  border-color:#d4af37;
 
-      position: relative;
+  box-shadow:
+    0 15px 35px rgba(212,175,55,.14);
+}
 
-      z-index: 2;
 
-    }
+.product-card img{
+  width:100%;
+  height:230px;
 
+  object-fit:cover;
 
-    /* =====================================================
-       COLLECTION CARD
-    ===================================================== */
+  display:block;
 
-    .collection-card {
+  background:#111;
+}
 
-      position: relative;
 
-      min-height: 250px;
+.product-info{
+  padding:15px;
+}
 
-      border:
-        1px solid
-        rgba(212,175,55,0.40);
 
-      border-radius: 18px;
+.product-info h3{
+  color:#fff;
+  font-size:16px;
+  margin-bottom:7px;
+}
 
-      padding: 25px 18px;
 
-      display: flex;
+.product-info p{
+  color:#aaa;
+  font-size:12px;
+}
 
-      flex-direction: column;
 
-      justify-content: flex-end;
+/* =====================================================
+   BACK BUTTON
+===================================================== */
 
-      align-items: center;
+.back-btn{
+  margin-bottom:25px;
 
-      text-align: center;
+  background:transparent;
 
-      overflow: hidden;
+  border:
+    1px solid #d4af37;
 
-      cursor: pointer;
+  color:#d4af37;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(212,175,55,0.12),
-          rgba(255,255,255,0.025)
-        );
+  padding:9px 17px;
 
-      background-size: cover;
+  border-radius:20px;
 
-      background-position: center;
+  cursor:pointer;
 
-      box-shadow:
-        0 12px 35px
-        rgba(0,0,0,0.35);
+  transition:.3s;
+}
 
-      transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
 
-    }
+.back-btn:hover{
+  background:#d4af37;
+  color:#111;
+}
 
 
-    /* =====================================================
-       CARD OVERLAY
-    ===================================================== */
+/* =====================================================
+   MODAL
+===================================================== */
 
-    .collection-card::after {
+.modal{
+  display:none;
 
-      content: "";
+  position:fixed;
 
-      position: absolute;
+  z-index:5000;
 
-      inset: 0;
+  inset:0;
 
-      background:
-        linear-gradient(
-          to top,
-          rgba(0,0,0,0.94) 0%,
-          rgba(0,0,0,0.70) 38%,
-          rgba(0,0,0,0.22) 75%,
-          rgba(0,0,0,0.05) 100%
-        );
+  background:
+    rgba(0,0,0,.82);
 
-      z-index: 0;
+  backdrop-filter:blur(8px);
 
-      transition: 0.35s;
+  padding:20px;
 
-    }
+  overflow-y:auto;
+}
 
 
-    /* =====================================================
-       GOLD GRAPHIC
-    ===================================================== */
+.modal-content{
+  width:min(1000px,100%);
 
-    .collection-card::before {
+  margin:30px auto;
 
-      content: "✦";
+  background:
+    linear-gradient(
+      145deg,
+      #17130b,
+      #090909
+    );
 
-      position: absolute;
+  border:
+    1px solid rgba(212,175,55,.45);
 
-      width: 110px;
+  border-radius:20px;
 
-      height: 110px;
+  padding:25px;
 
-      top: -42px;
+  position:relative;
 
-      right: -42px;
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.65);
+}
 
-      border-radius: 50%;
 
-      background:
-        radial-gradient(
-          circle,
-          rgba(212,175,55,0.30),
-          transparent 65%
-        );
+.close{
+  position:absolute;
 
-      color:
-        rgba(212,175,55,0.60);
+  right:18px;
+  top:12px;
 
-      font-size: 32px;
+  width:38px;
+  height:38px;
 
-      display: flex;
+  border-radius:50%;
 
-      align-items: center;
+  border:
+    1px solid #d4af37;
 
-      justify-content: center;
+  background:#090909;
 
-      z-index: 1;
+  color:#d4af37;
 
-    }
+  font-size:25px;
 
+  cursor:pointer;
 
-    .collection-card:hover {
+  z-index:10;
+}
 
-      transform:
-        translateY(-8px);
 
-      border-color:
-        #d4af37;
+.product-modal-grid{
+  display:grid;
 
-      box-shadow:
-        0 20px 50px
-        rgba(212,175,55,0.18);
+  grid-template-columns:
+    1fr 1fr;
 
-    }
+  gap:30px;
 
+  margin-top:15px;
+}
 
-    .collection-card:hover::after {
 
-      background:
-        linear-gradient(
-          to top,
-          rgba(0,0,0,0.94) 0%,
-          rgba(0,0,0,0.62) 45%,
-          rgba(0,0,0,0.12) 100%
-        );
+.main-product-image{
+  width:100%;
+  height:500px;
 
-    }
+  object-fit:contain;
 
+  background:#080808;
 
-    /* =====================================================
-       COLLECTION CONTENT
-    ===================================================== */
+  border-radius:15px;
 
-    .collection-content {
+  border:
+    1px solid rgba(212,175,55,.3);
 
-      position: relative;
+  display:block;
+}
 
-      z-index: 2;
 
-      width: 100%;
+.thumbs{
+  display:flex;
 
-    }
+  gap:10px;
 
+  margin-top:12px;
 
-    .collection-card h3 {
+  overflow-x:auto;
+}
 
-      color: #fff;
 
-      font-size: 20px;
+.thumbs img{
+  width:65px;
+  height:65px;
 
-      margin-bottom: 8px;
+  object-fit:cover;
 
-      text-shadow:
-        0 2px 8px
-        rgba(0,0,0,0.8);
+  border-radius:8px;
 
-    }
+  cursor:pointer;
 
+  border:
+    1px solid rgba(212,175,55,.25);
+}
 
-    .collection-card p {
 
-      color: #e0e0e0;
+.thumbs img.active{
+  border:
+    2px solid #d4af37;
+}
 
-      font-size: 12px;
 
-      margin-bottom: 15px;
+.modal-info h2{
+  color:#d4af37;
 
-      text-shadow:
-        0 2px 7px
-        rgba(0,0,0,0.9);
+  font-size:28px;
 
-    }
+  margin-bottom:10px;
+}
 
 
-    /* =====================================================
-       GOLD BUTTON
-    ===================================================== */
+.modal-category{
+  color:#aaa;
 
-    .gold-btn {
+  font-size:13px;
 
-      border: none;
+  margin-bottom:20px;
+}
 
-      outline: none;
 
-      cursor: pointer;
+.description{
+  color:#ddd;
 
-      background:
-        linear-gradient(
-          135deg,
-          #d4af37,
-          #f2d675,
-          #c49b28
-        );
+  line-height:1.7;
 
-      color: #111;
+  margin-bottom:20px;
+}
 
-      padding:
-        10px 19px;
 
-      border-radius: 25px;
+.details-box{
+  background:
+    rgba(255,255,255,.035);
 
-      font-weight: bold;
+  border:
+    1px solid rgba(212,175,55,.2);
 
-      transition: 0.3s;
+  padding:15px;
 
-      position: relative;
+  border-radius:12px;
 
-      box-shadow:
-        0 5px 15px
-        rgba(212,175,55,0.15);
+  margin-bottom:20px;
+}
 
-    }
 
+.details-box p{
+  margin-bottom:8px;
 
-    .gold-btn:hover {
+  color:#ccc;
 
-      transform:
-        scale(1.06);
+  font-size:14px;
+}
 
-      box-shadow:
-        0 8px 25px
-        rgba(212,175,55,0.35);
 
-    }
+/* =====================================================
+   WHATSAPP
+===================================================== */
 
+.enquiry-title{
+  color:#d4af37;
 
-    /* =====================================================
-       LOADING BACKGROUND
-    ===================================================== */
+  font-size:19px;
 
-    .collection-card.loading-bg {
+  margin-bottom:12px;
+}
 
-      background:
-        linear-gradient(
-          135deg,
-          #151515,
-          #211b0e,
-          #101010
-        );
 
-    }
+.branch-enquiry{
+  display:grid;
 
+  grid-template-columns:
+    1fr auto;
 
-    .collection-card.loading-bg::before {
+  gap:12px;
 
-      animation:
-        goldPulse 1.5s infinite;
+  align-items:center;
 
-    }
+  background:
+    rgba(255,255,255,.035);
 
+  border:
+    1px solid rgba(212,175,55,.18);
 
-    @keyframes goldPulse {
+  border-radius:12px;
 
-      0%,100% {
-        opacity: 0.35;
-      }
+  padding:12px;
 
-      50% {
-        opacity: 1;
-      }
+  margin-bottom:10px;
+}
 
-    }
 
+.branch-enquiry strong{
+  display:block;
 
-    /* =====================================================
-       PRODUCTS
-    ===================================================== */
+  color:#fff;
 
-    .products-section {
+  margin-bottom:4px;
+}
 
-      display: none;
 
-      background:
-        radial-gradient(
-          circle at 20% 20%,
-          rgba(212,175,55,0.08),
-          transparent 25%
-        ),
+.branch-enquiry span{
+  color:#aaa;
 
-        radial-gradient(
-          circle at 80% 80%,
-          rgba(212,175,55,0.08),
-          transparent 25%
-        );
+  font-size:12px;
+}
 
-    }
 
+.whatsapp-btn{
+  text-decoration:none;
 
-    .products {
+  background:#25D366;
 
-      display: grid;
+  color:white;
 
-      grid-template-columns:
-        repeat(
-          auto-fill,
-          minmax(190px,1fr)
-        );
+  padding:10px 14px;
 
-      gap: 22px;
+  border-radius:22px;
 
-    }
+  font-weight:bold;
 
+  font-size:12px;
 
-    .product-card {
+  white-space:nowrap;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.06),
-          rgba(255,255,255,0.025)
-        );
+  border:none;
 
-      border:
-        1px solid
-        rgba(212,175,55,0.28);
+  cursor:pointer;
 
-      border-radius: 16px;
+  transition:.3s;
+}
 
-      overflow: hidden;
 
-      cursor: pointer;
+.whatsapp-btn:hover{
+  background:#1ebe5d;
 
-      transition: 0.35s;
+  transform:translateY(-2px);
+}
 
-    }
 
+/* =====================================================
+   BRANCHES
+===================================================== */
 
-    .product-card:hover {
+.branches{
+  display:grid;
 
-      transform:
-        translateY(-6px);
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
 
-      border-color:
-        #d4af37;
+  gap:20px;
+}
 
-      box-shadow:
-        0 15px 35px
-        rgba(212,175,55,0.14);
 
-    }
+.branch-card{
+  padding:25px;
 
+  border-radius:16px;
 
-    .product-card img {
+  border:
+    1px solid rgba(212,175,55,.28);
 
-      width: 100%;
+  background:
+    rgba(255,255,255,.035);
 
-      height: 230px;
+  text-align:center;
+}
 
-      object-fit: cover;
 
-      display: block;
+.branch-card h3{
+  color:#d4af37;
 
-      background: #111;
+  margin-bottom:10px;
+}
 
-    }
 
+.branch-card p{
+  color:#ccc;
 
-    .product-info {
+  margin-bottom:15px;
+}
 
-      padding: 15px;
 
-    }
+.branch-card a{
+  color:#25D366;
 
+  text-decoration:none;
 
-    .product-info h3 {
+  font-weight:bold;
+}
 
-      color: #fff;
 
-      font-size: 16px;
+/* =====================================================
+   CONTACT
+===================================================== */
 
-      margin-bottom: 7px;
+.contact-box{
+  text-align:center;
 
-    }
+  background:
+    rgba(255,255,255,.035);
 
+  border:
+    1px solid rgba(212,175,55,.25);
 
-    .product-info p {
+  padding:35px 20px;
 
-      color: #aaa;
+  border-radius:20px;
+}
 
-      font-size: 12px;
 
-    }
+.contact-box h2{
+  color:#d4af37;
 
+  margin-bottom:12px;
+}
 
-    /* =====================================================
-       BACK BUTTON
-    ===================================================== */
 
-    .back-btn {
+.contact-box p{
+  color:#bbb;
+}
 
-      margin-bottom: 25px;
 
-      background: transparent;
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
 
-      border:
-        1px solid #d4af37;
+.floating-whatsapp{
+  position:fixed;
 
-      color: #d4af37;
+  right:18px;
+  bottom:18px;
 
-      padding:
-        9px 17px;
+  z-index:4000;
 
-      border-radius: 20px;
+  width:58px;
+  height:58px;
 
-      cursor: pointer;
+  border-radius:50%;
 
-      transition: 0.3s;
+  background:#25D366;
 
-    }
+  display:flex;
 
+  align-items:center;
+  justify-content:center;
 
-    .back-btn:hover {
+  color:white;
 
-      background: #d4af37;
+  font-size:28px;
 
-      color: #111;
+  text-decoration:none;
 
-    }
+  border:none;
 
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.35);
 
-    /* =====================================================
-       MODAL
-    ===================================================== */
+  cursor:pointer;
 
-    .modal {
+  transition:.3s;
+}
 
-      display: none;
 
-      position: fixed;
+.floating-whatsapp:hover{
+  transform:scale(1.08);
+}
 
-      z-index: 5000;
 
-      inset: 0;
+/* =====================================================
+   BRANCH MODAL
+===================================================== */
 
-      background:
-        rgba(0,0,0,0.82);
+.branch-modal-box{
+  max-width:500px;
+}
 
-      backdrop-filter:
-        blur(8px);
 
-      padding: 20px;
+.branch-choice{
+  display:flex;
 
-      overflow-y: auto;
+  justify-content:space-between;
 
-    }
+  align-items:center;
 
+  gap:10px;
 
-    .modal-content {
+  padding:15px;
 
-      width:
-        min(1000px,100%);
+  margin-bottom:12px;
 
-      margin:
-        30px auto;
+  border-radius:12px;
 
-      background:
-        linear-gradient(
-          145deg,
-          #17130b,
-          #090909
-        );
+  background:
+    rgba(255,255,255,.04);
 
-      border:
-        1px solid
-        rgba(212,175,55,0.45);
+  border:
+    1px solid rgba(212,175,55,.2);
+}
 
-      border-radius: 20px;
 
-      padding: 25px;
+.branch-choice strong{
+  color:#fff;
 
-      position: relative;
+  display:block;
 
-      box-shadow:
-        0 25px 80px
-        rgba(0,0,0,0.65);
+  margin-bottom:5px;
+}
 
-    }
 
+.branch-choice span{
+  color:#aaa;
 
-    .close {
+  font-size:12px;
+}
 
-      position: absolute;
 
-      right: 18px;
+/* =====================================================
+   LOADING / EMPTY
+===================================================== */
 
-      top: 12px;
+.loading{
+  text-align:center;
 
-      width: 38px;
+  color:#d4af37;
 
-      height: 38px;
+  padding:40px 10px;
 
-      border-radius: 50%;
+  grid-column:1/-1;
+}
 
-      border:
-        1px solid #d4af37;
 
-      background: #090909;
+.empty{
+  text-align:center;
 
-      color: #d4af37;
+  color:#aaa;
 
-      font-size: 25px;
+  padding:40px 10px;
 
-      cursor: pointer;
+  grid-column:1/-1;
+}
 
-      z-index: 10;
 
-    }
+/* =====================================================
+   FOOTER
+===================================================== */
 
+footer{
+  text-align:center;
 
-    .product-modal-grid {
+  padding:25px;
 
-      display: grid;
+  border-top:
+    1px solid rgba(212,175,55,.2);
 
-      grid-template-columns:
-        1fr 1fr;
+  color:#888;
 
-      gap: 30px;
+  font-size:13px;
+}
 
-      margin-top: 15px;
 
-    }
+/* =====================================================
+   MOBILE
+===================================================== */
 
+@media(max-width:768px){
 
-    .main-product-image {
+  .navbar{
+    padding:9px 4%;
+  }
 
-      width: 100%;
 
-      height: 500px;
+  .logo-box img{
+    width:44px;
+    height:44px;
+  }
 
-      object-fit: contain;
 
-      background: #080808;
+  .logo-text{
+    font-size:16px;
+  }
 
-      border-radius: 15px;
 
-      border:
-        1px solid
-        rgba(212,175,55,0.3);
+  .nav-links{
+    gap:10px;
+  }
 
-      display: block;
 
-    }
+  .nav-links a{
+    font-size:11px;
+  }
 
 
-    .thumbs {
+  .section{
+    padding:40px 4%;
+  }
 
-      display: flex;
 
-      gap: 10px;
+  .section-title{
+    font-size:25px;
+  }
 
-      margin-top: 12px;
 
-      overflow-x: auto;
+  .collections{
+    grid-template-columns:
+      repeat(2,1fr);
 
-    }
+    gap:12px;
+  }
 
 
-    .thumbs img {
+  .collection-card{
+    min-height:205px;
 
-      width: 65px;
+    padding:16px 10px;
+  }
 
-      height: 65px;
 
-      object-fit: cover;
+  .collection-card h3{
+    font-size:16px;
+  }
 
-      border-radius: 8px;
 
-      cursor: pointer;
+  .collection-card p{
+    font-size:11px;
+  }
 
-      border:
-        1px solid
-        rgba(212,175,55,0.25);
 
-    }
+  .gold-btn{
+    font-size:11px;
 
+    padding:9px 14px;
+  }
 
-    .thumbs img.active {
 
-      border:
-        2px solid #d4af37;
+  .products{
+    grid-template-columns:
+      repeat(2,1fr);
 
-    }
+    gap:12px;
+  }
 
 
-    .modal-info h2 {
+  .product-card img{
+    height:190px;
+  }
 
-      color: #d4af37;
 
-      font-size: 28px;
+  .product-info{
+    padding:11px;
+  }
 
-      margin-bottom: 10px;
 
-    }
+  .product-info h3{
+    font-size:14px;
+  }
 
 
-    .modal-category {
+  .product-modal-grid{
+    grid-template-columns:1fr;
 
-      color: #aaa;
+    gap:20px;
+  }
 
-      font-size: 13px;
 
-      margin-bottom: 20px;
+  .main-product-image{
+    height:390px;
+  }
 
-    }
 
+  .modal-content{
+    padding:18px;
 
-    .description {
+    margin:10px auto;
+  }
 
-      color: #ddd;
 
-      line-height: 1.7;
+  .modal-info h2{
+    font-size:23px;
+  }
 
-      margin-bottom: 20px;
 
-    }
+  .branch-enquiry{
+    grid-template-columns:1fr;
+  }
 
 
-    .details-box {
+  .whatsapp-btn{
+    width:100%;
 
-      background:
-        rgba(255,255,255,0.035);
+    text-align:center;
+  }
 
-      border:
-        1px solid
-        rgba(212,175,55,0.2);
 
-      padding: 15px;
+  .branch-choice{
+    flex-direction:column;
 
-      border-radius: 12px;
+    align-items:stretch;
+  }
 
-      margin-bottom: 20px;
 
-    }
+  .branch-choice .whatsapp-btn{
+    width:100%;
+  }
 
+}
 
-    .details-box p {
 
-      margin-bottom: 8px;
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
 
-      color: #ccc;
+@media(max-width:430px){
 
-      font-size: 14px;
+  .logo-text{
+    font-size:14px;
+  }
 
-    }
 
+  .nav-links{
+    gap:7px;
+  }
 
-    /* =====================================================
-       WHATSAPP
-    ===================================================== */
 
-    .enquiry-title {
+  .nav-links a{
+    font-size:10px;
+  }
 
-      color: #d4af37;
 
-      font-size: 19px;
+  .collection-card{
+    min-height:190px;
+  }
 
-      margin-bottom: 12px;
 
-    }
+  .collection-card h3{
+    font-size:15px;
+  }
 
+}
 
-    .branch-enquiry {
-
-      display: grid;
-
-      grid-template-columns:
-        1fr auto;
-
-      gap: 12px;
-
-      align-items: center;
-
-      background:
-        rgba(255,255,255,0.035);
-
-      border:
-        1px solid
-        rgba(212,175,55,0.18);
-
-      border-radius: 12px;
-
-      padding: 12px;
-
-      margin-bottom: 10px;
-
-    }
-
-
-    .branch-enquiry strong {
-
-      display: block;
-
-      color: #fff;
-
-      margin-bottom: 4px;
-
-    }
-
-
-    .branch-enquiry span {
-
-      color: #aaa;
-
-      font-size: 12px;
-
-    }
-
-
-    .whatsapp-btn {
-
-      text-decoration: none;
-
-      background: #25D366;
-
-      color: white;
-
-      padding:
-        10px 14px;
-
-      border-radius: 22px;
-
-      font-weight: bold;
-
-      font-size: 12px;
-
-      white-space: nowrap;
-
-      border: none;
-
-      cursor: pointer;
-
-      transition: 0.3s;
-
-    }
-
-
-    .whatsapp-btn:hover {
-
-      background: #1ebe5d;
-
-      transform:
-        translateY(-2px);
-
-    }
-
-
-    /* =====================================================
-       BRANCHES
-    ===================================================== */
-
-    .branches {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(220px,1fr)
-        );
-
-      gap: 20px;
-
-    }
-
-
-    .branch-card {
-
-      padding: 25px;
-
-      border-radius: 16px;
-
-      border:
-        1px solid
-        rgba(212,175,55,0.28);
-
-      background:
-        rgba(255,255,255,0.035);
-
-      text-align: center;
-
-    }
-
-
-    .branch-card h3 {
-
-      color: #d4af37;
-
-      margin-bottom: 10px;
-
-    }
-
-
-    .branch-card p {
-
-      color: #ccc;
-
-      margin-bottom: 15px;
-
-    }
-
-
-    .branch-card a {
-
-      color: #25D366;
-
-      text-decoration: none;
-
-      font-weight: bold;
-
-    }
-
-
-    /* =====================================================
-       CONTACT
-    ===================================================== */
-
-    .contact-box {
-
-      text-align: center;
-
-      background:
-        rgba(255,255,255,0.035);
-
-      border:
-        1px solid
-        rgba(212,175,55,0.25);
-
-      padding:
-        35px 20px;
-
-      border-radius: 20px;
-
-    }
-
-
-    .contact-box h2 {
-
-      color: #d4af37;
-
-      margin-bottom: 12px;
-
-    }
-
-
-    .contact-box p {
-
-      color: #bbb;
-
-    }
-
-
-    /* =====================================================
-       FLOATING WHATSAPP
-    ===================================================== */
-
-    .floating-whatsapp {
-
-      position: fixed;
-
-      right: 18px;
-
-      bottom: 18px;
-
-      z-index: 4000;
-
-      width: 58px;
-
-      height: 58px;
-
-      border-radius: 50%;
-
-      background: #25D366;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      color: white;
-
-      font-size: 28px;
-
-      text-decoration: none;
-
-      border: none;
-
-      box-shadow:
-        0 8px 25px
-        rgba(0,0,0,0.35);
-
-      cursor: pointer;
-
-      transition: 0.3s;
-
-    }
-
-
-    .floating-whatsapp:hover {
-
-      transform:
-        scale(1.08);
-
-    }
-
-
-    /* =====================================================
-       BRANCH MODAL
-    ===================================================== */
-
-    .branch-modal-box {
-
-      max-width: 500px;
-
-    }
-
-
-    .branch-choice {
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      gap: 10px;
-
-      padding: 15px;
-
-      margin-bottom: 12px;
-
-      border-radius: 12px;
-
-      background:
-        rgba(255,255,255,0.04);
-
-      border:
-        1px solid
-        rgba(212,175,55,0.2);
-
-    }
-
-
-    .branch-choice strong {
-
-      color: #fff;
-
-      display: block;
-
-      margin-bottom: 5px;
-
-    }
-
-
-    .branch-choice span {
-
-      color: #aaa;
-
-      font-size: 12px;
-
-    }
-
-
-    /* =====================================================
-       LOADING / EMPTY
-    ===================================================== */
-
-    .loading {
-
-      text-align: center;
-
-      color: #d4af37;
-
-      padding:
-        40px 10px;
-
-      grid-column:
-        1 / -1;
-
-    }
-
-
-    .empty {
-
-      text-align: center;
-
-      color: #aaa;
-
-      padding:
-        40px 10px;
-
-      grid-column:
-        1 / -1;
-
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    footer {
-
-      text-align: center;
-
-      padding: 25px;
-
-      border-top:
-        1px solid
-        rgba(212,175,55,0.2);
-
-      color: #888;
-
-      font-size: 13px;
-
-    }
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
-
-    @media (max-width: 768px) {
-
-      .navbar {
-
-        padding:
-          9px 4%;
-
-      }
-
-
-      .logo-box img {
-
-        width: 44px;
-
-        height: 44px;
-
-      }
-
-
-      .logo-text {
-
-        font-size: 16px;
-
-      }
-
-
-      .nav-links {
-
-        gap: 10px;
-
-      }
-
-
-      .nav-links a {
-
-        font-size: 11px;
-
-      }
-
-
-      .section {
-
-        padding:
-          40px 4%;
-
-      }
-
-
-      .section-title {
-
-        font-size: 25px;
-
-      }
-
-
-      .collections {
-
-        grid-template-columns:
-          repeat(2,1fr);
-
-        gap: 12px;
-
-      }
-
-
-      .collection-card {
-
-        min-height: 205px;
-
-        padding:
-          16px 10px;
-
-      }
-
-
-      .collection-card h3 {
-
-        font-size: 16px;
-
-      }
-
-
-      .collection-card p {
-
-        font-size: 11px;
-
-      }
-
-
-      .gold-btn {
-
-        font-size: 11px;
-
-        padding:
-          9px 14px;
-
-      }
-
-
-      .products {
-
-        grid-template-columns:
-          repeat(2,1fr);
-
-        gap: 12px;
-
-      }
-
-
-      .product-card img {
-
-        height: 190px;
-
-      }
-
-
-      .product-info {
-
-        padding: 11px;
-
-      }
-
-
-      .product-info h3 {
-
-        font-size: 14px;
-
-      }
-
-
-      .product-modal-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-      }
-
-
-      .main-product-image {
-
-        height: 390px;
-
-      }
-
-
-      .modal-content {
-
-        padding: 18px;
-
-        margin:
-          10px auto;
-
-      }
-
-
-      .modal-info h2 {
-
-        font-size: 23px;
-
-      }
-
-
-      .branch-enquiry {
-
-        grid-template-columns: 1fr;
-
-      }
-
-
-      .whatsapp-btn {
-
-        width: 100%;
-
-        text-align: center;
-
-      }
-
-
-      .branch-choice {
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-      }
-
-
-      .branch-choice .whatsapp-btn {
-
-        width: 100%;
-
-      }
-
-    }
-
-
-    /* =====================================================
-       VERY SMALL MOBILE
-    ===================================================== */
-
-    @media (max-width: 430px) {
-
-      .logo-text {
-
-        font-size: 14px;
-
-      }
-
-
-      .nav-links {
-
-        gap: 7px;
-
-      }
-
-
-      .nav-links a {
-
-        font-size: 10px;
-
-      }
-
-
-      .collection-card {
-
-        min-height: 190px;
-
-      }
-
-
-      .collection-card h3 {
-
-        font-size: 15px;
-
-      }
-
-    }
-
-  </style>
-
+</style>
 </head>
 
 
 <body>
 
 
-  <!-- =====================================================
-       NAVBAR
-  ===================================================== -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-  <nav class="navbar">
+<nav class="navbar">
 
-    <div class="logo-box">
-
-      <img
-        src="kk-logo.jpg"
-        alt="KK 1 Gram Jewellers Logo"
-      >
-
-      <div class="logo-text">
-        KK 1 Gram Jewellers
-      </div>
-
-    </div>
-
-
-    <div class="nav-links">
-
-      <a href="#home">
-        Home
-      </a>
-
-      <a href="#collections">
-        Collections
-      </a>
-
-      <a href="#branches">
-        Branches
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-    </div>
-
-  </nav>
-
-
-  <!-- =====================================================
-       EXISTING BANNER
-       SAME BANNER
-  ===================================================== -->
-
-  <section
-    class="hero"
-    id="home"
-  >
+  <div class="logo-box">
 
     <img
-      src="banner.jpg.jpg"
-      alt="KK 1 Gram Jewellers"
+      src="kk-logo.jpg"
+      alt="KK 1 Gram Jewellers Logo"
     >
 
-    <div class="hero-overlay"></div>
+    <div class="logo-text">
+      KK 1 Gram Jewellers
+    </div>
 
-  </section>
+  </div>
 
 
-  <!-- =====================================================
-       COLLECTIONS
-  ===================================================== -->
+  <div class="nav-links">
 
-  <section
-    class="section"
-    id="collections"
+    <a href="#home">
+      Home
+    </a>
+
+    <a href="#collections">
+      Collections
+    </a>
+
+    <a href="#branches">
+      Branches
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =====================================================
+     EXISTING BANNER
+===================================================== -->
+
+<section
+  class="hero"
+  id="home"
+>
+
+  <img
+    src="banner.jpg.jpg"
+    alt="KK 1 Gram Jewellers"
   >
 
-    <h2 class="section-title">
-      Our Collections
-    </h2>
+  <div class="hero-overlay"></div>
+
+</section>
 
 
-    <div class="collections">
+<!-- =====================================================
+     COLLECTIONS
+===================================================== -->
+
+<section
+  class="section"
+  id="collections"
+>
+
+  <h2 class="section-title">
+    Our Collections
+  </h2>
 
 
-      <!-- NECKLACES -->
-
-      <div
-        class="collection-card loading-bg"
-        id="card-necklaces"
-        onclick="openCategory('necklaces')"
-      >
-
-        <div class="collection-content">
-
-          <h3>
-            Necklaces
-          </h3>
-
-          <p id="desc-necklaces">
-            Elegant 1 Gram Gold Necklace Designs
-          </p>
-
-          <button
-            class="gold-btn"
-            type="button"
-            onclick="
-              event.stopPropagation();
-              openCategory('necklaces');
-            "
-          >
-            View Designs
-          </button>
-
-        </div>
-
-      </div>
+  <div class="collections">
 
 
-      <!-- LADIES BRACELETS -->
+    <!-- NECKLACES -->
 
-      <div
-        class="collection-card loading-bg"
-        id="card-ladies-bracelets"
-        onclick="openCategory('ladies-bracelets')"
-      >
+    <div
+      class="collection-card loading-bg"
+      id="card-necklaces"
+      onclick="openCategory('necklaces')"
+    >
 
-        <div class="collection-content">
+      <div class="collection-content">
 
-          <h3>
-            Ladies Bracelets
-          </h3>
+        <h3>
+          Necklaces
+        </h3>
 
-          <p id="desc-ladies-bracelets">
-            Beautiful Bracelet Collection
-          </p>
+        <p id="desc-necklaces">
+          Elegant 1 Gram Gold Necklace Designs
+        </p>
 
-          <button
-            class="gold-btn"
-            type="button"
-            onclick="
-              event.stopPropagation();
-              openCategory('ladies-bracelets');
-            "
-          >
-            View Designs
-          </button>
-
-        </div>
+        <button
+          class="gold-btn"
+          type="button"
+          onclick="event.stopPropagation();openCategory('necklaces')"
+        >
+          View Designs
+        </button>
 
       </div>
-
-
-      <!-- KADA KADLI -->
-
-      <div
-        class="collection-card loading-bg"
-        id="card-kada-kadli"
-        onclick="openCategory('kada-kadli')"
-      >
-
-        <div class="collection-content">
-
-          <h3>
-            Kada Kadli
-          </h3>
-
-          <p id="desc-kada-kadli">
-            Beautiful Kada Kadli Collection
-          </p>
-
-          <button
-            class="gold-btn"
-            type="button"
-            onclick="
-              event.stopPropagation();
-              openCategory('kada-kadli');
-            "
-          >
-            View Designs
-          </button>
-
-        </div>
-
-      </div>
-
-
-      <!-- PENDAL BUTTI -->
-
-      <div
-        class="collection-card loading-bg"
-        id="card-pendal-butti"
-        onclick="openCategory('pendal-butti')"
-      >
-
-        <div class="collection-content">
-
-          <h3>
-            Pendal Butti
-          </h3>
-
-          <p id="desc-pendal-butti">
-            Beautiful Pendal Butti Collection
-          </p>
-
-          <button
-            class="gold-btn"
-            type="button"
-            onclick="
-              event.stopPropagation();
-              openCategory('pendal-butti');
-            "
-          >
-            View Designs
-          </button>
-
-        </div>
-
-      </div>
-
-
-      <!-- SHORT MS -->
-
-      <div
-        class="collection-card loading-bg"
-        id="card-short-ms"
-        onclick="openCategory('short-ms')"
-      >
-
-        <div class="collection-content">
-
-          <h3>
-            Short MS
-          </h3>
-
-          <p id="desc-short-ms">
-            Beautiful Short MS Collection
-          </p>
-
-          <button
-            class="gold-btn"
-            type="button"
-            onclick="
-              event.stopPropagation();
-              openCategory('short-ms');
-            "
-          >
-            View Designs
-          </button>
-
-        </div>
-
-      </div>
-
-
-      <!-- LAKI -->
-
-      <div
-        class="collection-card loading-bg"
-        id="card-laki"
-        onclick="openCategory('laki')"
-      >
-
-        <div class="collection-content">
-
-          <h3>
-            Laki
-          </h3>
-
-          <p id="desc-laki">
-            Beautiful Laki Collection
-          </p>
-
-          <button
-            class="gold-btn"
-            type="button"
-            onclick="
-              event.stopPropagation();
-              openCategory('laki');
-            "
-          >
-            View Designs
-          </button>
-
-        </div>
-
-      </div>
-
 
     </div>
 
-  </section>
+
+    <!-- LADIES BRACELETS -->
+
+    <div
+      class="collection-card loading-bg"
+      id="card-ladies-bracelets"
+      onclick="openCategory('ladies-bracelets')"
+    >
+
+      <div class="collection-content">
+
+        <h3>
+          Ladies Bracelets
+        </h3>
+
+        <p id="desc-ladies-bracelets">
+          Beautiful Bracelet Collection
+        </p>
+
+        <button
+          class="gold-btn"
+          type="button"
+          onclick="event.stopPropagation();openCategory('ladies-bracelets')"
+        >
+          View Designs
+        </button>
+
+      </div>
+
+    </div>
 
 
-  <!-- =====================================================
-       PRODUCTS
-  ===================================================== -->
+    <!-- KADA KADLI -->
 
-  <section
-    class="section products-section"
-    id="productsSection"
+    <div
+      class="collection-card loading-bg"
+      id="card-kada-kadli"
+      onclick="openCategory('kada-kadli')"
+    >
+
+      <div class="collection-content">
+
+        <h3>
+          Kada Kadli
+        </h3>
+
+        <p id="desc-kada-kadli">
+          Beautiful Kada Kadli Collection
+        </p>
+
+        <button
+          class="gold-btn"
+          type="button"
+          onclick="event.stopPropagation();openCategory('kada-kadli')"
+        >
+          View Designs
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- PENDAL BUTTI -->
+
+    <div
+      class="collection-card loading-bg"
+      id="card-pendal-butti"
+      onclick="openCategory('pendal-butti')"
+    >
+
+      <div class="collection-content">
+
+        <h3>
+          Pendal Butti
+        </h3>
+
+        <p id="desc-pendal-butti">
+          Beautiful Pendal Butti Collection
+        </p>
+
+        <button
+          class="gold-btn"
+          type="button"
+          onclick="event.stopPropagation();openCategory('pendal-butti')"
+        >
+          View Designs
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- SHORT MS -->
+
+    <div
+      class="collection-card loading-bg"
+      id="card-short-ms"
+      onclick="openCategory('short-ms')"
+    >
+
+      <div class="collection-content">
+
+        <h3>
+          Short MS
+        </h3>
+
+        <p id="desc-short-ms">
+          Beautiful Short MS Collection
+        </p>
+
+        <button
+          class="gold-btn"
+          type="button"
+          onclick="event.stopPropagation();openCategory('short-ms')"
+        >
+          View Designs
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- LAKI -->
+
+    <div
+      class="collection-card loading-bg"
+      id="card-laki"
+      onclick="openCategory('laki')"
+    >
+
+      <div class="collection-content">
+
+        <h3>
+          Laki
+        </h3>
+
+        <p id="desc-laki">
+          Beautiful Laki Collection
+        </p>
+
+        <button
+          class="gold-btn"
+          type="button"
+          onclick="event.stopPropagation();openCategory('laki')"
+        >
+          View Designs
+        </button>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section
+  class="section products-section"
+  id="productsSection"
+>
+
+  <button
+    class="back-btn"
+    type="button"
+    onclick="backToCollections()"
+  >
+    ← Back to Collections
+  </button>
+
+
+  <h2
+    class="section-title"
+    id="productsTitle"
+  >
+    Collection
+  </h2>
+
+
+  <div
+    id="productsContainer"
+    class="products"
+  ></div>
+
+</section>
+
+
+<!-- =====================================================
+     BRANCHES
+===================================================== -->
+
+<section
+  class="section"
+  id="branches"
+>
+
+  <h2 class="section-title">
+    Our Branches
+  </h2>
+
+
+  <div class="branches">
+
+
+    <div class="branch-card">
+
+      <h3>
+        Mehsana
+      </h3>
+
+      <p>
+        KK 1 Gram Jewellers
+      </p>
+
+      <a
+        href="https://wa.me/918140136434"
+        target="_blank"
+        rel="noopener"
+      >
+        +91 81401 36434
+      </a>
+
+    </div>
+
+
+    <div class="branch-card">
+
+      <h3>
+        Kalol
+      </h3>
+
+      <p>
+        KK 1 Gram Jewellers
+      </p>
+
+      <a
+        href="https://wa.me/918140136435"
+        target="_blank"
+        rel="noopener"
+      >
+        +91 81401 36435
+      </a>
+
+    </div>
+
+
+    <div class="branch-card">
+
+      <h3>
+        Palanpur
+      </h3>
+
+      <p>
+        KK 1 Gram Jewellers
+      </p>
+
+      <a
+        href="https://wa.me/918140136453"
+        target="_blank"
+        rel="noopener"
+      >
+        +91 81401 36453
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+  class="section"
+  id="contact"
+>
+
+  <div class="contact-box">
+
+    <h2>
+      Contact KK 1 Gram Jewellers
+    </h2>
+
+    <p>
+      For product enquiry, price and availability,
+      contact your nearest branch on WhatsApp.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCT MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="productModal"
+>
+
+  <div class="modal-content">
+
+    <button
+      class="close"
+      type="button"
+      onclick="closeProduct()"
+    >
+      ×
+    </button>
+
+
+    <div class="product-modal-grid">
+
+
+      <div>
+
+        <img
+          id="mainProductImage"
+          class="main-product-image"
+          src=""
+          alt="Product"
+        >
+
+
+        <div
+          id="productThumbs"
+          class="thumbs"
+        ></div>
+
+      </div>
+
+
+      <div class="modal-info">
+
+        <h2
+          id="modalProductTitle"
+        >
+          Product
+        </h2>
+
+
+        <div
+          id="modalProductCategory"
+          class="modal-category"
+        ></div>
+
+
+        <p
+          id="modalProductDescription"
+          class="description"
+        ></p>
+
+
+        <div class="details-box">
+
+          <p>
+            <strong>
+              Category:
+            </strong>
+
+            <span
+              id="modalDetailCategory"
+            ></span>
+          </p>
+
+
+          <p>
+            <strong>
+              Availability:
+            </strong>
+
+            Contact branch
+          </p>
+
+
+          <p>
+            <strong>
+              Price:
+            </strong>
+
+            Please enquire on WhatsApp
+          </p>
+
+        </div>
+
+
+        <h3 class="enquiry-title">
+          Enquire at your nearest store
+        </h3>
+
+
+        <!-- MEHSANA -->
+
+        <div class="branch-enquiry">
+
+          <div>
+
+            <strong>
+              Mehsana
+            </strong>
+
+            <span>
+              +91 81401 36434
+            </span>
+
+          </div>
+
+
+          <button
+            class="whatsapp-btn"
+            type="button"
+            onclick="sendProductInquiry(event,'mehsana')"
+          >
+            WhatsApp + Photo
+          </button>
+
+        </div>
+
+
+        <!-- KALOL -->
+
+        <div class="branch-enquiry">
+
+          <div>
+
+            <strong>
+              Kalol
+            </strong>
+
+            <span>
+              +91 81401 36435
+            </span>
+
+          </div>
+
+
+          <button
+            class="whatsapp-btn"
+            type="button"
+            onclick="sendProductInquiry(event,'kalol')"
+          >
+            WhatsApp + Photo
+          </button>
+
+        </div>
+
+
+        <!-- PALANPUR -->
+
+        <div class="branch-enquiry">
+
+          <div>
+
+            <strong>
+              Palanpur
+            </strong>
+
+            <span>
+              +91 81401 36453
+            </span>
+
+          </div>
+
+
+          <button
+            class="whatsapp-btn"
+            type="button"
+            onclick="sendProductInquiry(event,'palanpur')"
+          >
+            WhatsApp + Photo
+          </button>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     BRANCH MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="branchModal"
+>
+
+  <div
+    class="modal-content branch-modal-box"
   >
 
     <button
-      class="back-btn"
+      class="close"
       type="button"
-      onclick="backToCollections()"
+      onclick="closeBranchModal()"
     >
-      ← Back to Collections
+      ×
     </button>
 
 
     <h2
-      class="section-title"
-      id="productsTitle"
+      style="
+        color:#d4af37;
+        text-align:center;
+        margin:20px 0 25px;
+      "
     >
-      Collection
+      Select Branch
     </h2>
 
 
-    <div
-      id="productsContainer"
-      class="products"
-    ></div>
+    <div class="branch-choice">
 
-  </section>
+      <div>
 
-
-  <!-- =====================================================
-       BRANCHES
-  ===================================================== -->
-
-  <section
-    class="section"
-    id="branches"
-  >
-
-    <h2 class="section-title">
-      Our Branches
-    </h2>
-
-
-    <div class="branches">
-
-
-      <div class="branch-card">
-
-        <h3>
+        <strong>
           Mehsana
-        </h3>
+        </strong>
 
-        <p>
-          KK 1 Gram Jewellers
-        </p>
-
-        <a
-          href="https://wa.me/918140136434"
-          target="_blank"
-          rel="noopener"
-        >
+        <span>
           +91 81401 36434
-        </a>
+        </span>
 
       </div>
 
 
-      <div class="branch-card">
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/918140136434"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp
+      </a>
 
-        <h3>
+    </div>
+
+
+    <div class="branch-choice">
+
+      <div>
+
+        <strong>
           Kalol
-        </h3>
+        </strong>
 
-        <p>
-          KK 1 Gram Jewellers
-        </p>
-
-        <a
-          href="https://wa.me/918140136435"
-          target="_blank"
-          rel="noopener"
-        >
+        <span>
           +91 81401 36435
-        </a>
+        </span>
 
       </div>
 
 
-      <div class="branch-card">
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/918140136435"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp
+      </a>
 
-        <h3>
+    </div>
+
+
+    <div class="branch-choice">
+
+      <div>
+
+        <strong>
           Palanpur
-        </h3>
+        </strong>
 
-        <p>
-          KK 1 Gram Jewellers
-        </p>
-
-        <a
-          href="https://wa.me/918140136453"
-          target="_blank"
-          rel="noopener"
-        >
+        <span>
           +91 81401 36453
-        </a>
+        </span>
 
       </div>
 
 
-    </div>
-
-  </section>
-
-
-  <!-- =====================================================
-       CONTACT
-  ===================================================== -->
-
-  <section
-    class="section"
-    id="contact"
-  >
-
-    <div class="contact-box">
-
-      <h2>
-        Contact KK 1 Gram Jewellers
-      </h2>
-
-      <p>
-        For product enquiry, price and availability,
-        contact your nearest branch on WhatsApp.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================================
-       PRODUCT MODAL
-  ===================================================== -->
-
-  <div
-    class="modal"
-    id="productModal"
-  >
-
-    <div class="modal-content">
-
-      <button
-        class="close"
-        type="button"
-        onclick="closeProduct()"
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/918140136453"
+        target="_blank"
+        rel="noopener"
       >
-        ×
-      </button>
-
-
-      <div class="product-modal-grid">
-
-
-        <div>
-
-          <img
-            id="mainProductImage"
-            class="main-product-image"
-            src=""
-            alt="Product"
-          >
-
-
-          <div
-            id="productThumbs"
-            class="thumbs"
-          ></div>
-
-        </div>
-
-
-        <div class="modal-info">
-
-          <h2
-            id="modalProductTitle"
-          >
-            Product
-          </h2>
-
-
-          <div
-            id="modalProductCategory"
-            class="modal-category"
-          ></div>
-
-
-          <p
-            id="modalProductDescription"
-            class="description"
-          ></p>
-
-
-          <div class="details-box">
-
-            <p>
-
-              <strong>
-                Category:
-              </strong>
-
-              <span
-                id="modalDetailCategory"
-              ></span>
-
-            </p>
-
-
-            <p>
-
-              <strong>
-                Availability:
-              </strong>
-
-              Contact branch
-
-            </p>
-
-
-            <p>
-
-              <strong>
-                Price:
-              </strong>
-
-              Please enquire on WhatsApp
-
-            </p>
-
-          </div>
-
-
-          <h3 class="enquiry-title">
-            Enquire at your nearest store
-          </h3>
-
-
-          <!-- MEHSANA -->
-
-          <div class="branch-enquiry">
-
-            <div>
-
-              <strong>
-                Mehsana
-              </strong>
-
-              <span>
-                +91 81401 36434
-              </span>
-
-            </div>
-
-
-            <button
-              class="whatsapp-btn"
-              type="button"
-              onclick="
-                sendProductInquiry(
-                  event,
-                  'mehsana'
-                )
-              "
-            >
-              WhatsApp + Photo
-            </button>
-
-          </div>
-
-
-          <!-- KALOL -->
-
-          <div class="branch-enquiry">
-
-            <div>
-
-              <strong>
-                Kalol
-              </strong>
-
-              <span>
-                +91 81401 36435
-              </span>
-
-            </div>
-
-
-            <button
-              class="whatsapp-btn"
-              type="button"
-              onclick="
-                sendProductInquiry(
-                  event,
-                  'kalol'
-                )
-              "
-            >
-              WhatsApp + Photo
-            </button>
-
-          </div>
-
-
-          <!-- PALANPUR -->
-
-          <div class="branch-enquiry">
-
-            <div>
-
-              <strong>
-                Palanpur
-              </strong>
-
-              <span>
-                +91 81401 36453
-              </span>
-
-            </div>
-
-
-            <button
-              class="whatsapp-btn"
-              type="button"
-              onclick="
-                sendProductInquiry(
-                  event,
-                  'palanpur'
-                )
-              "
-            >
-              WhatsApp + Photo
-            </button>
-
-          </div>
-
-
-        </div>
-
-      </div>
+        WhatsApp
+      </a>
 
     </div>
+
 
   </div>
 
+</div>
 
-  <!-- =====================================================
-       BRANCH MODAL
-  ===================================================== -->
 
-  <div
-    class="modal"
-    id="branchModal"
-  >
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
 
-    <div
-      class="modal-content branch-modal-box"
-    >
+<button
+  class="floating-whatsapp"
+  type="button"
+  onclick="openBranchModal()"
+  aria-label="WhatsApp"
+>
+  ☎
+</button>
 
-      <button
-        class="close"
-        type="button"
-        onclick="closeBranchModal()"
-      >
-        ×
-      </button>
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-      <h2
-        style="
-          color:#d4af37;
-          text-align:center;
-          margin:20px 0 25px;
-        "
-      >
-        Select Branch
-      </h2>
+<footer>
 
+  ©️ 2026 KK 1 Gram Jewellers.
+  All Rights Reserved.
 
-      <div class="branch-choice">
+</footer>
 
-        <div>
 
-          <strong>
-            Mehsana
-          </strong>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
-          <span>
-            +91 81401 36434
-          </span>
+<script>
 
-        </div>
+/* =====================================================
+   BRANCH NUMBERS
+===================================================== */
 
+const BRANCH_NUMBERS = {
 
-        <a
-          class="whatsapp-btn"
-          href="https://wa.me/918140136434"
-          target="_blank"
-          rel="noopener"
-        >
-          WhatsApp
-        </a>
+  mehsana:
+    "918140136434",
 
-      </div>
+  kalol:
+    "918140136435",
 
+  palanpur:
+    "918140136453"
 
-      <div class="branch-choice">
+};
 
-        <div>
 
-          <strong>
-            Kalol
-          </strong>
+/* =====================================================
+   CATEGORY DATA
 
-          <span>
-            +91 81401 36435
-          </span>
+   IMPORTANT:
+   folder = GitHub ke images folder ke andar
+   EXACT folder name.
+===================================================== */
 
-        </div>
+const CATEGORY_DATA = {
 
+  necklaces:{
 
-        <a
-          class="whatsapp-btn"
-          href="https://wa.me/918140136435"
-          target="_blank"
-          rel="noopener"
-        >
-          WhatsApp
-        </a>
+    title:
+      "Necklaces Collection",
 
-      </div>
+    folder:
+      "Necklaces",
 
+    description:
+      "Elegant 1 Gram Gold Necklace Designs"
 
-      <div class="branch-choice">
+  },
 
-        <div>
 
-          <strong>
-            Palanpur
-          </strong>
+  "ladies-bracelets":{
 
-          <span>
-            +91 81401 36453
-          </span>
+    title:
+      "Ladies Bracelets Collection",
 
-        </div>
+    folder:
+      "Ladies Bracelets",
 
+    description:
+      "Beautiful Ladies Bracelet Collection"
 
-        <a
-          class="whatsapp-btn"
-          href="https://wa.me/918140136453"
-          target="_blank"
-          rel="noopener"
-        >
-          WhatsApp
-        </a>
+  },
 
-      </div>
 
+  "kada-kadli":{
 
-    </div>
+    title:
+      "Kada Kadli Collection",
 
-  </div>
+    folder:
+      "Kada Kadli",
 
+    description:
+      "Beautiful Kada Kadli Collection"
 
-  <!-- =====================================================
-       FLOATING WHATSAPP
-  ===================================================== -->
+  },
 
-  <button
-    class="floating-whatsapp"
-    type="button"
-    onclick="openBranchModal()"
-    aria-label="WhatsApp"
-  >
-    ☎
-  </button>
 
+  "pendal-butti":{
 
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
+    title:
+      "Pendal Butti Collection",
 
-  <footer>
+    /* EXACT GitHub folder name */
 
-    ©️ 2026 KK 1 Gram Jewellers.
-    All Rights Reserved.
+    folder:
+      "Pendal Butti",
 
-  </footer>
+    description:
+      "Beautiful Pendal Butti Collection"
 
+  },
 
-  <!-- =====================================================
-       JAVASCRIPT
-  ===================================================== -->
 
-  <script>
+  "short-ms":{
 
+    title:
+      "Short MS Collection",
 
-    /* =====================================================
-       BRANCH NUMBERS
-    ===================================================== */
+    /* EXACT GitHub folder name */
 
-    const BRANCH_NUMBERS = {
+    folder:
+      "Short MS",
 
-      mehsana:
-        "918140136434",
+    description:
+      "Beautiful Short MS Collection"
 
-      kalol:
-        "918140136435",
+  },
 
-      palanpur:
-        "918140136453"
 
-    };
+  laki:{
 
+    title:
+      "Laki Collection",
 
-    /* =====================================================
-       CATEGORY DATA
+    folder:
+      "Laki",
 
-       IMPORTANT:
-       folder = GitHub ke andar EXACT folder name
-    ===================================================== */
+    description:
+      "Beautiful Laki Collection"
 
-    const CATEGORY_DATA = {
+  }
 
+};
 
-      "necklaces": {
 
-        title:
-          "Necklaces Collection",
+/* =====================================================
+   STATE
+===================================================== */
 
-        folder:
-          "Necklaces",
+let currentCategory =
+  "necklaces";
 
-        description:
-          "Elegant 1 Gram Gold Necklace Designs"
+let currentProducts =
+  [];
 
-      },
+let currentProduct =
+  null;
 
 
-      "ladies-bracelets": {
+/* =====================================================
+   GITHUB REPOSITORY
+===================================================== */
 
-        title:
-          "Ladies Bracelets Collection",
+const GITHUB_API_BASE =
+  "https://api.github.com/repos/kkjewellers6064/kk-1-gram-jewellers/contents/images";
 
-        folder:
-          "Ladies Bracelets",
 
-        description:
-          "Beautiful Ladies Bracelet Collection"
+/* =====================================================
+   IMAGE EXTENSIONS
+===================================================== */
 
-      },
+const IMAGE_EXTENSIONS = [
 
+  ".jpg",
+  ".jpeg",
+  ".png",
+  ".webp",
+  ".gif",
+  ".avif",
+  ".jfif"
 
-      "kada-kadli": {
+];
 
-        title:
-          "Kada Kadli Collection",
 
-        /*
-          GitHub screenshot ke according
-          actual folder name:
-          Kada Kadli
-        */
+/* =====================================================
+   CREATE PRODUCT NAME
+===================================================== */
 
-        folder:
-          "Kada Kadli",
+function createProductName(filename){
 
-        description:
-          "Beautiful Kada Kadli Collection"
+  let name =
+    filename
+      .replace(/\.[^/.]+$/,"")
+      .replace(/[-_]+/g," ")
+      .replace(/\s+/g," ")
+      .trim();
 
-      },
 
+  return name
+    .split(" ")
+    .map(word=>{
 
-      "pendal-butti": {
-
-        title:
-          "Pendal Butti Collection",
-
-        /*
-          Aapke latest screenshot ke according
-          EXACT folder:
-          images / Pendal Butti
-        */
-
-        folder:
-          "Pendal Butti",
-
-        description:
-          "Beautiful Pendal Butti Collection"
-
-      },
-
-
-      "short-ms": {
-
-        title:
-          "Short MS Collection",
-
-        folder:
-          "Short MS",
-
-        description:
-          "Beautiful Short MS Collection"
-
-      },
-
-
-      "laki": {
-
-        title:
-          "Laki Collection",
-
-        folder:
-          "Laki",
-
-        description:
-          "Beautiful Laki Collection"
-
-      }
-
-    };
-
-
-    /* =====================================================
-       STATE
-    ===================================================== */
-
-    let currentCategory =
-      "necklaces";
-
-
-    let currentProducts =
-      [];
-
-
-    let currentProduct =
-      null;
-
-
-    /* =====================================================
-       GITHUB REPOSITORY
-    ===================================================== */
-
-    const GITHUB_API_BASE =
-      "https://api.github.com/repos/kkjewellers6064/kk-1-gram-jewellers/contents/images";
-
-
-    /* =====================================================
-       IMAGE EXTENSIONS
-    ===================================================== */
-
-    const IMAGE_EXTENSIONS = [
-
-      ".jpg",
-
-      ".jpeg",
-
-      ".png",
-
-      ".webp",
-
-      ".gif",
-
-      ".avif",
-
-      ".jfif"
-
-    ];
-
-
-    /* =====================================================
-       CREATE PRODUCT NAME
-    ===================================================== */
-
-    function createProductName(
-      filename
-    ) {
-
-      let name =
-        filename
-          .replace(
-            /\.[^/.]+$/,
-            ""
-          )
-          .replace(
-            /[-_]+/g,
-            " "
-          )
-          .replace(
-            /\s+/g,
-            " "
-          )
-          .trim();
-
-
-      return name
-        .split(" ")
-        .map(
-          word => {
-
-            if (!word) {
-
-              return "";
-
-            }
-
-
-            return (
-              word.charAt(0)
-              .toUpperCase() +
-              word.slice(1)
-            );
-
-          }
-        )
-        .join(" ");
-
-    }
-
-
-    /* =====================================================
-       CATEGORY NAME
-    ===================================================== */
-
-    function categoryName(
-      category
-    ) {
-
-      if (
-        category ===
-        "necklaces"
-      ) {
-
-        return "Necklace";
-
-      }
-
-
-      if (
-        category ===
-        "ladies-bracelets"
-      ) {
-
-        return "Ladies Bracelet";
-
-      }
-
-
-      if (
-        category ===
-        "kada-kadli"
-      ) {
-
-        return "Kada Kadli";
-
-      }
-
-
-      if (
-        category ===
-        "pendal-butti"
-      ) {
-
-        return "Pendal Butti";
-
-      }
-
-
-      if (
-        category ===
-        "short-ms"
-      ) {
-
-        return "Short MS";
-
-      }
-
-
-      if (
-        category ===
-        "laki"
-      ) {
-
-        return "Laki";
-
-      }
-
-
-      return category;
-
-    }
-
-
-    /* =====================================================
-       GET CATEGORY API
-       
-       encodeURIComponent is IMPORTANT
-       because folder names have spaces.
-    ===================================================== */
-
-    function getCategoryApi(
-      category
-    ) {
-
-      const data =
-        CATEGORY_DATA[category];
-
-
-      if (!data) {
-
+      if(!word){
         return "";
-
       }
-
 
       return (
-        GITHUB_API_BASE +
-        "/" +
-        encodeURIComponent(
-          data.folder
-        )
+        word.charAt(0).toUpperCase() +
+        word.slice(1)
+      );
+
+    })
+    .join(" ");
+
+}
+
+
+/* =====================================================
+   CATEGORY NAME
+===================================================== */
+
+function categoryName(category){
+
+  if(category==="necklaces"){
+    return "Necklace";
+  }
+
+
+  if(category==="ladies-bracelets"){
+    return "Ladies Bracelet";
+  }
+
+
+  if(category==="kada-kadli"){
+    return "Kada Kadli";
+  }
+
+
+  if(category==="pendal-butti"){
+    return "Pendal Butti";
+  }
+
+
+  if(category==="short-ms"){
+    return "Short MS";
+  }
+
+
+  if(category==="laki"){
+    return "Laki";
+  }
+
+
+  return category;
+
+}
+
+
+/* =====================================================
+   GET CATEGORY API
+
+   encodeURIComponent zaroori hai
+   kyunki "Pendal Butti" aur "Short MS"
+   mein SPACE hai.
+===================================================== */
+
+function getCategoryApi(category){
+
+  const data =
+    CATEGORY_DATA[category];
+
+
+  if(!data){
+    return "";
+  }
+
+
+  return (
+    GITHUB_API_BASE +
+    "/" +
+    encodeURIComponent(
+      data.folder
+    )
+  );
+
+}
+
+
+/* =====================================================
+   LOAD CATEGORY BACKGROUND
+
+   Category card ke background mein
+   folder ki first image show hogi.
+===================================================== */
+
+async function loadCategoryBackground(category){
+
+  const card =
+    document.getElementById(
+      "card-"+category
+    );
+
+
+  if(!card){
+    return;
+  }
+
+
+  const apiUrl =
+    getCategoryApi(category);
+
+
+  if(!apiUrl){
+    return;
+  }
+
+
+  try{
+
+    const response =
+      await fetch(apiUrl);
+
+
+    if(!response.ok){
+      throw new Error(
+        "Folder not found"
+      );
+    }
+
+
+    const files =
+      await response.json();
+
+
+    const imageFile =
+      files.find(file=>{
+
+        if(file.type!=="file"){
+          return false;
+        }
+
+
+        const name =
+          file.name.toLowerCase();
+
+
+        return IMAGE_EXTENSIONS.some(
+          ext =>
+            name.endsWith(ext)
+        );
+
+      });
+
+
+    if(imageFile){
+
+      card.style.backgroundImage =
+        "url(" +
+        JSON.stringify(
+          imageFile.download_url
+        ) +
+        ")";
+
+
+      card.classList.remove(
+        "loading-bg"
+      );
+
+
+      const description =
+        document.getElementById(
+          "desc-"+category
+        );
+
+
+      if(description){
+
+        description.textContent =
+          CATEGORY_DATA[
+            category
+          ].description;
+
+      }
+
+    }
+
+
+  }catch(error){
+
+    console.log(
+      "Category image not loaded:",
+      category,
+      error
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   LOAD ALL CATEGORY BACKGROUNDS
+===================================================== */
+
+function loadAllCategoryBackgrounds(){
+
+  Object.keys(
+    CATEGORY_DATA
+  ).forEach(category=>{
+
+    loadCategoryBackground(
+      category
+    );
+
+  });
+
+}
+
+
+/* =====================================================
+   LOAD PRODUCTS
+===================================================== */
+
+async function loadProducts(category){
+
+  const container =
+    document.getElementById(
+      "productsContainer"
+    );
+
+
+  container.innerHTML =
+    '<div class="loading">Loading designs...</div>';
+
+
+  const apiUrl =
+    getCategoryApi(category);
+
+
+  if(!apiUrl){
+
+    container.innerHTML =
+      '<div class="empty">Collection available soon.</div>';
+
+    return;
+
+  }
+
+
+  try{
+
+    const response =
+      await fetch(apiUrl);
+
+
+    if(!response.ok){
+
+      throw new Error(
+        "Unable to load products"
       );
 
     }
 
 
-    /* =====================================================
-       LOAD CATEGORY BACKGROUND
-    ===================================================== */
-
-    async function loadCategoryBackground(
-      category
-    ) {
-
-      const card =
-        document.getElementById(
-          "card-" + category
-        );
+    const files =
+      await response.json();
 
 
-      if (!card) {
+    currentProducts =
+      files
 
-        return;
+        .filter(file=>{
 
-      }
-
-
-      const apiUrl =
-        getCategoryApi(
-          category
-        );
-
-
-      if (!apiUrl) {
-
-        return;
-
-      }
-
-
-      try {
-
-        const response =
-          await fetch(
-            apiUrl,
-            {
-              cache: "no-store"
-            }
-          );
-
-
-        if (!response.ok) {
-
-          throw new Error(
-            "Folder not found"
-          );
-
-        }
-
-
-        const files =
-          await response.json();
-
-
-        if (
-          !Array.isArray(files)
-        ) {
-
-          throw new Error(
-            "Invalid GitHub response"
-          );
-
-        }
-
-
-        const imageFile =
-          files.find(
-            file => {
-
-              if (
-                !file.name ||
-                !file.download_url
-              ) {
-
-                return false;
-
-              }
-
-
-              const name =
-                file.name.toLowerCase();
-
-
-              return IMAGE_EXTENSIONS.some(
-                ext =>
-                  name.endsWith(ext)
-              );
-
-            }
-          );
-
-
-        if (imageFile) {
-
-          card.style.backgroundImage =
-            "url('" +
-            imageFile.download_url +
-            "')";
-
-
-          card.classList.remove(
-            "loading-bg"
-          );
-
-
-          const description =
-            document.getElementById(
-              "desc-" + category
-            );
-
-
-          if (description) {
-
-            description.textContent =
-              CATEGORY_DATA[
-                category
-              ].description;
-
+          if(file.type!=="file"){
+            return false;
           }
 
-        }
+
+          const name =
+            file.name.toLowerCase();
 
 
-      } catch (error) {
+          return IMAGE_EXTENSIONS.some(
+            ext =>
+              name.endsWith(ext)
+          );
 
-        console.log(
-          "Category images not loaded:",
-          category,
-          error
-        );
+        })
 
-      }
+        .map(file=>({
 
-    }
+          title:
+            createProductName(
+              file.name
+            ),
 
+          image:
+            file.download_url,
 
-    /* =====================================================
-       LOAD ALL CATEGORY BACKGROUNDS
-    ===================================================== */
-
-    function loadAllCategoryBackgrounds() {
-
-      Object.keys(
-        CATEGORY_DATA
-      ).forEach(
-        category => {
-
-          loadCategoryBackground(
+          category:
             category
-          );
 
-        }
-      );
-
-    }
+        }));
 
 
-    /* =====================================================
-       LOAD PRODUCTS
-    ===================================================== */
+    displayProducts();
 
-    async function loadProducts(
-      category
-    ) {
 
-      const container =
-        document.getElementById(
-          "productsContainer"
+  }catch(error){
+
+    console.error(
+      "Product loading error:",
+      error
+    );
+
+
+    container.innerHTML = `
+
+      <div class="empty">
+
+        <h3 style="
+          color:#d4af37;
+          margin-bottom:10px;
+        ">
+          Collection Coming Soon
+        </h3>
+
+        <p>
+          Is category ke designs
+          abhi upload nahi hue hain.
+        </p>
+
+      </div>
+
+    `;
+
+  }
+
+}
+
+
+/* =====================================================
+   DISPLAY PRODUCTS
+===================================================== */
+
+function displayProducts(){
+
+  const container =
+    document.getElementById(
+      "productsContainer"
+    );
+
+
+  container.innerHTML =
+    "";
+
+
+  if(!currentProducts.length){
+
+    container.innerHTML = `
+
+      <div class="empty">
+
+        <h3 style="
+          color:#d4af37;
+          margin-bottom:10px;
+        ">
+          Collection Coming Soon
+        </h3>
+
+        <p>
+          Is collection mein abhi
+          koi design available nahi hai.
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  currentProducts.forEach(
+    (product,index)=>{
+
+      const card =
+        document.createElement(
+          "div"
         );
 
 
-      container.innerHTML =
-        `
-          <div class="loading">
-            Loading designs...
-          </div>
-        `;
+      card.className =
+        "product-card";
 
 
-      const apiUrl =
-        getCategoryApi(
-          category
-        );
+      card.onclick =
+        function(){
 
+          openProduct(index);
 
-      if (!apiUrl) {
+        };
 
-        container.innerHTML =
-          `
-            <div class="empty">
-              Collection available soon.
-            </div>
-          `;
 
-        return;
-
-      }
-
-
-      try {
-
-        const response =
-          await fetch(
-            apiUrl,
-            {
-              cache: "no-store"
-            }
-          );
-
-
-        if (!response.ok) {
-
-          throw new Error(
-            "Unable to load products"
-          );
-
-        }
-
-
-        const files =
-          await response.json();
-
-
-        if (
-          !Array.isArray(files)
-        ) {
-
-          throw new Error(
-            "Invalid folder data"
-          );
-
-        }
-
-
-        currentProducts =
-          files
-            .filter(
-              file => {
-
-                if (
-                  !file.name ||
-                  !file.download_url
-                ) {
-
-                  return false;
-
-                }
-
-
-                const name =
-                  file.name.toLowerCase();
-
-
-                return IMAGE_EXTENSIONS.some(
-                  ext =>
-                    name.endsWith(ext)
-                );
-
-              }
-            )
-            .map(
-              file => ({
-
-                title:
-                  createProductName(
-                    file.name
-                  ),
-
-                image:
-                  file.download_url,
-
-                category:
-                  category
-
-              })
-            );
-
-
-        displayProducts();
-
-
-      } catch (error) {
-
-        console.error(
-          "Product loading error:",
-          error
-        );
-
-
-        container.innerHTML =
-
-          `
-            <div class="empty">
-
-              <h3
-                style="
-                  color:#d4af37;
-                  margin-bottom:10px;
-                "
-              >
-                Collection Coming Soon
-              </h3>
-
-              <p>
-                Is category ke designs
-                abhi load nahi ho rahe hain.
-              </p>
-
-            </div>
-          `;
-
-      }
-
-    }
-
-
-    /* =====================================================
-       DISPLAY PRODUCTS
-    ===================================================== */
-
-    function displayProducts() {
-
-      const container =
-        document.getElementById(
-          "productsContainer"
-        );
-
-
-      container.innerHTML =
-        "";
-
-
-      if (
-        !currentProducts.length
-      ) {
-
-        container.innerHTML =
-
-          `
-            <div class="empty">
-
-              <h3
-                style="
-                  color:#d4af37;
-                  margin-bottom:10px;
-                "
-              >
-                Collection Coming Soon
-              </h3>
-
-              <p>
-                Is collection mein abhi
-                koi design available nahi hai.
-              </p>
-
-            </div>
-          `;
-
-        return;
-
-      }
-
-
-      currentProducts.forEach(
-        (
-          product,
-          index
-        ) => {
-
-          const card =
-            document.createElement(
-              "div"
-            );
-
-
-          card.className =
-            "product-card";
-
-
-          card.onclick =
-            function() {
-
-              openProduct(
-                index
-              );
-
-            };
-
-
-          const image =
-            document.createElement(
-              "img"
-            );
-
-
-          image.src =
-            product.image;
-
-
-          image.alt =
-            product.title;
-
-
-          image.loading =
-            "lazy";
-
-
-          image.onerror =
-            function() {
-
-              this.style.opacity =
-                "0.2";
-
-            };
-
-
-          const info =
-            document.createElement(
-              "div"
-            );
-
-
-          info.className =
-            "product-info";
-
-
-          const title =
-            document.createElement(
-              "h3"
-            );
-
-
-          title.textContent =
-            product.title;
-
-
-          const category =
-            document.createElement(
-              "p"
-            );
-
-
-          category.textContent =
-            categoryName(
-              product.category
-            );
-
-
-          info.appendChild(
-            title
-          );
-
-
-          info.appendChild(
-            category
-          );
-
-
-          card.appendChild(
-            image
-          );
-
-
-          card.appendChild(
-            info
-          );
-
-
-          container.appendChild(
-            card
-          );
-
-        }
-      );
-
-    }
-
-
-    /* =====================================================
-       OPEN CATEGORY
-    ===================================================== */
-
-    function openCategory(
-      category
-    ) {
-
-      if (
-        !CATEGORY_DATA[category]
-      ) {
-
-        return;
-
-      }
-
-
-      currentCategory =
-        category;
-
-
-      document.getElementById(
-        "productsTitle"
-      ).textContent =
-        CATEGORY_DATA[
-          category
-        ].title;
-
-
-      document.getElementById(
-        "productsSection"
-      ).style.display =
-        "block";
-
-
-      document.getElementById(
-        "collections"
-      ).style.display =
-        "none";
-
-
-      loadProducts(
-        category
-      );
-
-
-      document.getElementById(
-        "productsSection"
-      ).scrollIntoView({
-
-        behavior:
-          "smooth",
-
-        block:
-          "start"
-
-      });
-
-    }
-
-
-    /* =====================================================
-       BACK TO COLLECTIONS
-    ===================================================== */
-
-    function backToCollections() {
-
-      document.getElementById(
-        "productsSection"
-      ).style.display =
-        "none";
-
-
-      document.getElementById(
-        "collections"
-      ).style.display =
-        "block";
-
-
-      document.getElementById(
-        "collections"
-      ).scrollIntoView({
-
-        behavior:
-          "smooth",
-
-        block:
-          "start"
-
-      });
-
-    }
-
-
-    /* =====================================================
-       OPEN PRODUCT
-    ===================================================== */
-
-    function openProduct(
-      index
-    ) {
-
-      const product =
-        currentProducts[index];
-
-
-      if (!product) {
-
-        return;
-
-      }
-
-
-      currentProduct =
-        product;
-
-
-      const mainImage =
-        document.getElementById(
-          "mainProductImage"
-        );
-
-
-      mainImage.src =
-        product.image;
-
-
-      mainImage.alt =
-        product.title;
-
-
-      document.getElementById(
-        "modalProductTitle"
-      ).textContent =
-        product.title;
-
-
-      document.getElementById(
-        "modalProductCategory"
-      ).textContent =
-        categoryName(
-          product.category
-        );
-
-
-      document.getElementById(
-        "modalDetailCategory"
-      ).textContent =
-        categoryName(
-          product.category
-        );
-
-
-      document.getElementById(
-        "modalProductDescription"
-      ).textContent =
-
-        "Beautiful " +
-
-        categoryName(
-          product.category
-        ) +
-
-        " design from KK 1 Gram Jewellers. " +
-
-        "For price, availability and more details, " +
-
-        "please contact your preferred branch on WhatsApp.";
-
-
-      createThumbnail(
-        product.image
-      );
-
-
-      document.getElementById(
-        "productModal"
-      ).style.display =
-        "block";
-
-
-      document.body.style.overflow =
-        "hidden";
-
-    }
-
-
-    /* =====================================================
-       THUMBNAIL
-    ===================================================== */
-
-    function createThumbnail(
-      imageUrl
-    ) {
-
-      const thumbs =
-        document.getElementById(
-          "productThumbs"
-        );
-
-
-      thumbs.innerHTML =
-        "";
-
-
-      const img =
+      const image =
         document.createElement(
           "img"
         );
 
 
-      img.src =
-        imageUrl;
+      image.src =
+        product.image;
 
 
-      img.alt =
-        "Product thumbnail";
+      image.alt =
+        product.title;
 
 
-      img.className =
-        "active";
+      image.loading =
+        "lazy";
 
 
-      img.onclick =
-        function() {
+      image.onerror =
+        function(){
 
-          document.getElementById(
-            "mainProductImage"
-          ).src =
-            imageUrl;
-
-
-          document
-            .querySelectorAll(
-              "#productThumbs img"
-            )
-            .forEach(
-              item => {
-
-                item.classList.remove(
-                  "active"
-                );
-
-              }
-            );
-
-
-          img.classList.add(
-            "active"
-          );
+          this.style.display =
+            "none";
 
         };
 
 
-      thumbs.appendChild(
-        img
+      const info =
+        document.createElement(
+          "div"
+        );
+
+
+      info.className =
+        "product-info";
+
+
+      const title =
+        document.createElement(
+          "h3"
+        );
+
+
+      title.textContent =
+        product.title;
+
+
+      const category =
+        document.createElement(
+          "p"
+        );
+
+
+      category.textContent =
+        categoryName(
+          product.category
+        );
+
+
+      info.appendChild(
+        title
+      );
+
+
+      info.appendChild(
+        category
+      );
+
+
+      card.appendChild(
+        image
+      );
+
+
+      card.appendChild(
+        info
+      );
+
+
+      container.appendChild(
+        card
       );
 
     }
+  );
+
+}
 
 
-    /* =====================================================
-       CLOSE PRODUCT
-    ===================================================== */
+/* =====================================================
+   OPEN CATEGORY
+===================================================== */
 
-    function closeProduct() {
+function openCategory(category){
 
+  if(!CATEGORY_DATA[category]){
+    return;
+  }
+
+
+  currentCategory =
+    category;
+
+
+  document.getElementById(
+    "productsTitle"
+  ).textContent =
+    CATEGORY_DATA[
+      category
+    ].title;
+
+
+  document.getElementById(
+    "productsSection"
+  ).style.display =
+    "block";
+
+
+  document.getElementById(
+    "collections"
+  ).style.display =
+    "none";
+
+
+  loadProducts(
+    category
+  );
+
+
+  document.getElementById(
+    "productsSection"
+  ).scrollIntoView({
+
+    behavior:"smooth",
+
+    block:"start"
+
+  });
+
+}
+
+
+/* =====================================================
+   BACK TO COLLECTIONS
+===================================================== */
+
+function backToCollections(){
+
+  document.getElementById(
+    "productsSection"
+  ).style.display =
+    "none";
+
+
+  document.getElementById(
+    "collections"
+  ).style.display =
+    "block";
+
+
+  document.getElementById(
+    "collections"
+  ).scrollIntoView({
+
+    behavior:"smooth",
+
+    block:"start"
+
+  });
+
+}
+
+
+/* =====================================================
+   OPEN PRODUCT
+===================================================== */
+
+function openProduct(index){
+
+  const product =
+    currentProducts[index];
+
+
+  if(!product){
+    return;
+  }
+
+
+  currentProduct =
+    product;
+
+
+  const mainImage =
+    document.getElementById(
+      "mainProductImage"
+    );
+
+
+  mainImage.src =
+    product.image;
+
+
+  mainImage.alt =
+    product.title;
+
+
+  document.getElementById(
+    "modalProductTitle"
+  ).textContent =
+    product.title;
+
+
+  document.getElementById(
+    "modalProductCategory"
+  ).textContent =
+    categoryName(
+      product.category
+    );
+
+
+  document.getElementById(
+    "modalDetailCategory"
+  ).textContent =
+    categoryName(
+      product.category
+    );
+
+
+  document.getElementById(
+    "modalProductDescription"
+  ).textContent =
+    "Beautiful " +
+    categoryName(
+      product.category
+    ) +
+    " design from KK 1 Gram Jewellers. " +
+    "For price, availability and more details, " +
+    "please contact your preferred branch on WhatsApp.";
+
+
+  createThumbnail(
+    product.image
+  );
+
+
+  document.getElementById(
+    "productModal"
+  ).style.display =
+    "block";
+
+
+  document.body.style.overflow =
+    "hidden";
+
+}
+
+
+/* =====================================================
+   CREATE THUMBNAIL
+===================================================== */
+
+function createThumbnail(imageUrl){
+
+  const thumbs =
+    document.getElementById(
+      "productThumbs"
+    );
+
+
+  thumbs.innerHTML =
+    "";
+
+
+  const img =
+    document.createElement(
+      "img"
+    );
+
+
+  img.src =
+    imageUrl;
+
+
+  img.alt =
+    "Product thumbnail";
+
+
+  img.className =
+    "active";
+
+
+  img.onclick =
+    function(){
+
+      document.getElementById(
+        "mainProductImage"
+      ).src =
+        imageUrl;
+
+
+      document
+        .querySelectorAll(
+          "#productThumbs img"
+        )
+        .forEach(item=>{
+
+          item.classList.remove(
+            "active"
+          );
+
+        });
+
+
+      img.classList.add(
+        "active"
+      );
+
+    };
+
+
+  thumbs.appendChild(
+    img
+  );
+
+}
+
+
+/* =====================================================
+   CLOSE PRODUCT
+===================================================== */
+
+function closeProduct(){
+
+  document.getElementById(
+    "productModal"
+  ).style.display =
+    "none";
+
+
+  document.body.style.overflow =
+    "";
+
+
+  currentProduct =
+    null;
+
+}
+
+
+/* =====================================================
+   CREATE PRODUCT MESSAGE
+===================================================== */
+
+function createProductMessage(
+  category,
+  title,
+  branch
+){
+
+  return (
+
+    "Hello KK 1 Gram Jewellers " +
+    branch +
+    ", I am interested in this " +
+    category.toLowerCase() +
+    " design: " +
+    title +
+    ". Please share the price, availability and details."
+
+  );
+
+}
+
+
+/* =====================================================
+   WHATSAPP PRODUCT INQUIRY
+===================================================== */
+
+function sendProductInquiry(
+  event,
+  branch
+){
+
+  if(event){
+
+    event.preventDefault();
+
+    event.stopPropagation();
+
+  }
+
+
+  if(!currentProduct){
+    return;
+  }
+
+
+  const categoryText =
+    categoryName(
+      currentProduct.category
+    );
+
+
+  const branchName =
+    branch.charAt(0).toUpperCase() +
+    branch.slice(1);
+
+
+  const message =
+    createProductMessage(
+      categoryText,
+      currentProduct.title,
+      branchName
+    );
+
+
+  /*
+     Product image ka public GitHub URL
+     WhatsApp message mein add hoga.
+  */
+
+  const finalMessage =
+    message +
+    "\n\nProduct Photo:\n" +
+    currentProduct.image;
+
+
+  const number =
+    BRANCH_NUMBERS[branch];
+
+
+  if(!number){
+    return;
+  }
+
+
+  const whatsappUrl =
+    "https://wa.me/" +
+    number +
+    "?text=" +
+    encodeURIComponent(
+      finalMessage
+    );
+
+
+  /*
+     Selected branch ki direct
+     WhatsApp chat.
+  */
+
+  window.location.href =
+    whatsappUrl;
+
+}
+
+
+/* =====================================================
+   BRANCH MODAL
+===================================================== */
+
+function openBranchModal(){
+
+  document.getElementById(
+    "branchModal"
+  ).style.display =
+    "block";
+
+
+  document.body.style.overflow =
+    "hidden";
+
+}
+
+
+function closeBranchModal(){
+
+  document.getElementById(
+    "branchModal"
+  ).style.display =
+    "none";
+
+
+  document.body.style.overflow =
+    "";
+
+}
+
+
+/* =====================================================
+   OUTSIDE MODAL CLICK
+===================================================== */
+
+window.addEventListener(
+  "click",
+  function(event){
+
+    const productModal =
       document.getElementById(
         "productModal"
-      ).style.display =
-        "none";
-
-
-      document.body.style.overflow =
-        "";
-
-
-      currentProduct =
-        null;
-
-    }
-
-
-    /* =====================================================
-       PRODUCT MESSAGE
-    ===================================================== */
-
-    function createProductMessage(
-      category,
-      title,
-      branch
-    ) {
-
-      return (
-
-        "Hello KK 1 Gram Jewellers " +
-
-        branch +
-
-        ", I am interested in this " +
-
-        category.toLowerCase() +
-
-        " design: " +
-
-        title +
-
-        ". Please share the price, availability and details."
-
       );
 
-    }
 
-
-    /* =====================================================
-       DIRECT WHATSAPP
-    ===================================================== */
-
-    function sendProductInquiry(
-      event,
-      branch
-    ) {
-
-      if (event) {
-
-        event.preventDefault();
-
-        event.stopPropagation();
-
-      }
-
-
-      if (!currentProduct) {
-
-        return;
-
-      }
-
-
-      const categoryText =
-        categoryName(
-          currentProduct.category
-        );
-
-
-      const branchName =
-        branch.charAt(0)
-          .toUpperCase() +
-
-        branch.slice(1);
-
-
-      const message =
-        createProductMessage(
-          categoryText,
-          currentProduct.title,
-          branchName
-        );
-
-
-      const finalMessage =
-
-        message +
-
-        "\n\nProduct Photo:\n" +
-
-        currentProduct.image;
-
-
-      const number =
-        BRANCH_NUMBERS[
-          branch
-        ];
-
-
-      if (!number) {
-
-        return;
-
-      }
-
-
-      const whatsappUrl =
-
-        "https://wa.me/" +
-
-        number +
-
-        "?text=" +
-
-        encodeURIComponent(
-          finalMessage
-        );
-
-
-      window.location.href =
-        whatsappUrl;
-
-    }
-
-
-    /* =====================================================
-       BRANCH MODAL
-    ===================================================== */
-
-    function openBranchModal() {
-
+    const branchModal =
       document.getElementById(
         "branchModal"
-      ).style.display =
-        "block";
+      );
 
 
-      document.body.style.overflow =
-        "hidden";
+    if(
+      event.target ===
+      productModal
+    ){
 
-    }
-
-
-    function closeBranchModal() {
-
-      document.getElementById(
-        "branchModal"
-      ).style.display =
-        "none";
-
-
-      document.body.style.overflow =
-        "";
+      closeProduct();
 
     }
 
 
-    /* =====================================================
-       OUTSIDE MODAL CLICK
-    ===================================================== */
+    if(
+      event.target ===
+      branchModal
+    ){
 
-    window.addEventListener(
-      "click",
-      function(event) {
+      closeBranchModal();
 
-        const productModal =
-          document.getElementById(
-            "productModal"
-          );
+    }
 
-
-        const branchModal =
-          document.getElementById(
-            "branchModal"
-          );
+  }
+);
 
 
-        if (
-          event.target ===
-          productModal
-        ) {
+/* =====================================================
+   ESC KEY
+===================================================== */
 
-          closeProduct();
+document.addEventListener(
+  "keydown",
+  function(event){
 
-        }
+    if(
+      event.key ===
+      "Escape"
+    ){
 
+      closeProduct();
 
-        if (
-          event.target ===
-          branchModal
-        ) {
+      closeBranchModal();
 
-          closeBranchModal();
+    }
 
-        }
-
-      }
-    );
-
-
-    /* =====================================================
-       ESC KEY
-    ===================================================== */
-
-    document.addEventListener(
-      "keydown",
-      function(event) {
-
-        if (
-          event.key ===
-          "Escape"
-        ) {
-
-          closeProduct();
-
-          closeBranchModal();
-
-        }
-
-      }
-    );
+  }
+);
 
 
-    /* =====================================================
-       START
-    ===================================================== */
+/* =====================================================
+   START
+===================================================== */
 
-    document.addEventListener(
-      "DOMContentLoaded",
-      function() {
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
 
-        loadAllCategoryBackgrounds();
+    loadAllCategoryBackgrounds();
 
-      }
-    );
+  }
+);
 
-
-  </script>
-
+</script>
 
 </body>
-
 </html>
