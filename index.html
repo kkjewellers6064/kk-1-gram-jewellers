@@ -430,6 +430,31 @@
 
     }
 
+    /* CATEGORY CARD IMAGE - VISIBLE */
+
+    .collection-card .category-bg-image {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      z-index: 0;
+
+      display: block;
+
+      opacity: 1;
+
+    }
+
+
     .collection-card::before {
 
       content: "";
@@ -1198,167 +1223,6 @@
 
     }
 
-
-
-    /* =========================================================
-       PREMIUM GOLD JEWELLERY BACKGROUND
-    ========================================================= */
-
-    body {
-      background:
-        radial-gradient(circle at 15% 5%, rgba(255,224,130,.24), transparent 25%),
-        radial-gradient(circle at 85% 25%, rgba(212,175,55,.18), transparent 30%),
-        linear-gradient(135deg, #fffaf0 0%, #f6e8c4 42%, #ead39b 100%);
-      color: #2d210b;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      min-height: 390px;
-      background:
-        radial-gradient(circle at 50% 35%, rgba(255,215,100,.24), transparent 35%),
-        linear-gradient(135deg, #fff8df 0%, #e8ce87 48%, #c49a38 100%);
-      border-bottom: 2px solid #c99b32;
-    }
-
-    .hero img {
-      position: relative;
-      z-index: 1;
-      display: block;
-      width: 100%;
-      min-height: 390px;
-      object-fit: cover;
-    }
-
-    .hero-content {
-      z-index: 3;
-      background: rgba(25,18,5,.52);
-      border: 1px solid rgba(255,220,120,.75);
-      border-radius: 22px;
-      padding: 28px 36px;
-      box-shadow: 0 12px 35px rgba(60,40,5,.28), inset 0 0 30px rgba(255,220,120,.08);
-    }
-
-    .featured-banners {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(255,225,130,.38), transparent 32%),
-        radial-gradient(circle at 8% 80%, rgba(198,151,48,.16), transparent 28%),
-        radial-gradient(circle at 92% 70%, rgba(198,151,48,.16), transparent 28%),
-        linear-gradient(135deg, #fffaf0 0%, #f5e5bb 42%, #ecd6a0 100%) !important;
-      border-top: 2px solid #c99b32;
-      border-bottom: 2px solid #c99b32;
-      padding-top: 55px;
-      padding-bottom: 70px;
-    }
-
-    .featured-banners::before {
-      content: "";
-      position: absolute;
-      width: 520px;
-      height: 520px;
-      top: -280px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,215,100,.34), transparent 68%);
-      pointer-events: none;
-    }
-
-    .featured-banners .section-title {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-    }
-
-    .featured-banners .section-title::before {
-      content: "";
-      display: block;
-      width: 120px;
-      height: 4px;
-      margin: 0 auto 20px;
-      border-radius: 10px;
-      background: linear-gradient(90deg, transparent, #b88620, #ffe27a, #b88620, transparent);
-    }
-
-    .featured-banners .section-title h2 {
-      color: #704c08 !important;
-      text-shadow: 0 2px 3px rgba(255,255,255,.75);
-    }
-
-    .featured-banners .section-title p {
-      color: #5d4b29 !important;
-    }
-
-    .featured-banner-grid {
-      position: relative;
-      z-index: 3;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-      width: 94%;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 8px 0 15px;
-    }
-
-    .featured-banner {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      border-radius: 18px;
-      background: #fff;
-      border: 2px solid #c99b32;
-      box-shadow: 0 10px 25px rgba(83,59,12,.25), 0 0 0 1px rgba(255,221,120,.5);
-      transition: transform .3s ease, box-shadow .3s ease;
-    }
-
-    .featured-banner:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 16px 35px rgba(83,59,12,.30), 0 0 0 3px rgba(218,174,63,.20);
-    }
-
-    .featured-banner img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-    }
-
-    .featured-banner-grid::after {
-      content: "";
-      display: block;
-      width: 190px;
-      height: 3px;
-      margin: 25px auto 0;
-      border-radius: 10px;
-      background: linear-gradient(90deg, transparent, #b88620, #ffe27a, #b88620, transparent);
-      grid-column: 1 / -1;
-    }
-
-    @media (max-width: 900px) {
-      .featured-banner-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 550px) {
-      .featured-banner-grid {
-        display: flex;
-        overflow-x: auto;
-        gap: 14px;
-        width: 96%;
-        padding-bottom: 15px;
-        scroll-snap-type: x mandatory;
-      }
-
-      .featured-banner {
-        flex: 0 0 78%;
-        scroll-snap-align: center;
-      }
-    }
   </style>
 
 </head>
@@ -1402,7 +1266,7 @@
           Collections
         </a>
 
-        <a href="#branches">
+        <a href="#branchesSection">
           Branches
         </a>
 
@@ -1424,9 +1288,9 @@
 
       <img
         id="siteBanner"
-        src="images/banner.jpg.jpg"
+        src="KK_Jewellers_Mens_Banner.jpg"
         alt="KK 1 Gram Jewellers Banner"
-        onerror="this.style.display='none';"
+        onerror="this.onerror=null; this.src='banner.jpg.jpg';"
       >
 
       <div class="hero-content">
@@ -3019,6 +2883,149 @@
 
 
     /* =======================================================
+       LOAD CATEGORY CARD IMAGES
+       Uses GitHub TREE API once so every category card
+       gets its real first jewellery image.
+    ======================================================== */
+
+    async function loadCategoryCardImages() {
+
+      const cards = document.querySelectorAll(
+        ".collection-card"
+      );
+
+      if (!cards || cards.length === 0) {
+        return;
+      }
+
+      try {
+
+        const treeUrl =
+          "https://api.github.com/repos/" +
+          GITHUB_OWNER +
+          "/" +
+          GITHUB_REPO +
+          "/git/trees/" +
+          encodeURIComponent(GITHUB_BRANCH) +
+          "?recursive=1";
+
+        const response = await fetch(
+          treeUrl,
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+          throw new Error(
+            "GitHub tree API returned " + response.status
+          );
+        }
+
+        const data = await response.json();
+        const tree = Array.isArray(data.tree) ? data.tree : [];
+
+        const imageExtensions = /\.(jpg|jpeg|png|webp|gif)$/i;
+        const firstImageByFolder = {};
+
+        tree.forEach(function(item) {
+
+          if (!item || item.type !== "blob" || !item.path) {
+            return;
+          }
+
+          if (!imageExtensions.test(item.path)) {
+            return;
+          }
+
+          if (!item.path.toLowerCase().startsWith("images/")) {
+            return;
+          }
+
+          const parts = item.path.split("/");
+
+          if (parts.length < 3) {
+            return;
+          }
+
+          const folderName = parts[1];
+
+          if (!firstImageByFolder[folderName]) {
+            firstImageByFolder[folderName] = item.path;
+          }
+
+        });
+
+        cards.forEach(function(card, index) {
+
+          const category = categories[index];
+
+          if (!category) {
+            return;
+          }
+
+          const imagePath =
+            firstImageByFolder[category.folder];
+
+          if (!imagePath) {
+            console.warn(
+              "No category image found for:",
+              category.folder
+            );
+            return;
+          }
+
+          const oldImage = card.querySelector(
+            ".category-bg-image"
+          );
+
+          if (oldImage) {
+            oldImage.remove();
+          }
+
+          const image = document.createElement("img");
+
+          image.className = "category-bg-image";
+          image.alt = category.title + " jewellery";
+          image.loading = "lazy";
+          image.src =
+            RAW_BASE +
+            imagePath
+              .split("/")
+              .map(encodeURIComponent)
+              .join("/");
+
+          image.onerror = function() {
+            console.error(
+              "Category image failed:",
+              image.src
+            );
+            image.style.display = "none";
+          };
+
+          const info = card.querySelector(
+            ".collection-info"
+          );
+
+          if (info) {
+            card.insertBefore(image, info);
+          } else {
+            card.appendChild(image);
+          }
+
+        });
+
+      } catch (error) {
+
+        console.error(
+          "Category card image loading error:",
+          error
+        );
+
+      }
+
+    }
+
+
+    /* =======================================================
        SHOW COLLECTIONS
     ======================================================== */
 
@@ -3054,7 +3061,7 @@
 
       const branches =
         document.getElementById(
-          "branches"
+          "branchesSection"
         );
 
 
@@ -3106,7 +3113,7 @@
 
       const branches =
         document.getElementById(
-          "branches"
+          "branchesSection"
         );
 
 
@@ -3175,19 +3182,22 @@
       `;
 
 
-      await loadCategoryProducts(
-        folder
-      );
+      const productsSectionForScroll =
+        document.getElementById(
+          "productsSection"
+        );
 
-
-      if (productsSection) {
-
-        productsSection.scrollIntoView({
+      if (productsSectionForScroll) {
+        productsSectionForScroll.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
-
       }
+
+
+      await loadCategoryProducts(
+        folder
+      );
 
     }
 
@@ -3789,6 +3799,8 @@
         loadMainImages();
 
         showCollections();
+
+        loadCategoryCardImages();
 
       }
     );
