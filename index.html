@@ -1037,6 +1037,24 @@
     }
 
 
+
+    .enquiry-title {
+      color: var(--light-gold);
+      margin: 18px 0 12px;
+      font-size: 16px;
+    }
+
+    .branch-enquiry-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .branch-enquiry-list .whatsapp-btn {
+      width: 100%;
+      border: 0;
+      text-align: center;
+    }
+
     /* =========================================================
        RESPONSIVE
     ========================================================= */
@@ -2575,15 +2593,23 @@
           </div>
 
 
-          <a
-            id="modalWhatsapp"
-            class="whatsapp-btn"
-            href="https://wa.me/918140136434"
-            target="_blank"
-            rel="noopener"
-          >
-            Enquire on WhatsApp
-          </a>
+          <h3 class="enquiry-title">Enquire on WhatsApp</h3>
+
+          <div class="branch-enquiry-list">
+
+            <button class="whatsapp-btn" type="button" onclick="shareProductOnWhatsApp('mehsana')">
+              Mehsana — WhatsApp + Photo
+            </button>
+
+            <button class="whatsapp-btn" type="button" onclick="shareProductOnWhatsApp('kalol')">
+              Kalol — WhatsApp + Photo
+            </button>
+
+            <button class="whatsapp-btn" type="button" onclick="shareProductOnWhatsApp('palanpur')">
+              Palanpur — WhatsApp + Photo
+            </button>
+
+          </div>
 
         </div>
 
@@ -2666,6 +2692,12 @@
 
     const WHATSAPP_NUMBER =
       "918140136434";
+
+    const BRANCH_NUMBERS = {
+      mehsana: "918140136434",
+      kalol: "918140136435",
+      palanpur: "918140136453"
+    };
 
 
     /* =======================================================
@@ -3567,11 +3599,6 @@
         );
 
 
-      const modalWhatsapp =
-        document.getElementById(
-          "modalWhatsapp"
-        );
-
 
       if (modalImage) {
 
@@ -3600,27 +3627,6 @@
 
         modalDescription.textContent =
           "Premium jewellery design from KK 1 Gram Jewellers.";
-
-      }
-
-
-      if (modalWhatsapp) {
-
-        const message =
-          "Hello KK 1 Gram Jewellers, I am interested in " +
-          getProductName(
-            product.name
-          ) +
-          ".";
-
-
-        modalWhatsapp.href =
-          "https://wa.me/" +
-          WHATSAPP_NUMBER +
-          "?text=" +
-          encodeURIComponent(
-            message
-          );
 
       }
 
@@ -3715,6 +3721,70 @@
 
       }
 
+    }
+
+
+    /* =======================================================
+       WHATSAPP BRANCH + PHOTO SHARE
+    ======================================================== */
+
+    async function shareProductOnWhatsApp(branch) {
+
+      if (!currentProducts || !currentProducts[currentProductIndex]) {
+        return;
+      }
+
+      const product = currentProducts[currentProductIndex];
+      const productName = getProductName(product.name);
+      const imageUrl = RAW_BASE +
+        "images/" +
+        encodeURIComponent(currentCategory) +
+        "/" +
+        encodeURIComponent(product.name);
+
+      const branchNames = {
+        mehsana: "Mehsana",
+        kalol: "Kalol",
+        palanpur: "Palanpur"
+      };
+
+      const branchName = branchNames[branch] || branch;
+      const number = BRANCH_NUMBERS[branch];
+
+      const message =
+        "Hello KK 1 Gram Jewellers " + branchName + ",\n\n" +
+        "I am interested in this product: " + productName + ".\n" +
+        "Please share price, availability and details.";
+
+      /* Mobile browsers that support file sharing: send the actual photo. */
+      try {
+        if (navigator.share && navigator.canShare) {
+          const response = await fetch(imageUrl);
+          const blob = await response.blob();
+          const extension = (blob.type.split("/")[1] || "jpg").replace("jpeg", "jpg");
+          const file = new File([blob], "KK-Jewellers-" + product.name, {
+            type: blob.type || "image/jpeg"
+          });
+
+          if (navigator.canShare({ files: [file] })) {
+            await navigator.share({
+              files: [file],
+              text: message
+            });
+            return;
+          }
+        }
+      } catch (error) {
+        console.log("Photo share fallback:", error);
+      }
+
+      /* Fallback: WhatsApp opens with product details + direct photo link. */
+      const finalMessage = message + "\n\nProduct Photo: " + imageUrl;
+      const whatsappUrl =
+        "https://wa.me/" + number +
+        "?text=" + encodeURIComponent(finalMessage);
+
+      window.open(whatsappUrl, "_blank");
     }
 
 
