@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -499,6 +498,53 @@
 
 
     /* =========================================================
+       FEATURED BANNERS
+    ========================================================= */
+
+    .featured-banners {
+      background: rgba(0,0,0,.22);
+    }
+
+    .featured-banner-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .featured-banner {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(212,175,55,.45);
+      background: #080808;
+      box-shadow: 0 10px 35px rgba(0,0,0,.35);
+      text-decoration: none;
+    }
+
+    .featured-banner img {
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s;
+    }
+
+    .featured-banner:hover img {
+      transform: scale(1.03);
+    }
+
+    .category-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .category-link:hover {
+      color: var(--light-gold);
+    }
+
+
+    /* =========================================================
        PRODUCTS
     ========================================================= */
 
@@ -807,82 +853,79 @@
 
     .modal {
 
+      display: none;
+
       position: fixed;
+
+      z-index: 3000;
 
       inset: 0;
 
-      z-index: 5000;
+      background:
+        rgba(0,0,0,.88);
 
-      display: none;
+      padding: 25px;
 
       align-items: center;
 
       justify-content: center;
 
-      padding: 20px;
-
-      background:
-        rgba(0,0,0,.88);
-
-      backdrop-filter:
-        blur(8px);
-
     }
 
-    .modal.show {
+    .modal.active {
 
       display: flex;
 
     }
 
-    .modal-box {
+    .modal-content {
 
       position: relative;
 
-      width:
-        min(1000px, 100%);
+      width: min(900px, 100%);
 
       max-height: 92vh;
 
       overflow: auto;
 
-      background: #111;
+      background:
+        #101010;
 
       border:
         1px solid var(--gold);
 
       border-radius: 20px;
 
-      padding: 25px;
+      padding: 20px;
 
       box-shadow:
-        0 20px 70px
-        rgba(0,0,0,.8);
+        0 20px 80px rgba(0,0,0,.7);
 
     }
 
-    .close-modal {
+    .modal-close {
 
       position: absolute;
 
-      top: 12px;
+      top: 10px;
 
       right: 15px;
 
-      width: 38px;
+      width: 42px;
 
-      height: 38px;
+      height: 42px;
+
+      border-radius: 50%;
 
       border:
         1px solid var(--gold);
 
-      border-radius: 50%;
-
-      background: #080808;
+      background:
+        rgba(0,0,0,.75);
 
       color: #fff;
 
-      font-size: 22px;
+      font-size: 25px;
 
       cursor: pointer;
 
@@ -890,155 +933,39 @@
 
     }
 
-    .modal-main {
-
-      display: grid;
-
-      grid-template-columns:
-        1.1fr .9fr;
-
-      gap: 25px;
-
-      margin-top: 10px;
-
-    }
-
-    .modal-image-wrap {
-
-      background: #080808;
-
-      border-radius: 14px;
-
-      overflow: hidden;
-
-      border:
-        1px solid
-        rgba(212,175,55,.25);
-
-    }
-
-    .modal-image-wrap img {
+    .modal-image {
 
       width: 100%;
 
-      max-height: 570px;
+      max-height: 72vh;
 
       object-fit: contain;
 
-    }
+      background: #050505;
 
-    .modal-details {
-
-      padding: 15px;
+      border-radius: 14px;
 
     }
 
-    .modal-details h2 {
+    .modal-title {
 
       color:
         var(--light-gold);
 
-      font-size: 28px;
+      text-align: center;
 
-      margin-bottom: 12px;
+      margin-top: 15px;
 
-    }
-
-    .modal-details p {
-
-      color: #bbb;
-
-      line-height: 1.7;
-
-      margin-bottom: 20px;
-
-    }
-
-    .whatsapp-btn {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      width: 100%;
-
-      padding: 14px 18px;
-
-      border-radius: 10px;
-
-      background:
-        #25D366;
-
-      color: #fff;
-
-      text-decoration: none;
-
-      font-weight: bold;
-
-      transition: .3s;
-
-    }
-
-    .whatsapp-btn:hover {
-
-      transform:
-        translateY(-2px);
-
-      filter:
-        brightness(1.08);
-
-    }
-
-    .thumbnails {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 8px;
-
-      margin-top: 10px;
-
-    }
-
-    .thumb {
-
-      width: 65px;
-
-      height: 65px;
-
-      border-radius: 8px;
-
-      overflow: hidden;
-
-      border:
-        1px solid
-        rgba(212,175,55,.4);
-
-      cursor: pointer;
-
-      background: #080808;
-
-    }
-
-    .thumb img {
-
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
+      font-size: 20px;
 
     }
 
 
     /* =========================================================
-       FLOATING WHATSAPP
+       WHATSAPP
     ========================================================= */
 
-    .floating-whatsapp {
+    .whatsapp-float {
 
       position: fixed;
 
@@ -1046,7 +973,7 @@
 
       bottom: 20px;
 
-      z-index: 2000;
+      z-index: 2500;
 
       width: 58px;
 
@@ -1063,15 +990,24 @@
       background:
         #25D366;
 
-      color: white;
+      color: #fff;
 
       text-decoration: none;
 
-      font-size: 25px;
+      font-size: 28px;
 
       box-shadow:
-        0 8px 30px
-        rgba(0,0,0,.45);
+        0 8px 30px rgba(0,0,0,.45);
+
+      transition:
+        transform .3s;
+
+    }
+
+    .whatsapp-float:hover {
+
+      transform:
+        scale(1.08);
 
     }
 
@@ -1080,33 +1016,54 @@
        RESPONSIVE
     ========================================================= */
 
+    @media (max-width: 900px) {
+
+      .nav-links {
+
+        gap: 14px;
+
+      }
+
+      .nav-links a {
+
+        font-size: 13px;
+
+      }
+
+      .featured-banner-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
     @media (max-width: 750px) {
 
       .nav-inner {
 
-        min-height: 65px;
-
-        padding: 8px 14px;
-
-      }
-
-      .brand img {
-
-        width: 44px;
-
-        height: 44px;
+        padding:
+          9px 14px;
 
       }
 
       .brand-text {
 
-        font-size: 15px;
+        font-size: 16px;
+
+      }
+
+      .brand img {
+
+        width: 45px;
+
+        height: 45px;
 
       }
 
       .nav-links {
 
-        gap: 12px;
+        gap: 10px;
 
       }
 
@@ -1125,7 +1082,7 @@
       .section-wrap {
 
         padding:
-          45px 14px;
+          45px 15px;
 
       }
 
@@ -1140,15 +1097,13 @@
 
       .collection-card {
 
-        min-height: 210px;
-
-        border-radius: 13px;
+        min-height: 190px;
 
       }
 
       .collection-info {
 
-        padding: 14px;
+        padding: 15px;
 
       }
 
@@ -1175,97 +1130,259 @@
 
       .product-image {
 
-        height: 190px;
+        height: 210px;
 
       }
 
-      .product-info {
-
-        padding: 10px;
-
-      }
-
-      .product-info h3 {
-
-        font-size: 13px;
-
-      }
-
-      .modal-main {
+      .featured-banner-grid {
 
         grid-template-columns: 1fr;
 
-      }
-
-      .modal-box {
-
-        padding: 15px;
+        gap: 15px;
 
       }
 
-      .modal-details h2 {
+      .featured-banner img {
 
-        font-size: 22px;
+        aspect-ratio: 16 / 7;
 
       }
 
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: 500px) {
 
-      .nav-links a:nth-child(2) {
+      .nav-links a:nth-child(3) {
 
         display: none;
 
       }
 
-      .brand-text {
+      .hero-content {
 
-        font-size: 14px;
+        bottom: 25px;
 
       }
 
-      .collection-card {
+      .collections-grid {
 
-        min-height: 195px;
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+      .products-grid {
+
+        grid-template-columns:
+          1fr 1fr;
 
       }
 
       .product-image {
 
-        height: 175px;
+        height: 180px;
+
+      }
+
+      .modal {
+
+        padding: 10px;
+
+      }
+
+      .modal-content {
+
+        padding: 10px;
 
       }
 
     }
 
+
+
+    /* =========================================================
+       PREMIUM GOLD JEWELLERY BACKGROUND
+    ========================================================= */
+
+    body {
+      background:
+        radial-gradient(circle at 15% 5%, rgba(255,224,130,.24), transparent 25%),
+        radial-gradient(circle at 85% 25%, rgba(212,175,55,.18), transparent 30%),
+        linear-gradient(135deg, #fffaf0 0%, #f6e8c4 42%, #ead39b 100%);
+      color: #2d210b;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 390px;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255,215,100,.24), transparent 35%),
+        linear-gradient(135deg, #fff8df 0%, #e8ce87 48%, #c49a38 100%);
+      border-bottom: 2px solid #c99b32;
+    }
+
+    .hero img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      min-height: 390px;
+      object-fit: cover;
+    }
+
+    .hero-content {
+      z-index: 3;
+      background: rgba(25,18,5,.52);
+      border: 1px solid rgba(255,220,120,.75);
+      border-radius: 22px;
+      padding: 28px 36px;
+      box-shadow: 0 12px 35px rgba(60,40,5,.28), inset 0 0 30px rgba(255,220,120,.08);
+    }
+
+    .featured-banners {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255,225,130,.38), transparent 32%),
+        radial-gradient(circle at 8% 80%, rgba(198,151,48,.16), transparent 28%),
+        radial-gradient(circle at 92% 70%, rgba(198,151,48,.16), transparent 28%),
+        linear-gradient(135deg, #fffaf0 0%, #f5e5bb 42%, #ecd6a0 100%) !important;
+      border-top: 2px solid #c99b32;
+      border-bottom: 2px solid #c99b32;
+      padding-top: 55px;
+      padding-bottom: 70px;
+    }
+
+    .featured-banners::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      top: -280px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,215,100,.34), transparent 68%);
+      pointer-events: none;
+    }
+
+    .featured-banners .section-title {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .featured-banners .section-title::before {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 4px;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, transparent, #b88620, #ffe27a, #b88620, transparent);
+    }
+
+    .featured-banners .section-title h2 {
+      color: #704c08 !important;
+      text-shadow: 0 2px 3px rgba(255,255,255,.75);
+    }
+
+    .featured-banners .section-title p {
+      color: #5d4b29 !important;
+    }
+
+    .featured-banner-grid {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      width: 94%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 8px 0 15px;
+    }
+
+    .featured-banner {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #fff;
+      border: 2px solid #c99b32;
+      box-shadow: 0 10px 25px rgba(83,59,12,.25), 0 0 0 1px rgba(255,221,120,.5);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .featured-banner:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 16px 35px rgba(83,59,12,.30), 0 0 0 3px rgba(218,174,63,.20);
+    }
+
+    .featured-banner img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .featured-banner-grid::after {
+      content: "";
+      display: block;
+      width: 190px;
+      height: 3px;
+      margin: 25px auto 0;
+      border-radius: 10px;
+      background: linear-gradient(90deg, transparent, #b88620, #ffe27a, #b88620, transparent);
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 900px) {
+      .featured-banner-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 550px) {
+      .featured-banner-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 14px;
+        width: 96%;
+        padding-bottom: 15px;
+        scroll-snap-type: x mandatory;
+      }
+
+      .featured-banner {
+        flex: 0 0 78%;
+        scroll-snap-align: center;
+      }
+    }
   </style>
 
 </head>
 
-
 <body>
 
 
-  <!-- =======================================================
+  <!-- =========================================================
        NAVBAR
-  ======================================================== -->
+  ========================================================= -->
 
-  <header class="navbar">
+  <nav class="navbar">
 
     <div class="nav-inner">
 
       <a
-        href="#"
+        href="#top"
         class="brand"
-        onclick="showCollections(); return false;"
       >
 
-        <!-- FIXED LOGO -->
         <img
           id="siteLogo"
-          src=""
-          alt="KK 1 Gram Jewellers Logo"
+          src="images/kk-logo.jpg"
+          alt="KK Jewellers Logo"
         >
 
         <div class="brand-text">
@@ -1275,16 +1392,13 @@
       </a>
 
 
-      <nav class="nav-links">
+      <div class="nav-links">
 
-        <a
-          href="#"
-          onclick="showCollections(); return false;"
-        >
+        <a href="#top">
           Home
         </a>
 
-        <a href="#collections">
+        <a href="#collectionsSection">
           Collections
         </a>
 
@@ -1292,749 +1406,1079 @@
           Branches
         </a>
 
-      </nav>
+      </div>
 
     </div>
 
-  </header>
+  </nav>
 
 
-  <!-- =======================================================
+
+  <!-- =========================================================
        HERO
-  ======================================================== -->
+  ========================================================= -->
 
-  <section class="hero">
+  <main id="top">
 
-    <!-- FIXED BANNER -->
-    <img
-      id="siteBanner"
-      src=""
-      alt="KK 1 Gram Jewellers Banner"
-    >
+    <section class="hero">
 
-    <div class="hero-content">
+      <img
+        id="siteBanner"
+        src="images/banner.jpg.jpg"
+        alt="KK 1 Gram Jewellers Banner"
+        onerror="this.style.display='none';"
+      >
 
-      <h1>
-        KK 1 Gram Jewellers
-      </h1>
+      <div class="hero-content">
 
-      <p>
-        Premium Diamond &amp; Swarovski Work
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       COLLECTIONS
-  ======================================================== -->
-
-  <section id="collections">
-
-    <div class="section-wrap">
-
-      <div class="section-title">
-
-        <h2>
-          Our Collections
-        </h2>
+        <h1>
+          KK 1 Gram Jewellers
+        </h1>
 
         <p>
-          Explore our premium 1 Gram Jewellery collections
+          Premium Jewellery Collections
         </p>
 
       </div>
 
+    </section>
 
-      <div class="collections-grid">
 
 
-        <!-- 1 -->
-        <div
-          class="collection-card"
-          id="card-necklaces"
-          onclick="openCategory('necklaces','Necklaces')"
-        >
+    <!-- =========================================================
+         FEATURED BANNERS
+    ========================================================= -->
 
-          <div class="collection-info">
+    <section class="featured-banners">
 
-            <h3>
-              Necklaces
-            </h3>
+      <div class="section-wrap">
 
-            <p>
-              Premium Necklaces Jewellery Designs
-            </p>
+        <div class="section-title">
 
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
+          <h2>
+            Explore Our Collections
+          </h2>
 
-          </div>
+          <p>
+            Discover our latest jewellery collections
+          </p>
 
         </div>
 
 
-        <!-- 2 -->
-        <div
-          class="collection-card"
-          id="card-ladies-bracelets"
-          onclick="openCategory('ladies-bracelets','Ladies Bracelets')"
-        >
+        <div class="featured-banner-grid">
 
-          <div class="collection-info">
 
-            <h3>
-              Ladies Bracelets
-            </h3>
+          <a
+            class="featured-banner"
+            href="#productsSection"
+            onclick="openCategory('J Chain','J Chain'); return false;"
+          >
 
-            <p>
-              Premium Ladies Bracelets Jewellery Designs
-            </p>
+            <img
+              src="KK_Jewellers_Mens_Banner.jpg"
+              alt="Men's Jewellery - Chain, Vinti, Lucky and Kada"
+              onerror="console.error('Missing banner: KK_Jewellers_Mens_Banner.jpg'); this.style.display='none';"
+            >
 
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
+          </a>
 
-          </div>
+
+          <a
+            class="featured-banner"
+            href="#productsSection"
+            onclick="openCategory('necklaces','Necklaces'); return false;"
+          >
+
+            <img
+              src="KK_Jewellers_Womens_Banner.jpg"
+              alt="Women's Jewellery Collection"
+              onerror="console.error('Missing banner: KK_Jewellers_Womens_Banner.jpg'); this.style.display='none';"
+            >
+
+          </a>
+
+
+          <a
+            class="featured-banner"
+            href="#productsSection"
+            onclick="openCategory('J Ring','J Ring'); return false;"
+          >
+
+            <img
+              src="KK_Jewellers_Rings_Banner.jpg"
+              alt="Rings Collection"
+              onerror="console.error('Missing banner: KK_Jewellers_Rings_Banner.jpg'); this.style.display='none';"
+            >
+
+          </a>
+
+
+          <a
+            class="featured-banner"
+            href="#productsSection"
+            onclick="openCategory('Kada Kadli','Kada Kadli'); return false;"
+          >
+
+            <img
+              src="KK_Jewellers_Kada_Bangles_Banner.jpg"
+              alt="Kada and Bangles Collection"
+              onerror="console.error('Missing banner: KK_Jewellers_Kada_Bangles_Banner.jpg'); this.style.display='none';"
+            >
+
+          </a>
+
 
         </div>
-
-
-        <!-- 3 -->
-        <div
-          class="collection-card"
-          id="card-Kada-Kadli"
-          onclick="openCategory('Kada Kadli','Kada Kadli')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Kada Kadli
-            </h3>
-
-            <p>
-              Premium Kada Kadli Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 4 -->
-        <div
-          class="collection-card"
-          id="card-Pendal-Butti"
-          onclick="openCategory('Pendal Butti','Pendal Butti')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Pendal Butti
-            </h3>
-
-            <p>
-              Premium Pendal Butti Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 5 -->
-        <div
-          class="collection-card"
-          id="card-Short-MS"
-          onclick="openCategory('Short MS','Short MS')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Short MS
-            </h3>
-
-            <p>
-              Premium Short MS Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 6 -->
-        <div
-          class="collection-card"
-          id="card-Laki"
-          onclick="openCategory('Laki','Laki')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Laki
-            </h3>
-
-            <p>
-              Premium Laki Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 7 -->
-        <div
-          class="collection-card"
-          id="card-Bangles"
-          onclick="openCategory('Bangles','Bangles')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Bangles
-            </h3>
-
-            <p>
-              Premium Bangles Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 8 -->
-        <div
-          class="collection-card"
-          id="card-Butti"
-          onclick="openCategory('Butti','Butti')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Butti
-            </h3>
-
-            <p>
-              Premium Butti Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 9 -->
-        <div
-          class="collection-card"
-          id="card-Chain-pendal"
-          onclick="openCategory('Chain pendal','Chain Pendal')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Chain Pendal
-            </h3>
-
-            <p>
-              Premium Chain Pendal Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 10 -->
-        <div
-          class="collection-card"
-          id="card-Dokiya"
-          onclick="openCategory('Dokiya','Dokiya')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Dokiya
-            </h3>
-
-            <p>
-              Premium Dokiya Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 11 -->
-        <div
-          class="collection-card"
-          id="card-Magmala"
-          onclick="openCategory('Magmala','Magmala')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Magmala
-            </h3>
-
-            <p>
-              Premium Magmala Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 12 -->
-        <div
-          class="collection-card"
-          id="card-Heavy-MS"
-          onclick="openCategory('Heavy MS','Heavy MS')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Heavy MS
-            </h3>
-
-            <p>
-              Premium Heavy MS Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 13 -->
-        <div
-          class="collection-card"
-          id="card-J-Chain"
-          onclick="openCategory('J Chain','J Chain')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              J Chain
-            </h3>
-
-            <p>
-              Premium J Chain Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 14 -->
-        <div
-          class="collection-card"
-          id="card-J-Kada"
-          onclick="openCategory('J Kada','J Kada')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              J Kada
-            </h3>
-
-            <p>
-              Premium J Kada Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 15 -->
-        <div
-          class="collection-card"
-          id="card-J-Laki"
-          onclick="openCategory('J Laki','J Laki')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              J Laki
-            </h3>
-
-            <p>
-              Premium J Laki Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 16 -->
-        <div
-          class="collection-card"
-          id="card-J-Ring"
-          onclick="openCategory('J Ring','J Ring')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              J Ring
-            </h3>
-
-            <p>
-              Premium J Ring Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 17 -->
-        <div
-          class="collection-card"
-          id="card-Kanser"
-          onclick="openCategory('Kanser','Kanser')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Kanser
-            </h3>
-
-            <p>
-              Premium Kanser Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 18 -->
-        <div
-          class="collection-card"
-          id="card-Kanthi"
-          onclick="openCategory('Kanthi','Kanthi')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Kanthi
-            </h3>
-
-            <p>
-              Premium Kanthi Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 19 -->
-        <div
-          class="collection-card"
-          id="card-L-Chain"
-          onclick="openCategory('L Chain','L Chain')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              L Chain
-            </h3>
-
-            <p>
-              Premium L Chain Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 20 -->
-        <div
-          class="collection-card"
-          id="card-L-Ring"
-          onclick="openCategory('L Ring','L Ring')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              L Ring
-            </h3>
-
-            <p>
-              Premium L Ring Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 21 -->
-        <div
-          class="collection-card"
-          id="card-Long-MS"
-          onclick="openCategory('Long MS','Long MS')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Long MS
-            </h3>
-
-            <p>
-              Premium Long MS Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 22 -->
-        <div
-          class="collection-card"
-          id="card-Long-Set"
-          onclick="openCategory('Long Set','Long Set')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Long Set
-            </h3>
-
-            <p>
-              Premium Long Set Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 23 -->
-        <div
-          class="collection-card"
-          id="card-Pendal"
-          onclick="openCategory('Pendal','Pendal')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Pendal
-            </h3>
-
-            <p>
-              Premium Pendal Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 24 -->
-        <div
-          class="collection-card"
-          id="card-R-Mala"
-          onclick="openCategory('R Mala','R Mala')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              R Mala
-            </h3>
-
-            <p>
-              Premium R Mala Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 25 -->
-        <div
-          class="collection-card"
-          id="card-Short-KL-Meena-MS"
-          onclick="openCategory('Short KL Meena MS','Short KL Meena MS')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Short KL Meena MS
-            </h3>
-
-            <p>
-              Premium Short KL Meena MS Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- 26 -->
-        <div
-          class="collection-card"
-          id="card-Short-Set"
-          onclick="openCategory('Short Set','Short Set')"
-        >
-
-          <div class="collection-info">
-
-            <h3>
-              Short Set
-            </h3>
-
-            <p>
-              Premium Short Set Jewellery Designs
-            </p>
-
-            <span class="collection-arrow">
-              VIEW COLLECTION →
-            </span>
-
-          </div>
-
-        </div>
-
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- =======================================================
+
+    <!-- =========================================================
+         COLLECTIONS SECTION
+    ========================================================= -->
+
+    <section
+      id="collectionsSection"
+      class="collections"
+    >
+
+      <div class="section-wrap">
+
+        <div class="section-title">
+
+          <h2>
+            Our Collections
+          </h2>
+
+          <p>
+            Explore our complete jewellery collection
+          </p>
+
+        </div>
+
+
+        <div class="collections-grid">
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('necklaces','Necklaces')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('necklaces','Necklaces'); return false;"
+                >
+                  Necklaces
+                </a>
+              </h3>
+
+              <p>
+                Elegant necklace designs for every occasion.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('necklaces','Necklaces'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('ladies-bracelets','Ladies Bracelets')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('ladies-bracelets','Ladies Bracelets'); return false;"
+                >
+                  Ladies Bracelets
+                </a>
+              </h3>
+
+              <p>
+                Stylish bracelet designs for women.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('ladies-bracelets','Ladies Bracelets'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Kada Kadli','Kada Kadli')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Kada Kadli','Kada Kadli'); return false;"
+                >
+                  Kada Kadli
+                </a>
+              </h3>
+
+              <p>
+                Beautiful kada and kadli designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Kada Kadli','Kada Kadli'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Pendal Butti','Pendal Butti')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Pendal Butti','Pendal Butti'); return false;"
+                >
+                  Pendal Butti
+                </a>
+              </h3>
+
+              <p>
+                Beautiful pendal and butti designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Pendal Butti','Pendal Butti'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Short MS','Short MS')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Short MS','Short MS'); return false;"
+                >
+                  Short MS
+                </a>
+              </h3>
+
+              <p>
+                Short mangalsutra style collections.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Short MS','Short MS'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Laki','Laki')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Laki','Laki'); return false;"
+                >
+                  Laki
+                </a>
+              </h3>
+
+              <p>
+                Attractive laki jewellery designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Laki','Laki'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Bangles','Bangles')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Bangles','Bangles'); return false;"
+                >
+                  Bangles
+                </a>
+              </h3>
+
+              <p>
+                Elegant bangle collections.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Bangles','Bangles'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Butti','Butti')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Butti','Butti'); return false;"
+                >
+                  Butti
+                </a>
+              </h3>
+
+              <p>
+                Beautiful traditional butti designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Butti','Butti'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Chain pendal','Chain Pendal')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Chain pendal','Chain Pendal'); return false;"
+                >
+                  Chain Pendal
+                </a>
+              </h3>
+
+              <p>
+                Chain and pendal combinations.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Chain pendal','Chain Pendal'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Dokiya','Dokiya')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Dokiya','Dokiya'); return false;"
+                >
+                  Dokiya
+                </a>
+              </h3>
+
+              <p>
+                Traditional and modern dokiya designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Dokiya','Dokiya'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Magmala','Magmala')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Magmala','Magmala'); return false;"
+                >
+                  Magmala
+                </a>
+              </h3>
+
+              <p>
+                Premium magmala jewellery designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Magmala','Magmala'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Heavy MS','Heavy MS')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Heavy MS','Heavy MS'); return false;"
+                >
+                  Heavy MS
+                </a>
+              </h3>
+
+              <p>
+                Heavy mangalsutra style collections.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Heavy MS','Heavy MS'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('J Chain','J Chain')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('J Chain','J Chain'); return false;"
+                >
+                  J Chain
+                </a>
+              </h3>
+
+              <p>
+                Stylish jewellery chains for men and women.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('J Chain','J Chain'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('J Kada','J Kada')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('J Kada','J Kada'); return false;"
+                >
+                  J Kada
+                </a>
+              </h3>
+
+              <p>
+                Premium kada designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('J Kada','J Kada'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('J Laki','J Laki')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('J Laki','J Laki'); return false;"
+                >
+                  J Laki
+                </a>
+              </h3>
+
+              <p>
+                Modern laki designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('J Laki','J Laki'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('J Ring','J Ring')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('J Ring','J Ring'); return false;"
+                >
+                  J Ring
+                </a>
+              </h3>
+
+              <p>
+                Beautiful ring designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('J Ring','J Ring'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Kanser','Kanser')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Kanser','Kanser'); return false;"
+                >
+                  Kanser
+                </a>
+              </h3>
+
+              <p>
+                Elegant kanser jewellery collection.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Kanser','Kanser'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Kanthi','Kanthi')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Kanthi','Kanthi'); return false;"
+                >
+                  Kanthi
+                </a>
+              </h3>
+
+              <p>
+                Traditional kanthi designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Kanthi','Kanthi'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('L Chain','L Chain')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('L Chain','L Chain'); return false;"
+                >
+                  L Chain
+                </a>
+              </h3>
+
+              <p>
+                Attractive L chain designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('L Chain','L Chain'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('L Ring','L Ring')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('L Ring','L Ring'); return false;"
+                >
+                  L Ring
+                </a>
+              </h3>
+
+              <p>
+                Stylish L ring collection.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('L Ring','L Ring'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Long MS','Long MS')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Long MS','Long MS'); return false;"
+                >
+                  Long MS
+                </a>
+              </h3>
+
+              <p>
+                Long mangalsutra collections.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Long MS','Long MS'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Long Set','Long Set')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Long Set','Long Set'); return false;"
+                >
+                  Long Set
+                </a>
+              </h3>
+
+              <p>
+                Long jewellery set collections.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Long Set','Long Set'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Pendal','Pendal')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Pendal','Pendal'); return false;"
+                >
+                  Pendal
+                </a>
+              </h3>
+
+              <p>
+                Elegant pendal designs.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Pendal','Pendal'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('R Mala','R Mala')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('R Mala','R Mala'); return false;"
+                >
+                  R Mala
+                </a>
+              </h3>
+
+              <p>
+                Beautiful mala jewellery collection.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('R Mala','R Mala'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Short KL Meena MS','Short KL Meena MS')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Short KL Meena MS','Short KL Meena MS'); return false;"
+                >
+                  Short KL Meena MS
+                </a>
+              </h3>
+
+              <p>
+                Short KL Meena mangalsutra collection.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Short KL Meena MS','Short KL Meena MS'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="collection-card"
+            onclick="openCategory('Short Set','Short Set')"
+          >
+
+            <div class="collection-info">
+
+              <h3>
+                <a
+                  class="category-link"
+                  href="#productsSection"
+                  onclick="event.stopPropagation(); openCategory('Short Set','Short Set'); return false;"
+                >
+                  Short Set
+                </a>
+              </h3>
+
+              <p>
+                Beautiful short jewellery sets.
+              </p>
+
+              <a
+                class="collection-arrow"
+                href="#productsSection"
+                onclick="event.stopPropagation(); openCategory('Short Set','Short Set'); return false;"
+              >
+                EXPLORE PRODUCTS →
+              </a>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+      <!-- =======================================================
        PRODUCTS
   ======================================================== -->
 
@@ -2049,26 +2493,41 @@
         ← Back to Collections
       </button>
 
+
       <div class="section-title">
 
-        <h2 id="productSectionTitle">
-          Collection
+        <h2 id="productsTitle">
+          Products
         </h2>
 
-        <p>
-          Premium 1 Gram Jewellery Designs
+        <p id="productsSubtitle">
+          Explore our jewellery collection
         </p>
 
       </div>
 
+
       <div
         id="productsGrid"
         class="products-grid"
-      ></div>
+      >
+
+        <div class="loading-box">
+
+          <strong>
+            Loading Products...
+          </strong>
+
+          Please wait while we load the collection.
+
+        </div>
+
+      </div>
 
     </div>
 
   </section>
+
 
 
   <!-- =======================================================
@@ -2089,7 +2548,7 @@
         </h2>
 
         <p>
-          Visit KK 1 Gram Jewellers
+          Visit us at our nearby branches
         </p>
 
       </div>
@@ -2098,6 +2557,8 @@
       <div class="branches-grid">
 
 
+        <!-- MEHSANA -->
+
         <div class="branch-card">
 
           <h3>
@@ -2105,17 +2566,21 @@
           </h3>
 
           <p>
-            ST Workshop Road,<br>
-            Opp. Surya Complex,<br>
+            ST Workshop Road,
+            Opp. Surya Complex,
             Mehsana
           </p>
 
-          <a href="tel:+918140136434">
+          <a
+            href="tel:+918140136434"
+          >
             +91 81401 36434
           </a>
 
         </div>
 
+
+        <!-- KALOL -->
 
         <div class="branch-card">
 
@@ -2124,16 +2589,20 @@
           </h3>
 
           <p>
-            Kalol,<br>
+            Kalol,
             Gujarat
           </p>
 
-          <a href="tel:+918140136435">
+          <a
+            href="tel:+918140136435"
+          >
             +91 81401 36435
           </a>
 
         </div>
 
+
+        <!-- PALANPUR -->
 
         <div class="branch-card">
 
@@ -2142,12 +2611,14 @@
           </h3>
 
           <p>
-            Guru Nanak Chowk,<br>
-            C.M. Complex,<br>
+            Guru Nanak Chowk,
+            C.M. Complex,
             Palanpur
           </p>
 
-          <a href="tel:+918140136453">
+          <a
+            href="tel:+918140136453"
+          >
             +91 81401 36453
           </a>
 
@@ -2161,6 +2632,7 @@
   </section>
 
 
+
   <!-- =======================================================
        FOOTER
   ======================================================== -->
@@ -2172,14 +2644,15 @@
     </h3>
 
     <p>
-      Premium 1 Gram Jewellery • Diamond &amp; Swarovski Work
+      Premium 1 Gram Jewellery Collections
     </p>
 
-    <p style="margin-top:8px;">
+    <p>
       © 2026 KK 1 Gram Jewellers. All Rights Reserved.
     </p>
 
   </footer>
+
 
 
   <!-- =======================================================
@@ -2189,14 +2662,18 @@
   <div
     id="productModal"
     class="modal"
-    onclick="closeModalOutside(event)"
+    onclick="closeModal(event)"
   >
 
-    <div class="modal-box">
+    <div
+      class="modal-box"
+      onclick="event.stopPropagation()"
+    >
 
       <button
         class="close-modal"
         onclick="closeProductModal()"
+        aria-label="Close"
       >
         ×
       </button>
@@ -2204,51 +2681,44 @@
 
       <div class="modal-main">
 
-        <div>
 
-          <div class="modal-image-wrap">
+        <div class="modal-image-wrap">
 
-            <img
-              id="modalMainImage"
-              src=""
-              alt="Jewellery Product"
-            >
-
-          </div>
-
-
-          <div
-            id="modalThumbs"
-            class="thumbnails"
-          ></div>
+          <img
+            id="modalMainImage"
+            src=""
+            alt="Product"
+          >
 
         </div>
 
 
         <div class="modal-details">
 
-          <h2 id="modalProductTitle">
-            Jewellery
+          <h2 id="modalTitle">
+            Product
           </h2>
 
-          <p>
-            Premium 1 Gram Jewellery with elegant
-            Diamond &amp; Swarovski Work.
+          <p id="modalDescription">
+            Premium jewellery design from KK 1 Gram Jewellers.
           </p>
 
-          <p>
-            For price, availability and more details,
-            contact KK 1 Gram Jewellers on WhatsApp.
-          </p>
+
+          <div
+            id="modalThumbnails"
+            class="thumbnails"
+          >
+          </div>
+
 
           <a
             id="modalWhatsapp"
             class="whatsapp-btn"
-            href="#"
+            href="https://wa.me/918140136434"
             target="_blank"
             rel="noopener"
           >
-            WhatsApp Enquiry
+            Enquire on WhatsApp
           </a>
 
         </div>
@@ -2260,6 +2730,7 @@
   </div>
 
 
+
   <!-- =======================================================
        FLOATING WHATSAPP
   ======================================================== -->
@@ -2269,10 +2740,11 @@
     href="https://wa.me/918140136434"
     target="_blank"
     rel="noopener"
-    aria-label="WhatsApp"
+    aria-label="Chat on WhatsApp"
   >
     ☎
   </a>
+
 
 
   <!-- =======================================================
@@ -2281,10 +2753,9 @@
 
   <script>
 
-
     /* =======================================================
        GITHUB SETTINGS
-    ======================================================= */
+    ======================================================== */
 
     const GITHUB_OWNER =
       "kkjewellers6064";
@@ -2296,23 +2767,6 @@
       "main";
 
 
-    /* =======================================================
-       IMPORTANT IMAGE PATHS
-    ======================================================= */
-
-    const LOGO_PATH =
-      "images/kk-logo.jpg";
-
-    const BANNER_PATH =
-      "images/banner.jpg.jpg";
-
-
-    /*
-      GitHub RAW base URL.
-
-      Isse logo aur banner direct GitHub se load honge.
-    */
-
     const RAW_BASE =
       "https://raw.githubusercontent.com/" +
       GITHUB_OWNER +
@@ -2323,184 +2777,465 @@
       "/";
 
 
+    const API_BASE =
+      "https://api.github.com/repos/" +
+      GITHUB_OWNER +
+      "/" +
+      GITHUB_REPO +
+      "/contents/";
+
+
+    /* =======================================================
+       MAIN IMAGE PATHS
+    ======================================================== */
+
+    const LOGO_PATH =
+      "images/kk-logo.jpg";
+
+    const BANNER_PATH =
+      "images/banner.jpg.jpg";
+
+
     /* =======================================================
        WHATSAPP
-    ======================================================= */
+    ======================================================== */
 
     const WHATSAPP_NUMBER =
       "918140136434";
 
 
     /* =======================================================
-       ALL 26 CATEGORY FOLDERS
-    ======================================================= */
+       CATEGORY DATA
+    ======================================================== */
 
-    const CURRENT_FOLDERS = [
+    const categories = [
 
-      "necklaces",
+      {
+        folder: "necklaces",
+        title: "Necklaces"
+      },
 
-      "ladies-bracelets",
+      {
+        folder: "ladies-bracelets",
+        title: "Ladies Bracelets"
+      },
 
-      "Kada Kadli",
+      {
+        folder: "Kada Kadli",
+        title: "Kada Kadli"
+      },
 
-      "Pendal Butti",
+      {
+        folder: "Pendal Butti",
+        title: "Pendal Butti"
+      },
 
-      "Short MS",
+      {
+        folder: "Short MS",
+        title: "Short MS"
+      },
 
-      "Laki",
+      {
+        folder: "Laki",
+        title: "Laki"
+      },
 
-      "Bangles",
+      {
+        folder: "Bangles",
+        title: "Bangles"
+      },
 
-      "Butti",
+      {
+        folder: "Butti",
+        title: "Butti"
+      },
 
-      "Chain pendal",
+      {
+        folder: "Chain pendal",
+        title: "Chain Pendal"
+      },
 
-      "Dokiya",
+      {
+        folder: "Dokiya",
+        title: "Dokiya"
+      },
 
-      "Magmala",
+      {
+        folder: "Magmala",
+        title: "Magmala"
+      },
 
-      "Heavy MS",
+      {
+        folder: "Heavy MS",
+        title: "Heavy MS"
+      },
 
-      "J Chain",
+      {
+        folder: "J Chain",
+        title: "J Chain"
+      },
 
-      "J Kada",
+      {
+        folder: "J Kada",
+        title: "J Kada"
+      },
 
-      "J Laki",
+      {
+        folder: "J Laki",
+        title: "J Laki"
+      },
 
-      "J Ring",
+      {
+        folder: "J Ring",
+        title: "J Ring"
+      },
 
-      "Kanser",
+      {
+        folder: "Kanser",
+        title: "Kanser"
+      },
 
-      "Kanthi",
+      {
+        folder: "Kanthi",
+        title: "Kanthi"
+      },
 
-      "L Chain",
+      {
+        folder: "L Chain",
+        title: "L Chain"
+      },
 
-      "L Ring",
+      {
+        folder: "L Ring",
+        title: "L Ring"
+      },
 
-      "Long MS",
+      {
+        folder: "Long MS",
+        title: "Long MS"
+      },
 
-      "Long Set",
+      {
+        folder: "Long Set",
+        title: "Long Set"
+      },
 
-      "Pendal",
+      {
+        folder: "Pendal",
+        title: "Pendal"
+      },
 
-      "R Mala",
+      {
+        folder: "R Mala",
+        title: "R Mala"
+      },
 
-      "Short KL Meena MS",
+      {
+        folder: "Short KL Meena MS",
+        title: "Short KL Meena MS"
+      },
 
-      "Short Set"
+      {
+        folder: "Short Set",
+        title: "Short Set"
+      }
 
     ];
 
 
     /* =======================================================
-       IMAGE URL HELPER
-    ======================================================= */
+       GLOBAL STATE
+    ======================================================== */
 
-    function getRawImageUrl(
-      folderName,
-      fileName
-    ) {
+    let currentCategory =
+      null;
 
-      return (
-        RAW_BASE +
-        "images/" +
-        encodeURIComponent(folderName) +
-        "/" +
-        encodeURIComponent(fileName)
-      );
+    let currentProducts =
+      [];
 
-    }
+    let currentProductIndex =
+      0;
 
 
     /* =======================================================
-       LOAD LOGO + BANNER
-    ======================================================= */
+       LOAD MAIN IMAGES
+    ======================================================== */
 
     function loadMainImages() {
 
       const logo =
-        document.getElementById("siteLogo");
+        document.getElementById(
+          "siteLogo"
+        );
+
+
+      if (logo) {
+
+        logo.src =
+          RAW_BASE +
+          LOGO_PATH;
+
+
+        logo.onerror =
+          function() {
+
+            console.error(
+              "Logo not found:",
+              RAW_BASE +
+              LOGO_PATH
+            );
+
+          };
+
+      }
+
+
+      /*
+       * IMPORTANT:
+       * Hero banner is intentionally NOT
+       * replaced with the GitHub banner.
+       *
+       * The new banner exists in the
+       * repository ROOT folder.
+       */
 
       const banner =
-        document.getElementById("siteBanner");
+        document.getElementById(
+          "siteBanner"
+        );
 
 
-      /*
-        Logo
-      */
+      if (
+        banner &&
+        !banner.getAttribute("src")
+      ) {
 
-      logo.src =
-        RAW_BASE +
-        LOGO_PATH;
+        banner.src =
+          "KK_Jewellers_Mens_Banner.jpg";
 
-
-      /*
-        Banner
-      */
-
-      banner.src =
-        RAW_BASE +
-        BANNER_PATH;
-
-
-      /*
-        If logo fails
-      */
-
-      logo.onerror =
-        function() {
-
-          console.error(
-            "Logo not found:",
-            RAW_BASE + LOGO_PATH
-          );
-
-          this.style.display =
-            "none";
-
-        };
-
-
-      /*
-        If banner fails
-      */
-
-      banner.onerror =
-        function() {
-
-          console.error(
-            "Banner not found:",
-            RAW_BASE + BANNER_PATH
-          );
-
-          this.style.display =
-            "none";
-
-        };
+      }
 
     }
 
 
     /* =======================================================
-       GET GITHUB FOLDER IMAGES
-    ======================================================= */
+       SHOW COLLECTIONS
+    ======================================================== */
 
-    async function getCategoryImages(
-      folderName
+    function showCollections() {
+
+      const productsSection =
+        document.getElementById(
+          "productsSection"
+        );
+
+
+      if (productsSection) {
+
+        productsSection.style.display =
+          "none";
+
+      }
+
+
+      const collections =
+        document.getElementById(
+          "collectionsSection"
+        );
+
+
+      if (collections) {
+
+        collections.style.display =
+          "block";
+
+      }
+
+
+      const branches =
+        document.getElementById(
+          "branches"
+        );
+
+
+      if (branches) {
+
+        branches.style.display =
+          "block";
+
+      }
+
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+
+    /* =======================================================
+       OPEN CATEGORY
+    ======================================================== */
+
+    async function openCategory(
+      folder,
+      title
     ) {
 
-      const apiUrl =
-        "https://api.github.com/repos/" +
-        encodeURIComponent(GITHUB_OWNER) +
-        "/" +
-        encodeURIComponent(GITHUB_REPO) +
-        "/contents/images/" +
-        encodeURIComponent(folderName) +
-        "?ref=" +
-        encodeURIComponent(GITHUB_BRANCH);
+      currentCategory =
+        folder;
+
+
+      const collections =
+        document.getElementById(
+          "collectionsSection"
+        );
+
+
+      if (collections) {
+
+        collections.style.display =
+          "none";
+
+      }
+
+
+      const branches =
+        document.getElementById(
+          "branches"
+        );
+
+
+      if (branches) {
+
+        branches.style.display =
+          "none";
+
+      }
+
+
+      const productsSection =
+        document.getElementById(
+          "productsSection"
+        );
+
+
+      if (productsSection) {
+
+        productsSection.style.display =
+          "block";
+
+      }
+
+
+      const productsTitle =
+        document.getElementById(
+          "productsTitle"
+        );
+
+
+      if (productsTitle) {
+
+        productsTitle.textContent =
+          title;
+
+      }
+
+
+      const productsGrid =
+        document.getElementById(
+          "productsGrid"
+        );
+
+
+      if (!productsGrid) {
+
+        return;
+
+      }
+
+
+      productsGrid.innerHTML = `
+
+        <div class="loading-box">
+
+          <strong>
+            Loading ${escapeHtml(title)}...
+          </strong>
+
+          Please wait while we load
+          the jewellery collection.
+
+        </div>
+
+      `;
+
+
+      await loadCategoryProducts(
+        folder
+      );
+
+
+      if (productsSection) {
+
+        productsSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }
+
+    }
+
+
+    /* =======================================================
+       LOAD CATEGORY PRODUCTS
+    ======================================================== */
+
+    async function loadCategoryProducts(
+      folder
+    ) {
+
+      const productsGrid =
+        document.getElementById(
+          "productsGrid"
+        );
+
+
+      if (!productsGrid) {
+
+        return;
+
+      }
 
 
       try {
+
+        const encodedFolder =
+          encodeURIComponent(
+            folder
+          );
+
+
+        const apiUrl =
+          API_BASE +
+          "images/" +
+          encodedFolder +
+          "?ref=" +
+          encodeURIComponent(
+            GITHUB_BRANCH
+          );
+
+
+        console.log(
+          "Loading products from:",
+          apiUrl
+        );
+
 
         const response =
           await fetch(
@@ -2513,415 +3248,284 @@
 
         if (!response.ok) {
 
-          console.error(
-            "GitHub API error:",
-            response.status,
-            folderName
+          throw new Error(
+            "GitHub API returned " +
+            response.status
           );
-
-          return [];
 
         }
 
 
-        const data =
+        const files =
           await response.json();
 
 
-        if (!Array.isArray(data)) {
+        if (!Array.isArray(files)) {
 
-          return [];
+          throw new Error(
+            "Invalid GitHub response"
+          );
 
         }
 
 
-        const allowedExtensions = [
+        const imageFiles =
+          files.filter(
+            function(file) {
 
-          ".jpg",
-
-          ".jpeg",
-
-          ".png",
-
-          ".webp"
-
-        ];
-
-
-        return data
-
-          .filter(
-            function(item) {
-
-              if (
-                item.type !==
-                "file"
-              ) {
-
-                return false;
-
-              }
-
-
-              const name =
-                String(
-                  item.name || ""
-                ).toLowerCase();
-
-
-              return allowedExtensions.some(
-                function(extension) {
-
-                  return name.endsWith(
-                    extension
-                  );
-
-                }
+              return (
+                file &&
+                file.type === "file" &&
+                /\.(jpg|jpeg|png|webp|gif)$/i.test(
+                  file.name || ""
+                )
               );
 
             }
-          )
+          );
 
-          .map(
-            function(item) {
 
-              return {
+        currentProducts =
+          imageFiles;
 
-                name:
-                  item.name,
 
-                url:
-                  getRawImageUrl(
-                    folderName,
-                    item.name
-                  )
+        if (
+          imageFiles.length === 0
+        ) {
+
+          productsGrid.innerHTML = `
+
+            <div class="empty-box">
+
+              <strong>
+                No Products Found
+              </strong>
+
+              No jewellery images were
+              found in this category.
+
+            </div>
+
+          `;
+
+          return;
+
+        }
+
+
+        productsGrid.innerHTML =
+          "";
+
+
+        imageFiles.forEach(
+          function(file, index) {
+
+            const rawUrl =
+              RAW_BASE +
+              "images/" +
+              encodeURIComponent(
+                folder
+              ) +
+              "/" +
+              encodeURIComponent(
+                file.name
+              );
+
+
+            const card =
+              document.createElement(
+                "div"
+              );
+
+
+            card.className =
+              "product-card";
+
+
+            card.onclick =
+              function() {
+
+                openProductModal(
+                  index
+                );
 
               };
 
-            }
-          );
 
-      }
+            card.innerHTML = `
 
-      catch (error) {
+              <div class="product-image">
+
+                <img
+                  src="${rawUrl}"
+                  alt="${escapeHtml(file.name)}"
+                  loading="lazy"
+                  onerror="this.style.display='none';"
+                >
+
+              </div>
+
+              <div class="product-info">
+
+                <h3>
+                  ${escapeHtml(
+                    getProductName(
+                      file.name
+                    )
+                  )}
+                </h3>
+
+                <p>
+                  View Product →
+                </p>
+
+              </div>
+
+            `;
+
+
+            productsGrid.appendChild(
+              card
+            );
+
+          }
+        );
+
+
+      } catch (error) {
 
         console.error(
-          "Image loading error:",
-          folderName,
+          "Product loading error:",
           error
         );
 
-        return [];
-
-      }
-
-    }
-
-
-    /* =======================================================
-       MAKE CARD ID
-    ======================================================= */
-
-    function makeCardId(
-      folderName
-    ) {
-
-      return (
-        "card-" +
-        folderName
-          .replace(
-            /[^a-zA-Z0-9]+/g,
-            "-"
-          )
-          .replace(
-            /^-|-$/g,
-            ""
-          )
-      );
-
-    }
-
-
-    /* =======================================================
-       LOAD CATEGORY BACKGROUND IMAGES
-    ======================================================= */
-
-    async function loadCategoryBackgrounds() {
-
-      for (
-        const folderName of CURRENT_FOLDERS
-      ) {
-
-        try {
-
-          const images =
-            await getCategoryImages(
-              folderName
-            );
-
-
-          if (
-            !images ||
-            images.length === 0
-          ) {
-
-            continue;
-
-          }
-
-
-          const card =
-            document.getElementById(
-              makeCardId(
-                folderName
-              )
-            );
-
-
-          if (!card) {
-
-            continue;
-
-          }
-
-
-          card.style.backgroundImage =
-            "url(\"" +
-            images[0].url +
-            "\")";
-
-
-          card.style.backgroundSize =
-            "cover";
-
-
-          card.style.backgroundPosition =
-            "center";
-
-
-        }
-
-        catch (error) {
-
-          console.error(
-            "Category background error:",
-            folderName,
-            error
-          );
-
-        }
-
-      }
-
-    }
-
-
-    /* =======================================================
-       OPEN CATEGORY
-    ======================================================= */
-
-    async function openCategory(
-      folderName,
-      categoryTitle
-    ) {
-
-      const collections =
-        document.getElementById(
-          "collections"
-        );
-
-
-      const productsSection =
-        document.getElementById(
-          "productsSection"
-        );
-
-
-      const productsGrid =
-        document.getElementById(
-          "productsGrid"
-        );
-
-
-      const title =
-        document.getElementById(
-          "productSectionTitle"
-        );
-
-
-      collections.style.display =
-        "none";
-
-
-      productsSection.style.display =
-        "block";
-
-
-      title.textContent =
-        categoryTitle;
-
-
-      productsGrid.innerHTML = `
-
-        <div class="loading-box">
-
-          <strong>
-            Loading Collection...
-          </strong>
-
-          Please wait while jewellery photos are loading.
-
-        </div>
-
-      `;
-
-
-      window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-      });
-
-
-      const images =
-        await getCategoryImages(
-          folderName
-        );
-
-
-      if (
-        !images ||
-        images.length === 0
-      ) {
 
         productsGrid.innerHTML = `
 
           <div class="empty-box">
 
             <strong>
-              No Product Photos Found
+              Products Could Not Be Loaded
             </strong>
 
-            Folder:
-            <b>
-              ${escapeHtml(folderName)}
-            </b>
-
-            <br><br>
-
-            Make sure this folder exists inside:
-
-            <br>
-
-            <b>
-              images/${escapeHtml(folderName)}
-            </b>
-
-            <br><br>
-
-            And contains JPG, JPEG, PNG or WEBP photos.
+            Please check your internet
+            connection or GitHub image
+            folder.
 
           </div>
 
         `;
+
+      }
+
+    }
+
+
+    /* =======================================================
+       PRODUCT NAME
+    ======================================================== */
+
+    function getProductName(
+      filename
+    ) {
+
+      if (!filename) {
+
+        return "Jewellery Product";
+
+      }
+
+
+      return filename
+        .replace(
+          /\.[^/.]+$/,
+          ""
+        )
+        .replace(
+          /[-_]+/g,
+          " "
+        )
+        .replace(
+          /\s+/g,
+          " "
+        )
+        .trim();
+
+    }
+
+
+    /* =======================================================
+       ESCAPE HTML
+    ======================================================== */
+
+    function escapeHtml(
+      value
+    ) {
+
+      return String(
+        value ?? ""
+      )
+        .replace(
+          /&/g,
+          "&amp;"
+        )
+        .replace(
+          /</g,
+          "&lt;"
+        )
+        .replace(
+          />/g,
+          "&gt;"
+        )
+        .replace(
+          /"/g,
+          "&quot;"
+        )
+        .replace(
+          /'/g,
+          "&#039;"
+        );
+
+    }
+
+
+    /* =======================================================
+       OPEN PRODUCT MODAL
+    ======================================================== */
+
+    function openProductModal(
+      index
+    ) {
+
+      if (
+        !currentProducts ||
+        !currentProducts[index]
+      ) {
 
         return;
 
       }
 
 
-      productsGrid.innerHTML =
-        "";
+      currentProductIndex =
+        index;
 
 
-      images.forEach(
-        function(image, index) {
-
-          const card =
-            document.createElement(
-              "div"
-            );
+      const product =
+        currentProducts[index];
 
 
-          card.className =
-            "product-card";
+      const rawUrl =
+        RAW_BASE +
+        "images/" +
+        encodeURIComponent(
+          currentCategory
+        ) +
+        "/" +
+        encodeURIComponent(
+          product.name
+        );
 
-
-          card.innerHTML = `
-
-            <div class="product-image">
-
-              <img
-                src="${image.url}"
-                alt="${escapeHtml(categoryTitle)} Jewellery ${index + 1}"
-                loading="lazy"
-              >
-
-            </div>
-
-            <div class="product-info">
-
-              <h3>
-                ${escapeHtml(categoryTitle)}
-                ${index + 1}
-              </h3>
-
-              <p>
-                Premium 1 Gram Jewellery
-              </p>
-
-            </div>
-
-          `;
-
-
-          card.addEventListener(
-            "click",
-            function() {
-
-              openProductModal(
-
-                image.url,
-
-                categoryTitle,
-
-                index + 1,
-
-                images
-
-              );
-
-            }
-          );
-
-
-          productsGrid.appendChild(
-            card
-          );
-
-        }
-      );
-
-    }
-
-
-    /* =======================================================
-       PRODUCT MODAL
-    ======================================================= */
-
-    function openProductModal(
-
-      imageUrl,
-
-      categoryTitle,
-
-      productNumber,
-
-      allImages
-
-    ) {
 
       const modal =
         document.getElementById(
@@ -2929,119 +3533,184 @@
         );
 
 
-      const mainImage =
+      const modalImage =
         document.getElementById(
           "modalMainImage"
         );
 
 
-      const productTitle =
+      const modalTitle =
         document.getElementById(
-          "modalProductTitle"
+          "modalTitle"
         );
 
 
-      const thumbs =
+      const modalDescription =
         document.getElementById(
-          "modalThumbs"
+          "modalDescription"
         );
 
 
-      const whatsapp =
+      const thumbnails =
+        document.getElementById(
+          "modalThumbnails"
+        );
+
+
+      const modalWhatsapp =
         document.getElementById(
           "modalWhatsapp"
         );
 
 
-      mainImage.src =
-        imageUrl;
+      if (modalImage) {
+
+        modalImage.src =
+          rawUrl;
+
+        modalImage.alt =
+          getProductName(
+            product.name
+          );
+
+      }
 
 
-      productTitle.textContent =
-        categoryTitle +
-        " " +
-        productNumber;
+      if (modalTitle) {
+
+        modalTitle.textContent =
+          getProductName(
+            product.name
+          );
+
+      }
 
 
-      thumbs.innerHTML =
-        "";
+      if (modalDescription) {
+
+        modalDescription.textContent =
+          "Premium jewellery design from KK 1 Gram Jewellers.";
+
+      }
 
 
-      allImages.forEach(
-        function(image, index) {
+      if (modalWhatsapp) {
 
-          const thumb =
-            document.createElement(
-              "div"
+        const message =
+          "Hello KK 1 Gram Jewellers, I am interested in " +
+          getProductName(
+            product.name
+          ) +
+          ".";
+
+
+        modalWhatsapp.href =
+          "https://wa.me/" +
+          WHATSAPP_NUMBER +
+          "?text=" +
+          encodeURIComponent(
+            message
+          );
+
+      }
+
+
+      if (thumbnails) {
+
+        thumbnails.innerHTML =
+          "";
+
+
+        currentProducts.forEach(
+          function(item, itemIndex) {
+
+            const itemUrl =
+              RAW_BASE +
+              "images/" +
+              encodeURIComponent(
+                currentCategory
+              ) +
+              "/" +
+              encodeURIComponent(
+                item.name
+              );
+
+
+            const thumb =
+              document.createElement(
+                "div"
+              );
+
+
+            thumb.className =
+              "thumb";
+
+
+            thumb.innerHTML = `
+
+              <img
+                src="${itemUrl}"
+                alt="${escapeHtml(item.name)}"
+                loading="lazy"
+              >
+
+            `;
+
+
+            thumb.onclick =
+              function() {
+
+                currentProductIndex =
+                  itemIndex;
+
+
+                if (modalImage) {
+
+                  modalImage.src =
+                    itemUrl;
+
+                }
+
+
+                if (modalTitle) {
+
+                  modalTitle.textContent =
+                    getProductName(
+                      item.name
+                    );
+
+                }
+
+              };
+
+
+            thumbnails.appendChild(
+              thumb
             );
 
+          }
+        );
 
-          thumb.className =
-            "thumb";
-
-
-          thumb.innerHTML = `
-
-            <img
-              src="${image.url}"
-              alt="Product ${index + 1}"
-            >
-
-          `;
+      }
 
 
-          thumb.addEventListener(
-            "click",
-            function(event) {
+      if (modal) {
 
-              event.stopPropagation();
+        modal.classList.add(
+          "show"
+        );
 
-              mainImage.src =
-                image.url;
+        document.body.style.overflow =
+          "hidden";
 
-            }
-          );
-
-
-          thumbs.appendChild(
-            thumb
-          );
-
-        }
-      );
-
-
-      const message =
-        "Hello KK 1 Gram Jewellers,%0A%0A" +
-        "I am interested in:%0A" +
-        categoryTitle +
-        " " +
-        productNumber +
-        "%0A%0A" +
-        "Please share price and details.";
-
-
-      whatsapp.href =
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        message;
-
-
-      modal.classList.add(
-        "show"
-      );
-
-
-      document.body.style.overflow =
-        "hidden";
+      }
 
     }
 
 
     /* =======================================================
-       CLOSE MODAL
-    ======================================================= */
+       CLOSE PRODUCT MODAL
+    ======================================================== */
 
     function closeProductModal() {
 
@@ -3051,9 +3720,13 @@
         );
 
 
-      modal.classList.remove(
-        "show"
-      );
+      if (modal) {
+
+        modal.classList.remove(
+          "show"
+        );
+
+      }
 
 
       document.body.style.overflow =
@@ -3062,13 +3735,19 @@
     }
 
 
-    function closeModalOutside(
+    /* =======================================================
+       CLOSE MODAL ON BACKGROUND CLICK
+    ======================================================== */
+
+    function closeModal(
       event
     ) {
 
       if (
+        event &&
+        event.target &&
         event.target.id ===
-        "productModal"
+          "productModal"
       ) {
 
         closeProductModal();
@@ -3079,83 +3758,8 @@
 
 
     /* =======================================================
-       SHOW COLLECTIONS
-    ======================================================= */
-
-    function showCollections() {
-
-      const collections =
-        document.getElementById(
-          "collections"
-        );
-
-
-      const productsSection =
-        document.getElementById(
-          "productsSection"
-        );
-
-
-      productsSection.style.display =
-        "none";
-
-
-      collections.style.display =
-        "block";
-
-
-      window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-      });
-
-    }
-
-
-    /* =======================================================
-       ESCAPE HTML
-    ======================================================= */
-
-    function escapeHtml(
-      value
-    ) {
-
-      return String(value)
-
-        .replace(
-          /&/g,
-          "&amp;"
-        )
-
-        .replace(
-          /</g,
-          "&lt;"
-        )
-
-        .replace(
-          />/g,
-          "&gt;"
-        )
-
-        .replace(
-          /"/g,
-          "&quot;"
-        )
-
-        .replace(
-          /'/g,
-          "&#039;"
-        );
-
-    }
-
-
-    /* =======================================================
-       ESC KEY CLOSE MODAL
-    ======================================================= */
+       KEYBOARD ESC
+    ======================================================== */
 
     document.addEventListener(
       "keydown",
@@ -3175,26 +3779,16 @@
 
 
     /* =======================================================
-       START WEBSITE
-    ======================================================= */
+       INITIALIZE WEBSITE
+    ======================================================== */
 
     document.addEventListener(
       "DOMContentLoaded",
       function() {
 
-        /*
-          First load logo + banner
-        */
-
         loadMainImages();
 
-
-        /*
-          Then load category
-          background images
-        */
-
-        loadCategoryBackgrounds();
+        showCollections();
 
       }
     );
@@ -3205,4 +3799,3 @@
 </body>
 
 </html>
-```
