@@ -4,27 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>KK 1 Gram Jewellers</title>
+  <title>KK 1 Gram Jewellers | Mehsana • Palanpur • Kalol</title>
 
-  <meta
-    name="description"
-    content="KK 1 Gram Jewellers - Premium 1 Gram Gold Jewellery Collections."
-  >
+  <meta name="description"
+        content="KK 1 Gram Jewellers — Premium 1 Gram Jewellery collections in Mehsana, Palanpur and Kalol.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
+  <meta name="theme-color" content="#080808">
 
   <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
     * {
       margin: 0;
       padding: 0;
@@ -36,413 +26,320 @@
     }
 
     body {
+      font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 20% 10%, rgba(201, 162, 39, 0.12), transparent 25%),
-        radial-gradient(circle at 80% 40%, rgba(201, 162, 39, 0.08), transparent 25%),
-        #0b0b0b;
+        radial-gradient(circle at 20% 10%, rgba(212,175,55,.12), transparent 25%),
+        radial-gradient(circle at 80% 30%, rgba(212,175,55,.08), transparent 25%),
+        linear-gradient(135deg, #050505, #17130b, #050505);
       color: #fff;
-      font-family: "Montserrat", sans-serif;
       min-height: 100vh;
     }
 
-    :root {
-      --gold: #c9a227;
-      --gold-light: #f3d77a;
-      --gold-dark: #8f6d12;
-      --cream: #f8f3e8;
-      --green: #25d366;
-      --black: #0b0b0b;
-      --dark: #111;
-      --border: rgba(201, 162, 39, 0.35);
+    button,
+    a {
+      font-family: inherit;
     }
 
-    /* =========================
-       NAVBAR
-    ========================= */
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-    nav {
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+    :root {
+      --gold: #d4af37;
+      --light-gold: #f2d675;
+      --dark: #070707;
+      --card: rgba(20,20,20,.92);
+      --border: rgba(212,175,55,.45);
+      --white: #ffffff;
+      --muted: #bcbcbc;
+    }
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+    .navbar {
       position: sticky;
       top: 0;
-      z-index: 9999;
-
+      z-index: 1000;
       width: 100%;
-      min-height: 76px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 10px 5%;
-
-      background: rgba(8, 8, 8, 0.96);
-      backdrop-filter: blur(12px);
-
-      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
-
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+      background: rgba(0,0,0,.90);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(212,175,55,.25);
     }
 
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo-area img {
-      width: 52px;
-      height: 52px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 1px solid var(--gold);
-      box-shadow: 0 0 15px rgba(201, 162, 39, 0.25);
-    }
-
-    .brand-name {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--gold-light);
-      letter-spacing: 0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.8px;
-      transition: 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold-light);
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .hero img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 650px;
-      object-fit: cover;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.08),
-          rgba(0, 0, 0, 0.15),
-          rgba(0, 0, 0, 0.5)
-        );
-
-      pointer-events: none;
-    }
-
-    /* =========================
-       COMMON
-    ========================= */
-
-    section {
-      padding: 70px 5%;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 42px;
-    }
-
-    .section-heading h2 {
-      font-family: "Cormorant Garamond", serif;
-      color: var(--gold-light);
-      font-size: 48px;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .section-heading p {
-      color: #cfcfcf;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .gold-line {
-      width: 85px;
-      height: 2px;
-      margin: 15px auto 0;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold-light),
-        transparent
-      );
-    }
-
-    /* =========================
-       COLLECTIONS
-    ========================= */
-
-    #collections {
-      min-height: 500px;
-    }
-
-    .collections-grid {
+    .nav-inner {
       max-width: 1250px;
       margin: auto;
-
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .collection-card {
-      position: relative;
-      min-height: 250px;
-
-      border: 1px solid var(--border);
-      border-radius: 18px;
-
-      overflow: hidden;
-      cursor: pointer;
-
-      display: flex;
-      align-items: flex-end;
-
-      background:
-        radial-gradient(
-          circle at 50% 20%,
-          rgba(201, 162, 39, 0.18),
-          transparent 45%
-        ),
-        linear-gradient(145deg, #181818, #080808);
-
-      box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.35),
-        inset 0 0 30px rgba(201, 162, 39, 0.04);
-
-      transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
-    }
-
-    .collection-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--gold-light);
-
-      box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.55),
-        0 0 25px rgba(201, 162, 39, 0.14);
-    }
-
-    .collection-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-
-      background:
-        radial-gradient(
-          circle at 50% 15%,
-          rgba(243, 215, 122, 0.12),
-          transparent 35%
-        );
-
-      pointer-events: none;
-    }
-
-    .collection-card.has-image {
-      background-size: cover;
-      background-position: center;
-    }
-
-    .collection-card.has-image::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.93) 0%,
-          rgba(0, 0, 0, 0.7) 38%,
-          rgba(0, 0, 0, 0.12) 100%
-        );
-    }
-
-    .collection-content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      padding: 25px 20px;
-      text-align: center;
-    }
-
-    .collection-star {
-      color: var(--gold-light);
-      font-size: 18px;
-      margin-bottom: 8px;
-      text-shadow: 0 0 10px rgba(243, 215, 122, 0.5);
-    }
-
-    .collection-content h3 {
-      font-family: "Cormorant Garamond", serif;
-      color: #fff;
-      font-size: 29px;
-      line-height: 1;
-      margin-bottom: 9px;
-    }
-
-    .collection-content p {
-      color: #e6e6e6;
-      font-size: 11px;
-      line-height: 1.5;
-      letter-spacing: 0.4px;
-    }
-
-    .collection-card.coming {
-      cursor: pointer;
-    }
-
-    .collection-card.coming .collection-content h3 {
-      color: #ddd;
-    }
-
-    .coming-label {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 5px 10px;
-
-      border: 1px solid rgba(201, 162, 39, 0.5);
-      border-radius: 50px;
-
-      color: var(--gold-light);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    /* =========================
-       PRODUCTS SECTION
-    ========================= */
-
-    .products-section {
-      display: none;
-      min-height: 500px;
-      padding-top: 45px;
-    }
-
-    .products-section.show {
-      display: block;
-    }
-
-    .products-top {
-      max-width: 1250px;
-      margin: 0 auto 35px;
-
+      min-height: 75px;
+      padding: 10px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
     }
 
-    .products-title h2 {
-      font-family: "Cormorant Garamond", serif;
-      color: var(--gold-light);
-      font-size: 44px;
-      margin-bottom: 5px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
     }
 
-    .products-title p {
-      color: #aaa;
-      font-size: 12px;
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
     }
 
-    .back-btn {
-      border: 1px solid var(--gold);
-      background: transparent;
-      color: var(--gold-light);
-
-      padding: 11px 20px;
-      border-radius: 50px;
-
-      font-family: "Montserrat", sans-serif;
-      font-size: 11px;
+    .brand-text {
+      font-size: 20px;
       font-weight: 700;
-
-      cursor: pointer;
-      transition: 0.3s ease;
+      letter-spacing: .5px;
     }
 
-    .back-btn:hover {
+    .brand-text span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--light-gold);
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+    .hero {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: #080808;
+    }
+
+    .hero img {
+      width: 100%;
+      min-height: 360px;
+      max-height: 650px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,.12),
+          rgba(0,0,0,.25),
+          rgba(0,0,0,.85)
+        );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: absolute;
+      z-index: 2;
+      inset: auto 20px 45px;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(28px, 5vw, 62px);
+      color: #fff;
+      text-shadow: 0 3px 20px #000;
+      letter-spacing: 1px;
+    }
+
+    .hero-content p {
+      margin-top: 10px;
+      color: var(--light-gold);
+      font-size: clamp(14px, 2vw, 22px);
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       COMMON SECTION
+    ========================================================= */
+    section {
+      width: 100%;
+    }
+
+    .section-wrap {
+      max-width: 1250px;
+      margin: auto;
+      padding: 65px 22px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: var(--light-gold);
+      font-size: clamp(27px, 4vw, 42px);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* =========================================================
+       COLLECTIONS
+    ========================================================= */
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(210px, 1fr)
+      );
+      gap: 20px;
+    }
+
+    .collection-card {
+      position: relative;
+      min-height: 250px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(212,175,55,.12),
+          rgba(0,0,0,.95)
+        );
+      box-shadow: 0 10px 35px rgba(0,0,0,.35);
+      transition: transform .35s, border-color .35s, box-shadow .35s;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--light-gold);
+      box-shadow:
+        0 15px 40px rgba(0,0,0,.55),
+        0 0 25px rgba(212,175,55,.15);
+    }
+
+    .collection-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.96),
+          rgba(0,0,0,.25),
+          rgba(0,0,0,.05)
+        );
+      z-index: 1;
+    }
+
+    .collection-info {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 22px;
+    }
+
+    .collection-info h3 {
+      color: #fff;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .collection-info p {
+      color: #d8d8d8;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .collection-arrow {
+      display: inline-block;
+      margin-top: 13px;
+      color: var(--light-gold);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* =========================================================
+       PRODUCTS
+    ========================================================= */
+    #productsSection {
+      display: none;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 25px;
+      padding: 11px 18px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      background: transparent;
+      color: var(--light-gold);
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .back-button:hover {
       background: var(--gold);
       color: #000;
     }
 
     .products-grid {
-      max-width: 1250px;
-      margin: auto;
-
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(190px, 1fr)
+      );
+      gap: 20px;
     }
 
     .product-card {
-      position: relative;
-
-      background: linear-gradient(145deg, #171717, #090909);
-
-      border: 1px solid rgba(201, 162, 39, 0.22);
+      background: var(--card);
+      border: 1px solid rgba(212,175,55,.3);
       border-radius: 16px;
-
       overflow: hidden;
       cursor: pointer;
-
-      transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+      transition: .3s;
     }
 
     .product-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
       border-color: var(--gold);
-
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     }
 
     .product-image {
       width: 100%;
-      height: 280px;
-
+      height: 250px;
       background: #111;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
       overflow: hidden;
     }
 
@@ -450,634 +347,318 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-
-      transition: transform 0.5s ease;
+      transition: transform .4s;
     }
 
     .product-card:hover .product-image img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .product-info {
       padding: 15px;
-      text-align: center;
     }
 
     .product-info h3 {
+      font-size: 15px;
       color: #fff;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 23px;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .product-info p {
-      color: #aaa;
-      font-size: 10px;
-    }
-
-    .loading {
-      max-width: 1250px;
-      margin: 40px auto;
-      text-align: center;
-      color: var(--gold-light);
-      font-size: 13px;
-    }
-
-    .error-box {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-
-      border: 1px solid rgba(255, 100, 100, 0.4);
-      border-radius: 12px;
-
-      background: rgba(255, 50, 50, 0.06);
-      color: #ffb1b1;
-
-      text-align: center;
       font-size: 12px;
-      line-height: 1.7;
+      color: var(--light-gold);
     }
 
-    /* =========================
-       BRANCHES
-    ========================= */
-
-    #branches {
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.3),
-          rgba(0, 0, 0, 0.3)
-        );
-    }
-
-    .branches-grid {
-      max-width: 1100px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .branch-card {
-      padding: 30px 22px;
-
+    /* =========================================================
+       LOADING / EMPTY
+    ========================================================= */
+    .loading-box,
+    .empty-box {
+      grid-column: 1 / -1;
       text-align: center;
-
-      background: linear-gradient(145deg, #171717, #090909);
-
-      border: 1px solid rgba(201, 162, 39, 0.28);
-      border-radius: 18px;
-
-      transition: 0.3s ease;
+      padding: 55px 20px;
+      color: var(--muted);
+      border: 1px dashed rgba(212,175,55,.35);
+      border-radius: 16px;
     }
 
-    .branch-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold-light);
-    }
-
-    .branch-icon {
-      width: 52px;
-      height: 52px;
-
-      margin: 0 auto 15px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-
-      color: var(--gold-light);
-      font-size: 19px;
-    }
-
-    .branch-card h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 30px;
-      color: var(--gold-light);
+    .loading-box strong,
+    .empty-box strong {
+      display: block;
+      color: var(--light-gold);
+      font-size: 20px;
       margin-bottom: 8px;
     }
 
+    /* =========================================================
+       BRANCHES
+    ========================================================= */
+    .branches {
+      background: rgba(0,0,0,.35);
+      border-top: 1px solid rgba(212,175,55,.12);
+      border-bottom: 1px solid rgba(212,175,55,.12);
+    }
+
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+      );
+      gap: 20px;
+    }
+
+    .branch-card {
+      padding: 28px 22px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(15,15,15,.8);
+      text-align: center;
+    }
+
+    .branch-card h3 {
+      color: var(--light-gold);
+      margin-bottom: 12px;
+    }
+
     .branch-card p {
-      color: #aaa;
-      font-size: 11px;
-      margin-bottom: 18px;
+      color: #ccc;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .branch-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--light-gold);
+      text-decoration: none;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+    footer {
+      padding: 35px 20px;
+      text-align: center;
+      background: #030303;
+      border-top: 1px solid rgba(212,175,55,.2);
+    }
+
+    footer h3 {
+      color: var(--light-gold);
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* =========================================================
+       MODAL
+    ========================================================= */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 5000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,.88);
+      backdrop-filter: blur(8px);
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-box {
+      position: relative;
+      width: min(1000px, 100%);
+      max-height: 92vh;
+      overflow: auto;
+      background: #111;
+      border: 1px solid var(--gold);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 20px 70px rgba(0,0,0,.8);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      background: #080808;
+      color: #fff;
+      font-size: 22px;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .modal-main {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 25px;
+      margin-top: 10px;
+    }
+
+    .modal-image-wrap {
+      background: #080808;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(212,175,55,.25);
+    }
+
+    .modal-image-wrap img {
+      width: 100%;
+      max-height: 570px;
+      object-fit: contain;
+    }
+
+    .modal-details {
+      padding: 15px;
+    }
+
+    .modal-details h2 {
+      color: var(--light-gold);
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .modal-details p {
+      color: #bbb;
+      line-height: 1.7;
+      margin-bottom: 20px;
     }
 
     .whatsapp-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-
-      padding: 11px 17px;
-
-      border-radius: 50px;
-      background: var(--green);
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 10px;
+      background: #25D366;
       color: #fff;
-
       text-decoration: none;
-
-      font-size: 11px;
-      font-weight: 700;
-
-      transition: 0.3s ease;
+      font-weight: bold;
+      transition: .3s;
     }
 
     .whatsapp-btn:hover {
-      transform: scale(1.04);
-      filter: brightness(1.08);
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    #contact {
-      padding-bottom: 100px;
-    }
-
-    .contact-box {
-      max-width: 900px;
-      margin: auto;
-
-      text-align: center;
-
-      padding: 45px 25px;
-
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(201, 162, 39, 0.1),
-          transparent 55%
-        ),
-        #111;
-
-      border: 1px solid rgba(201, 162, 39, 0.3);
-      border-radius: 22px;
-    }
-
-    .contact-box h2 {
-      font-family: "Cormorant Garamond", serif;
-      color: var(--gold-light);
-      font-size: 43px;
-      margin-bottom: 10px;
-    }
-
-    .contact-box p {
-      color: #aaa;
-      font-size: 12px;
-      line-height: 1.8;
-      margin-bottom: 25px;
-    }
-
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      border-top: 1px solid rgba(201, 162, 39, 0.2);
-      padding: 25px 5%;
-
-      text-align: center;
-
-      background: #070707;
-    }
-
-    footer p {
-      color: #777;
-      font-size: 10px;
-      letter-spacing: 0.5px;
-    }
-
-    footer span {
-      color: var(--gold-light);
-    }
-
-    /* =========================
-       PRODUCT MODAL
-    ========================= */
-
-    .modal {
-      display: none;
-
-      position: fixed;
-      inset: 0;
-
-      z-index: 10000;
-
-      background: rgba(0, 0, 0, 0.88);
-      backdrop-filter: blur(8px);
-
-      padding: 25px;
-
-      overflow-y: auto;
-    }
-
-    .modal.show {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-content {
-      position: relative;
-
-      width: min(1000px, 100%);
-
-      background:
-        linear-gradient(145deg, #181818, #080808);
-
-      border: 1px solid rgba(201, 162, 39, 0.45);
-      border-radius: 20px;
-
-      padding: 25px;
-
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
-
-      animation: modalIn 0.25s ease;
-    }
-
-    @keyframes modalIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px) scale(0.98);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    .close-modal {
-      position: absolute;
-      top: 14px;
-      right: 17px;
-
-      width: 40px;
-      height: 40px;
-
-      border-radius: 50%;
-
-      border: 1px solid rgba(201, 162, 39, 0.4);
-      background: rgba(0, 0, 0, 0.65);
-
-      color: #fff;
-      font-size: 22px;
-
-      cursor: pointer;
-      z-index: 5;
-    }
-
-    .close-modal:hover {
-      color: var(--gold-light);
-      border-color: var(--gold);
-    }
-
-    .modal-main {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .modal-image-wrap {
-      background: #050505;
-      border-radius: 15px;
-      overflow: hidden;
-      border: 1px solid rgba(201, 162, 39, 0.18);
-    }
-
-    .modal-image {
-      width: 100%;
-      max-height: 600px;
-      object-fit: contain;
-      display: block;
-    }
-
-    .modal-info {
-      padding: 15px;
-    }
-
-    .modal-info .small-title {
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .modal-info h2 {
-      color: var(--gold-light);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 42px;
-      line-height: 1.05;
-      margin-bottom: 15px;
-    }
-
-    .modal-info p {
-      color: #aaa;
-      font-size: 12px;
-      line-height: 1.8;
-      margin-bottom: 25px;
-    }
-
-    .modal-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-
-      width: 100%;
-
-      padding: 14px 20px;
-
-      border-radius: 50px;
-
-      background: var(--green);
-      color: #fff;
-
-      text-decoration: none;
-
-      font-size: 12px;
-      font-weight: 800;
-
-      transition: 0.3s ease;
-    }
-
-    .modal-whatsapp:hover {
-      filter: brightness(1.08);
       transform: translateY(-2px);
+      filter: brightness(1.08);
     }
 
-    /* =========================
-       BRANCH MODAL
-    ========================= */
-
-    .branch-modal-info {
-      text-align: center;
-      padding: 35px 20px 20px;
+    .thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
     }
 
-    .branch-modal-info i {
-      color: var(--gold-light);
-      font-size: 35px;
-      margin-bottom: 15px;
+    .thumb {
+      width: 65px;
+      height: 65px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(212,175,55,.4);
+      cursor: pointer;
+      background: #080808;
     }
 
-    .branch-modal-info h2 {
-      font-family: "Cormorant Garamond", serif;
-      color: var(--gold-light);
-      font-size: 40px;
-      margin-bottom: 10px;
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .branch-modal-info p {
-      color: #aaa;
-      font-size: 12px;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    /* =========================
+    /* =========================================================
        FLOATING WHATSAPP
-    ========================= */
-
+    ========================================================= */
     .floating-whatsapp {
       position: fixed;
-
       right: 20px;
       bottom: 20px;
-
-      z-index: 9998;
-
+      z-index: 2000;
       width: 58px;
       height: 58px;
-
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      border-radius: 50%;
-
-      background: var(--green);
-      color: #fff;
-
+      background: #25D366;
+      color: white;
       text-decoration: none;
-
-      font-size: 28px;
-
-      box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.45),
-        0 0 20px rgba(37, 211, 102, 0.18);
-
-      transition: 0.3s ease;
+      font-size: 25px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.45);
     }
 
-    .floating-whatsapp:hover {
-      transform: scale(1.08);
-    }
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+    @media (max-width: 750px) {
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
-
-    .menu-btn {
-      display: none;
-
-      border: 1px solid rgba(201, 162, 39, 0.4);
-      background: transparent;
-
-      color: var(--gold-light);
-
-      width: 42px;
-      height: 42px;
-
-      border-radius: 10px;
-
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    /* =========================
-       RESPONSIVE 1000px
-    ========================= */
-
-    @media (max-width: 1000px) {
-
-      .collections-grid,
-      .products-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .nav-inner {
+        min-height: 65px;
+        padding: 8px 14px;
       }
 
-      .branches-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .brand img {
+        width: 44px;
+        height: 44px;
       }
 
-      .modal-main {
-        grid-template-columns: 1fr;
-      }
-
-      .modal-image {
-        max-height: 500px;
-      }
-    }
-
-    /* =========================
-       RESPONSIVE 700px
-    ========================= */
-
-    @media (max-width: 700px) {
-
-      nav {
-        min-height: 68px;
-        padding: 8px 4%;
-      }
-
-      .logo-area img {
-        width: 45px;
-        height: 45px;
-      }
-
-      .brand-name {
-        font-size: 23px;
-      }
-
-      .menu-btn {
-        display: block;
+      .brand-text {
+        font-size: 15px;
       }
 
       .nav-links {
-        display: none;
-
-        position: absolute;
-
-        left: 0;
-        right: 0;
-        top: 68px;
-
-        padding: 20px;
-
-        flex-direction: column;
-        gap: 18px;
-
-        background: rgba(8, 8, 8, 0.98);
-
-        border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+        gap: 12px;
       }
 
-      .nav-links.show {
-        display: flex;
+      .nav-links a {
+        font-size: 12px;
       }
 
       .hero img {
-        min-height: 180px;
-        object-fit: cover;
+        min-height: 280px;
       }
 
-      section {
-        padding: 55px 4%;
+      .section-wrap {
+        padding: 45px 14px;
       }
 
-      .section-heading h2 {
-        font-size: 39px;
+      .collections-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
       }
 
-      .collections-grid,
+      .collection-card {
+        min-height: 210px;
+        border-radius: 13px;
+      }
+
+      .collection-info {
+        padding: 14px;
+      }
+
+      .collection-info h3 {
+        font-size: 16px;
+      }
+
+      .collection-info p {
+        font-size: 11px;
+      }
+
       .products-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-      }
-
-      .collection-card {
-        min-height: 205px;
-        border-radius: 14px;
-      }
-
-      .collection-content {
-        padding: 18px 10px;
-      }
-
-      .collection-content h3 {
-        font-size: 25px;
-      }
-
-      .collection-content p {
-        font-size: 9px;
-      }
-
-      .products-top {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .products-title h2 {
-        font-size: 38px;
-      }
-
-      .product-image {
-        height: 220px;
-      }
-
-      .product-info h3 {
-        font-size: 20px;
-      }
-
-      .branches-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-box h2 {
-        font-size: 36px;
-      }
-
-      .modal {
-        padding: 12px;
-      }
-
-      .modal-content {
-        padding: 15px;
-      }
-
-      .modal-info h2 {
-        font-size: 35px;
-      }
-    }
-
-    /* =========================
-       RESPONSIVE 400px
-    ========================= */
-
-    @media (max-width: 400px) {
-
-      .brand-name {
-        font-size: 20px;
-      }
-
-      .collections-grid,
-      .products-grid {
-        gap: 10px;
-      }
-
-      .collection-card {
-        min-height: 185px;
-      }
-
-      .collection-content h3 {
-        font-size: 22px;
+        gap: 12px;
       }
 
       .product-image {
@@ -1085,18 +666,42 @@
       }
 
       .product-info {
-        padding: 11px 7px;
+        padding: 10px;
       }
 
       .product-info h3 {
-        font-size: 18px;
+        font-size: 13px;
       }
 
-      .floating-whatsapp {
-        width: 52px;
-        height: 52px;
-        right: 15px;
-        bottom: 15px;
+      .modal-main {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-box {
+        padding: 15px;
+      }
+
+      .modal-details h2 {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 430px) {
+
+      .nav-links a:nth-child(2) {
+        display: none;
+      }
+
+      .brand-text {
+        font-size: 14px;
+      }
+
+      .collection-card {
+        min-height: 195px;
+      }
+
+      .product-image {
+        height: 175px;
       }
     }
   </style>
@@ -1104,851 +709,447 @@
 
 <body>
 
-  <!-- =========================
+  <!-- =======================================================
        NAVBAR
-  ========================= -->
+  ======================================================== -->
+  <header class="navbar">
+    <div class="nav-inner">
 
-  <nav>
+      <a href="#" class="brand" onclick="showCollections(); return false;">
+        <img src="images/kk-logo.jpg" alt="KK 1 Gram Jewellers Logo">
 
-    <a href="#home" class="logo-area">
-      <img
-        src="kk-logo.jpg"
-        alt="KK 1 Gram Jewellers Logo"
-      >
+        <div class="brand-text">
+          KK <span>1 Gram</span> Jewellers
+        </div>
+      </a>
 
-      <span class="brand-name">
-        KK 1 Gram Jewellers
-      </span>
-    </a>
+      <nav class="nav-links">
+        <a href="#" onclick="showCollections(); return false;">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#branches">Branches</a>
+      </nav>
 
-    <button
-      class="menu-btn"
-      onclick="toggleMenu()"
-      aria-label="Open Menu"
+    </div>
+  </header>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+  <section class="hero">
+
+    <img
+      src="images/banner.jpg.jpg"
+      alt="KK 1 Gram Jewellers Banner"
     >
-      <i class="fa-solid fa-bars"></i>
-    </button>
 
-    <div class="nav-links" id="navLinks">
-
-      <a href="#home" onclick="closeMenu()">
-        Home
-      </a>
-
-      <a href="#collections" onclick="closeMenu()">
-        Collections
-      </a>
-
-      <a href="#branches" onclick="closeMenu()">
-        Branches
-      </a>
-
-      <a href="#contact" onclick="closeMenu()">
-        Contact
-      </a>
-
+    <div class="hero-content">
+      <h1>KK 1 Gram Jewellers</h1>
+      <p>Premium Diamond &amp; Swarovski Work</p>
     </div>
 
-  </nav>
+  </section>
 
 
-  <!-- =========================
-       HOME / EXISTING BANNER
-       BANNER IS NOT CHANGED
-  ========================= -->
+  <!-- =======================================================
+       COLLECTIONS
+  ======================================================== -->
+  <section id="collections">
 
-  <main id="home">
+    <div class="section-wrap">
 
-    <div class="hero">
-      <img
-        src="banner.jpg.jpg"
-        alt="KK 1 Gram Jewellers Banner"
-      >
-    </div>
-
-
-    <!-- =========================
-         COLLECTIONS
-    ========================= -->
-
-    <section id="collections">
-
-      <div class="section-heading">
-
-        <h2>
-          Our Collections
-        </h2>
-
-        <p>
-          Explore our premium 1 gram gold jewellery collection
-        </p>
-
-        <div class="gold-line"></div>
-
+      <div class="section-title">
+        <h2>Our Collections</h2>
+        <p>Explore our premium 1 Gram Jewellery collections</p>
       </div>
 
 
-      <div class="collections-grid" id="collectionsGrid">
+      <div class="collections-grid">
 
 
-        <!-- NECKLACES -->
-
+        <!-- 1 -->
         <div
           class="collection-card"
           id="card-necklaces"
-          onclick="openCategory('necklaces', 'Necklaces')"
+          onclick="openCategory('necklaces','Necklaces')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Necklaces
-            </h3>
-
-            <p>
-              Elegant 1 Gram Gold Necklace Designs
-            </p>
-
+          <div class="collection-info">
+            <h3>Necklaces</h3>
+            <p>Premium Necklaces Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- LADIES BRACELETS -->
-
+        <!-- 2 -->
         <div
           class="collection-card"
           id="card-ladies-bracelets"
-          onclick="openCategory('ladies-bracelets', 'Ladies Bracelets')"
+          onclick="openCategory('ladies-bracelets','Ladies Bracelets')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Ladies Bracelets
-            </h3>
-
-            <p>
-              Beautiful Bracelet Collection
-            </p>
-
+          <div class="collection-info">
+            <h3>Ladies Bracelets</h3>
+            <p>Premium Ladies Bracelets Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- KADA KADLI -->
-
+        <!-- 3 -->
         <div
           class="collection-card"
           id="card-Kada-Kadli"
-          onclick="openCategory('Kada Kadli', 'Kada Kadli')"
+          onclick="openCategory('Kada Kadli','Kada Kadli')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Kada Kadli
-            </h3>
-
-            <p>
-              Premium Gold Kada Designs
-            </p>
-
+          <div class="collection-info">
+            <h3>Kada Kadli</h3>
+            <p>Premium Kada Kadli Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- PENDAL BUTTI -->
-
+        <!-- 4 -->
         <div
           class="collection-card"
           id="card-Pendal-Butti"
-          onclick="openCategory('Pendal Butti', 'Pendal Butti')"
+          onclick="openCategory('Pendal Butti','Pendal Butti')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Pendal Butti
-            </h3>
-
-            <p>
-              Elegant Traditional Designs
-            </p>
-
+          <div class="collection-info">
+            <h3>Pendal Butti</h3>
+            <p>Premium Pendal Butti Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- SHORT MS -->
-
+        <!-- 5 -->
         <div
           class="collection-card"
           id="card-Short-MS"
-          onclick="openCategory('Short MS', 'Short MS')"
+          onclick="openCategory('Short MS','Short MS')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Short MS
-            </h3>
-
-            <p>
-              Stylish Short Mangalsutra Designs
-            </p>
-
+          <div class="collection-info">
+            <h3>Short MS</h3>
+            <p>Premium Short MS Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- LAKI -->
-
+        <!-- 6 -->
         <div
           class="collection-card"
           id="card-Laki"
-          onclick="openCategory('Laki', 'Laki')"
+          onclick="openCategory('Laki','Laki')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Laki
-            </h3>
-
-            <p>
-              Beautiful Laki Gold Designs
-            </p>
-
+          <div class="collection-info">
+            <h3>Laki</h3>
+            <p>Premium Laki Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- BANGLES -->
-
+        <!-- 7 -->
         <div
           class="collection-card"
           id="card-Bangles"
-          onclick="openCategory('Bangles', 'Bangles')"
+          onclick="openCategory('Bangles','Bangles')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Bangles
-            </h3>
-
-            <p>
-              Premium Gold Bangles Collection
-            </p>
-
+          <div class="collection-info">
+            <h3>Bangles</h3>
+            <p>Premium Bangles Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- BUTTI -->
-
+        <!-- 8 -->
         <div
           class="collection-card"
           id="card-Butti"
-          onclick="openCategory('Butti', 'Butti')"
+          onclick="openCategory('Butti','Butti')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Butti
-            </h3>
-
-            <p>
-              Elegant Gold Butti Designs
-            </p>
-
+          <div class="collection-info">
+            <h3>Butti</h3>
+            <p>Premium Butti Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- CHAIN PENDAL -->
-
+        <!-- 9 -->
         <div
           class="collection-card"
           id="card-Chain-pendal"
-          onclick="openCategory('Chain pendal', 'Chain Pendal')"
+          onclick="openCategory('Chain pendal','Chain Pendal')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Chain Pendal
-            </h3>
-
-            <p>
-              Stylish Chain Pendal Designs
-            </p>
-
+          <div class="collection-info">
+            <h3>Chain Pendal</h3>
+            <p>Premium Chain Pendal Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- DOKIYA -->
-
+        <!-- 10 -->
         <div
           class="collection-card"
           id="card-Dokiya"
-          onclick="openCategory('Dokiya', 'Dokiya')"
+          onclick="openCategory('Dokiya','Dokiya')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Dokiya
-            </h3>
-
-            <p>
-              Beautiful Traditional Jewellery
-            </p>
-
+          <div class="collection-info">
+            <h3>Dokiya</h3>
+            <p>Premium Dokiya Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- MAGMALA
-             IMPORTANT:
-             FOLDER NAME = images/Magmala
-             Mangalsutra replaced with Magmala
-        -->
-
+        <!-- 11 -->
         <div
           class="collection-card"
           id="card-Magmala"
-          onclick="openCategory('Magmala', 'Magmala')"
+          onclick="openCategory('Magmala','Magmala')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Magmala
-            </h3>
-
-            <p>
-              Beautiful Magmala Collection
-            </p>
-
+          <div class="collection-info">
+            <h3>Magmala</h3>
+            <p>Premium Magmala Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
-        <!-- COMING SOON CATEGORIES -->
-
+        <!-- 12 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('Heavy MS')"
+          class="collection-card"
+          id="card-Heavy-MS"
+          onclick="openCategory('Heavy MS','Heavy MS')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Heavy MS
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>Heavy MS</h3>
+            <p>Premium Heavy MS Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 13 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('J Chain')"
+          class="collection-card"
+          id="card-J-Chain"
+          onclick="openCategory('J Chain','J Chain')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              J Chain
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>J Chain</h3>
+            <p>Premium J Chain Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 14 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('J Kada')"
+          class="collection-card"
+          id="card-J-Kada"
+          onclick="openCategory('J Kada','J Kada')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              J Kada
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>J Kada</h3>
+            <p>Premium J Kada Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 15 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('J Laki')"
+          class="collection-card"
+          id="card-J-Laki"
+          onclick="openCategory('J Laki','J Laki')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              J Laki
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>J Laki</h3>
+            <p>Premium J Laki Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 16 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('J Ring')"
+          class="collection-card"
+          id="card-J-Ring"
+          onclick="openCategory('J Ring','J Ring')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              J Ring
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>J Ring</h3>
+            <p>Premium J Ring Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 17 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('Kanser')"
+          class="collection-card"
+          id="card-Kanser"
+          onclick="openCategory('Kanser','Kanser')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Kanser
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>Kanser</h3>
+            <p>Premium Kanser Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 18 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('Kanthi')"
+          class="collection-card"
+          id="card-Kanthi"
+          onclick="openCategory('Kanthi','Kanthi')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Kanthi
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>Kanthi</h3>
+            <p>Premium Kanthi Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 19 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('L Chain')"
+          class="collection-card"
+          id="card-L-Chain"
+          onclick="openCategory('L Chain','L Chain')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              L Chain
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>L Chain</h3>
+            <p>Premium L Chain Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 20 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('L Ring')"
+          class="collection-card"
+          id="card-L-Ring"
+          onclick="openCategory('L Ring','L Ring')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              L Ring
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>L Ring</h3>
+            <p>Premium L Ring Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 21 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('Long MS')"
+          class="collection-card"
+          id="card-Long-MS"
+          onclick="openCategory('Long MS','Long MS')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Long MS
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>Long MS</h3>
+            <p>Premium Long MS Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 22 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('Long Set')"
+          class="collection-card"
+          id="card-Long-Set"
+          onclick="openCategory('Long Set','Long Set')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Long Set
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>Long Set</h3>
+            <p>Premium Long Set Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 23 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('Pendal')"
+          class="collection-card"
+          id="card-Pendal"
+          onclick="openCategory('Pendal','Pendal')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Pendal
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>Pendal</h3>
+            <p>Premium Pendal Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 24 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('R Mala')"
+          class="collection-card"
+          id="card-R-Mala"
+          onclick="openCategory('R Mala','R Mala')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              R Mala
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>R Mala</h3>
+            <p>Premium R Mala Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 25 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('Short KL Meena MS')"
+          class="collection-card"
+          id="card-Short-KL-Meena-MS"
+          onclick="openCategory('Short KL Meena MS','Short KL Meena MS')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Short KL Meena MS
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>Short KL Meena MS</h3>
+            <p>Premium Short KL Meena MS Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
 
 
+        <!-- 26 -->
         <div
-          class="collection-card coming"
-          onclick="comingSoon('Short Set')"
+          class="collection-card"
+          id="card-Short-Set"
+          onclick="openCategory('Short Set','Short Set')"
         >
-
-          <div class="collection-content">
-
-            <div class="collection-star">
-              ✦
-            </div>
-
-            <h3>
-              Short Set
-            </h3>
-
-            <p>
-              Premium Designs Coming Soon
-            </p>
-
-            <span class="coming-label">
-              Coming Soon
-            </span>
-
+          <div class="collection-info">
+            <h3>Short Set</h3>
+            <p>Premium Short Set Jewellery Designs</p>
+            <span class="collection-arrow">VIEW COLLECTION →</span>
           </div>
-
         </div>
+
 
       </div>
+    </div>
+  </section>
 
-    </section>
 
+  <!-- =======================================================
+       PRODUCTS SECTION
+  ======================================================== -->
+  <section id="productsSection">
 
-    <!-- =========================
-         PRODUCTS
-    ========================= -->
+    <div class="section-wrap">
 
-    <section
-      id="productsSection"
-      class="products-section"
-    >
+      <button class="back-button" onclick="showCollections()">
+        ← Back to Collections
+      </button>
 
-      <div class="products-top">
-
-        <div class="products-title">
-
-          <h2 id="productsTitle">
-            Collection
-          </h2>
-
-          <p id="productsSubtitle">
-            Explore our designs
-          </p>
-
-        </div>
-
-        <button
-          class="back-btn"
-          onclick="closeCategory()"
-        >
-          <i class="fa-solid fa-arrow-left"></i>
-          &nbsp; Back to Collections
-        </button>
-
+      <div class="section-title">
+        <h2 id="productSectionTitle">Collection</h2>
+        <p>Premium 1 Gram Jewellery Designs</p>
       </div>
 
       <div
@@ -1956,235 +1157,149 @@
         class="products-grid"
       ></div>
 
-      <div
-        id="productsLoading"
-        class="loading"
-        style="display:none;"
-      >
-        <i class="fa-solid fa-spinner fa-spin"></i>
-        &nbsp; Loading designs...
+    </div>
+  </section>
+
+
+  <!-- =======================================================
+       BRANCHES
+  ======================================================== -->
+  <section id="branches" class="branches">
+
+    <div class="section-wrap">
+
+      <div class="section-title">
+        <h2>Our Branches</h2>
+        <p>Visit KK 1 Gram Jewellers</p>
       </div>
-
-      <div
-        id="productsError"
-        class="error-box"
-        style="display:none;"
-      ></div>
-
-    </section>
-
-
-    <!-- =========================
-         BRANCHES
-    ========================= -->
-
-    <section id="branches">
-
-      <div class="section-heading">
-
-        <h2>
-          Our Branches
-        </h2>
-
-        <p>
-          Visit or contact your nearest KK 1 Gram Jewellers branch
-        </p>
-
-        <div class="gold-line"></div>
-
-      </div>
-
 
       <div class="branches-grid">
 
-
-        <!-- MEHSANA -->
-
         <div class="branch-card">
-
-          <div class="branch-icon">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-
-          <h3>
+          <h3>Mehsana</h3>
+          <p>
+            ST Workshop Road,<br>
+            Opp. Surya Complex,<br>
             Mehsana
-          </h3>
+          </p>
 
-          <p>
+          <a href="tel:+918140136434">
             +91 81401 36434
-          </p>
-
-          <a
-            class="whatsapp-btn"
-            href="https://wa.me/918140136434"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-            WhatsApp
           </a>
-
         </div>
 
 
-        <!-- KALOL -->
-
         <div class="branch-card">
-
-          <div class="branch-icon">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-
-          <h3>
-            Kalol
-          </h3>
-
+          <h3>Kalol</h3>
           <p>
+            Kalol,<br>
+            Gujarat
+          </p>
+
+          <a href="tel:+918140136435">
             +91 81401 36435
-          </p>
-
-          <a
-            class="whatsapp-btn"
-            href="https://wa.me/918140136435"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-            WhatsApp
           </a>
-
         </div>
 
-
-        <!-- PALANPUR -->
 
         <div class="branch-card">
-
-          <div class="branch-icon">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-
-          <h3>
-            Palanpur
-          </h3>
-
+          <h3>Palanpur</h3>
           <p>
-            +91 81401 36453
+            Guru Nanak Chowk,<br>
+            C.M. Complex,<br>
+            Palanpur
           </p>
 
-          <a
-            class="whatsapp-btn"
-            href="https://wa.me/918140136453"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-            WhatsApp
+          <a href="tel:+918140136453">
+            +91 81401 36453
           </a>
-
         </div>
 
       </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section id="contact">
-
-      <div class="contact-box">
-
-        <h2>
-          Contact KK 1 Gram Jewellers
-        </h2>
-
-        <p>
-          For product enquiries, availability, designs and more information,
-          contact us directly on WhatsApp.
-        </p>
-
-        <div class="contact-buttons">
-
-          <a
-            class="whatsapp-btn"
-            href="https://wa.me/918140136434"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-            Chat on WhatsApp
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
+    </div>
+  </section>
 
 
-  <!-- =========================
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+  <footer>
+
+    <h3>KK 1 Gram Jewellers</h3>
+
+    <p>
+      Premium 1 Gram Jewellery • Diamond &amp; Swarovski Work
+    </p>
+
+    <p style="margin-top:8px;">
+      © 2026 KK 1 Gram Jewellers. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- =======================================================
        PRODUCT MODAL
-  ========================= -->
-
+  ======================================================== -->
   <div
-    class="modal"
     id="productModal"
+    class="modal"
     onclick="closeModalOutside(event)"
   >
 
-    <div class="modal-content">
+    <div class="modal-box">
 
       <button
         class="close-modal"
         onclick="closeProductModal()"
-        aria-label="Close"
       >
         ×
       </button>
 
       <div class="modal-main">
 
-        <div class="modal-image-wrap">
+        <div>
 
-          <img
-            id="modalProductImage"
-            class="modal-image"
-            src=""
-            alt="Jewellery Product"
-          >
+          <div class="modal-image-wrap">
+            <img
+              id="modalMainImage"
+              src=""
+              alt="Jewellery Product"
+            >
+          </div>
+
+          <div
+            id="modalThumbs"
+            class="thumbnails"
+          ></div>
 
         </div>
 
-        <div class="modal-info">
 
-          <div class="small-title">
-            KK 1 Gram Jewellers
-          </div>
+        <div class="modal-details">
 
           <h2 id="modalProductTitle">
-            Jewellery Design
+            Jewellery
           </h2>
 
-          <p id="modalProductDescription">
-            Premium 1 gram gold jewellery design.
-            Contact us on WhatsApp for product details,
-            availability and price.
+          <p>
+            Premium 1 Gram Jewellery with elegant
+            Diamond &amp; Swarovski Work.
+          </p>
+
+          <p>
+            For price, availability and more details,
+            contact KK 1 Gram Jewellers on WhatsApp.
           </p>
 
           <a
-            id="modalWhatsApp"
-            class="modal-whatsapp"
+            id="modalWhatsapp"
+            class="whatsapp-btn"
             href="#"
             target="_blank"
             rel="noopener"
           >
-            <i class="fa-brands fa-whatsapp"></i>
-            Enquire on WhatsApp
+            WhatsApp Enquiry
           </a>
 
         </div>
@@ -2192,64 +1307,12 @@
       </div>
 
     </div>
-
   </div>
 
 
-  <!-- =========================
-       COMING SOON MODAL
-  ========================= -->
-
-  <div
-    class="modal"
-    id="comingModal"
-    onclick="closeComingOutside(event)"
-  >
-
-    <div class="modal-content">
-
-      <button
-        class="close-modal"
-        onclick="closeComingModal()"
-        aria-label="Close"
-      >
-        ×
-      </button>
-
-      <div class="branch-modal-info">
-
-        <i class="fa-solid fa-gem"></i>
-
-        <h2 id="comingTitle">
-          Coming Soon
-        </h2>
-
-        <p>
-          This collection is coming soon.
-          Please contact us on WhatsApp for more designs and availability.
-        </p>
-
-        <a
-          class="whatsapp-btn"
-          href="https://wa.me/918140136434"
-          target="_blank"
-          rel="noopener"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-          Contact on WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
+  <!-- =======================================================
        FLOATING WHATSAPP
-  ========================= -->
-
+  ======================================================== -->
   <a
     class="floating-whatsapp"
     href="https://wa.me/918140136434"
@@ -2257,138 +1320,519 @@
     rel="noopener"
     aria-label="WhatsApp"
   >
-    <i class="fa-brands fa-whatsapp"></i>
+    ☎
   </a>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-    <p>
-      © <span id="year"></span>
-      <span>KK 1 Gram Jewellers</span>.
-      All Rights Reserved.
-    </p>
-
-  </footer>
-
-
-  <!-- =========================
+  <!-- =======================================================
        JAVASCRIPT
-  ========================= -->
-
+  ======================================================== -->
   <script>
 
-    /* =========================================
+    /* =======================================================
        GITHUB SETTINGS
-    ========================================= */
+    ======================================================== */
 
     const GITHUB_OWNER = "kkjewellers6064";
 
     const GITHUB_REPO = "kk-1-gram-jewellers";
 
-    const GITHUB_BRANCHES = [
-      "main",
-      "master"
-    ];
+    const GITHUB_BRANCH = "main";
 
 
     /*
+      ALL 26 CATEGORY FOLDERS
+
       IMPORTANT:
-      Folder names below MUST exactly match
-      your GitHub folders inside:
-
-      images/
-
-      Especially:
-
-      images/Magmala
+      GitHub folder name exactly same hona chahiye.
     */
 
     const CURRENT_FOLDERS = [
+
       "necklaces",
+
       "ladies-bracelets",
+
       "Kada Kadli",
+
       "Pendal Butti",
+
       "Short MS",
+
       "Laki",
+
       "Bangles",
+
       "Butti",
+
       "Chain pendal",
+
       "Dokiya",
-      "Magmala"
+
+      "Magmala",
+
+      "Heavy MS",
+
+      "J Chain",
+
+      "J Kada",
+
+      "J Laki",
+
+      "J Ring",
+
+      "Kanser",
+
+      "Kanthi",
+
+      "L Chain",
+
+      "L Ring",
+
+      "Long MS",
+
+      "Long Set",
+
+      "Pendal",
+
+      "R Mala",
+
+      "Short KL Meena MS",
+
+      "Short Set"
+
     ];
 
 
-    const IMAGE_EXTENSIONS = [
-      ".jpg",
-      ".jpeg",
-      ".png",
-      ".webp",
-      ".JPG",
-      ".JPEG",
-      ".PNG",
-      ".WEBP"
-    ];
+    /* =======================================================
+       WHATSAPP
+    ======================================================== */
+
+    const WHATSAPP_NUMBER = "918140136434";
 
 
-    let currentCategoryFolder = "";
+    /* =======================================================
+       GET GITHUB FOLDER IMAGES
+    ======================================================== */
 
-    let currentCategoryTitle = "";
+    async function getCategoryImages(folderName) {
 
+      const url =
+        "https://api.github.com/repos/" +
+        GITHUB_OWNER +
+        "/" +
+        GITHUB_REPO +
+        "/contents/images/" +
+        encodeURIComponent(folderName) +
+        "?ref=" +
+        encodeURIComponent(GITHUB_BRANCH);
 
-    /* =========================================
-       MOBILE MENU
-    ========================================= */
+      try {
 
-    function toggleMenu() {
+        const response = await fetch(url, {
+          cache: "no-store"
+        });
 
-      const navLinks = document.getElementById("navLinks");
+        if (!response.ok) {
+          return [];
+        }
 
-      navLinks.classList.toggle("show");
+        const data = await response.json();
 
+        if (!Array.isArray(data)) {
+          return [];
+        }
+
+        const allowedExtensions = [
+          ".jpg",
+          ".jpeg",
+          ".png",
+          ".webp"
+        ];
+
+        return data
+          .filter(item => {
+
+            if (item.type !== "file") {
+              return false;
+            }
+
+            const name =
+              String(item.name || "").toLowerCase();
+
+            return allowedExtensions.some(
+              extension => name.endsWith(extension)
+            );
+
+          })
+          .map(item => {
+
+            return {
+              name: item.name,
+              url: item.download_url
+            };
+
+          });
+
+      } catch (error) {
+
+        console.error(
+          "Image loading error:",
+          folderName,
+          error
+        );
+
+        return [];
+      }
     }
 
 
-    function closeMenu() {
+    /* =======================================================
+       LOAD CATEGORY BACKGROUND IMAGES
+    ======================================================== */
 
-      const navLinks = document.getElementById("navLinks");
+    async function loadCategoryBackgrounds() {
 
-      navLinks.classList.remove("show");
-
-    }
-
-
-    /* =========================================
-       CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
-    ========================================= */
-
-    document.addEventListener("click", function(event) {
-
-      const navLinks = document.getElementById("navLinks");
-
-      const menuBtn = document.querySelector(".menu-btn");
-
-      if (
-        navLinks &&
-        navLinks.classList.contains("show") &&
-        !navLinks.contains(event.target) &&
-        !menuBtn.contains(event.target)
+      for (
+        const folderName of CURRENT_FOLDERS
       ) {
 
-        navLinks.classList.remove("show");
+        const images =
+          await getCategoryImages(folderName);
+
+        if (
+          !images ||
+          images.length === 0
+        ) {
+          continue;
+        }
+
+        const cardId =
+          "card-" +
+          folderName
+            .replace(/[^a-zA-Z0-9]+/g, "-")
+            .replace(/^-|-$/g, "");
+
+        const card =
+          document.getElementById(cardId);
+
+        if (!card) {
+          continue;
+        }
+
+        card.style.backgroundImage =
+          "url('" +
+          images[0].url +
+          "')";
+
+        card.style.backgroundSize = "cover";
+
+        card.style.backgroundPosition = "center";
 
       }
+    }
 
-    });
+
+    /* =======================================================
+       OPEN CATEGORY
+    ======================================================== */
+
+    async function openCategory(
+      folderName,
+      categoryTitle
+    ) {
+
+      const collections =
+        document.getElementById("collections");
+
+      const productsSection =
+        document.getElementById("productsSection");
+
+      const productsGrid =
+        document.getElementById("productsGrid");
+
+      const title =
+        document.getElementById("productSectionTitle");
 
 
-    /* =========================================
+      collections.style.display = "none";
+
+      productsSection.style.display = "block";
+
+      title.textContent = categoryTitle;
+
+
+      productsGrid.innerHTML = `
+
+        <div class="loading-box">
+
+          <strong>Loading Collection...</strong>
+
+          Please wait while jewellery photos are loading.
+
+        </div>
+
+      `;
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+
+      const images =
+        await getCategoryImages(folderName);
+
+
+      if (
+        !images ||
+        images.length === 0
+      ) {
+
+        productsGrid.innerHTML = `
+
+          <div class="empty-box">
+
+            <strong>No Product Photos Found</strong>
+
+            Please check that the GitHub folder
+            <b>${escapeHtml(folderName)}</b>
+            exists inside
+            <b>images</b>
+            and contains JPG, JPEG, PNG or WEBP photos.
+
+          </div>
+
+        `;
+
+        return;
+      }
+
+
+      productsGrid.innerHTML = "";
+
+
+      images.forEach(
+        (image, index) => {
+
+          const card =
+            document.createElement("div");
+
+          card.className =
+            "product-card";
+
+
+          card.innerHTML = `
+
+            <div class="product-image">
+
+              <img
+                src="${image.url}"
+                alt="${escapeHtml(categoryTitle)} Jewellery ${index + 1}"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="product-info">
+
+              <h3>
+                ${escapeHtml(categoryTitle)}
+                ${index + 1}
+              </h3>
+
+              <p>
+                Premium 1 Gram Jewellery
+              </p>
+
+            </div>
+
+          `;
+
+
+          card.addEventListener(
+            "click",
+            function() {
+
+              openProductModal(
+                image.url,
+                categoryTitle,
+                index + 1,
+                images
+              );
+
+            }
+          );
+
+
+          productsGrid.appendChild(card);
+
+        }
+      );
+
+    }
+
+
+    /* =======================================================
+       PRODUCT MODAL
+    ======================================================== */
+
+    function openProductModal(
+      imageUrl,
+      categoryTitle,
+      productNumber,
+      allImages
+    ) {
+
+      const modal =
+        document.getElementById("productModal");
+
+      const mainImage =
+        document.getElementById("modalMainImage");
+
+      const productTitle =
+        document.getElementById("modalProductTitle");
+
+      const thumbs =
+        document.getElementById("modalThumbs");
+
+      const whatsapp =
+        document.getElementById("modalWhatsapp");
+
+
+      mainImage.src = imageUrl;
+
+
+      productTitle.textContent =
+        categoryTitle +
+        " " +
+        productNumber;
+
+
+      thumbs.innerHTML = "";
+
+
+      allImages.forEach(
+        (image, index) => {
+
+          const thumb =
+            document.createElement("div");
+
+          thumb.className =
+            "thumb";
+
+
+          thumb.innerHTML = `
+
+            <img
+              src="${image.url}"
+              alt="Product ${index + 1}"
+            >
+
+          `;
+
+
+          thumb.addEventListener(
+            "click",
+            function() {
+
+              mainImage.src =
+                image.url;
+
+            }
+          );
+
+
+          thumbs.appendChild(thumb);
+
+        }
+      );
+
+
+      const message =
+        "Hello KK 1 Gram Jewellers,%0A%0A" +
+        "I am interested in:%0A" +
+        categoryTitle +
+        " " +
+        productNumber +
+        "%0A%0APlease share price and details.";
+
+
+      whatsapp.href =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        message;
+
+
+      modal.classList.add("show");
+
+      document.body.style.overflow =
+        "hidden";
+    }
+
+
+    /* =======================================================
+       CLOSE MODAL
+    ======================================================== */
+
+    function closeProductModal() {
+
+      const modal =
+        document.getElementById("productModal");
+
+      modal.classList.remove("show");
+
+      document.body.style.overflow =
+        "";
+    }
+
+
+    function closeModalOutside(event) {
+
+      if (
+        event.target.id ===
+        "productModal"
+      ) {
+
+        closeProductModal();
+
+      }
+    }
+
+
+    /* =======================================================
+       SHOW COLLECTIONS
+    ======================================================== */
+
+    function showCollections() {
+
+      const collections =
+        document.getElementById("collections");
+
+      const productsSection =
+        document.getElementById("productsSection");
+
+
+      productsSection.style.display =
+        "none";
+
+      collections.style.display =
+        "block";
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+
+    /* =======================================================
        ESCAPE HTML
-    ========================================= */
+    ======================================================== */
 
     function escapeHtml(value) {
 
@@ -2402,678 +1846,9 @@
     }
 
 
-    /* =========================================
-       GET GITHUB CONTENTS
-    ========================================= */
-
-    async function getGitHubFolderContents(
-      folderName,
-      branch
-    ) {
-
-      const apiUrl =
-        "https://api.github.com/repos/" +
-        encodeURIComponent(GITHUB_OWNER) +
-        "/" +
-        encodeURIComponent(GITHUB_REPO) +
-        "/contents/images/" +
-        encodeURIComponent(folderName) +
-        "?ref=" +
-        encodeURIComponent(branch);
-
-
-      const response = await fetch(apiUrl, {
-        cache: "no-store"
-      });
-
-
-      if (!response.ok) {
-
-        throw new Error(
-          "GitHub folder not found: images/" +
-          folderName +
-          " on branch " +
-          branch
-        );
-
-      }
-
-
-      const data = await response.json();
-
-
-      if (!Array.isArray(data)) {
-
-        throw new Error(
-          "Invalid GitHub folder response."
-        );
-
-      }
-
-
-      return data;
-
-    }
-
-
-    /* =========================================
-       GET CATEGORY IMAGES
-    ========================================= */
-
-    async function getCategoryImages(folderName) {
-
-      let lastError = null;
-
-
-      for (const branch of GITHUB_BRANCHES) {
-
-        try {
-
-          const files =
-            await getGitHubFolderContents(
-              folderName,
-              branch
-            );
-
-
-          const imageFiles = files
-            .filter(file => {
-
-              if (file.type !== "file") {
-                return false;
-              }
-
-              const name =
-                file.name || "";
-
-              return IMAGE_EXTENSIONS.some(
-                extension =>
-                  name.endsWith(extension)
-              );
-
-            })
-            .sort((a, b) => {
-
-              return a.name.localeCompare(
-                b.name,
-                undefined,
-                {
-                  numeric: true,
-                  sensitivity: "base"
-                }
-              );
-
-            });
-
-
-          return imageFiles.map(file => {
-
-            return {
-              name: file.name,
-              url:
-                "https://raw.githubusercontent.com/" +
-                GITHUB_OWNER +
-                "/" +
-                GITHUB_REPO +
-                "/" +
-                branch +
-                "/images/" +
-                encodeURIComponent(folderName) +
-                "/" +
-                encodeURIComponent(file.name)
-            };
-
-          });
-
-        } catch (error) {
-
-          lastError = error;
-
-        }
-
-      }
-
-
-      throw lastError ||
-        new Error(
-          "Unable to load images."
-        );
-
-    }
-
-
-    /* =========================================
-       LOAD CATEGORY BACKGROUNDS
-    ========================================= */
-
-    async function loadCategoryBackgrounds() {
-
-      for (
-        const folderName of CURRENT_FOLDERS
-      ) {
-
-        try {
-
-          const images =
-            await getCategoryImages(
-              folderName
-            );
-
-
-          if (
-            images &&
-            images.length > 0
-          ) {
-
-            const cardId =
-              "card-" +
-              folderName
-                .replace(/\s+/g, "-")
-                .replace(/[^a-zA-Z0-9-_]/g, "");
-
-
-            const card =
-              document.getElementById(cardId);
-
-
-            if (card) {
-
-              card.style.backgroundImage =
-                "url('" +
-                images[0].url +
-                "')";
-
-              card.classList.add(
-                "has-image"
-              );
-
-            }
-
-          }
-
-        } catch (error) {
-
-          console.log(
-            "Background not loaded for:",
-            folderName
-          );
-
-        }
-
-      }
-
-    }
-
-
-    /* =========================================
-       OPEN CATEGORY
-    ========================================= */
-
-    async function openCategory(
-      folderName,
-      categoryTitle
-    ) {
-
-      currentCategoryFolder =
-        folderName;
-
-      currentCategoryTitle =
-        categoryTitle;
-
-
-      const collections =
-        document.getElementById(
-          "collections"
-        );
-
-      const productsSection =
-        document.getElementById(
-          "productsSection"
-        );
-
-      const productsGrid =
-        document.getElementById(
-          "productsGrid"
-        );
-
-      const productsLoading =
-        document.getElementById(
-          "productsLoading"
-        );
-
-      const productsError =
-        document.getElementById(
-          "productsError"
-        );
-
-      const productsTitle =
-        document.getElementById(
-          "productsTitle"
-        );
-
-      const productsSubtitle =
-        document.getElementById(
-          "productsSubtitle"
-        );
-
-
-      collections.style.display =
-        "none";
-
-
-      productsSection.classList.add(
-        "show"
-      );
-
-
-      productsTitle.textContent =
-        categoryTitle;
-
-
-      productsSubtitle.textContent =
-        "Explore our " +
-        categoryTitle +
-        " designs";
-
-
-      productsGrid.innerHTML = "";
-
-
-      productsError.style.display =
-        "none";
-
-
-      productsLoading.style.display =
-        "block";
-
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-
-      try {
-
-        const images =
-          await getCategoryImages(
-            folderName
-          );
-
-
-        productsLoading.style.display =
-          "none";
-
-
-        if (
-          !images ||
-          images.length === 0
-        ) {
-
-          productsError.style.display =
-            "block";
-
-
-          productsError.innerHTML =
-            "No product photos found in " +
-            "<strong>images/" +
-            escapeHtml(folderName) +
-            "</strong>.";
-
-          return;
-
-        }
-
-
-        images.forEach(
-          (image, index) => {
-
-            const card =
-              document.createElement(
-                "div"
-              );
-
-
-            card.className =
-              "product-card";
-
-
-            card.onclick =
-              function() {
-
-                openProduct(
-                  image.url,
-                  categoryTitle,
-                  image.name
-                );
-
-              };
-
-
-            card.innerHTML = `
-
-              <div class="product-image">
-
-                <img
-                  src="${escapeHtml(image.url)}"
-                  alt="${escapeHtml(categoryTitle)} ${index + 1}"
-                  loading="lazy"
-                  onerror="this.style.display='none';"
-                >
-
-              </div>
-
-              <div class="product-info">
-
-                <h3>
-                  ${escapeHtml(categoryTitle)}
-                </h3>
-
-                <p>
-                  Design ${index + 1}
-                </p>
-
-              </div>
-
-            `;
-
-
-            productsGrid.appendChild(
-              card
-            );
-
-          }
-        );
-
-
-      } catch (error) {
-
-        productsLoading.style.display =
-          "none";
-
-
-        productsError.style.display =
-          "block";
-
-
-        productsError.innerHTML = `
-
-          <strong>
-            Products load nahi ho paaye.
-          </strong>
-
-          <br><br>
-
-          Folder check karo:
-
-          <strong>
-            images/${escapeHtml(folderName)}
-          </strong>
-
-          <br><br>
-
-          GitHub folder ka naam
-          exactly same hona chahiye.
-
-          <br>
-
-          Error:
-          ${escapeHtml(error.message)}
-
-        `;
-
-      }
-
-    }
-
-
-    /* =========================================
-       CLOSE CATEGORY
-    ========================================= */
-
-    function closeCategory() {
-
-      const collections =
-        document.getElementById(
-          "collections"
-        );
-
-      const productsSection =
-        document.getElementById(
-          "productsSection"
-        );
-
-      const productsGrid =
-        document.getElementById(
-          "productsGrid"
-        );
-
-
-      productsSection.classList.remove(
-        "show"
-      );
-
-
-      productsSection.style.display =
-        "none";
-
-
-      collections.style.display =
-        "block";
-
-
-      productsGrid.innerHTML = "";
-
-
-      currentCategoryFolder = "";
-
-      currentCategoryTitle = "";
-
-
-      document.getElementById(
-        "collections"
-      ).scrollIntoView({
-        behavior: "smooth"
-      });
-
-    }
-
-
-    /* =========================================
-       OPEN PRODUCT MODAL
-    ========================================= */
-
-    function openProduct(
-      imageUrl,
-      categoryTitle,
-      imageName
-    ) {
-
-      const modal =
-        document.getElementById(
-          "productModal"
-        );
-
-      const modalImage =
-        document.getElementById(
-          "modalProductImage"
-        );
-
-      const modalTitle =
-        document.getElementById(
-          "modalProductTitle"
-        );
-
-      const modalDescription =
-        document.getElementById(
-          "modalProductDescription"
-        );
-
-      const whatsapp =
-        document.getElementById(
-          "modalWhatsApp"
-        );
-
-
-      modalImage.src =
-        imageUrl;
-
-
-      modalImage.alt =
-        categoryTitle +
-        " Jewellery";
-
-
-      modalTitle.textContent =
-        categoryTitle;
-
-
-      modalDescription.textContent =
-        "I am interested in this " +
-        categoryTitle +
-        " design (" +
-        imageName +
-        "). Please share price and availability.";
-
-
-      const message =
-        "Hello KK 1 Gram Jewellers,%0A%0A" +
-        "I am interested in this " +
-        categoryTitle +
-        " design.%0A" +
-        "Product: " +
-        imageName +
-        "%0A%0A" +
-        "Please share price and availability.";
-
-
-      whatsapp.href =
-        "https://wa.me/918140136434?text=" +
-        message;
-
-
-      modal.classList.add(
-        "show"
-      );
-
-
-      document.body.style.overflow =
-        "hidden";
-
-    }
-
-
-    /* =========================================
-       CLOSE PRODUCT MODAL
-    ========================================= */
-
-    function closeProductModal() {
-
-      const modal =
-        document.getElementById(
-          "productModal"
-        );
-
-
-      modal.classList.remove(
-        "show"
-      );
-
-
-      document.body.style.overflow =
-        "";
-
-    }
-
-
-    /* =========================================
-       CLOSE MODAL OUTSIDE
-    ========================================= */
-
-    function closeModalOutside(event) {
-
-      if (
-        event.target.id ===
-        "productModal"
-      ) {
-
-        closeProductModal();
-
-      }
-
-    }
-
-
-    /* =========================================
-       COMING SOON
-    ========================================= */
-
-    function comingSoon(categoryName) {
-
-      const modal =
-        document.getElementById(
-          "comingModal"
-        );
-
-
-      const title =
-        document.getElementById(
-          "comingTitle"
-        );
-
-
-      title.textContent =
-        categoryName +
-        " - Coming Soon";
-
-
-      modal.classList.add(
-        "show"
-      );
-
-
-      document.body.style.overflow =
-        "hidden";
-
-    }
-
-
-    function closeComingModal() {
-
-      const modal =
-        document.getElementById(
-          "comingModal"
-        );
-
-
-      modal.classList.remove(
-        "show"
-      );
-
-
-      document.body.style.overflow =
-        "";
-
-    }
-
-
-    function closeComingOutside(event) {
-
-      if (
-        event.target.id ===
-        "comingModal"
-      ) {
-
-        closeComingModal();
-
-      }
-
-    }
-
-
-    /* =========================================
-       ESC KEY
-    ========================================= */
+    /* =======================================================
+       ESC KEY CLOSE MODAL
+    ======================================================== */
 
     document.addEventListener(
       "keydown",
@@ -3085,30 +1860,18 @@
 
           closeProductModal();
 
-          closeComingModal();
-
         }
 
       }
     );
 
 
-    /* =========================================
-       YEAR
-    ========================================= */
+    /* =======================================================
+       START
+    ======================================================== */
 
-    document.getElementById(
-      "year"
-    ).textContent =
-      new Date().getFullYear();
-
-
-    /* =========================================
-       LOAD CATEGORY BACKGROUNDS
-    ========================================= */
-
-    window.addEventListener(
-      "load",
+    document.addEventListener(
+      "DOMContentLoaded",
       function() {
 
         loadCategoryBackgrounds();
